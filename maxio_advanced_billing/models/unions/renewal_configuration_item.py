@@ -1,0 +1,22 @@
+from __future__ import annotations
+
+from typing import Annotated, TypeAlias
+
+from pydantic import Field
+
+from ..scheduled_renewal_item_request_body_component import (
+    ScheduledRenewalItemRequestBodyComponent,
+    ScheduledRenewalItemRequestBodyComponentDict,
+)
+from ..scheduled_renewal_item_request_body_product import (
+    ScheduledRenewalItemRequestBodyProduct,
+    ScheduledRenewalItemRequestBodyProductDict,
+)
+
+RenewalConfigurationItem: TypeAlias = Annotated[
+    ScheduledRenewalItemRequestBodyComponent | ScheduledRenewalItemRequestBodyProduct, Field(discriminator="item_type")
+]
+
+RenewalConfigurationItemDict: TypeAlias = (
+    ScheduledRenewalItemRequestBodyComponentDict | ScheduledRenewalItemRequestBodyProductDict
+)
