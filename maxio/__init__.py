@@ -1,15 +1,15 @@
 from . import models
-from .async_client import AsyncClient, AsyncMaxioAdvancedBillingClient
-from .client import Client, MaxioAdvancedBillingClient
+from .async_client import AsyncClient, AsyncMaxioClient
+from .client import Client, MaxioClient
 from .server import Environment, ServerConfig, ServerConfigDict, ServerConfigOrDict
 
 __all__ = [
     "models",
     "AsyncClient",
-    "AsyncMaxioAdvancedBillingClient",
+    "AsyncMaxioClient",
     "Client",
     "Environment",
-    "MaxioAdvancedBillingClient",
+    "MaxioClient",
     "ServerConfig",
     "ServerConfigDict",
     "ServerConfigOrDict",

@@ -2,7 +2,7 @@
 
 # SubscriptionComponents — operations
 
-Accessor: `client.subscription_components` · Source: `maxio_advanced_billing/apis/subscription_components.py` · 17 operations
+Accessor: `client.subscription_components` · Source: `maxio/apis/subscription_components.py` · 17 operations
 
 Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omit what its invariants table covers and are otherwise self-contained, so chunk at block level. Signatures are the sync parsed spelling; the async and raw spellings take the same parameters (see sdk-map.md). **Type sources** names the module declaring each type an operation mentions, so resolving a body, return or error payload is a lookup rather than a search; the runtime types `RawError` and `ApiResult` are excluded, and an operation with no table mentions nothing but builtins and those.
 
@@ -19,8 +19,8 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ActivateEventBasedComponent` | `maxio_advanced_billing/models/activate_event_based_component.py` |
-| `ActivateEventBasedComponentDict` | `maxio_advanced_billing/models/activate_event_based_component.py` |
+| `ActivateEventBasedComponent` | `maxio/models/activate_event_based_component.py` |
+| `ActivateEventBasedComponentDict` | `maxio/models/activate_event_based_component.py` |
 
 ### client.subscription_components.allocate_component
 
@@ -36,11 +36,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CreateAllocationRequest` | `maxio_advanced_billing/models/create_allocation_request.py` |
-| `CreateAllocationRequestDict` | `maxio_advanced_billing/models/create_allocation_request.py` |
-| `AllocationResponse` | `maxio_advanced_billing/models/allocation_response.py` |
-| `AllocateComponentErrorBody` | `maxio_advanced_billing/errors/allocate_component_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `CreateAllocationRequest` | `maxio/models/create_allocation_request.py` |
+| `CreateAllocationRequestDict` | `maxio/models/create_allocation_request.py` |
+| `AllocationResponse` | `maxio/models/allocation_response.py` |
+| `AllocateComponentErrorBody` | `maxio/errors/allocate_component_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.subscription_components.allocate_components
 
@@ -56,11 +56,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `AllocateComponents` | `maxio_advanced_billing/models/allocate_components.py` |
-| `AllocateComponentsDict` | `maxio_advanced_billing/models/allocate_components.py` |
-| `AllocationResponse` | `maxio_advanced_billing/models/allocation_response.py` |
-| `AllocateComponentsErrorBody` | `maxio_advanced_billing/errors/allocate_components_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `AllocateComponents` | `maxio/models/allocate_components.py` |
+| `AllocateComponentsDict` | `maxio/models/allocate_components.py` |
+| `AllocationResponse` | `maxio/models/allocation_response.py` |
+| `AllocateComponentsErrorBody` | `maxio/errors/allocate_components_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.subscription_components.bulk_record_events
 
@@ -75,8 +75,8 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `EbbEvent` | `maxio_advanced_billing/models/ebb_event.py` |
-| `EbbEventDict` | `maxio_advanced_billing/models/ebb_event.py` |
+| `EbbEvent` | `maxio/models/ebb_event.py` |
+| `EbbEventDict` | `maxio/models/ebb_event.py` |
 
 ### client.subscription_components.bulk_reset_subscription_components_price_points
 
@@ -91,7 +91,7 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `SubscriptionResponse` | `maxio_advanced_billing/models/subscription_response.py` |
+| `SubscriptionResponse` | `maxio/models/subscription_response.py` |
 
 ### client.subscription_components.bulk_update_subscription_components_price_points
 
@@ -107,10 +107,10 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `BulkComponentsPricePointAssignment` | `maxio_advanced_billing/models/bulk_components_price_point_assignment.py` |
-| `BulkComponentsPricePointAssignmentDict` | `maxio_advanced_billing/models/bulk_components_price_point_assignment.py` |
-| `BulkUpdateSubscriptionComponentsPricePointsErrorBody` | `maxio_advanced_billing/errors/bulk_update_subscription_components_price_points_error.py` |
-| `ComponentPricePointError1` | `maxio_advanced_billing/models/component_price_point_error1.py` |
+| `BulkComponentsPricePointAssignment` | `maxio/models/bulk_components_price_point_assignment.py` |
+| `BulkComponentsPricePointAssignmentDict` | `maxio/models/bulk_components_price_point_assignment.py` |
+| `BulkUpdateSubscriptionComponentsPricePointsErrorBody` | `maxio/errors/bulk_update_subscription_components_price_points_error.py` |
+| `ComponentPricePointError1` | `maxio/models/component_price_point_error1.py` |
 
 ### client.subscription_components.create_usage
 
@@ -126,15 +126,15 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `SubscriptionIdOrReference` | `maxio_advanced_billing/models/unions/subscription_id_or_reference.py` |
-| `SubscriptionIdOrReferenceDict` | `maxio_advanced_billing/models/unions/subscription_id_or_reference.py` |
-| `ComponentIdModel` | `maxio_advanced_billing/models/unions/component_id_model.py` |
-| `ComponentIdModelDict` | `maxio_advanced_billing/models/unions/component_id_model.py` |
-| `CreateUsageRequest` | `maxio_advanced_billing/models/create_usage_request.py` |
-| `CreateUsageRequestDict` | `maxio_advanced_billing/models/create_usage_request.py` |
-| `UsageResponse` | `maxio_advanced_billing/models/usage_response.py` |
-| `CreateUsageErrorBody` | `maxio_advanced_billing/errors/create_usage_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `SubscriptionIdOrReference` | `maxio/models/unions/subscription_id_or_reference.py` |
+| `SubscriptionIdOrReferenceDict` | `maxio/models/unions/subscription_id_or_reference.py` |
+| `ComponentIdModel` | `maxio/models/unions/component_id_model.py` |
+| `ComponentIdModelDict` | `maxio/models/unions/component_id_model.py` |
+| `CreateUsageRequest` | `maxio/models/create_usage_request.py` |
+| `CreateUsageRequestDict` | `maxio/models/create_usage_request.py` |
+| `UsageResponse` | `maxio/models/usage_response.py` |
+| `CreateUsageErrorBody` | `maxio/errors/create_usage_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.subscription_components.deactivate_event_based_component
 
@@ -161,10 +161,10 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CreditSchemeRequest` | `maxio_advanced_billing/models/credit_scheme_request.py` |
-| `CreditSchemeRequestDict` | `maxio_advanced_billing/models/credit_scheme_request.py` |
-| `DeletePrepaidUsageAllocationErrorBody` | `maxio_advanced_billing/errors/delete_prepaid_usage_allocation_error.py` |
-| `SubscriptionComponentAllocationError1` | `maxio_advanced_billing/models/subscription_component_allocation_error1.py` |
+| `CreditSchemeRequest` | `maxio/models/credit_scheme_request.py` |
+| `CreditSchemeRequestDict` | `maxio/models/credit_scheme_request.py` |
+| `DeletePrepaidUsageAllocationErrorBody` | `maxio/errors/delete_prepaid_usage_allocation_error.py` |
+| `SubscriptionComponentAllocationError1` | `maxio/models/subscription_component_allocation_error1.py` |
 
 ### client.subscription_components.list_allocations
 
@@ -180,9 +180,9 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `AllocationResponse` | `maxio_advanced_billing/models/allocation_response.py` |
-| `ListAllocationsErrorBody` | `maxio_advanced_billing/errors/list_allocations_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `AllocationResponse` | `maxio/models/allocation_response.py` |
+| `ListAllocationsErrorBody` | `maxio/errors/list_allocations_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.subscription_components.list_subscription_components
 
@@ -197,14 +197,14 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `SubscriptionListDateFieldOrStr` | `maxio_advanced_billing/models/enums/subscription_list_date_field.py` |
-| `SortingDirectionOrStr` | `maxio_advanced_billing/models/enums/sorting_direction.py` |
-| `ListSubscriptionComponentsFilter` | `maxio_advanced_billing/models/list_subscription_components_filter.py` |
-| `ListSubscriptionComponentsFilterDict` | `maxio_advanced_billing/models/list_subscription_components_filter.py` |
-| `IncludeNotNullOrStr` | `maxio_advanced_billing/models/enums/include_not_null.py` |
-| `ListSubscriptionComponentsSortOrStr` | `maxio_advanced_billing/models/enums/list_subscription_components_sort.py` |
-| `ListSubscriptionComponentsIncludeOrStr` | `maxio_advanced_billing/models/enums/list_subscription_components_include.py` |
-| `SubscriptionComponentResponse` | `maxio_advanced_billing/models/subscription_component_response.py` |
+| `SubscriptionListDateFieldOrStr` | `maxio/models/enums/subscription_list_date_field.py` |
+| `SortingDirectionOrStr` | `maxio/models/enums/sorting_direction.py` |
+| `ListSubscriptionComponentsFilter` | `maxio/models/list_subscription_components_filter.py` |
+| `ListSubscriptionComponentsFilterDict` | `maxio/models/list_subscription_components_filter.py` |
+| `IncludeNotNullOrStr` | `maxio/models/enums/include_not_null.py` |
+| `ListSubscriptionComponentsSortOrStr` | `maxio/models/enums/list_subscription_components_sort.py` |
+| `ListSubscriptionComponentsIncludeOrStr` | `maxio/models/enums/list_subscription_components_include.py` |
+| `SubscriptionComponentResponse` | `maxio/models/subscription_component_response.py` |
 
 ### client.subscription_components.list_subscription_components_for_site
 
@@ -218,14 +218,14 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ListSubscriptionComponentsSortOrStr` | `maxio_advanced_billing/models/enums/list_subscription_components_sort.py` |
-| `SortingDirectionOrStr` | `maxio_advanced_billing/models/enums/sorting_direction.py` |
-| `ListSubscriptionComponentsForSiteFilter` | `maxio_advanced_billing/models/list_subscription_components_for_site_filter.py` |
-| `ListSubscriptionComponentsForSiteFilterDict` | `maxio_advanced_billing/models/list_subscription_components_for_site_filter.py` |
-| `SubscriptionListDateFieldOrStr` | `maxio_advanced_billing/models/enums/subscription_list_date_field.py` |
-| `IncludeNotNullOrStr` | `maxio_advanced_billing/models/enums/include_not_null.py` |
-| `ListSubscriptionComponentsIncludeOrStr` | `maxio_advanced_billing/models/enums/list_subscription_components_include.py` |
-| `ListSubscriptionComponentsResponse` | `maxio_advanced_billing/models/list_subscription_components_response.py` |
+| `ListSubscriptionComponentsSortOrStr` | `maxio/models/enums/list_subscription_components_sort.py` |
+| `SortingDirectionOrStr` | `maxio/models/enums/sorting_direction.py` |
+| `ListSubscriptionComponentsForSiteFilter` | `maxio/models/list_subscription_components_for_site_filter.py` |
+| `ListSubscriptionComponentsForSiteFilterDict` | `maxio/models/list_subscription_components_for_site_filter.py` |
+| `SubscriptionListDateFieldOrStr` | `maxio/models/enums/subscription_list_date_field.py` |
+| `IncludeNotNullOrStr` | `maxio/models/enums/include_not_null.py` |
+| `ListSubscriptionComponentsIncludeOrStr` | `maxio/models/enums/list_subscription_components_include.py` |
+| `ListSubscriptionComponentsResponse` | `maxio/models/list_subscription_components_response.py` |
 
 ### client.subscription_components.list_usages
 
@@ -240,11 +240,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `SubscriptionIdOrReference` | `maxio_advanced_billing/models/unions/subscription_id_or_reference.py` |
-| `SubscriptionIdOrReferenceDict` | `maxio_advanced_billing/models/unions/subscription_id_or_reference.py` |
-| `ComponentIdModel` | `maxio_advanced_billing/models/unions/component_id_model.py` |
-| `ComponentIdModelDict` | `maxio_advanced_billing/models/unions/component_id_model.py` |
-| `UsageResponse` | `maxio_advanced_billing/models/usage_response.py` |
+| `SubscriptionIdOrReference` | `maxio/models/unions/subscription_id_or_reference.py` |
+| `SubscriptionIdOrReferenceDict` | `maxio/models/unions/subscription_id_or_reference.py` |
+| `ComponentIdModel` | `maxio/models/unions/component_id_model.py` |
+| `ComponentIdModelDict` | `maxio/models/unions/component_id_model.py` |
+| `UsageResponse` | `maxio/models/usage_response.py` |
 
 ### client.subscription_components.preview_allocations
 
@@ -260,11 +260,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `PreviewAllocationsRequest` | `maxio_advanced_billing/models/preview_allocations_request.py` |
-| `PreviewAllocationsRequestDict` | `maxio_advanced_billing/models/preview_allocations_request.py` |
-| `AllocationPreviewResponse` | `maxio_advanced_billing/models/allocation_preview_response.py` |
-| `PreviewAllocationsErrorBody` | `maxio_advanced_billing/errors/preview_allocations_error.py` |
-| `ComponentAllocationError1` | `maxio_advanced_billing/models/component_allocation_error1.py` |
+| `PreviewAllocationsRequest` | `maxio/models/preview_allocations_request.py` |
+| `PreviewAllocationsRequestDict` | `maxio/models/preview_allocations_request.py` |
+| `AllocationPreviewResponse` | `maxio/models/allocation_preview_response.py` |
+| `PreviewAllocationsErrorBody` | `maxio/errors/preview_allocations_error.py` |
+| `ComponentAllocationError1` | `maxio/models/component_allocation_error1.py` |
 
 ### client.subscription_components.read_subscription_component
 
@@ -280,8 +280,8 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `SubscriptionComponentResponse` | `maxio_advanced_billing/models/subscription_component_response.py` |
-| `ReadSubscriptionComponentErrorBody` | `maxio_advanced_billing/errors/read_subscription_component_error.py` |
+| `SubscriptionComponentResponse` | `maxio/models/subscription_component_response.py` |
+| `ReadSubscriptionComponentErrorBody` | `maxio/errors/read_subscription_component_error.py` |
 
 ### client.subscription_components.record_event
 
@@ -296,8 +296,8 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `EbbEvent` | `maxio_advanced_billing/models/ebb_event.py` |
-| `EbbEventDict` | `maxio_advanced_billing/models/ebb_event.py` |
+| `EbbEvent` | `maxio/models/ebb_event.py` |
+| `EbbEventDict` | `maxio/models/ebb_event.py` |
 
 ### client.subscription_components.update_prepaid_usage_allocation_expiration_date
 
@@ -313,8 +313,8 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `UpdateAllocationExpirationDate` | `maxio_advanced_billing/models/update_allocation_expiration_date.py` |
-| `UpdateAllocationExpirationDateDict` | `maxio_advanced_billing/models/update_allocation_expiration_date.py` |
-| `UpdatePrepaidUsageAllocationExpirationDateErrorBody` | `maxio_advanced_billing/errors/update_prepaid_usage_allocation_expiration_date_error.py` |
-| `SubscriptionComponentAllocationError1` | `maxio_advanced_billing/models/subscription_component_allocation_error1.py` |
+| `UpdateAllocationExpirationDate` | `maxio/models/update_allocation_expiration_date.py` |
+| `UpdateAllocationExpirationDateDict` | `maxio/models/update_allocation_expiration_date.py` |
+| `UpdatePrepaidUsageAllocationExpirationDateErrorBody` | `maxio/errors/update_prepaid_usage_allocation_expiration_date_error.py` |
+| `SubscriptionComponentAllocationError1` | `maxio/models/subscription_component_allocation_error1.py` |
 

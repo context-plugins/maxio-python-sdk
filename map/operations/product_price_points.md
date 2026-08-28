@@ -2,7 +2,7 @@
 
 # ProductPricePoints — operations
 
-Accessor: `client.product_price_points` · Source: `maxio_advanced_billing/apis/product_price_points.py` · 11 operations
+Accessor: `client.product_price_points` · Source: `maxio/apis/product_price_points.py` · 11 operations
 
 Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omit what its invariants table covers and are otherwise self-contained, so chunk at block level. Signatures are the sync parsed spelling; the async and raw spellings take the same parameters (see sdk-map.md). **Type sources** names the module declaring each type an operation mentions, so resolving a body, return or error payload is a lookup rather than a search; the runtime types `RawError` and `ApiResult` are excluded.
 
@@ -20,13 +20,13 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ProductIdModel` | `maxio_advanced_billing/models/unions/product_id_model.py` |
-| `ProductIdModelDict` | `maxio_advanced_billing/models/unions/product_id_model.py` |
-| `PricePointIdModel` | `maxio_advanced_billing/models/unions/price_point_id_model.py` |
-| `PricePointIdModelDict` | `maxio_advanced_billing/models/unions/price_point_id_model.py` |
-| `ProductPricePointResponse` | `maxio_advanced_billing/models/product_price_point_response.py` |
-| `ArchiveProductPricePointErrorBody` | `maxio_advanced_billing/errors/archive_product_price_point_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `ProductIdModel` | `maxio/models/unions/product_id_model.py` |
+| `ProductIdModelDict` | `maxio/models/unions/product_id_model.py` |
+| `PricePointIdModel` | `maxio/models/unions/price_point_id_model.py` |
+| `PricePointIdModelDict` | `maxio/models/unions/price_point_id_model.py` |
+| `ProductPricePointResponse` | `maxio/models/product_price_point_response.py` |
+| `ArchiveProductPricePointErrorBody` | `maxio/errors/archive_product_price_point_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.product_price_points.bulk_create_product_price_points
 
@@ -42,10 +42,10 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `BulkCreateProductPricePointsRequest` | `maxio_advanced_billing/models/bulk_create_product_price_points_request.py` |
-| `BulkCreateProductPricePointsRequestDict` | `maxio_advanced_billing/models/bulk_create_product_price_points_request.py` |
-| `BulkCreateProductPricePointsResponse` | `maxio_advanced_billing/models/bulk_create_product_price_points_response.py` |
-| `BulkCreateProductPricePointsErrorBody` | `maxio_advanced_billing/errors/bulk_create_product_price_points_error.py` |
+| `BulkCreateProductPricePointsRequest` | `maxio/models/bulk_create_product_price_points_request.py` |
+| `BulkCreateProductPricePointsRequestDict` | `maxio/models/bulk_create_product_price_points_request.py` |
+| `BulkCreateProductPricePointsResponse` | `maxio/models/bulk_create_product_price_points_response.py` |
+| `BulkCreateProductPricePointsErrorBody` | `maxio/errors/bulk_create_product_price_points_error.py` |
 
 ### client.product_price_points.create_product_currency_prices
 
@@ -61,11 +61,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CreateProductCurrencyPricesRequest` | `maxio_advanced_billing/models/create_product_currency_prices_request.py` |
-| `CreateProductCurrencyPricesRequestDict` | `maxio_advanced_billing/models/create_product_currency_prices_request.py` |
-| `CurrencyPricesResponse` | `maxio_advanced_billing/models/currency_prices_response.py` |
-| `CreateProductCurrencyPricesErrorBody` | `maxio_advanced_billing/errors/create_product_currency_prices_error.py` |
-| `ErrorArrayMapResponse1` | `maxio_advanced_billing/models/error_array_map_response1.py` |
+| `CreateProductCurrencyPricesRequest` | `maxio/models/create_product_currency_prices_request.py` |
+| `CreateProductCurrencyPricesRequestDict` | `maxio/models/create_product_currency_prices_request.py` |
+| `CurrencyPricesResponse` | `maxio/models/currency_prices_response.py` |
+| `CreateProductCurrencyPricesErrorBody` | `maxio/errors/create_product_currency_prices_error.py` |
+| `ErrorArrayMapResponse1` | `maxio/models/error_array_map_response1.py` |
 
 ### client.product_price_points.create_product_price_point
 
@@ -81,13 +81,13 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ProductIdModel` | `maxio_advanced_billing/models/unions/product_id_model.py` |
-| `ProductIdModelDict` | `maxio_advanced_billing/models/unions/product_id_model.py` |
-| `CreateProductPricePointRequest` | `maxio_advanced_billing/models/create_product_price_point_request.py` |
-| `CreateProductPricePointRequestDict` | `maxio_advanced_billing/models/create_product_price_point_request.py` |
-| `ProductPricePointResponse` | `maxio_advanced_billing/models/product_price_point_response.py` |
-| `CreateProductPricePointErrorBody` | `maxio_advanced_billing/errors/create_product_price_point_error.py` |
-| `ProductPricePointErrorResponse1` | `maxio_advanced_billing/models/product_price_point_error_response1.py` |
+| `ProductIdModel` | `maxio/models/unions/product_id_model.py` |
+| `ProductIdModelDict` | `maxio/models/unions/product_id_model.py` |
+| `CreateProductPricePointRequest` | `maxio/models/create_product_price_point_request.py` |
+| `CreateProductPricePointRequestDict` | `maxio/models/create_product_price_point_request.py` |
+| `ProductPricePointResponse` | `maxio/models/product_price_point_response.py` |
+| `CreateProductPricePointErrorBody` | `maxio/errors/create_product_price_point_error.py` |
+| `ProductPricePointErrorResponse1` | `maxio/models/product_price_point_error_response1.py` |
 
 ### client.product_price_points.list_all_product_price_points
 
@@ -102,13 +102,13 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `SortingDirectionOrStr` | `maxio_advanced_billing/models/enums/sorting_direction.py` |
-| `ListPricePointsFilter` | `maxio_advanced_billing/models/list_price_points_filter.py` |
-| `ListPricePointsFilterDict` | `maxio_advanced_billing/models/list_price_points_filter.py` |
-| `ListProductsPricePointsIncludeOrStr` | `maxio_advanced_billing/models/enums/list_products_price_points_include.py` |
-| `ListProductPricePointsResponse` | `maxio_advanced_billing/models/list_product_price_points_response.py` |
-| `ListAllProductPricePointsErrorBody` | `maxio_advanced_billing/errors/list_all_product_price_points_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `SortingDirectionOrStr` | `maxio/models/enums/sorting_direction.py` |
+| `ListPricePointsFilter` | `maxio/models/list_price_points_filter.py` |
+| `ListPricePointsFilterDict` | `maxio/models/list_price_points_filter.py` |
+| `ListProductsPricePointsIncludeOrStr` | `maxio/models/enums/list_products_price_points_include.py` |
+| `ListProductPricePointsResponse` | `maxio/models/list_product_price_points_response.py` |
+| `ListAllProductPricePointsErrorBody` | `maxio/errors/list_all_product_price_points_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.product_price_points.list_product_price_points
 
@@ -123,10 +123,10 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ProductIdModel` | `maxio_advanced_billing/models/unions/product_id_model.py` |
-| `ProductIdModelDict` | `maxio_advanced_billing/models/unions/product_id_model.py` |
-| `PricePointTypeOrStr` | `maxio_advanced_billing/models/enums/price_point_type.py` |
-| `ListProductPricePointsResponse` | `maxio_advanced_billing/models/list_product_price_points_response.py` |
+| `ProductIdModel` | `maxio/models/unions/product_id_model.py` |
+| `ProductIdModelDict` | `maxio/models/unions/product_id_model.py` |
+| `PricePointTypeOrStr` | `maxio/models/enums/price_point_type.py` |
+| `ListProductPricePointsResponse` | `maxio/models/list_product_price_points_response.py` |
 
 ### client.product_price_points.promote_product_price_point_to_default
 
@@ -141,7 +141,7 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ProductResponse` | `maxio_advanced_billing/models/product_response.py` |
+| `ProductResponse` | `maxio/models/product_response.py` |
 
 ### client.product_price_points.read_product_price_point
 
@@ -156,11 +156,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ProductIdModel` | `maxio_advanced_billing/models/unions/product_id_model.py` |
-| `ProductIdModelDict` | `maxio_advanced_billing/models/unions/product_id_model.py` |
-| `PricePointIdModel` | `maxio_advanced_billing/models/unions/price_point_id_model.py` |
-| `PricePointIdModelDict` | `maxio_advanced_billing/models/unions/price_point_id_model.py` |
-| `ProductPricePointResponse` | `maxio_advanced_billing/models/product_price_point_response.py` |
+| `ProductIdModel` | `maxio/models/unions/product_id_model.py` |
+| `ProductIdModelDict` | `maxio/models/unions/product_id_model.py` |
+| `PricePointIdModel` | `maxio/models/unions/price_point_id_model.py` |
+| `PricePointIdModelDict` | `maxio/models/unions/price_point_id_model.py` |
+| `ProductPricePointResponse` | `maxio/models/product_price_point_response.py` |
 
 ### client.product_price_points.unarchive_product_price_point
 
@@ -175,7 +175,7 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ProductPricePointResponse` | `maxio_advanced_billing/models/product_price_point_response.py` |
+| `ProductPricePointResponse` | `maxio/models/product_price_point_response.py` |
 
 ### client.product_price_points.update_product_currency_prices
 
@@ -191,11 +191,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `UpdateCurrencyPricesRequest` | `maxio_advanced_billing/models/update_currency_prices_request.py` |
-| `UpdateCurrencyPricesRequestDict` | `maxio_advanced_billing/models/update_currency_prices_request.py` |
-| `CurrencyPricesResponse` | `maxio_advanced_billing/models/currency_prices_response.py` |
-| `UpdateProductCurrencyPricesErrorBody` | `maxio_advanced_billing/errors/update_product_currency_prices_error.py` |
-| `ErrorArrayMapResponse1` | `maxio_advanced_billing/models/error_array_map_response1.py` |
+| `UpdateCurrencyPricesRequest` | `maxio/models/update_currency_prices_request.py` |
+| `UpdateCurrencyPricesRequestDict` | `maxio/models/update_currency_prices_request.py` |
+| `CurrencyPricesResponse` | `maxio/models/currency_prices_response.py` |
+| `UpdateProductCurrencyPricesErrorBody` | `maxio/errors/update_product_currency_prices_error.py` |
+| `ErrorArrayMapResponse1` | `maxio/models/error_array_map_response1.py` |
 
 ### client.product_price_points.update_product_price_point
 
@@ -210,11 +210,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ProductIdModel` | `maxio_advanced_billing/models/unions/product_id_model.py` |
-| `ProductIdModelDict` | `maxio_advanced_billing/models/unions/product_id_model.py` |
-| `PricePointIdModel` | `maxio_advanced_billing/models/unions/price_point_id_model.py` |
-| `PricePointIdModelDict` | `maxio_advanced_billing/models/unions/price_point_id_model.py` |
-| `UpdateProductPricePointRequest` | `maxio_advanced_billing/models/update_product_price_point_request.py` |
-| `UpdateProductPricePointRequestDict` | `maxio_advanced_billing/models/update_product_price_point_request.py` |
-| `ProductPricePointResponse` | `maxio_advanced_billing/models/product_price_point_response.py` |
+| `ProductIdModel` | `maxio/models/unions/product_id_model.py` |
+| `ProductIdModelDict` | `maxio/models/unions/product_id_model.py` |
+| `PricePointIdModel` | `maxio/models/unions/price_point_id_model.py` |
+| `PricePointIdModelDict` | `maxio/models/unions/price_point_id_model.py` |
+| `UpdateProductPricePointRequest` | `maxio/models/update_product_price_point_request.py` |
+| `UpdateProductPricePointRequestDict` | `maxio/models/update_product_price_point_request.py` |
+| `ProductPricePointResponse` | `maxio/models/product_price_point_response.py` |
 

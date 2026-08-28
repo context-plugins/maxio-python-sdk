@@ -2,7 +2,7 @@
 
 # AdvanceInvoice — operations
 
-Accessor: `client.advance_invoice` · Source: `maxio_advanced_billing/apis/advance_invoice.py` · 3 operations
+Accessor: `client.advance_invoice` · Source: `maxio/apis/advance_invoice.py` · 3 operations
 
 Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omit what its invariants table covers and are otherwise self-contained, so chunk at block level. Signatures are the sync parsed spelling; the async and raw spellings take the same parameters (see sdk-map.md). **Type sources** names the module declaring each type an operation mentions, so resolving a body, return or error payload is a lookup rather than a search; the runtime types `RawError` and `ApiResult` are excluded.
 
@@ -20,11 +20,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `IssueAdvanceInvoiceRequest` | `maxio_advanced_billing/models/issue_advance_invoice_request.py` |
-| `IssueAdvanceInvoiceRequestDict` | `maxio_advanced_billing/models/issue_advance_invoice_request.py` |
-| `Invoice` | `maxio_advanced_billing/models/invoice.py` |
-| `IssueAdvanceInvoiceErrorBody` | `maxio_advanced_billing/errors/issue_advance_invoice_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `IssueAdvanceInvoiceRequest` | `maxio/models/issue_advance_invoice_request.py` |
+| `IssueAdvanceInvoiceRequestDict` | `maxio/models/issue_advance_invoice_request.py` |
+| `Invoice` | `maxio/models/invoice.py` |
+| `IssueAdvanceInvoiceErrorBody` | `maxio/errors/issue_advance_invoice_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.advance_invoice.read_advance_invoice
 
@@ -40,8 +40,8 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `Invoice` | `maxio_advanced_billing/models/invoice.py` |
-| `ReadAdvanceInvoiceErrorBody` | `maxio_advanced_billing/errors/read_advance_invoice_error.py` |
+| `Invoice` | `maxio/models/invoice.py` |
+| `ReadAdvanceInvoiceErrorBody` | `maxio/errors/read_advance_invoice_error.py` |
 
 ### client.advance_invoice.void_advance_invoice
 
@@ -57,8 +57,8 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `VoidInvoiceRequest` | `maxio_advanced_billing/models/void_invoice_request.py` |
-| `VoidInvoiceRequestDict` | `maxio_advanced_billing/models/void_invoice_request.py` |
-| `Invoice` | `maxio_advanced_billing/models/invoice.py` |
-| `VoidAdvanceInvoiceErrorBody` | `maxio_advanced_billing/errors/void_advance_invoice_error.py` |
+| `VoidInvoiceRequest` | `maxio/models/void_invoice_request.py` |
+| `VoidInvoiceRequestDict` | `maxio/models/void_invoice_request.py` |
+| `Invoice` | `maxio/models/invoice.py` |
+| `VoidAdvanceInvoiceErrorBody` | `maxio/errors/void_advance_invoice_error.py` |
 

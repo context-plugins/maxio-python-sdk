@@ -2,7 +2,7 @@
 
 # Coupons — operations
 
-Accessor: `client.coupons` · Source: `maxio_advanced_billing/apis/coupons.py` · 14 operations
+Accessor: `client.coupons` · Source: `maxio/apis/coupons.py` · 14 operations
 
 Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omit what its invariants table covers and are otherwise self-contained, so chunk at block level. Signatures are the sync parsed spelling; the async and raw spellings take the same parameters (see sdk-map.md). **Type sources** names the module declaring each type an operation mentions, so resolving a body, return or error payload is a lookup rather than a search; the runtime types `RawError` and `ApiResult` are excluded.
 
@@ -19,7 +19,7 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CouponResponse` | `maxio_advanced_billing/models/coupon_response.py` |
+| `CouponResponse` | `maxio/models/coupon_response.py` |
 
 ### client.coupons.create_coupon
 
@@ -35,11 +35,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CouponRequest` | `maxio_advanced_billing/models/coupon_request.py` |
-| `CouponRequestDict` | `maxio_advanced_billing/models/coupon_request.py` |
-| `CouponResponse` | `maxio_advanced_billing/models/coupon_response.py` |
-| `CreateCouponErrorBody` | `maxio_advanced_billing/errors/create_coupon_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `CouponRequest` | `maxio/models/coupon_request.py` |
+| `CouponRequestDict` | `maxio/models/coupon_request.py` |
+| `CouponResponse` | `maxio/models/coupon_response.py` |
+| `CreateCouponErrorBody` | `maxio/errors/create_coupon_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.coupons.create_coupon_subcodes
 
@@ -54,9 +54,9 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CouponSubcodes` | `maxio_advanced_billing/models/coupon_subcodes.py` |
-| `CouponSubcodesDict` | `maxio_advanced_billing/models/coupon_subcodes.py` |
-| `CouponSubcodesResponse` | `maxio_advanced_billing/models/coupon_subcodes_response.py` |
+| `CouponSubcodes` | `maxio/models/coupon_subcodes.py` |
+| `CouponSubcodesDict` | `maxio/models/coupon_subcodes.py` |
+| `CouponSubcodesResponse` | `maxio/models/coupon_subcodes_response.py` |
 
 ### client.coupons.create_or_update_coupon_currency_prices
 
@@ -72,11 +72,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CouponCurrencyRequest` | `maxio_advanced_billing/models/coupon_currency_request.py` |
-| `CouponCurrencyRequestDict` | `maxio_advanced_billing/models/coupon_currency_request.py` |
-| `CouponCurrencyResponse` | `maxio_advanced_billing/models/coupon_currency_response.py` |
-| `CreateOrUpdateCouponCurrencyPricesErrorBody` | `maxio_advanced_billing/errors/create_or_update_coupon_currency_prices_error.py` |
-| `ErrorStringMapResponse1` | `maxio_advanced_billing/models/error_string_map_response1.py` |
+| `CouponCurrencyRequest` | `maxio/models/coupon_currency_request.py` |
+| `CouponCurrencyRequestDict` | `maxio/models/coupon_currency_request.py` |
+| `CouponCurrencyResponse` | `maxio/models/coupon_currency_response.py` |
+| `CreateOrUpdateCouponCurrencyPricesErrorBody` | `maxio/errors/create_or_update_coupon_currency_prices_error.py` |
+| `ErrorStringMapResponse1` | `maxio/models/error_string_map_response1.py` |
 
 ### client.coupons.delete_coupon_subcode
 
@@ -92,7 +92,7 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `DeleteCouponSubcodeErrorBody` | `maxio_advanced_billing/errors/delete_coupon_subcode_error.py` |
+| `DeleteCouponSubcodeErrorBody` | `maxio/errors/delete_coupon_subcode_error.py` |
 
 ### client.coupons.find_coupon
 
@@ -106,7 +106,7 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CouponResponse` | `maxio_advanced_billing/models/coupon_response.py` |
+| `CouponResponse` | `maxio/models/coupon_response.py` |
 
 ### client.coupons.list_coupon_subcodes
 
@@ -121,7 +121,7 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CouponSubcodes` | `maxio_advanced_billing/models/coupon_subcodes.py` |
+| `CouponSubcodes` | `maxio/models/coupon_subcodes.py` |
 
 ### client.coupons.list_coupons
 
@@ -135,9 +135,9 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ListCouponsFilter` | `maxio_advanced_billing/models/list_coupons_filter.py` |
-| `ListCouponsFilterDict` | `maxio_advanced_billing/models/list_coupons_filter.py` |
-| `CouponResponse` | `maxio_advanced_billing/models/coupon_response.py` |
+| `ListCouponsFilter` | `maxio/models/list_coupons_filter.py` |
+| `ListCouponsFilterDict` | `maxio/models/list_coupons_filter.py` |
+| `CouponResponse` | `maxio/models/coupon_response.py` |
 
 ### client.coupons.list_coupons_for_product_family
 
@@ -152,9 +152,9 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ListCouponsFilter` | `maxio_advanced_billing/models/list_coupons_filter.py` |
-| `ListCouponsFilterDict` | `maxio_advanced_billing/models/list_coupons_filter.py` |
-| `CouponResponse` | `maxio_advanced_billing/models/coupon_response.py` |
+| `ListCouponsFilter` | `maxio/models/list_coupons_filter.py` |
+| `ListCouponsFilterDict` | `maxio/models/list_coupons_filter.py` |
+| `CouponResponse` | `maxio/models/coupon_response.py` |
 
 ### client.coupons.read_coupon
 
@@ -169,7 +169,7 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CouponResponse` | `maxio_advanced_billing/models/coupon_response.py` |
+| `CouponResponse` | `maxio/models/coupon_response.py` |
 
 ### client.coupons.read_coupon_usage
 
@@ -184,7 +184,7 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CouponUsage` | `maxio_advanced_billing/models/coupon_usage.py` |
+| `CouponUsage` | `maxio/models/coupon_usage.py` |
 
 ### client.coupons.update_coupon
 
@@ -200,11 +200,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CouponRequest` | `maxio_advanced_billing/models/coupon_request.py` |
-| `CouponRequestDict` | `maxio_advanced_billing/models/coupon_request.py` |
-| `CouponResponse` | `maxio_advanced_billing/models/coupon_response.py` |
-| `UpdateCouponErrorBody` | `maxio_advanced_billing/errors/update_coupon_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `CouponRequest` | `maxio/models/coupon_request.py` |
+| `CouponRequestDict` | `maxio/models/coupon_request.py` |
+| `CouponResponse` | `maxio/models/coupon_response.py` |
+| `UpdateCouponErrorBody` | `maxio/errors/update_coupon_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.coupons.update_coupon_subcodes
 
@@ -219,9 +219,9 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CouponSubcodes` | `maxio_advanced_billing/models/coupon_subcodes.py` |
-| `CouponSubcodesDict` | `maxio_advanced_billing/models/coupon_subcodes.py` |
-| `CouponSubcodesResponse` | `maxio_advanced_billing/models/coupon_subcodes_response.py` |
+| `CouponSubcodes` | `maxio/models/coupon_subcodes.py` |
+| `CouponSubcodesDict` | `maxio/models/coupon_subcodes.py` |
+| `CouponSubcodesResponse` | `maxio/models/coupon_subcodes_response.py` |
 
 ### client.coupons.validate_coupon
 
@@ -237,7 +237,7 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CouponResponse` | `maxio_advanced_billing/models/coupon_response.py` |
-| `ValidateCouponErrorBody` | `maxio_advanced_billing/errors/validate_coupon_error.py` |
-| `SingleStringErrorResponse1` | `maxio_advanced_billing/models/single_string_error_response1.py` |
+| `CouponResponse` | `maxio/models/coupon_response.py` |
+| `ValidateCouponErrorBody` | `maxio/errors/validate_coupon_error.py` |
+| `SingleStringErrorResponse1` | `maxio/models/single_string_error_response1.py` |
 

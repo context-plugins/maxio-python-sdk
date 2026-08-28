@@ -2,7 +2,7 @@
 
 # SubscriptionStatus — operations
 
-Accessor: `client.subscription_status` · Source: `maxio_advanced_billing/apis/subscription_status.py` · 10 operations
+Accessor: `client.subscription_status` · Source: `maxio/apis/subscription_status.py` · 10 operations
 
 Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omit what its invariants table covers and are otherwise self-contained, so chunk at block level. Signatures are the sync parsed spelling; the async and raw spellings take the same parameters (see sdk-map.md). **Type sources** names the module declaring each type an operation mentions, so resolving a body, return or error payload is a lookup rather than a search; the runtime types `RawError` and `ApiResult` are excluded.
 
@@ -20,8 +20,8 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `DelayedCancellationResponse` | `maxio_advanced_billing/models/delayed_cancellation_response.py` |
-| `CancelDelayedCancellationErrorBody` | `maxio_advanced_billing/errors/cancel_delayed_cancellation_error.py` |
+| `DelayedCancellationResponse` | `maxio/models/delayed_cancellation_response.py` |
+| `CancelDelayedCancellationErrorBody` | `maxio/errors/cancel_delayed_cancellation_error.py` |
 
 ### client.subscription_status.cancel_dunning
 
@@ -37,9 +37,9 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `SubscriptionResponse` | `maxio_advanced_billing/models/subscription_response.py` |
-| `CancelDunningErrorBody` | `maxio_advanced_billing/errors/cancel_dunning_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `SubscriptionResponse` | `maxio/models/subscription_response.py` |
+| `CancelDunningErrorBody` | `maxio/errors/cancel_dunning_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.subscription_status.cancel_subscription
 
@@ -55,11 +55,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CancellationRequest` | `maxio_advanced_billing/models/cancellation_request.py` |
-| `CancellationRequestDict` | `maxio_advanced_billing/models/cancellation_request.py` |
-| `SubscriptionResponse` | `maxio_advanced_billing/models/subscription_response.py` |
-| `CancelSubscriptionErrorBody` | `maxio_advanced_billing/errors/cancel_subscription_error.py` |
-| `CancelSubscriptionErrorResponse` | `maxio_advanced_billing/models/unions/cancel_subscription_error_response.py` |
+| `CancellationRequest` | `maxio/models/cancellation_request.py` |
+| `CancellationRequestDict` | `maxio/models/cancellation_request.py` |
+| `SubscriptionResponse` | `maxio/models/subscription_response.py` |
+| `CancelSubscriptionErrorBody` | `maxio/errors/cancel_subscription_error.py` |
+| `CancelSubscriptionErrorResponse` | `maxio/models/unions/cancel_subscription_error_response.py` |
 
 ### client.subscription_status.initiate_delayed_cancellation
 
@@ -75,11 +75,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CancellationRequest` | `maxio_advanced_billing/models/cancellation_request.py` |
-| `CancellationRequestDict` | `maxio_advanced_billing/models/cancellation_request.py` |
-| `DelayedCancellationResponse` | `maxio_advanced_billing/models/delayed_cancellation_response.py` |
-| `InitiateDelayedCancellationErrorBody` | `maxio_advanced_billing/errors/initiate_delayed_cancellation_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `CancellationRequest` | `maxio/models/cancellation_request.py` |
+| `CancellationRequestDict` | `maxio/models/cancellation_request.py` |
+| `DelayedCancellationResponse` | `maxio/models/delayed_cancellation_response.py` |
+| `InitiateDelayedCancellationErrorBody` | `maxio/errors/initiate_delayed_cancellation_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.subscription_status.pause_subscription
 
@@ -95,11 +95,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `PauseRequest` | `maxio_advanced_billing/models/pause_request.py` |
-| `PauseRequestDict` | `maxio_advanced_billing/models/pause_request.py` |
-| `SubscriptionResponse` | `maxio_advanced_billing/models/subscription_response.py` |
-| `PauseSubscriptionErrorBody` | `maxio_advanced_billing/errors/pause_subscription_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `PauseRequest` | `maxio/models/pause_request.py` |
+| `PauseRequestDict` | `maxio/models/pause_request.py` |
+| `SubscriptionResponse` | `maxio/models/subscription_response.py` |
+| `PauseSubscriptionErrorBody` | `maxio/errors/pause_subscription_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.subscription_status.preview_renewal
 
@@ -115,11 +115,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `RenewalPreviewRequest` | `maxio_advanced_billing/models/renewal_preview_request.py` |
-| `RenewalPreviewRequestDict` | `maxio_advanced_billing/models/renewal_preview_request.py` |
-| `RenewalPreviewResponse` | `maxio_advanced_billing/models/renewal_preview_response.py` |
-| `PreviewRenewalErrorBody` | `maxio_advanced_billing/errors/preview_renewal_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `RenewalPreviewRequest` | `maxio/models/renewal_preview_request.py` |
+| `RenewalPreviewRequestDict` | `maxio/models/renewal_preview_request.py` |
+| `RenewalPreviewResponse` | `maxio/models/renewal_preview_response.py` |
+| `PreviewRenewalErrorBody` | `maxio/errors/preview_renewal_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.subscription_status.reactivate_subscription
 
@@ -135,11 +135,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ReactivateSubscriptionRequest` | `maxio_advanced_billing/models/reactivate_subscription_request.py` |
-| `ReactivateSubscriptionRequestDict` | `maxio_advanced_billing/models/reactivate_subscription_request.py` |
-| `SubscriptionResponse` | `maxio_advanced_billing/models/subscription_response.py` |
-| `ReactivateSubscriptionErrorBody` | `maxio_advanced_billing/errors/reactivate_subscription_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `ReactivateSubscriptionRequest` | `maxio/models/reactivate_subscription_request.py` |
+| `ReactivateSubscriptionRequestDict` | `maxio/models/reactivate_subscription_request.py` |
+| `SubscriptionResponse` | `maxio/models/subscription_response.py` |
+| `ReactivateSubscriptionErrorBody` | `maxio/errors/reactivate_subscription_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.subscription_status.resume_subscription
 
@@ -155,10 +155,10 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ResumptionChargeOrStr` | `maxio_advanced_billing/models/enums/resumption_charge.py` |
-| `SubscriptionResponse` | `maxio_advanced_billing/models/subscription_response.py` |
-| `ResumeSubscriptionErrorBody` | `maxio_advanced_billing/errors/resume_subscription_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `ResumptionChargeOrStr` | `maxio/models/enums/resumption_charge.py` |
+| `SubscriptionResponse` | `maxio/models/subscription_response.py` |
+| `ResumeSubscriptionErrorBody` | `maxio/errors/resume_subscription_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.subscription_status.retry_subscription
 
@@ -174,9 +174,9 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `SubscriptionResponse` | `maxio_advanced_billing/models/subscription_response.py` |
-| `RetrySubscriptionErrorBody` | `maxio_advanced_billing/errors/retry_subscription_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `SubscriptionResponse` | `maxio/models/subscription_response.py` |
+| `RetrySubscriptionErrorBody` | `maxio/errors/retry_subscription_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.subscription_status.update_automatic_subscription_resumption
 
@@ -192,9 +192,9 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `PauseRequest` | `maxio_advanced_billing/models/pause_request.py` |
-| `PauseRequestDict` | `maxio_advanced_billing/models/pause_request.py` |
-| `SubscriptionResponse` | `maxio_advanced_billing/models/subscription_response.py` |
-| `UpdateAutomaticSubscriptionResumptionErrorBody` | `maxio_advanced_billing/errors/update_automatic_subscription_resumption_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `PauseRequest` | `maxio/models/pause_request.py` |
+| `PauseRequestDict` | `maxio/models/pause_request.py` |
+| `SubscriptionResponse` | `maxio/models/subscription_response.py` |
+| `UpdateAutomaticSubscriptionResumptionErrorBody` | `maxio/errors/update_automatic_subscription_resumption_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 

@@ -2,7 +2,7 @@
 
 # Invoices — operations
 
-Accessor: `client.invoices` · Source: `maxio_advanced_billing/apis/invoices.py` · 19 operations
+Accessor: `client.invoices` · Source: `maxio/apis/invoices.py` · 19 operations
 
 Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omit what its invariants table covers and are otherwise self-contained, so chunk at block level. Signatures are the sync parsed spelling; the async and raw spellings take the same parameters (see sdk-map.md). **Type sources** names the module declaring each type an operation mentions, so resolving a body, return or error payload is a lookup rather than a search; the runtime types `RawError` and `ApiResult` are excluded.
 
@@ -20,11 +20,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CreateInvoiceRequest` | `maxio_advanced_billing/models/create_invoice_request.py` |
-| `CreateInvoiceRequestDict` | `maxio_advanced_billing/models/create_invoice_request.py` |
-| `InvoiceResponse` | `maxio_advanced_billing/models/invoice_response.py` |
-| `CreateInvoiceErrorBody` | `maxio_advanced_billing/errors/create_invoice_error.py` |
-| `ErrorArrayMapResponse1` | `maxio_advanced_billing/models/error_array_map_response1.py` |
+| `CreateInvoiceRequest` | `maxio/models/create_invoice_request.py` |
+| `CreateInvoiceRequestDict` | `maxio/models/create_invoice_request.py` |
+| `InvoiceResponse` | `maxio/models/invoice_response.py` |
+| `CreateInvoiceErrorBody` | `maxio/errors/create_invoice_error.py` |
+| `ErrorArrayMapResponse1` | `maxio/models/error_array_map_response1.py` |
 
 ### client.invoices.delete_invoice
 
@@ -40,8 +40,8 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `DeleteInvoiceErrorBody` | `maxio_advanced_billing/errors/delete_invoice_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `DeleteInvoiceErrorBody` | `maxio/errors/delete_invoice_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.invoices.issue_invoice
 
@@ -57,11 +57,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `IssueInvoiceRequest` | `maxio_advanced_billing/models/issue_invoice_request.py` |
-| `IssueInvoiceRequestDict` | `maxio_advanced_billing/models/issue_invoice_request.py` |
-| `Invoice` | `maxio_advanced_billing/models/invoice.py` |
-| `IssueInvoiceErrorBody` | `maxio_advanced_billing/errors/issue_invoice_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `IssueInvoiceRequest` | `maxio/models/issue_invoice_request.py` |
+| `IssueInvoiceRequestDict` | `maxio/models/issue_invoice_request.py` |
+| `Invoice` | `maxio/models/invoice.py` |
+| `IssueInvoiceErrorBody` | `maxio/errors/issue_invoice_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.invoices.list_consolidated_invoice_segments
 
@@ -76,8 +76,8 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `DirectionOrStr` | `maxio_advanced_billing/models/enums/direction.py` |
-| `ConsolidatedInvoice` | `maxio_advanced_billing/models/consolidated_invoice.py` |
+| `DirectionOrStr` | `maxio/models/enums/direction.py` |
+| `ConsolidatedInvoice` | `maxio/models/consolidated_invoice.py` |
 
 ### client.invoices.list_credit_notes
 
@@ -91,7 +91,7 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ListCreditNotesResponse` | `maxio_advanced_billing/models/list_credit_notes_response.py` |
+| `ListCreditNotesResponse` | `maxio/models/list_credit_notes_response.py` |
 
 ### client.invoices.list_invoice_events
 
@@ -105,8 +105,8 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `InvoiceEventTypeOrStr` | `maxio_advanced_billing/models/enums/invoice_event_type.py` |
-| `ListInvoiceEventsResponse` | `maxio_advanced_billing/models/list_invoice_events_response.py` |
+| `InvoiceEventTypeOrStr` | `maxio/models/enums/invoice_event_type.py` |
+| `ListInvoiceEventsResponse` | `maxio/models/list_invoice_events_response.py` |
 
 ### client.invoices.list_invoices
 
@@ -120,11 +120,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `InvoiceStatusOrStr` | `maxio_advanced_billing/models/enums/invoice_status.py` |
-| `DirectionOrStr` | `maxio_advanced_billing/models/enums/direction.py` |
-| `InvoiceDateFieldOrStr` | `maxio_advanced_billing/models/enums/invoice_date_field.py` |
-| `InvoiceSortFieldOrStr` | `maxio_advanced_billing/models/enums/invoice_sort_field.py` |
-| `ListInvoicesResponse` | `maxio_advanced_billing/models/list_invoices_response.py` |
+| `InvoiceStatusOrStr` | `maxio/models/enums/invoice_status.py` |
+| `DirectionOrStr` | `maxio/models/enums/direction.py` |
+| `InvoiceDateFieldOrStr` | `maxio/models/enums/invoice_date_field.py` |
+| `InvoiceSortFieldOrStr` | `maxio/models/enums/invoice_sort_field.py` |
+| `ListInvoicesResponse` | `maxio/models/list_invoices_response.py` |
 
 ### client.invoices.preview_customer_information_changes
 
@@ -140,9 +140,9 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CustomerChangesPreviewResponse` | `maxio_advanced_billing/models/customer_changes_preview_response.py` |
-| `PreviewCustomerInformationChangesErrorBody` | `maxio_advanced_billing/errors/preview_customer_information_changes_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `CustomerChangesPreviewResponse` | `maxio/models/customer_changes_preview_response.py` |
+| `PreviewCustomerInformationChangesErrorBody` | `maxio/errors/preview_customer_information_changes_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.invoices.read_credit_note
 
@@ -157,7 +157,7 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CreditNote` | `maxio_advanced_billing/models/credit_note.py` |
+| `CreditNote` | `maxio/models/credit_note.py` |
 
 ### client.invoices.read_invoice
 
@@ -172,7 +172,7 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `Invoice` | `maxio_advanced_billing/models/invoice.py` |
+| `Invoice` | `maxio/models/invoice.py` |
 
 ### client.invoices.record_payment_for_invoice
 
@@ -188,11 +188,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CreateInvoicePaymentRequest` | `maxio_advanced_billing/models/create_invoice_payment_request.py` |
-| `CreateInvoicePaymentRequestDict` | `maxio_advanced_billing/models/create_invoice_payment_request.py` |
-| `Invoice` | `maxio_advanced_billing/models/invoice.py` |
-| `RecordPaymentForInvoiceErrorBody` | `maxio_advanced_billing/errors/record_payment_for_invoice_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `CreateInvoicePaymentRequest` | `maxio/models/create_invoice_payment_request.py` |
+| `CreateInvoicePaymentRequestDict` | `maxio/models/create_invoice_payment_request.py` |
+| `Invoice` | `maxio/models/invoice.py` |
+| `RecordPaymentForInvoiceErrorBody` | `maxio/errors/record_payment_for_invoice_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.invoices.record_payment_for_multiple_invoices
 
@@ -207,11 +207,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CreateMultiInvoicePaymentRequest` | `maxio_advanced_billing/models/create_multi_invoice_payment_request.py` |
-| `CreateMultiInvoicePaymentRequestDict` | `maxio_advanced_billing/models/create_multi_invoice_payment_request.py` |
-| `MultiInvoicePaymentResponse` | `maxio_advanced_billing/models/multi_invoice_payment_response.py` |
-| `RecordPaymentForMultipleInvoicesErrorBody` | `maxio_advanced_billing/errors/record_payment_for_multiple_invoices_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `CreateMultiInvoicePaymentRequest` | `maxio/models/create_multi_invoice_payment_request.py` |
+| `CreateMultiInvoicePaymentRequestDict` | `maxio/models/create_multi_invoice_payment_request.py` |
+| `MultiInvoicePaymentResponse` | `maxio/models/multi_invoice_payment_response.py` |
+| `RecordPaymentForMultipleInvoicesErrorBody` | `maxio/errors/record_payment_for_multiple_invoices_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.invoices.record_payment_for_subscription
 
@@ -227,11 +227,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `RecordPaymentRequest` | `maxio_advanced_billing/models/record_payment_request.py` |
-| `RecordPaymentRequestDict` | `maxio_advanced_billing/models/record_payment_request.py` |
-| `RecordPaymentResponse` | `maxio_advanced_billing/models/record_payment_response.py` |
-| `RecordPaymentForSubscriptionErrorBody` | `maxio_advanced_billing/errors/record_payment_for_subscription_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `RecordPaymentRequest` | `maxio/models/record_payment_request.py` |
+| `RecordPaymentRequestDict` | `maxio/models/record_payment_request.py` |
+| `RecordPaymentResponse` | `maxio/models/record_payment_response.py` |
+| `RecordPaymentForSubscriptionErrorBody` | `maxio/errors/record_payment_for_subscription_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.invoices.refund_invoice
 
@@ -247,11 +247,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `RefundInvoiceRequest` | `maxio_advanced_billing/models/refund_invoice_request.py` |
-| `RefundInvoiceRequestDict` | `maxio_advanced_billing/models/refund_invoice_request.py` |
-| `Invoice` | `maxio_advanced_billing/models/invoice.py` |
-| `RefundInvoiceErrorBody` | `maxio_advanced_billing/errors/refund_invoice_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `RefundInvoiceRequest` | `maxio/models/refund_invoice_request.py` |
+| `RefundInvoiceRequestDict` | `maxio/models/refund_invoice_request.py` |
+| `Invoice` | `maxio/models/invoice.py` |
+| `RefundInvoiceErrorBody` | `maxio/errors/refund_invoice_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.invoices.reopen_invoice
 
@@ -267,9 +267,9 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `Invoice` | `maxio_advanced_billing/models/invoice.py` |
-| `ReopenInvoiceErrorBody` | `maxio_advanced_billing/errors/reopen_invoice_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `Invoice` | `maxio/models/invoice.py` |
+| `ReopenInvoiceErrorBody` | `maxio/errors/reopen_invoice_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.invoices.send_invoice
 
@@ -285,10 +285,10 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `SendInvoiceRequest` | `maxio_advanced_billing/models/send_invoice_request.py` |
-| `SendInvoiceRequestDict` | `maxio_advanced_billing/models/send_invoice_request.py` |
-| `SendInvoiceErrorBody` | `maxio_advanced_billing/errors/send_invoice_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `SendInvoiceRequest` | `maxio/models/send_invoice_request.py` |
+| `SendInvoiceRequestDict` | `maxio/models/send_invoice_request.py` |
+| `SendInvoiceErrorBody` | `maxio/errors/send_invoice_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.invoices.update_customer_information
 
@@ -304,9 +304,9 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `Invoice` | `maxio_advanced_billing/models/invoice.py` |
-| `UpdateCustomerInformationErrorBody` | `maxio_advanced_billing/errors/update_customer_information_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `Invoice` | `maxio/models/invoice.py` |
+| `UpdateCustomerInformationErrorBody` | `maxio/errors/update_customer_information_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.invoices.update_invoice
 
@@ -322,12 +322,12 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `UpdateInvoiceRequest` | `maxio_advanced_billing/models/update_invoice_request.py` |
-| `UpdateInvoiceRequestDict` | `maxio_advanced_billing/models/update_invoice_request.py` |
-| `InvoiceResponse` | `maxio_advanced_billing/models/invoice_response.py` |
-| `UpdateInvoiceErrorBody` | `maxio_advanced_billing/errors/update_invoice_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
-| `ErrorArrayMapResponse1` | `maxio_advanced_billing/models/error_array_map_response1.py` |
+| `UpdateInvoiceRequest` | `maxio/models/update_invoice_request.py` |
+| `UpdateInvoiceRequestDict` | `maxio/models/update_invoice_request.py` |
+| `InvoiceResponse` | `maxio/models/invoice_response.py` |
+| `UpdateInvoiceErrorBody` | `maxio/errors/update_invoice_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
+| `ErrorArrayMapResponse1` | `maxio/models/error_array_map_response1.py` |
 
 ### client.invoices.void_invoice
 
@@ -343,9 +343,9 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `VoidInvoiceRequest` | `maxio_advanced_billing/models/void_invoice_request.py` |
-| `VoidInvoiceRequestDict` | `maxio_advanced_billing/models/void_invoice_request.py` |
-| `Invoice` | `maxio_advanced_billing/models/invoice.py` |
-| `VoidInvoiceErrorBody` | `maxio_advanced_billing/errors/void_invoice_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `VoidInvoiceRequest` | `maxio/models/void_invoice_request.py` |
+| `VoidInvoiceRequestDict` | `maxio/models/void_invoice_request.py` |
+| `Invoice` | `maxio/models/invoice.py` |
+| `VoidInvoiceErrorBody` | `maxio/errors/void_invoice_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 

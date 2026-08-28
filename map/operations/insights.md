@@ -2,7 +2,7 @@
 
 # Insights — operations
 
-Accessor: `client.insights` · Source: `maxio_advanced_billing/apis/insights.py` · 4 operations
+Accessor: `client.insights` · Source: `maxio/apis/insights.py` · 4 operations
 
 Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omit what its invariants table covers and are otherwise self-contained, so chunk at block level. Signatures are the sync parsed spelling; the async and raw spellings take the same parameters (see sdk-map.md). **Type sources** names the module declaring each type an operation mentions, so resolving a body, return or error payload is a lookup rather than a search; the runtime types `RawError` and `ApiResult` are excluded.
 
@@ -18,8 +18,8 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `SortingDirectionOrStr` | `maxio_advanced_billing/models/enums/sorting_direction.py` |
-| `ListMrrResponse` | `maxio_advanced_billing/models/list_mrr_response.py` |
+| `SortingDirectionOrStr` | `maxio/models/enums/sorting_direction.py` |
+| `ListMrrResponse` | `maxio/models/list_mrr_response.py` |
 
 ### client.insights.list_mrr_per_subscription
 
@@ -34,12 +34,12 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ListMrrFilter` | `maxio_advanced_billing/models/list_mrr_filter.py` |
-| `ListMrrFilterDict` | `maxio_advanced_billing/models/list_mrr_filter.py` |
-| `DirectionOrStr` | `maxio_advanced_billing/models/enums/direction.py` |
-| `SubscriptionMrrResponse` | `maxio_advanced_billing/models/subscription_mrr_response.py` |
-| `ListMrrPerSubscriptionErrorBody` | `maxio_advanced_billing/errors/list_mrr_per_subscription_error.py` |
-| `SubscriptionsMrrErrorResponse1` | `maxio_advanced_billing/models/subscriptions_mrr_error_response1.py` |
+| `ListMrrFilter` | `maxio/models/list_mrr_filter.py` |
+| `ListMrrFilterDict` | `maxio/models/list_mrr_filter.py` |
+| `DirectionOrStr` | `maxio/models/enums/direction.py` |
+| `SubscriptionMrrResponse` | `maxio/models/subscription_mrr_response.py` |
+| `ListMrrPerSubscriptionErrorBody` | `maxio/errors/list_mrr_per_subscription_error.py` |
+| `SubscriptionsMrrErrorResponse1` | `maxio/models/subscriptions_mrr_error_response1.py` |
 
 ### client.insights.read_mrr
 
@@ -53,7 +53,7 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `MrrResponse` | `maxio_advanced_billing/models/mrr_response.py` |
+| `MrrResponse` | `maxio/models/mrr_response.py` |
 
 ### client.insights.read_site_stats
 
@@ -66,5 +66,5 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `SiteSummary` | `maxio_advanced_billing/models/site_summary.py` |
+| `SiteSummary` | `maxio/models/site_summary.py` |
 

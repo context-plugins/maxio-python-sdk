@@ -2,7 +2,7 @@
 
 # SubscriptionNotes — operations
 
-Accessor: `client.subscription_notes` · Source: `maxio_advanced_billing/apis/subscription_notes.py` · 5 operations
+Accessor: `client.subscription_notes` · Source: `maxio/apis/subscription_notes.py` · 5 operations
 
 Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omit what its invariants table covers and are otherwise self-contained, so chunk at block level. Signatures are the sync parsed spelling; the async and raw spellings take the same parameters (see sdk-map.md). **Type sources** names the module declaring each type an operation mentions, so resolving a body, return or error payload is a lookup rather than a search; the runtime types `RawError` and `ApiResult` are excluded, and an operation with no table mentions nothing but builtins and those.
 
@@ -20,11 +20,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `UpdateSubscriptionNoteRequest` | `maxio_advanced_billing/models/update_subscription_note_request.py` |
-| `UpdateSubscriptionNoteRequestDict` | `maxio_advanced_billing/models/update_subscription_note_request.py` |
-| `SubscriptionNoteResponse` | `maxio_advanced_billing/models/subscription_note_response.py` |
-| `CreateSubscriptionNoteErrorBody` | `maxio_advanced_billing/errors/create_subscription_note_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `UpdateSubscriptionNoteRequest` | `maxio/models/update_subscription_note_request.py` |
+| `UpdateSubscriptionNoteRequestDict` | `maxio/models/update_subscription_note_request.py` |
+| `SubscriptionNoteResponse` | `maxio/models/subscription_note_response.py` |
+| `CreateSubscriptionNoteErrorBody` | `maxio/errors/create_subscription_note_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.subscription_notes.delete_subscription_note
 
@@ -51,9 +51,9 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `SubscriptionNoteResponse` | `maxio_advanced_billing/models/subscription_note_response.py` |
-| `ListSubscriptionNotesErrorBody` | `maxio_advanced_billing/errors/list_subscription_notes_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `SubscriptionNoteResponse` | `maxio/models/subscription_note_response.py` |
+| `ListSubscriptionNotesErrorBody` | `maxio/errors/list_subscription_notes_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.subscription_notes.read_subscription_note
 
@@ -68,7 +68,7 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `SubscriptionNoteResponse` | `maxio_advanced_billing/models/subscription_note_response.py` |
+| `SubscriptionNoteResponse` | `maxio/models/subscription_note_response.py` |
 
 ### client.subscription_notes.update_subscription_note
 
@@ -84,9 +84,9 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `UpdateSubscriptionNoteRequest` | `maxio_advanced_billing/models/update_subscription_note_request.py` |
-| `UpdateSubscriptionNoteRequestDict` | `maxio_advanced_billing/models/update_subscription_note_request.py` |
-| `SubscriptionNoteResponse` | `maxio_advanced_billing/models/subscription_note_response.py` |
-| `UpdateSubscriptionNoteErrorBody` | `maxio_advanced_billing/errors/update_subscription_note_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `UpdateSubscriptionNoteRequest` | `maxio/models/update_subscription_note_request.py` |
+| `UpdateSubscriptionNoteRequestDict` | `maxio/models/update_subscription_note_request.py` |
+| `SubscriptionNoteResponse` | `maxio/models/subscription_note_response.py` |
+| `UpdateSubscriptionNoteErrorBody` | `maxio/errors/update_subscription_note_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 

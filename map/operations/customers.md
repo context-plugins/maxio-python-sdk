@@ -2,7 +2,7 @@
 
 # Customers — operations
 
-Accessor: `client.customers` · Source: `maxio_advanced_billing/apis/customers.py` · 7 operations
+Accessor: `client.customers` · Source: `maxio/apis/customers.py` · 7 operations
 
 Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omit what its invariants table covers and are otherwise self-contained, so chunk at block level. Signatures are the sync parsed spelling; the async and raw spellings take the same parameters (see sdk-map.md). **Type sources** names the module declaring each type an operation mentions, so resolving a body, return or error payload is a lookup rather than a search; the runtime types `RawError` and `ApiResult` are excluded, and an operation with no table mentions nothing but builtins and those.
 
@@ -19,11 +19,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CreateCustomerRequest` | `maxio_advanced_billing/models/create_customer_request.py` |
-| `CreateCustomerRequestDict` | `maxio_advanced_billing/models/create_customer_request.py` |
-| `CustomerResponse` | `maxio_advanced_billing/models/customer_response.py` |
-| `CreateCustomerErrorBody` | `maxio_advanced_billing/errors/create_customer_error.py` |
-| `CustomerErrorResponse1` | `maxio_advanced_billing/models/customer_error_response1.py` |
+| `CreateCustomerRequest` | `maxio/models/create_customer_request.py` |
+| `CreateCustomerRequestDict` | `maxio/models/create_customer_request.py` |
+| `CustomerResponse` | `maxio/models/customer_response.py` |
+| `CreateCustomerErrorBody` | `maxio/errors/create_customer_error.py` |
+| `CustomerErrorResponse1` | `maxio/models/customer_error_response1.py` |
 
 ### client.customers.delete_customer
 
@@ -49,7 +49,7 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `SubscriptionResponse` | `maxio_advanced_billing/models/subscription_response.py` |
+| `SubscriptionResponse` | `maxio/models/subscription_response.py` |
 
 ### client.customers.list_customers
 
@@ -63,9 +63,9 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `SortingDirectionOrStr` | `maxio_advanced_billing/models/enums/sorting_direction.py` |
-| `BasicDateFieldOrStr` | `maxio_advanced_billing/models/enums/basic_date_field.py` |
-| `CustomerResponse` | `maxio_advanced_billing/models/customer_response.py` |
+| `SortingDirectionOrStr` | `maxio/models/enums/sorting_direction.py` |
+| `BasicDateFieldOrStr` | `maxio/models/enums/basic_date_field.py` |
+| `CustomerResponse` | `maxio/models/customer_response.py` |
 
 ### client.customers.read_customer
 
@@ -80,7 +80,7 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CustomerResponse` | `maxio_advanced_billing/models/customer_response.py` |
+| `CustomerResponse` | `maxio/models/customer_response.py` |
 
 ### client.customers.read_customer_by_reference
 
@@ -95,7 +95,7 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CustomerResponse` | `maxio_advanced_billing/models/customer_response.py` |
+| `CustomerResponse` | `maxio/models/customer_response.py` |
 
 ### client.customers.update_customer
 
@@ -111,9 +111,9 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `UpdateCustomerRequest` | `maxio_advanced_billing/models/update_customer_request.py` |
-| `UpdateCustomerRequestDict` | `maxio_advanced_billing/models/update_customer_request.py` |
-| `CustomerResponse` | `maxio_advanced_billing/models/customer_response.py` |
-| `UpdateCustomerErrorBody` | `maxio_advanced_billing/errors/update_customer_error.py` |
-| `CustomerErrorResponse1` | `maxio_advanced_billing/models/customer_error_response1.py` |
+| `UpdateCustomerRequest` | `maxio/models/update_customer_request.py` |
+| `UpdateCustomerRequestDict` | `maxio/models/update_customer_request.py` |
+| `CustomerResponse` | `maxio/models/customer_response.py` |
+| `UpdateCustomerErrorBody` | `maxio/errors/update_customer_error.py` |
+| `CustomerErrorResponse1` | `maxio/models/customer_error_response1.py` |
 

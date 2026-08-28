@@ -2,7 +2,7 @@
 
 # SubscriptionProducts — operations
 
-Accessor: `client.subscription_products` · Source: `maxio_advanced_billing/apis/subscription_products.py` · 2 operations
+Accessor: `client.subscription_products` · Source: `maxio/apis/subscription_products.py` · 2 operations
 
 Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omit what its invariants table covers and are otherwise self-contained, so chunk at block level. Signatures are the sync parsed spelling; the async and raw spellings take the same parameters (see sdk-map.md). **Type sources** names the module declaring each type an operation mentions, so resolving a body, return or error payload is a lookup rather than a search; the runtime types `RawError` and `ApiResult` are excluded.
 
@@ -20,11 +20,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `SubscriptionProductMigrationRequest` | `maxio_advanced_billing/models/subscription_product_migration_request.py` |
-| `SubscriptionProductMigrationRequestDict` | `maxio_advanced_billing/models/subscription_product_migration_request.py` |
-| `SubscriptionResponse` | `maxio_advanced_billing/models/subscription_response.py` |
-| `MigrateSubscriptionProductErrorBody` | `maxio_advanced_billing/errors/migrate_subscription_product_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `SubscriptionProductMigrationRequest` | `maxio/models/subscription_product_migration_request.py` |
+| `SubscriptionProductMigrationRequestDict` | `maxio/models/subscription_product_migration_request.py` |
+| `SubscriptionResponse` | `maxio/models/subscription_response.py` |
+| `MigrateSubscriptionProductErrorBody` | `maxio/errors/migrate_subscription_product_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.subscription_products.preview_subscription_product_migration
 
@@ -40,9 +40,9 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `SubscriptionMigrationPreviewRequest` | `maxio_advanced_billing/models/subscription_migration_preview_request.py` |
-| `SubscriptionMigrationPreviewRequestDict` | `maxio_advanced_billing/models/subscription_migration_preview_request.py` |
-| `SubscriptionMigrationPreviewResponse` | `maxio_advanced_billing/models/subscription_migration_preview_response.py` |
-| `PreviewSubscriptionProductMigrationErrorBody` | `maxio_advanced_billing/errors/preview_subscription_product_migration_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `SubscriptionMigrationPreviewRequest` | `maxio/models/subscription_migration_preview_request.py` |
+| `SubscriptionMigrationPreviewRequestDict` | `maxio/models/subscription_migration_preview_request.py` |
+| `SubscriptionMigrationPreviewResponse` | `maxio/models/subscription_migration_preview_response.py` |
+| `PreviewSubscriptionProductMigrationErrorBody` | `maxio/errors/preview_subscription_product_migration_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 

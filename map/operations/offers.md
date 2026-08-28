@@ -2,7 +2,7 @@
 
 # Offers — operations
 
-Accessor: `client.offers` · Source: `maxio_advanced_billing/apis/offers.py` · 5 operations
+Accessor: `client.offers` · Source: `maxio/apis/offers.py` · 5 operations
 
 Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omit what its invariants table covers and are otherwise self-contained, so chunk at block level. Signatures are the sync parsed spelling; the async and raw spellings take the same parameters (see sdk-map.md). **Type sources** names the module declaring each type an operation mentions, so resolving a body, return or error payload is a lookup rather than a search; the runtime types `RawError` and `ApiResult` are excluded, and an operation with no table mentions nothing but builtins and those.
 
@@ -30,11 +30,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CreateOfferRequest` | `maxio_advanced_billing/models/create_offer_request.py` |
-| `CreateOfferRequestDict` | `maxio_advanced_billing/models/create_offer_request.py` |
-| `OfferResponse` | `maxio_advanced_billing/models/offer_response.py` |
-| `CreateOfferErrorBody` | `maxio_advanced_billing/errors/create_offer_error.py` |
-| `ErrorArrayMapResponse1` | `maxio_advanced_billing/models/error_array_map_response1.py` |
+| `CreateOfferRequest` | `maxio/models/create_offer_request.py` |
+| `CreateOfferRequestDict` | `maxio/models/create_offer_request.py` |
+| `OfferResponse` | `maxio/models/offer_response.py` |
+| `CreateOfferErrorBody` | `maxio/errors/create_offer_error.py` |
+| `ErrorArrayMapResponse1` | `maxio/models/error_array_map_response1.py` |
 
 ### client.offers.list_offers
 
@@ -49,9 +49,9 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ListOffersResponse` | `maxio_advanced_billing/models/list_offers_response.py` |
-| `ListOffersErrorBody` | `maxio_advanced_billing/errors/list_offers_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `ListOffersResponse` | `maxio/models/list_offers_response.py` |
+| `ListOffersErrorBody` | `maxio/errors/list_offers_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.offers.read_offer
 
@@ -66,7 +66,7 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `OfferResponse` | `maxio_advanced_billing/models/offer_response.py` |
+| `OfferResponse` | `maxio/models/offer_response.py` |
 
 ### client.offers.unarchive_offer
 

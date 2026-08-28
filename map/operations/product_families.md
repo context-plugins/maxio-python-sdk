@@ -2,7 +2,7 @@
 
 # ProductFamilies — operations
 
-Accessor: `client.product_families` · Source: `maxio_advanced_billing/apis/product_families.py` · 4 operations
+Accessor: `client.product_families` · Source: `maxio/apis/product_families.py` · 4 operations
 
 Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omit what its invariants table covers and are otherwise self-contained, so chunk at block level. Signatures are the sync parsed spelling; the async and raw spellings take the same parameters (see sdk-map.md). **Type sources** names the module declaring each type an operation mentions, so resolving a body, return or error payload is a lookup rather than a search; the runtime types `RawError` and `ApiResult` are excluded.
 
@@ -19,11 +19,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CreateProductFamilyRequest` | `maxio_advanced_billing/models/create_product_family_request.py` |
-| `CreateProductFamilyRequestDict` | `maxio_advanced_billing/models/create_product_family_request.py` |
-| `ProductFamilyResponse` | `maxio_advanced_billing/models/product_family_response.py` |
-| `CreateProductFamilyErrorBody` | `maxio_advanced_billing/errors/create_product_family_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `CreateProductFamilyRequest` | `maxio/models/create_product_family_request.py` |
+| `CreateProductFamilyRequestDict` | `maxio/models/create_product_family_request.py` |
+| `ProductFamilyResponse` | `maxio/models/product_family_response.py` |
+| `CreateProductFamilyErrorBody` | `maxio/errors/create_product_family_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.product_families.list_product_families
 
@@ -37,8 +37,8 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `BasicDateFieldOrStr` | `maxio_advanced_billing/models/enums/basic_date_field.py` |
-| `ProductFamilyResponse` | `maxio_advanced_billing/models/product_family_response.py` |
+| `BasicDateFieldOrStr` | `maxio/models/enums/basic_date_field.py` |
+| `ProductFamilyResponse` | `maxio/models/product_family_response.py` |
 
 ### client.product_families.list_products_for_product_family
 
@@ -54,12 +54,12 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `BasicDateFieldOrStr` | `maxio_advanced_billing/models/enums/basic_date_field.py` |
-| `ListProductsFilter` | `maxio_advanced_billing/models/list_products_filter.py` |
-| `ListProductsFilterDict` | `maxio_advanced_billing/models/list_products_filter.py` |
-| `ListProductsIncludeOrStr` | `maxio_advanced_billing/models/enums/list_products_include.py` |
-| `ProductResponse` | `maxio_advanced_billing/models/product_response.py` |
-| `ListProductsForProductFamilyErrorBody` | `maxio_advanced_billing/errors/list_products_for_product_family_error.py` |
+| `BasicDateFieldOrStr` | `maxio/models/enums/basic_date_field.py` |
+| `ListProductsFilter` | `maxio/models/list_products_filter.py` |
+| `ListProductsFilterDict` | `maxio/models/list_products_filter.py` |
+| `ListProductsIncludeOrStr` | `maxio/models/enums/list_products_include.py` |
+| `ProductResponse` | `maxio/models/product_response.py` |
+| `ListProductsForProductFamilyErrorBody` | `maxio/errors/list_products_for_product_family_error.py` |
 
 ### client.product_families.read_product_family
 
@@ -74,5 +74,5 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ProductFamilyResponse` | `maxio_advanced_billing/models/product_family_response.py` |
+| `ProductFamilyResponse` | `maxio/models/product_family_response.py` |
 

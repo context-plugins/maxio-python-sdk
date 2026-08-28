@@ -2,7 +2,7 @@
 
 # Webhooks — operations
 
-Accessor: `client.webhooks` · Source: `maxio_advanced_billing/apis/webhooks.py` · 6 operations
+Accessor: `client.webhooks` · Source: `maxio/apis/webhooks.py` · 6 operations
 
 Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omit what its invariants table covers and are otherwise self-contained, so chunk at block level. Signatures are the sync parsed spelling; the async and raw spellings take the same parameters (see sdk-map.md). **Type sources** names the module declaring each type an operation mentions, so resolving a body, return or error payload is a lookup rather than a search; the runtime types `RawError` and `ApiResult` are excluded.
 
@@ -19,11 +19,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CreateOrUpdateEndpointRequest` | `maxio_advanced_billing/models/create_or_update_endpoint_request.py` |
-| `CreateOrUpdateEndpointRequestDict` | `maxio_advanced_billing/models/create_or_update_endpoint_request.py` |
-| `EndpointResponse` | `maxio_advanced_billing/models/endpoint_response.py` |
-| `CreateEndpointErrorBody` | `maxio_advanced_billing/errors/create_endpoint_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `CreateOrUpdateEndpointRequest` | `maxio/models/create_or_update_endpoint_request.py` |
+| `CreateOrUpdateEndpointRequestDict` | `maxio/models/create_or_update_endpoint_request.py` |
+| `EndpointResponse` | `maxio/models/endpoint_response.py` |
+| `CreateEndpointErrorBody` | `maxio/errors/create_endpoint_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.webhooks.enable_webhooks
 
@@ -37,9 +37,9 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `EnableWebhooksRequest` | `maxio_advanced_billing/models/enable_webhooks_request.py` |
-| `EnableWebhooksRequestDict` | `maxio_advanced_billing/models/enable_webhooks_request.py` |
-| `EnableWebhooksResponse` | `maxio_advanced_billing/models/enable_webhooks_response.py` |
+| `EnableWebhooksRequest` | `maxio/models/enable_webhooks_request.py` |
+| `EnableWebhooksRequestDict` | `maxio/models/enable_webhooks_request.py` |
+| `EnableWebhooksResponse` | `maxio/models/enable_webhooks_response.py` |
 
 ### client.webhooks.list_endpoints
 
@@ -52,7 +52,7 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `Endpoint` | `maxio_advanced_billing/models/endpoint.py` |
+| `Endpoint` | `maxio/models/endpoint.py` |
 
 ### client.webhooks.list_webhooks
 
@@ -66,9 +66,9 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `WebhookStatusOrStr` | `maxio_advanced_billing/models/enums/webhook_status.py` |
-| `WebhookOrderOrStr` | `maxio_advanced_billing/models/enums/webhook_order.py` |
-| `WebhookResponse` | `maxio_advanced_billing/models/webhook_response.py` |
+| `WebhookStatusOrStr` | `maxio/models/enums/webhook_status.py` |
+| `WebhookOrderOrStr` | `maxio/models/enums/webhook_order.py` |
+| `WebhookResponse` | `maxio/models/webhook_response.py` |
 
 ### client.webhooks.replay_webhooks
 
@@ -82,9 +82,9 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ReplayWebhooksRequest` | `maxio_advanced_billing/models/replay_webhooks_request.py` |
-| `ReplayWebhooksRequestDict` | `maxio_advanced_billing/models/replay_webhooks_request.py` |
-| `ReplayWebhooksResponse` | `maxio_advanced_billing/models/replay_webhooks_response.py` |
+| `ReplayWebhooksRequest` | `maxio/models/replay_webhooks_request.py` |
+| `ReplayWebhooksRequestDict` | `maxio/models/replay_webhooks_request.py` |
+| `ReplayWebhooksResponse` | `maxio/models/replay_webhooks_response.py` |
 
 ### client.webhooks.update_endpoint
 
@@ -100,9 +100,9 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CreateOrUpdateEndpointRequest` | `maxio_advanced_billing/models/create_or_update_endpoint_request.py` |
-| `CreateOrUpdateEndpointRequestDict` | `maxio_advanced_billing/models/create_or_update_endpoint_request.py` |
-| `EndpointResponse` | `maxio_advanced_billing/models/endpoint_response.py` |
-| `UpdateEndpointErrorBody` | `maxio_advanced_billing/errors/update_endpoint_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `CreateOrUpdateEndpointRequest` | `maxio/models/create_or_update_endpoint_request.py` |
+| `CreateOrUpdateEndpointRequestDict` | `maxio/models/create_or_update_endpoint_request.py` |
+| `EndpointResponse` | `maxio/models/endpoint_response.py` |
+| `UpdateEndpointErrorBody` | `maxio/errors/update_endpoint_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 

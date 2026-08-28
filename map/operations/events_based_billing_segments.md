@@ -2,7 +2,7 @@
 
 # EventsBasedBillingSegments — operations
 
-Accessor: `client.events_based_billing_segments` · Source: `maxio_advanced_billing/apis/events_based_billing_segments.py` · 6 operations
+Accessor: `client.events_based_billing_segments` · Source: `maxio/apis/events_based_billing_segments.py` · 6 operations
 
 Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omit what its invariants table covers and are otherwise self-contained, so chunk at block level. Signatures are the sync parsed spelling; the async and raw spellings take the same parameters (see sdk-map.md). **Type sources** names the module declaring each type an operation mentions, so resolving a body, return or error payload is a lookup rather than a search; the runtime types `RawError` and `ApiResult` are excluded.
 
@@ -20,11 +20,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `BulkCreateSegments` | `maxio_advanced_billing/models/bulk_create_segments.py` |
-| `BulkCreateSegmentsDict` | `maxio_advanced_billing/models/bulk_create_segments.py` |
-| `ListSegmentsResponse` | `maxio_advanced_billing/models/list_segments_response.py` |
-| `BulkCreateSegmentsErrorBody` | `maxio_advanced_billing/errors/bulk_create_segments_error.py` |
-| `EventBasedBillingSegment1` | `maxio_advanced_billing/models/event_based_billing_segment1.py` |
+| `BulkCreateSegments` | `maxio/models/bulk_create_segments.py` |
+| `BulkCreateSegmentsDict` | `maxio/models/bulk_create_segments.py` |
+| `ListSegmentsResponse` | `maxio/models/list_segments_response.py` |
+| `BulkCreateSegmentsErrorBody` | `maxio/errors/bulk_create_segments_error.py` |
+| `EventBasedBillingSegment1` | `maxio/models/event_based_billing_segment1.py` |
 
 ### client.events_based_billing_segments.bulk_update_segments
 
@@ -40,11 +40,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `BulkUpdateSegments` | `maxio_advanced_billing/models/bulk_update_segments.py` |
-| `BulkUpdateSegmentsDict` | `maxio_advanced_billing/models/bulk_update_segments.py` |
-| `ListSegmentsResponse` | `maxio_advanced_billing/models/list_segments_response.py` |
-| `BulkUpdateSegmentsErrorBody` | `maxio_advanced_billing/errors/bulk_update_segments_error.py` |
-| `EventBasedBillingSegment1` | `maxio_advanced_billing/models/event_based_billing_segment1.py` |
+| `BulkUpdateSegments` | `maxio/models/bulk_update_segments.py` |
+| `BulkUpdateSegmentsDict` | `maxio/models/bulk_update_segments.py` |
+| `ListSegmentsResponse` | `maxio/models/list_segments_response.py` |
+| `BulkUpdateSegmentsErrorBody` | `maxio/errors/bulk_update_segments_error.py` |
+| `EventBasedBillingSegment1` | `maxio/models/event_based_billing_segment1.py` |
 
 ### client.events_based_billing_segments.create_segment
 
@@ -60,11 +60,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CreateSegmentRequest` | `maxio_advanced_billing/models/create_segment_request.py` |
-| `CreateSegmentRequestDict` | `maxio_advanced_billing/models/create_segment_request.py` |
-| `SegmentResponse` | `maxio_advanced_billing/models/segment_response.py` |
-| `CreateSegmentErrorBody` | `maxio_advanced_billing/errors/create_segment_error.py` |
-| `EventBasedBillingSegmentErrors1` | `maxio_advanced_billing/models/event_based_billing_segment_errors1.py` |
+| `CreateSegmentRequest` | `maxio/models/create_segment_request.py` |
+| `CreateSegmentRequestDict` | `maxio/models/create_segment_request.py` |
+| `SegmentResponse` | `maxio/models/segment_response.py` |
+| `CreateSegmentErrorBody` | `maxio/errors/create_segment_error.py` |
+| `EventBasedBillingSegmentErrors1` | `maxio/models/event_based_billing_segment_errors1.py` |
 
 ### client.events_based_billing_segments.delete_segment
 
@@ -80,7 +80,7 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `DeleteSegmentErrorBody` | `maxio_advanced_billing/errors/delete_segment_error.py` |
+| `DeleteSegmentErrorBody` | `maxio/errors/delete_segment_error.py` |
 
 ### client.events_based_billing_segments.list_segments_for_price_point
 
@@ -96,11 +96,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ListSegmentsFilter` | `maxio_advanced_billing/models/list_segments_filter.py` |
-| `ListSegmentsFilterDict` | `maxio_advanced_billing/models/list_segments_filter.py` |
-| `ListSegmentsResponse` | `maxio_advanced_billing/models/list_segments_response.py` |
-| `ListSegmentsForPricePointErrorBody` | `maxio_advanced_billing/errors/list_segments_for_price_point_error.py` |
-| `EventBasedBillingListSegmentsErrors1` | `maxio_advanced_billing/models/event_based_billing_list_segments_errors1.py` |
+| `ListSegmentsFilter` | `maxio/models/list_segments_filter.py` |
+| `ListSegmentsFilterDict` | `maxio/models/list_segments_filter.py` |
+| `ListSegmentsResponse` | `maxio/models/list_segments_response.py` |
+| `ListSegmentsForPricePointErrorBody` | `maxio/errors/list_segments_for_price_point_error.py` |
+| `EventBasedBillingListSegmentsErrors1` | `maxio/models/event_based_billing_list_segments_errors1.py` |
 
 ### client.events_based_billing_segments.update_segment
 
@@ -116,9 +116,9 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `UpdateSegmentRequest` | `maxio_advanced_billing/models/update_segment_request.py` |
-| `UpdateSegmentRequestDict` | `maxio_advanced_billing/models/update_segment_request.py` |
-| `SegmentResponse` | `maxio_advanced_billing/models/segment_response.py` |
-| `UpdateSegmentErrorBody` | `maxio_advanced_billing/errors/update_segment_error.py` |
-| `EventBasedBillingSegmentErrors1` | `maxio_advanced_billing/models/event_based_billing_segment_errors1.py` |
+| `UpdateSegmentRequest` | `maxio/models/update_segment_request.py` |
+| `UpdateSegmentRequestDict` | `maxio/models/update_segment_request.py` |
+| `SegmentResponse` | `maxio/models/segment_response.py` |
+| `UpdateSegmentErrorBody` | `maxio/errors/update_segment_error.py` |
+| `EventBasedBillingSegmentErrors1` | `maxio/models/event_based_billing_segment_errors1.py` |
 

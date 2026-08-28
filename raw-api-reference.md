@@ -2,11 +2,11 @@
 
 **Raw** endpoints, reached through `with_raw_response`, return `ApiResult[T, E]` and never raise for an API error. For the parsed endpoints, see [API Reference](api-reference.md).
 
-> Source: [MaxioAdvancedBillingClient](maxio_advanced_billing/client.py)
+> Source: [MaxioClient](maxio/client.py)
 
 ## ApiExports
 
-> Source: [ApiExports](maxio_advanced_billing/apis/api_exports.py)
+> Source: [ApiExports](maxio/apis/api_exports.py)
 
 <details>
 <summary><code>def export_invoices(*, request_options: RequestOptionsOrDict | None = None) -> ApiResult[BatchJobResponse, ExportInvoicesErrorBody]</code></summary>
@@ -61,7 +61,7 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -71,19 +71,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[BatchJobResponse](maxio_advanced_billing/models/batch_job_response.py), [ExportInvoicesErrorBody](maxio_advanced_billing/errors/export_invoices_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[BatchJobResponse](maxio/models/batch_job_response.py), [ExportInvoicesErrorBody](maxio/errors/export_invoices_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[BatchJobResponse](maxio_advanced_billing/models/batch_job_response.py)</code> -- Created
+**On `Success`**: `payload` is <code>[BatchJobResponse](maxio/models/batch_job_response.py)</code> -- Created
 
-**On `Failure`**: `error` is <code>[ExportInvoicesErrorBody](maxio_advanced_billing/errors/export_invoices_error.py)</code>
+**On `Failure`**: `error` is <code>[ExportInvoicesErrorBody](maxio/errors/export_invoices_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 409 | <code>[SingleErrorResponse1](maxio_advanced_billing/models/single_error_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 409 | <code>[SingleErrorResponse1](maxio/models/single_error_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -148,7 +148,7 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -158,19 +158,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[BatchJobResponse](maxio_advanced_billing/models/batch_job_response.py), [ExportProformaInvoicesErrorBody](maxio_advanced_billing/errors/export_proforma_invoices_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[BatchJobResponse](maxio/models/batch_job_response.py), [ExportProformaInvoicesErrorBody](maxio/errors/export_proforma_invoices_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[BatchJobResponse](maxio_advanced_billing/models/batch_job_response.py)</code> -- Created
+**On `Success`**: `payload` is <code>[BatchJobResponse](maxio/models/batch_job_response.py)</code> -- Created
 
-**On `Failure`**: `error` is <code>[ExportProformaInvoicesErrorBody](maxio_advanced_billing/errors/export_proforma_invoices_error.py)</code>
+**On `Failure`**: `error` is <code>[ExportProformaInvoicesErrorBody](maxio/errors/export_proforma_invoices_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 409 | <code>[SingleErrorResponse1](maxio_advanced_billing/models/single_error_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 409 | <code>[SingleErrorResponse1](maxio/models/single_error_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -233,7 +233,7 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -243,18 +243,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[BatchJobResponse](maxio_advanced_billing/models/batch_job_response.py), [ExportSubscriptionsErrorBody](maxio_advanced_billing/errors/export_subscriptions_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[BatchJobResponse](maxio/models/batch_job_response.py), [ExportSubscriptionsErrorBody](maxio/errors/export_subscriptions_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[BatchJobResponse](maxio_advanced_billing/models/batch_job_response.py)</code> -- Created
+**On `Success`**: `payload` is <code>[BatchJobResponse](maxio/models/batch_job_response.py)</code> -- Created
 
-**On `Failure`**: `error` is <code>[ExportSubscriptionsErrorBody](maxio_advanced_billing/errors/export_subscriptions_error.py)</code>
+**On `Failure`**: `error` is <code>[ExportSubscriptionsErrorBody](maxio/errors/export_subscriptions_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 409 | <code>[SingleErrorResponse1](maxio_advanced_billing/models/single_error_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 409 | <code>[SingleErrorResponse1](maxio/models/single_error_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -322,7 +322,7 @@ match result:
 | <code>batch_id</code> | <code>str</code> | Id of a Batch Job. |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. <br>Default value is 100. <br>The maximum allowed values is 10000; any per_page value over 10000 will be changed to 10000.<br>**Default**: <code>100</code> |
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -332,18 +332,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;list&#91;[Invoice](maxio_advanced_billing/models/invoice.py)&#93;, [ListExportedInvoicesErrorBody](maxio_advanced_billing/errors/list_exported_invoices_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;list&#91;[Invoice](maxio/models/invoice.py)&#93;, [ListExportedInvoicesErrorBody](maxio/errors/list_exported_invoices_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>list&#91;[Invoice](maxio_advanced_billing/models/invoice.py)&#93;</code> -- OK
+**On `Success`**: `payload` is <code>list&#91;[Invoice](maxio/models/invoice.py)&#93;</code> -- OK
 
-**On `Failure`**: `error` is <code>[ListExportedInvoicesErrorBody](maxio_advanced_billing/errors/list_exported_invoices_error.py)</code>
+**On `Failure`**: `error` is <code>[ListExportedInvoicesErrorBody](maxio/errors/list_exported_invoices_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -411,7 +411,7 @@ match result:
 | <code>batch_id</code> | <code>str</code> | Id of a Batch Job. |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. <br>Default value is 100. <br>The maximum allowed values is 10000; any per_page value over 10000 will be changed to 10000.<br>**Default**: <code>100</code> |
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -421,18 +421,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;list&#91;[ProformaInvoice](maxio_advanced_billing/models/proforma_invoice.py)&#93;, [ListExportedProformaInvoicesErrorBody](maxio_advanced_billing/errors/list_exported_proforma_invoices_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;list&#91;[ProformaInvoice](maxio/models/proforma_invoice.py)&#93;, [ListExportedProformaInvoicesErrorBody](maxio/errors/list_exported_proforma_invoices_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>list&#91;[ProformaInvoice](maxio_advanced_billing/models/proforma_invoice.py)&#93;</code> -- OK
+**On `Success`**: `payload` is <code>list&#91;[ProformaInvoice](maxio/models/proforma_invoice.py)&#93;</code> -- OK
 
-**On `Failure`**: `error` is <code>[ListExportedProformaInvoicesErrorBody](maxio_advanced_billing/errors/list_exported_proforma_invoices_error.py)</code>
+**On `Failure`**: `error` is <code>[ListExportedProformaInvoicesErrorBody](maxio/errors/list_exported_proforma_invoices_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -500,7 +500,7 @@ match result:
 | <code>batch_id</code> | <code>str</code> | Id of a Batch Job. |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. <br>Default value is 100. <br>The maximum allowed values is 10000; any per_page value over 10000 will be changed to 10000.<br>**Default**: <code>100</code> |
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -510,18 +510,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;list&#91;[Subscription](maxio_advanced_billing/models/subscription.py)&#93;, [ListExportedSubscriptionsErrorBody](maxio_advanced_billing/errors/list_exported_subscriptions_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;list&#91;[Subscription](maxio/models/subscription.py)&#93;, [ListExportedSubscriptionsErrorBody](maxio/errors/list_exported_subscriptions_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>list&#91;[Subscription](maxio_advanced_billing/models/subscription.py)&#93;</code> -- OK
+**On `Success`**: `payload` is <code>list&#91;[Subscription](maxio/models/subscription.py)&#93;</code> -- OK
 
-**On `Failure`**: `error` is <code>[ListExportedSubscriptionsErrorBody](maxio_advanced_billing/errors/list_exported_subscriptions_error.py)</code>
+**On `Failure`**: `error` is <code>[ListExportedSubscriptionsErrorBody](maxio/errors/list_exported_subscriptions_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -585,7 +585,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>batch_id</code> | <code>str</code> | Id of a Batch Job. |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -595,18 +595,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[BatchJobResponse](maxio_advanced_billing/models/batch_job_response.py), [ReadInvoicesExportErrorBody](maxio_advanced_billing/errors/read_invoices_export_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[BatchJobResponse](maxio/models/batch_job_response.py), [ReadInvoicesExportErrorBody](maxio/errors/read_invoices_export_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[BatchJobResponse](maxio_advanced_billing/models/batch_job_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[BatchJobResponse](maxio/models/batch_job_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[ReadInvoicesExportErrorBody](maxio_advanced_billing/errors/read_invoices_export_error.py)</code>
+**On `Failure`**: `error` is <code>[ReadInvoicesExportErrorBody](maxio/errors/read_invoices_export_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -670,7 +670,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>batch_id</code> | <code>str</code> | Id of a Batch Job. |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -680,18 +680,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[BatchJobResponse](maxio_advanced_billing/models/batch_job_response.py), [ReadProformaInvoicesExportErrorBody](maxio_advanced_billing/errors/read_proforma_invoices_export_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[BatchJobResponse](maxio/models/batch_job_response.py), [ReadProformaInvoicesExportErrorBody](maxio/errors/read_proforma_invoices_export_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[BatchJobResponse](maxio_advanced_billing/models/batch_job_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[BatchJobResponse](maxio/models/batch_job_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[ReadProformaInvoicesExportErrorBody](maxio_advanced_billing/errors/read_proforma_invoices_export_error.py)</code>
+**On `Failure`**: `error` is <code>[ReadProformaInvoicesExportErrorBody](maxio/errors/read_proforma_invoices_export_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -755,7 +755,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>batch_id</code> | <code>str</code> | Id of a Batch Job. |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -765,18 +765,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[BatchJobResponse](maxio_advanced_billing/models/batch_job_response.py), [ReadSubscriptionsExportErrorBody](maxio_advanced_billing/errors/read_subscriptions_export_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[BatchJobResponse](maxio/models/batch_job_response.py), [ReadSubscriptionsExportErrorBody](maxio/errors/read_subscriptions_export_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[BatchJobResponse](maxio_advanced_billing/models/batch_job_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[BatchJobResponse](maxio/models/batch_job_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[ReadSubscriptionsExportErrorBody](maxio_advanced_billing/errors/read_subscriptions_export_error.py)</code>
+**On `Failure`**: `error` is <code>[ReadSubscriptionsExportErrorBody](maxio/errors/read_subscriptions_export_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -788,7 +788,7 @@ Mapped in first-match order -- an earlier row wins over a later range that also 
 
 ## AdvanceInvoice
 
-> Source: [AdvanceInvoice](maxio_advanced_billing/apis/advance_invoice.py)
+> Source: [AdvanceInvoice](maxio/apis/advance_invoice.py)
 
 <details>
 <summary><code>def issue_advance_invoice(subscription_id: int, *, body: IssueAdvanceInvoiceRequest | IssueAdvanceInvoiceRequestDict | None = None, request_options: RequestOptionsOrDict | None = None) -> ApiResult[Invoice, IssueAdvanceInvoiceErrorBody]</code></summary>
@@ -847,8 +847,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>body</code> | <code>[IssueAdvanceInvoiceRequest](maxio_advanced_billing/models/issue_advance_invoice_request.py) \| [IssueAdvanceInvoiceRequestDict](maxio_advanced_billing/models/issue_advance_invoice_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[IssueAdvanceInvoiceRequest](maxio/models/issue_advance_invoice_request.py) \| [IssueAdvanceInvoiceRequestDict](maxio/models/issue_advance_invoice_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -858,19 +858,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[Invoice](maxio_advanced_billing/models/invoice.py), [IssueAdvanceInvoiceErrorBody](maxio_advanced_billing/errors/issue_advance_invoice_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[Invoice](maxio/models/invoice.py), [IssueAdvanceInvoiceErrorBody](maxio/errors/issue_advance_invoice_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[Invoice](maxio_advanced_billing/models/invoice.py)</code> -- Created
+**On `Success`**: `payload` is <code>[Invoice](maxio/models/invoice.py)</code> -- Created
 
-**On `Failure`**: `error` is <code>[IssueAdvanceInvoiceErrorBody](maxio_advanced_billing/errors/issue_advance_invoice_error.py)</code>
+**On `Failure`**: `error` is <code>[IssueAdvanceInvoiceErrorBody](maxio/errors/issue_advance_invoice_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -934,7 +934,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -944,18 +944,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[Invoice](maxio_advanced_billing/models/invoice.py), [ReadAdvanceInvoiceErrorBody](maxio_advanced_billing/errors/read_advance_invoice_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[Invoice](maxio/models/invoice.py), [ReadAdvanceInvoiceErrorBody](maxio/errors/read_advance_invoice_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[Invoice](maxio_advanced_billing/models/invoice.py)</code> -- OK
+**On `Success`**: `payload` is <code>[Invoice](maxio/models/invoice.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[ReadAdvanceInvoiceErrorBody](maxio_advanced_billing/errors/read_advance_invoice_error.py)</code>
+**On `Failure`**: `error` is <code>[ReadAdvanceInvoiceErrorBody](maxio/errors/read_advance_invoice_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -1020,8 +1020,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>body</code> | <code>[VoidInvoiceRequest](maxio_advanced_billing/models/void_invoice_request.py) \| [VoidInvoiceRequestDict](maxio_advanced_billing/models/void_invoice_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[VoidInvoiceRequest](maxio/models/void_invoice_request.py) \| [VoidInvoiceRequestDict](maxio/models/void_invoice_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -1031,18 +1031,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[Invoice](maxio_advanced_billing/models/invoice.py), [VoidAdvanceInvoiceErrorBody](maxio_advanced_billing/errors/void_advance_invoice_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[Invoice](maxio/models/invoice.py), [VoidAdvanceInvoiceErrorBody](maxio/errors/void_advance_invoice_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[Invoice](maxio_advanced_billing/models/invoice.py)</code> -- Created
+**On `Success`**: `payload` is <code>[Invoice](maxio/models/invoice.py)</code> -- Created
 
-**On `Failure`**: `error` is <code>[VoidAdvanceInvoiceErrorBody](maxio_advanced_billing/errors/void_advance_invoice_error.py)</code>
+**On `Failure`**: `error` is <code>[VoidAdvanceInvoiceErrorBody](maxio/errors/void_advance_invoice_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -1054,7 +1054,7 @@ Mapped in first-match order -- an earlier row wins over a later range that also 
 
 ## BillingPortal
 
-> Source: [BillingPortal](maxio_advanced_billing/apis/billing_portal.py)
+> Source: [BillingPortal](maxio/apis/billing_portal.py)
 
 <details>
 <summary><code>def enable_billing_portal_for_customer(customer_id: int, *, auto_invite: AutoInviteOrInt | None = None, request_options: RequestOptionsOrDict | None = None) -> ApiResult[CustomerResponse, EnableBillingPortalForCustomerErrorBody]</code></summary>
@@ -1126,8 +1126,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>customer_id</code> | <code>int</code> | The Chargify id of the customer |
-| <code>auto_invite</code> | <code>[AutoInviteOrInt](maxio_advanced_billing/models/enums/auto_invite.py) \| None</code> | When set to 1, an Invitation email will be sent to the Customer.<br>When set to 0, or not sent, an email will not be sent.<br>Use in query: `auto_invite=1`.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>auto_invite</code> | <code>[AutoInviteOrInt](maxio/models/enums/auto_invite.py) \| None</code> | When set to 1, an Invitation email will be sent to the Customer.<br>When set to 0, or not sent, an email will not be sent.<br>Use in query: `auto_invite=1`.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -1137,18 +1137,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[CustomerResponse](maxio_advanced_billing/models/customer_response.py), [EnableBillingPortalForCustomerErrorBody](maxio_advanced_billing/errors/enable_billing_portal_for_customer_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[CustomerResponse](maxio/models/customer_response.py), [EnableBillingPortalForCustomerErrorBody](maxio/errors/enable_billing_portal_for_customer_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[CustomerResponse](maxio_advanced_billing/models/customer_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[CustomerResponse](maxio/models/customer_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[EnableBillingPortalForCustomerErrorBody](maxio_advanced_billing/errors/enable_billing_portal_for_customer_error.py)</code>
+**On `Failure`**: `error` is <code>[EnableBillingPortalForCustomerErrorBody](maxio/errors/enable_billing_portal_for_customer_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -1220,7 +1220,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>customer_id</code> | <code>int</code> | The Chargify id of the customer |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -1230,19 +1230,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[PortalManagementLink](maxio_advanced_billing/models/portal_management_link.py), [ReadBillingPortalLinkErrorBody](maxio_advanced_billing/errors/read_billing_portal_link_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[PortalManagementLink](maxio/models/portal_management_link.py), [ReadBillingPortalLinkErrorBody](maxio/errors/read_billing_portal_link_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[PortalManagementLink](maxio_advanced_billing/models/portal_management_link.py)</code> -- OK
+**On `Success`**: `payload` is <code>[PortalManagementLink](maxio/models/portal_management_link.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[ReadBillingPortalLinkErrorBody](maxio_advanced_billing/errors/read_billing_portal_link_error.py)</code>
+**On `Failure`**: `error` is <code>[ReadBillingPortalLinkErrorBody](maxio/errors/read_billing_portal_link_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| 429 | <code>[TooManyManagementLinkRequestsError1](maxio_advanced_billing/models/too_many_management_link_requests_error1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| 429 | <code>[TooManyManagementLinkRequestsError1](maxio/models/too_many_management_link_requests_error1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -1316,7 +1316,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>customer_id</code> | <code>int</code> | The Chargify id of the customer |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -1326,19 +1326,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ResentInvitation](maxio_advanced_billing/models/resent_invitation.py), [ResendBillingPortalInvitationErrorBody](maxio_advanced_billing/errors/resend_billing_portal_invitation_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ResentInvitation](maxio/models/resent_invitation.py), [ResendBillingPortalInvitationErrorBody](maxio/errors/resend_billing_portal_invitation_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ResentInvitation](maxio_advanced_billing/models/resent_invitation.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ResentInvitation](maxio/models/resent_invitation.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[ResendBillingPortalInvitationErrorBody](maxio_advanced_billing/errors/resend_billing_portal_invitation_error.py)</code>
+**On `Failure`**: `error` is <code>[ResendBillingPortalInvitationErrorBody](maxio/errors/resend_billing_portal_invitation_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -1408,7 +1408,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>customer_id</code> | <code>int</code> | The Chargify id of the customer |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -1418,11 +1418,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[RevokedInvitation](maxio_advanced_billing/models/revoked_invitation.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[RevokedInvitation](maxio/models/revoked_invitation.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[RevokedInvitation](maxio_advanced_billing/models/revoked_invitation.py)</code> -- OK
+**On `Success`**: `payload` is <code>[RevokedInvitation](maxio/models/revoked_invitation.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -1434,7 +1434,7 @@ match result:
 
 ## ComponentPricePoints
 
-> Source: [ComponentPricePoints](maxio_advanced_billing/apis/component_price_points.py)
+> Source: [ComponentPricePoints](maxio/apis/component_price_points.py)
 
 <details>
 <summary><code>def archive_component_price_point(component_id: ComponentIdModel | ComponentIdModelDict, price_point_id: PricePointIdModel | PricePointIdModelDict, *, request_options: RequestOptionsOrDict | None = None) -> ApiResult[ComponentPricePointResponse, ArchiveComponentPricePointErrorBody]</code></summary>
@@ -1491,9 +1491,9 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>component_id</code> | <code>[ComponentIdModel](maxio_advanced_billing/models/unions/component_id_model.py) \| [ComponentIdModelDict](maxio_advanced_billing/models/unions/component_id_model.py)</code> | The id or handle of the component. When using the handle, it must be prefixed with `handle:`. Example: `123` for an integer ID, or `handle:example-product-handle` for a string handle. |
-| <code>price_point_id</code> | <code>[PricePointIdModel](maxio_advanced_billing/models/unions/price_point_id_model.py) \| [PricePointIdModelDict](maxio_advanced_billing/models/unions/price_point_id_model.py)</code> | The id or handle of the price point. When using the handle, it must be prefixed with `handle:`. Example: `123` for an integer ID, or `handle:example-price_point-handle` for a string handle. |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>component_id</code> | <code>[ComponentIdModel](maxio/models/unions/component_id_model.py) \| [ComponentIdModelDict](maxio/models/unions/component_id_model.py)</code> | The id or handle of the component. When using the handle, it must be prefixed with `handle:`. Example: `123` for an integer ID, or `handle:example-product-handle` for a string handle. |
+| <code>price_point_id</code> | <code>[PricePointIdModel](maxio/models/unions/price_point_id_model.py) \| [PricePointIdModelDict](maxio/models/unions/price_point_id_model.py)</code> | The id or handle of the price point. When using the handle, it must be prefixed with `handle:`. Example: `123` for an integer ID, or `handle:example-price_point-handle` for a string handle. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -1503,18 +1503,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ComponentPricePointResponse](maxio_advanced_billing/models/component_price_point_response.py), [ArchiveComponentPricePointErrorBody](maxio_advanced_billing/errors/archive_component_price_point_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ComponentPricePointResponse](maxio/models/component_price_point_response.py), [ArchiveComponentPricePointErrorBody](maxio/errors/archive_component_price_point_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ComponentPricePointResponse](maxio_advanced_billing/models/component_price_point_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ComponentPricePointResponse](maxio/models/component_price_point_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[ArchiveComponentPricePointErrorBody](maxio_advanced_billing/errors/archive_component_price_point_error.py)</code>
+**On `Failure`**: `error` is <code>[ArchiveComponentPricePointErrorBody](maxio/errors/archive_component_price_point_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -1578,8 +1578,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>component_id</code> | <code>str</code> | The Advanced Billing id of the component for which you want to fetch price points. |
-| <code>body</code> | <code>[CreateComponentPricePointsRequest](maxio_advanced_billing/models/create_component_price_points_request.py) \| [CreateComponentPricePointsRequestDict](maxio_advanced_billing/models/create_component_price_points_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CreateComponentPricePointsRequest](maxio/models/create_component_price_points_request.py) \| [CreateComponentPricePointsRequestDict](maxio/models/create_component_price_points_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -1589,18 +1589,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ComponentPricePointsResponse](maxio_advanced_billing/models/component_price_points_response.py), [BulkCreateComponentPricePointsErrorBody](maxio_advanced_billing/errors/bulk_create_component_price_points_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ComponentPricePointsResponse](maxio/models/component_price_points_response.py), [BulkCreateComponentPricePointsErrorBody](maxio/errors/bulk_create_component_price_points_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ComponentPricePointsResponse](maxio_advanced_billing/models/component_price_points_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ComponentPricePointsResponse](maxio/models/component_price_points_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[BulkCreateComponentPricePointsErrorBody](maxio_advanced_billing/errors/bulk_create_component_price_points_error.py)</code>
+**On `Failure`**: `error` is <code>[BulkCreateComponentPricePointsErrorBody](maxio/errors/bulk_create_component_price_points_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -1672,10 +1672,10 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>component_id</code> | <code>[ComponentIdModel](maxio_advanced_billing/models/unions/component_id_model.py) \| [ComponentIdModelDict](maxio_advanced_billing/models/unions/component_id_model.py)</code> | The id or handle of the component. When using the handle, it must be prefixed with `handle:`. Example: `123` for an integer ID, or `handle:example-product-handle` for a string handle. |
-| <code>price_point_id</code> | <code>[PricePointIdModel](maxio_advanced_billing/models/unions/price_point_id_model.py) \| [PricePointIdModelDict](maxio_advanced_billing/models/unions/price_point_id_model.py)</code> | The id or handle of the price point. When using the handle, it must be prefixed with `handle:`. Example: `123` for an integer ID, or `handle:example-price_point-handle` for a string handle. |
-| <code>body</code> | <code>[CloneComponentPricePointRequest](maxio_advanced_billing/models/clone_component_price_point_request.py) \| [CloneComponentPricePointRequestDict](maxio_advanced_billing/models/clone_component_price_point_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>component_id</code> | <code>[ComponentIdModel](maxio/models/unions/component_id_model.py) \| [ComponentIdModelDict](maxio/models/unions/component_id_model.py)</code> | The id or handle of the component. When using the handle, it must be prefixed with `handle:`. Example: `123` for an integer ID, or `handle:example-product-handle` for a string handle. |
+| <code>price_point_id</code> | <code>[PricePointIdModel](maxio/models/unions/price_point_id_model.py) \| [PricePointIdModelDict](maxio/models/unions/price_point_id_model.py)</code> | The id or handle of the price point. When using the handle, it must be prefixed with `handle:`. Example: `123` for an integer ID, or `handle:example-price_point-handle` for a string handle. |
+| <code>body</code> | <code>[CloneComponentPricePointRequest](maxio/models/clone_component_price_point_request.py) \| [CloneComponentPricePointRequestDict](maxio/models/clone_component_price_point_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -1685,19 +1685,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ComponentPricePointCurrencyOverageResponse](maxio_advanced_billing/models/component_price_point_currency_overage_response.py), [CloneComponentPricePointErrorBody](maxio_advanced_billing/errors/clone_component_price_point_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ComponentPricePointCurrencyOverageResponse](maxio/models/component_price_point_currency_overage_response.py), [CloneComponentPricePointErrorBody](maxio/errors/clone_component_price_point_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ComponentPricePointCurrencyOverageResponse](maxio_advanced_billing/models/component_price_point_currency_overage_response.py)</code> -- Created
+**On `Success`**: `payload` is <code>[ComponentPricePointCurrencyOverageResponse](maxio/models/component_price_point_currency_overage_response.py)</code> -- Created
 
-**On `Failure`**: `error` is <code>[CloneComponentPricePointErrorBody](maxio_advanced_billing/errors/clone_component_price_point_error.py)</code>
+**On `Failure`**: `error` is <code>[CloneComponentPricePointErrorBody](maxio/errors/clone_component_price_point_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -1761,8 +1761,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>component_id</code> | <code>int</code> | The Advanced Billing id of the component |
-| <code>body</code> | <code>[CreateComponentPricePointRequest](maxio_advanced_billing/models/create_component_price_point_request.py) \| [CreateComponentPricePointRequestDict](maxio_advanced_billing/models/create_component_price_point_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CreateComponentPricePointRequest](maxio/models/create_component_price_point_request.py) \| [CreateComponentPricePointRequestDict](maxio/models/create_component_price_point_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -1772,18 +1772,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ComponentPricePointResponse](maxio_advanced_billing/models/component_price_point_response.py), [CreateComponentPricePointErrorBody](maxio_advanced_billing/errors/create_component_price_point_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ComponentPricePointResponse](maxio/models/component_price_point_response.py), [CreateComponentPricePointErrorBody](maxio/errors/create_component_price_point_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ComponentPricePointResponse](maxio_advanced_billing/models/component_price_point_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ComponentPricePointResponse](maxio/models/component_price_point_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[CreateComponentPricePointErrorBody](maxio_advanced_billing/errors/create_component_price_point_error.py)</code>
+**On `Failure`**: `error` is <code>[CreateComponentPricePointErrorBody](maxio/errors/create_component_price_point_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorArrayMapResponse1](maxio_advanced_billing/models/error_array_map_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorArrayMapResponse1](maxio/models/error_array_map_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -1851,8 +1851,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>price_point_id</code> | <code>int</code> | The Advanced Billing id of the price point |
-| <code>body</code> | <code>[CreateCurrencyPricesRequest](maxio_advanced_billing/models/create_currency_prices_request.py) \| [CreateCurrencyPricesRequestDict](maxio_advanced_billing/models/create_currency_prices_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CreateCurrencyPricesRequest](maxio/models/create_currency_prices_request.py) \| [CreateCurrencyPricesRequestDict](maxio/models/create_currency_prices_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -1862,18 +1862,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ComponentCurrencyPricesResponse](maxio_advanced_billing/models/component_currency_prices_response.py), [CreateCurrencyPricesErrorBody](maxio_advanced_billing/errors/create_currency_prices_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ComponentCurrencyPricesResponse](maxio/models/component_currency_prices_response.py), [CreateCurrencyPricesErrorBody](maxio/errors/create_currency_prices_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ComponentCurrencyPricesResponse](maxio_advanced_billing/models/component_currency_prices_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ComponentCurrencyPricesResponse](maxio/models/component_currency_prices_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[CreateCurrencyPricesErrorBody](maxio_advanced_billing/errors/create_currency_prices_error.py)</code>
+**On `Failure`**: `error` is <code>[CreateCurrencyPricesErrorBody](maxio/errors/create_currency_prices_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorArrayMapResponse1](maxio_advanced_billing/models/error_array_map_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorArrayMapResponse1](maxio/models/error_array_map_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -1936,12 +1936,12 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>include</code> | <code>[ListComponentsPricePointsIncludeOrStr](maxio_advanced_billing/models/enums/list_components_price_points_include.py) \| None</code> | Allows including additional data in the response. Use in query: `include=currency_prices`.<br>**Default**: <code>None</code> |
+| <code>include</code> | <code>[ListComponentsPricePointsIncludeOrStr](maxio/models/enums/list_components_price_points_include.py) \| None</code> | Allows including additional data in the response. Use in query: `include=currency_prices`.<br>**Default**: <code>None</code> |
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 20. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>Use in query `per_page=200`.<br>**Default**: <code>20</code> |
-| <code>direction</code> | <code>[SortingDirectionOrStr](maxio_advanced_billing/models/enums/sorting_direction.py) \| None</code> | Controls the order in which results are returned.<br>Use in query `direction=asc`.<br>**Default**: <code>None</code> |
-| <code>filter</code> | <code>[ListPricePointsFilter](maxio_advanced_billing/models/list_price_points_filter.py) \| [ListPricePointsFilterDict](maxio_advanced_billing/models/list_price_points_filter.py) \| None</code> | Filter to use for List PricePoints operations<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>direction</code> | <code>[SortingDirectionOrStr](maxio/models/enums/sorting_direction.py) \| None</code> | Controls the order in which results are returned.<br>Use in query `direction=asc`.<br>**Default**: <code>None</code> |
+| <code>filter</code> | <code>[ListPricePointsFilter](maxio/models/list_price_points_filter.py) \| [ListPricePointsFilterDict](maxio/models/list_price_points_filter.py) \| None</code> | Filter to use for List PricePoints operations<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -1951,18 +1951,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ListComponentsPricePointsResponse](maxio_advanced_billing/models/list_components_price_points_response.py), [ListAllComponentPricePointsErrorBody](maxio_advanced_billing/errors/list_all_component_price_points_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ListComponentsPricePointsResponse](maxio/models/list_components_price_points_response.py), [ListAllComponentPricePointsErrorBody](maxio/errors/list_all_component_price_points_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ListComponentsPricePointsResponse](maxio_advanced_billing/models/list_components_price_points_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ListComponentsPricePointsResponse](maxio/models/list_components_price_points_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[ListAllComponentPricePointsErrorBody](maxio_advanced_billing/errors/list_all_component_price_points_error.py)</code>
+**On `Failure`**: `error` is <code>[ListAllComponentPricePointsErrorBody](maxio/errors/list_all_component_price_points_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -2033,8 +2033,8 @@ match result:
 | <code>currency_prices</code> | <code>bool \| None</code> | Include an array of currency price data.<br>**Default**: <code>None</code> |
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 20. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>Use in query `per_page=200`.<br>**Default**: <code>20</code> |
-| <code>filter_type</code> | <code>list&#91;[PricePointTypeOrStr](maxio_advanced_billing/models/enums/price_point_type.py)&#93; \| None</code> | Use in query: `filter[type]=catalog,default`.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>filter_type</code> | <code>list&#91;[PricePointTypeOrStr](maxio/models/enums/price_point_type.py)&#93; \| None</code> | Use in query: `filter[type]=catalog,default`.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -2044,11 +2044,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ComponentPricePointsResponse](maxio_advanced_billing/models/component_price_points_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ComponentPricePointsResponse](maxio/models/component_price_points_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ComponentPricePointsResponse](maxio_advanced_billing/models/component_price_points_response.py)</code> -- Created
+**On `Success`**: `payload` is <code>[ComponentPricePointsResponse](maxio/models/component_price_points_response.py)</code> -- Created
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -2121,7 +2121,7 @@ match result:
 | --- | --- | --- |
 | <code>component_id</code> | <code>int</code> | The Advanced Billing id of the component to which the price point belongs |
 | <code>price_point_id</code> | <code>int</code> | The Advanced Billing id of the price point |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -2131,11 +2131,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ComponentResponse](maxio_advanced_billing/models/component_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ComponentResponse](maxio/models/component_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ComponentResponse](maxio_advanced_billing/models/component_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ComponentResponse](maxio/models/component_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -2200,10 +2200,10 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>component_id</code> | <code>[ComponentIdModel](maxio_advanced_billing/models/unions/component_id_model.py) \| [ComponentIdModelDict](maxio_advanced_billing/models/unions/component_id_model.py)</code> | The id or handle of the component. When using the handle, it must be prefixed with `handle:`. Example: `123` for an integer ID, or `handle:example-product-handle` for a string handle. |
-| <code>price_point_id</code> | <code>[PricePointIdModel](maxio_advanced_billing/models/unions/price_point_id_model.py) \| [PricePointIdModelDict](maxio_advanced_billing/models/unions/price_point_id_model.py)</code> | The id or handle of the price point. When using the handle, it must be prefixed with `handle:`. Example: `123` for an integer ID, or `handle:example-price_point-handle` for a string handle. |
+| <code>component_id</code> | <code>[ComponentIdModel](maxio/models/unions/component_id_model.py) \| [ComponentIdModelDict](maxio/models/unions/component_id_model.py)</code> | The id or handle of the component. When using the handle, it must be prefixed with `handle:`. Example: `123` for an integer ID, or `handle:example-product-handle` for a string handle. |
+| <code>price_point_id</code> | <code>[PricePointIdModel](maxio/models/unions/price_point_id_model.py) \| [PricePointIdModelDict](maxio/models/unions/price_point_id_model.py)</code> | The id or handle of the price point. When using the handle, it must be prefixed with `handle:`. Example: `123` for an integer ID, or `handle:example-price_point-handle` for a string handle. |
 | <code>currency_prices</code> | <code>bool \| None</code> | Include an array of currency price data.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -2213,11 +2213,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ComponentPricePointCurrencyOverageResponse](maxio_advanced_billing/models/component_price_point_currency_overage_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ComponentPricePointCurrencyOverageResponse](maxio/models/component_price_point_currency_overage_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ComponentPricePointCurrencyOverageResponse](maxio_advanced_billing/models/component_price_point_currency_overage_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ComponentPricePointCurrencyOverageResponse](maxio/models/component_price_point_currency_overage_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -2284,7 +2284,7 @@ match result:
 | --- | --- | --- |
 | <code>component_id</code> | <code>int</code> | The Advanced Billing id of the component to which the price point belongs |
 | <code>price_point_id</code> | <code>int</code> | The Advanced Billing id of the price point |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -2294,11 +2294,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ComponentPricePointResponse](maxio_advanced_billing/models/component_price_point_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ComponentPricePointResponse](maxio/models/component_price_point_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ComponentPricePointResponse](maxio_advanced_billing/models/component_price_point_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ComponentPricePointResponse](maxio/models/component_price_point_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -2369,10 +2369,10 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>component_id</code> | <code>[ComponentIdModel](maxio_advanced_billing/models/unions/component_id_model.py) \| [ComponentIdModelDict](maxio_advanced_billing/models/unions/component_id_model.py)</code> | The id or handle of the component. When using the handle, it must be prefixed with `handle:`. Example: `123` for an integer ID, or `handle:example-product-handle` for a string handle. |
-| <code>price_point_id</code> | <code>[PricePointIdModel](maxio_advanced_billing/models/unions/price_point_id_model.py) \| [PricePointIdModelDict](maxio_advanced_billing/models/unions/price_point_id_model.py)</code> | The id or handle of the price point. When using the handle, it must be prefixed with `handle:`. Example: `123` for an integer ID, or `handle:example-price_point-handle` for a string handle. |
-| <code>body</code> | <code>[UpdateComponentPricePointRequest](maxio_advanced_billing/models/update_component_price_point_request.py) \| [UpdateComponentPricePointRequestDict](maxio_advanced_billing/models/update_component_price_point_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>component_id</code> | <code>[ComponentIdModel](maxio/models/unions/component_id_model.py) \| [ComponentIdModelDict](maxio/models/unions/component_id_model.py)</code> | The id or handle of the component. When using the handle, it must be prefixed with `handle:`. Example: `123` for an integer ID, or `handle:example-product-handle` for a string handle. |
+| <code>price_point_id</code> | <code>[PricePointIdModel](maxio/models/unions/price_point_id_model.py) \| [PricePointIdModelDict](maxio/models/unions/price_point_id_model.py)</code> | The id or handle of the price point. When using the handle, it must be prefixed with `handle:`. Example: `123` for an integer ID, or `handle:example-price_point-handle` for a string handle. |
+| <code>body</code> | <code>[UpdateComponentPricePointRequest](maxio/models/update_component_price_point_request.py) \| [UpdateComponentPricePointRequestDict](maxio/models/update_component_price_point_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -2382,18 +2382,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ComponentPricePointResponse](maxio_advanced_billing/models/component_price_point_response.py), [UpdateComponentPricePointErrorBody](maxio_advanced_billing/errors/update_component_price_point_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ComponentPricePointResponse](maxio/models/component_price_point_response.py), [UpdateComponentPricePointErrorBody](maxio/errors/update_component_price_point_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ComponentPricePointResponse](maxio_advanced_billing/models/component_price_point_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ComponentPricePointResponse](maxio/models/component_price_point_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[UpdateComponentPricePointErrorBody](maxio_advanced_billing/errors/update_component_price_point_error.py)</code>
+**On `Failure`**: `error` is <code>[UpdateComponentPricePointErrorBody](maxio/errors/update_component_price_point_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorArrayMapResponse1](maxio_advanced_billing/models/error_array_map_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorArrayMapResponse1](maxio/models/error_array_map_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -2459,8 +2459,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>price_point_id</code> | <code>int</code> | The Advanced Billing id of the price point |
-| <code>body</code> | <code>[UpdateCurrencyPricesRequest](maxio_advanced_billing/models/update_currency_prices_request.py) \| [UpdateCurrencyPricesRequestDict](maxio_advanced_billing/models/update_currency_prices_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[UpdateCurrencyPricesRequest](maxio/models/update_currency_prices_request.py) \| [UpdateCurrencyPricesRequestDict](maxio/models/update_currency_prices_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -2470,18 +2470,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ComponentCurrencyPricesResponse](maxio_advanced_billing/models/component_currency_prices_response.py), [UpdateCurrencyPricesErrorBody](maxio_advanced_billing/errors/update_currency_prices_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ComponentCurrencyPricesResponse](maxio/models/component_currency_prices_response.py), [UpdateCurrencyPricesErrorBody](maxio/errors/update_currency_prices_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ComponentCurrencyPricesResponse](maxio_advanced_billing/models/component_currency_prices_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ComponentCurrencyPricesResponse](maxio/models/component_currency_prices_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[UpdateCurrencyPricesErrorBody](maxio_advanced_billing/errors/update_currency_prices_error.py)</code>
+**On `Failure`**: `error` is <code>[UpdateCurrencyPricesErrorBody](maxio/errors/update_currency_prices_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorArrayMapResponse1](maxio_advanced_billing/models/error_array_map_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorArrayMapResponse1](maxio/models/error_array_map_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -2493,7 +2493,7 @@ Mapped in first-match order -- an earlier row wins over a later range that also 
 
 ## Components
 
-> Source: [Components](maxio_advanced_billing/apis/components.py)
+> Source: [Components](maxio/apis/components.py)
 
 <details>
 <summary><code>def archive_component(product_family_id: int, component_id: str, *, request_options: RequestOptionsOrDict | None = None) -> ApiResult[Component, ArchiveComponentErrorBody]</code></summary>
@@ -2550,7 +2550,7 @@ match result:
 | --- | --- | --- |
 | <code>product_family_id</code> | <code>int</code> | The Advanced Billing id of the product family to which the component belongs |
 | <code>component_id</code> | <code>str</code> | Either the Advanced Billing id of the component or the handle for the component prefixed with `handle:` |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -2560,18 +2560,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[Component](maxio_advanced_billing/models/component.py), [ArchiveComponentErrorBody](maxio_advanced_billing/errors/archive_component_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[Component](maxio/models/component.py), [ArchiveComponentErrorBody](maxio/errors/archive_component_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[Component](maxio_advanced_billing/models/component.py)</code> -- OK
+**On `Success`**: `payload` is <code>[Component](maxio/models/component.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[ArchiveComponentErrorBody](maxio_advanced_billing/errors/archive_component_error.py)</code>
+**On `Failure`**: `error` is <code>[ArchiveComponentErrorBody](maxio/errors/archive_component_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -2643,8 +2643,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>product_family_id</code> | <code>str</code> | Either the product family's id or its handle prefixed with `handle:` |
-| <code>body</code> | <code>[CreateEbbComponent](maxio_advanced_billing/models/create_ebb_component.py) \| [CreateEbbComponentDict](maxio_advanced_billing/models/create_ebb_component.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CreateEbbComponent](maxio/models/create_ebb_component.py) \| [CreateEbbComponentDict](maxio/models/create_ebb_component.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -2654,19 +2654,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ComponentResponse](maxio_advanced_billing/models/component_response.py), [CreateEventBasedComponentErrorBody](maxio_advanced_billing/errors/create_event_based_component_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ComponentResponse](maxio/models/component_response.py), [CreateEventBasedComponentErrorBody](maxio/errors/create_event_based_component_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ComponentResponse](maxio_advanced_billing/models/component_response.py)</code> -- Created
+**On `Success`**: `payload` is <code>[ComponentResponse](maxio/models/component_response.py)</code> -- Created
 
-**On `Failure`**: `error` is <code>[CreateEventBasedComponentErrorBody](maxio_advanced_billing/errors/create_event_based_component_error.py)</code>
+**On `Failure`**: `error` is <code>[CreateEventBasedComponentErrorBody](maxio/errors/create_event_based_component_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -2738,8 +2738,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>product_family_id</code> | <code>str</code> | Either the product family's id or its handle prefixed with `handle:` |
-| <code>body</code> | <code>[CreateMeteredComponent](maxio_advanced_billing/models/create_metered_component.py) \| [CreateMeteredComponentDict](maxio_advanced_billing/models/create_metered_component.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CreateMeteredComponent](maxio/models/create_metered_component.py) \| [CreateMeteredComponentDict](maxio/models/create_metered_component.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -2749,19 +2749,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ComponentResponse](maxio_advanced_billing/models/component_response.py), [CreateMeteredComponentErrorBody](maxio_advanced_billing/errors/create_metered_component_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ComponentResponse](maxio/models/component_response.py), [CreateMeteredComponentErrorBody](maxio/errors/create_metered_component_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ComponentResponse](maxio_advanced_billing/models/component_response.py)</code> -- Created
+**On `Success`**: `payload` is <code>[ComponentResponse](maxio/models/component_response.py)</code> -- Created
 
-**On `Failure`**: `error` is <code>[CreateMeteredComponentErrorBody](maxio_advanced_billing/errors/create_metered_component_error.py)</code>
+**On `Failure`**: `error` is <code>[CreateMeteredComponentErrorBody](maxio/errors/create_metered_component_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -2831,8 +2831,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>product_family_id</code> | <code>str</code> | Either the product family's id or its handle prefixed with `handle:` |
-| <code>body</code> | <code>[CreateOnOffComponent](maxio_advanced_billing/models/create_on_off_component.py) \| [CreateOnOffComponentDict](maxio_advanced_billing/models/create_on_off_component.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CreateOnOffComponent](maxio/models/create_on_off_component.py) \| [CreateOnOffComponentDict](maxio/models/create_on_off_component.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -2842,19 +2842,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ComponentResponse](maxio_advanced_billing/models/component_response.py), [CreateOnOffComponentErrorBody](maxio_advanced_billing/errors/create_on_off_component_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ComponentResponse](maxio/models/component_response.py), [CreateOnOffComponentErrorBody](maxio/errors/create_on_off_component_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ComponentResponse](maxio_advanced_billing/models/component_response.py)</code> -- Created
+**On `Success`**: `payload` is <code>[ComponentResponse](maxio/models/component_response.py)</code> -- Created
 
-**On `Failure`**: `error` is <code>[CreateOnOffComponentErrorBody](maxio_advanced_billing/errors/create_on_off_component_error.py)</code>
+**On `Failure`**: `error` is <code>[CreateOnOffComponentErrorBody](maxio/errors/create_on_off_component_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -2924,8 +2924,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>product_family_id</code> | <code>str</code> | Either the product family's id or its handle prefixed with `handle:` |
-| <code>body</code> | <code>[CreatePrepaidComponent](maxio_advanced_billing/models/create_prepaid_component.py) \| [CreatePrepaidComponentDict](maxio_advanced_billing/models/create_prepaid_component.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CreatePrepaidComponent](maxio/models/create_prepaid_component.py) \| [CreatePrepaidComponentDict](maxio/models/create_prepaid_component.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -2935,19 +2935,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ComponentResponse](maxio_advanced_billing/models/component_response.py), [CreatePrepaidUsageComponentErrorBody](maxio_advanced_billing/errors/create_prepaid_usage_component_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ComponentResponse](maxio/models/component_response.py), [CreatePrepaidUsageComponentErrorBody](maxio/errors/create_prepaid_usage_component_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ComponentResponse](maxio_advanced_billing/models/component_response.py)</code> -- Created
+**On `Success`**: `payload` is <code>[ComponentResponse](maxio/models/component_response.py)</code> -- Created
 
-**On `Failure`**: `error` is <code>[CreatePrepaidUsageComponentErrorBody](maxio_advanced_billing/errors/create_prepaid_usage_component_error.py)</code>
+**On `Failure`**: `error` is <code>[CreatePrepaidUsageComponentErrorBody](maxio/errors/create_prepaid_usage_component_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -3024,8 +3024,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>product_family_id</code> | <code>str</code> | Either the product family's id or its handle prefixed with `handle:` |
-| <code>body</code> | <code>[CreateQuantityBasedComponent](maxio_advanced_billing/models/create_quantity_based_component.py) \| [CreateQuantityBasedComponentDict](maxio_advanced_billing/models/create_quantity_based_component.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CreateQuantityBasedComponent](maxio/models/create_quantity_based_component.py) \| [CreateQuantityBasedComponentDict](maxio/models/create_quantity_based_component.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -3035,19 +3035,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ComponentResponse](maxio_advanced_billing/models/component_response.py), [CreateQuantityBasedComponentErrorBody](maxio_advanced_billing/errors/create_quantity_based_component_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ComponentResponse](maxio/models/component_response.py), [CreateQuantityBasedComponentErrorBody](maxio/errors/create_quantity_based_component_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ComponentResponse](maxio_advanced_billing/models/component_response.py)</code> -- Created
+**On `Success`**: `payload` is <code>[ComponentResponse](maxio/models/component_response.py)</code> -- Created
 
-**On `Failure`**: `error` is <code>[CreateQuantityBasedComponentErrorBody](maxio_advanced_billing/errors/create_quantity_based_component_error.py)</code>
+**On `Failure`**: `error` is <code>[CreateQuantityBasedComponentErrorBody](maxio/errors/create_quantity_based_component_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -3111,7 +3111,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>handle</code> | <code>str</code> | The handle of the component to find |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -3121,11 +3121,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ComponentResponse](maxio_advanced_billing/models/component_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ComponentResponse](maxio/models/component_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ComponentResponse](maxio_advanced_billing/models/component_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ComponentResponse](maxio/models/component_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -3188,7 +3188,7 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>date_field</code> | <code>[BasicDateFieldOrStr](maxio_advanced_billing/models/enums/basic_date_field.py) \| None</code> | The type of filter you would like to apply to your search.<br>**Default**: <code>None</code> |
+| <code>date_field</code> | <code>[BasicDateFieldOrStr](maxio/models/enums/basic_date_field.py) \| None</code> | The type of filter you would like to apply to your search.<br>**Default**: <code>None</code> |
 | <code>start_date</code> | <code>str \| None</code> | The start date (format YYYY-MM-DD) with which to filter the date_field. Returns components with a timestamp at or after midnight (12:00:00 AM) in your site’s time zone on the date specified.<br>**Default**: <code>None</code> |
 | <code>end_date</code> | <code>str \| None</code> | The end date (format YYYY-MM-DD) with which to filter the date_field. Returns components with a timestamp up to and including 11:59:59PM in your site’s time zone on the date specified.<br>**Default**: <code>None</code> |
 | <code>start_datetime</code> | <code>str \| None</code> | The start date and time (format YYYY-MM-DD HH:MM:SS) with which to filter the date_field. Returns components with a timestamp at or after exact time provided in query. You can specify timezone in query - otherwise your site's time zone will be used. If provided, this parameter will be used instead of start_date.<br>**Default**: <code>None</code> |
@@ -3196,8 +3196,8 @@ match result:
 | <code>include_archived</code> | <code>bool \| None</code> | Include archived items.<br>**Default**: <code>None</code> |
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 20. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>Use in query `per_page=200`.<br>**Default**: <code>20</code> |
-| <code>filter</code> | <code>[ListComponentsFilter](maxio_advanced_billing/models/list_components_filter.py) \| [ListComponentsFilterDict](maxio_advanced_billing/models/list_components_filter.py) \| None</code> | Filter to use for List Components operations<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>filter</code> | <code>[ListComponentsFilter](maxio/models/list_components_filter.py) \| [ListComponentsFilterDict](maxio/models/list_components_filter.py) \| None</code> | Filter to use for List Components operations<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -3207,11 +3207,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;list&#91;[ComponentResponse](maxio_advanced_billing/models/component_response.py)&#93;, [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;list&#91;[ComponentResponse](maxio/models/component_response.py)&#93;, [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>list&#91;[ComponentResponse](maxio_advanced_billing/models/component_response.py)&#93;</code> -- OK
+**On `Success`**: `payload` is <code>list&#91;[ComponentResponse](maxio/models/component_response.py)&#93;</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -3278,13 +3278,13 @@ match result:
 | <code>include_archived</code> | <code>bool \| None</code> | Include archived items.<br>**Default**: <code>None</code> |
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 20. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>Use in query `per_page=200`.<br>**Default**: <code>20</code> |
-| <code>filter</code> | <code>[ListComponentsFilter](maxio_advanced_billing/models/list_components_filter.py) \| [ListComponentsFilterDict](maxio_advanced_billing/models/list_components_filter.py) \| None</code> | Filter to use for List Components operations<br>**Default**: <code>None</code> |
-| <code>date_field</code> | <code>[BasicDateFieldOrStr](maxio_advanced_billing/models/enums/basic_date_field.py) \| None</code> | The type of filter you would like to apply to your search. Use in query `date_field=created_at`.<br>**Default**: <code>None</code> |
+| <code>filter</code> | <code>[ListComponentsFilter](maxio/models/list_components_filter.py) \| [ListComponentsFilterDict](maxio/models/list_components_filter.py) \| None</code> | Filter to use for List Components operations<br>**Default**: <code>None</code> |
+| <code>date_field</code> | <code>[BasicDateFieldOrStr](maxio/models/enums/basic_date_field.py) \| None</code> | The type of filter you would like to apply to your search. Use in query `date_field=created_at`.<br>**Default**: <code>None</code> |
 | <code>end_date</code> | <code>str \| None</code> | The end date (format YYYY-MM-DD) with which to filter the date_field. Returns components with a timestamp up to and including 11:59:59PM in your site’s time zone on the date specified.<br>**Default**: <code>None</code> |
 | <code>end_datetime</code> | <code>str \| None</code> | The end date and time (format YYYY-MM-DD HH:MM:SS) with which to filter the date_field. Returns components with a timestamp at or before exact time provided in query. You can specify timezone in query - otherwise your site's time zone will be used. If provided, this parameter will be used instead of end_date.<br>**Default**: <code>None</code> |
 | <code>start_date</code> | <code>str \| None</code> | The start date (format YYYY-MM-DD) with which to filter the date_field. Returns components with a timestamp at or after midnight (12:00:00 AM) in your site’s time zone on the date specified.<br>**Default**: <code>None</code> |
 | <code>start_datetime</code> | <code>str \| None</code> | The start date and time (format YYYY-MM-DD HH:MM:SS) with which to filter the date_field. Returns components with a timestamp at or after exact time provided in query. You can specify timezone in query - otherwise your site's time zone will be used. If provided, this parameter will be used instead of start_date.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -3294,11 +3294,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;list&#91;[ComponentResponse](maxio_advanced_billing/models/component_response.py)&#93;, [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;list&#91;[ComponentResponse](maxio/models/component_response.py)&#93;, [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>list&#91;[ComponentResponse](maxio_advanced_billing/models/component_response.py)&#93;</code> -- OK
+**On `Success`**: `payload` is <code>list&#91;[ComponentResponse](maxio/models/component_response.py)&#93;</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -3365,7 +3365,7 @@ match result:
 | --- | --- | --- |
 | <code>product_family_id</code> | <code>int</code> | The Advanced Billing id of the product family to which the component belongs |
 | <code>component_id</code> | <code>str</code> | Either the Advanced Billing id of the component or the handle for the component prefixed with `handle:` |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -3375,11 +3375,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ComponentResponse](maxio_advanced_billing/models/component_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ComponentResponse](maxio/models/component_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ComponentResponse](maxio_advanced_billing/models/component_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ComponentResponse](maxio/models/component_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -3447,8 +3447,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>component_id</code> | <code>str</code> | The id or handle of the component |
-| <code>body</code> | <code>[UpdateComponentRequest](maxio_advanced_billing/models/update_component_request.py) \| [UpdateComponentRequestDict](maxio_advanced_billing/models/update_component_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[UpdateComponentRequest](maxio/models/update_component_request.py) \| [UpdateComponentRequestDict](maxio/models/update_component_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -3458,18 +3458,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ComponentResponse](maxio_advanced_billing/models/component_response.py), [UpdateComponentErrorBody](maxio_advanced_billing/errors/update_component_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ComponentResponse](maxio/models/component_response.py), [UpdateComponentErrorBody](maxio/errors/update_component_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ComponentResponse](maxio_advanced_billing/models/component_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ComponentResponse](maxio/models/component_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[UpdateComponentErrorBody](maxio_advanced_billing/errors/update_component_error.py)</code>
+**On `Failure`**: `error` is <code>[UpdateComponentErrorBody](maxio/errors/update_component_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -3540,8 +3540,8 @@ match result:
 | --- | --- | --- |
 | <code>product_family_id</code> | <code>int</code> | The Advanced Billing id of the product family to which the component belongs |
 | <code>component_id</code> | <code>str</code> | Either the Advanced Billing id of the component or the handle for the component prefixed with `handle:` |
-| <code>body</code> | <code>[UpdateComponentRequest](maxio_advanced_billing/models/update_component_request.py) \| [UpdateComponentRequestDict](maxio_advanced_billing/models/update_component_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[UpdateComponentRequest](maxio/models/update_component_request.py) \| [UpdateComponentRequestDict](maxio/models/update_component_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -3551,18 +3551,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ComponentResponse](maxio_advanced_billing/models/component_response.py), [UpdateProductFamilyComponentErrorBody](maxio_advanced_billing/errors/update_product_family_component_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ComponentResponse](maxio/models/component_response.py), [UpdateProductFamilyComponentErrorBody](maxio/errors/update_product_family_component_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ComponentResponse](maxio_advanced_billing/models/component_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ComponentResponse](maxio/models/component_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[UpdateProductFamilyComponentErrorBody](maxio_advanced_billing/errors/update_product_family_component_error.py)</code>
+**On `Failure`**: `error` is <code>[UpdateProductFamilyComponentErrorBody](maxio/errors/update_product_family_component_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -3574,7 +3574,7 @@ Mapped in first-match order -- an earlier row wins over a later range that also 
 
 ## Coupons
 
-> Source: [Coupons](maxio_advanced_billing/apis/coupons.py)
+> Source: [Coupons](maxio/apis/coupons.py)
 
 <details>
 <summary><code>def archive_coupon(product_family_id: int, coupon_id: int, *, request_options: RequestOptionsOrDict | None = None) -> ApiResult[CouponResponse, RawError]</code></summary>
@@ -3633,7 +3633,7 @@ match result:
 | --- | --- | --- |
 | <code>product_family_id</code> | <code>int</code> | The Advanced Billing id of the product family to which the coupon belongs |
 | <code>coupon_id</code> | <code>int</code> | The Advanced Billing id of the coupon |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -3643,11 +3643,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[CouponResponse](maxio_advanced_billing/models/coupon_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[CouponResponse](maxio/models/coupon_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[CouponResponse](maxio_advanced_billing/models/coupon_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[CouponResponse](maxio/models/coupon_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -3715,8 +3715,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>product_family_id</code> | <code>int</code> | The Advanced Billing id of the product family to which the coupon belongs |
-| <code>body</code> | <code>[CouponRequest](maxio_advanced_billing/models/coupon_request.py) \| [CouponRequestDict](maxio_advanced_billing/models/coupon_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CouponRequest](maxio/models/coupon_request.py) \| [CouponRequestDict](maxio/models/coupon_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -3726,18 +3726,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[CouponResponse](maxio_advanced_billing/models/coupon_response.py), [CreateCouponErrorBody](maxio_advanced_billing/errors/create_coupon_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[CouponResponse](maxio/models/coupon_response.py), [CreateCouponErrorBody](maxio/errors/create_coupon_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[CouponResponse](maxio_advanced_billing/models/coupon_response.py)</code> -- Created
+**On `Success`**: `payload` is <code>[CouponResponse](maxio/models/coupon_response.py)</code> -- Created
 
-**On `Failure`**: `error` is <code>[CreateCouponErrorBody](maxio_advanced_billing/errors/create_coupon_error.py)</code>
+**On `Failure`**: `error` is <code>[CreateCouponErrorBody](maxio/errors/create_coupon_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -3842,8 +3842,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>coupon_id</code> | <code>int</code> | The Advanced Billing id of the coupon |
-| <code>body</code> | <code>[CouponSubcodes](maxio_advanced_billing/models/coupon_subcodes.py) \| [CouponSubcodesDict](maxio_advanced_billing/models/coupon_subcodes.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CouponSubcodes](maxio/models/coupon_subcodes.py) \| [CouponSubcodesDict](maxio/models/coupon_subcodes.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -3853,11 +3853,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[CouponSubcodesResponse](maxio_advanced_billing/models/coupon_subcodes_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[CouponSubcodesResponse](maxio/models/coupon_subcodes_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[CouponSubcodesResponse](maxio_advanced_billing/models/coupon_subcodes_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[CouponSubcodesResponse](maxio/models/coupon_subcodes_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -3923,8 +3923,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>coupon_id</code> | <code>int</code> | The Advanced Billing id of the coupon |
-| <code>body</code> | <code>[CouponCurrencyRequest](maxio_advanced_billing/models/coupon_currency_request.py) \| [CouponCurrencyRequestDict](maxio_advanced_billing/models/coupon_currency_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CouponCurrencyRequest](maxio/models/coupon_currency_request.py) \| [CouponCurrencyRequestDict](maxio/models/coupon_currency_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -3934,18 +3934,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[CouponCurrencyResponse](maxio_advanced_billing/models/coupon_currency_response.py), [CreateOrUpdateCouponCurrencyPricesErrorBody](maxio_advanced_billing/errors/create_or_update_coupon_currency_prices_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[CouponCurrencyResponse](maxio/models/coupon_currency_response.py), [CreateOrUpdateCouponCurrencyPricesErrorBody](maxio/errors/create_or_update_coupon_currency_prices_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[CouponCurrencyResponse](maxio_advanced_billing/models/coupon_currency_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[CouponCurrencyResponse](maxio/models/coupon_currency_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[CreateOrUpdateCouponCurrencyPricesErrorBody](maxio_advanced_billing/errors/create_or_update_coupon_currency_prices_error.py)</code>
+**On `Failure`**: `error` is <code>[CreateOrUpdateCouponCurrencyPricesErrorBody](maxio/errors/create_or_update_coupon_currency_prices_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorStringMapResponse1](maxio_advanced_billing/models/error_string_map_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorStringMapResponse1](maxio/models/error_string_map_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -4033,7 +4033,7 @@ match result:
 | --- | --- | --- |
 | <code>coupon_id</code> | <code>int</code> | The Advanced Billing id of the coupon to which the subcode belongs |
 | <code>subcode</code> | <code>str</code> | The subcode of the coupon |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -4043,18 +4043,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;None, [DeleteCouponSubcodeErrorBody](maxio_advanced_billing/errors/delete_coupon_subcode_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;None, [DeleteCouponSubcodeErrorBody](maxio/errors/delete_coupon_subcode_error.py)&#93;</code>
 
 **On `Success`**: the 2xx carries no content; `payload` is <code>None</code>
 
-**On `Failure`**: `error` is <code>[DeleteCouponSubcodeErrorBody](maxio_advanced_billing/errors/delete_coupon_subcode_error.py)</code>
+**On `Failure`**: `error` is <code>[DeleteCouponSubcodeErrorBody](maxio/errors/delete_coupon_subcode_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -4122,7 +4122,7 @@ match result:
 | <code>product_family_id</code> | <code>int \| None</code> | The Advanced Billing id of the product family to which the coupon belongs<br>**Default**: <code>None</code> |
 | <code>code</code> | <code>str \| None</code> | The code of the coupon<br>**Default**: <code>None</code> |
 | <code>currency_prices</code> | <code>bool \| None</code> | (Optional) If you have defined multiple currencies at the site level, you can pass `?currency_prices=true` to include an array of currency price data in the response.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -4132,11 +4132,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[CouponResponse](maxio_advanced_billing/models/coupon_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[CouponResponse](maxio/models/coupon_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[CouponResponse](maxio_advanced_billing/models/coupon_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[CouponResponse](maxio/models/coupon_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -4202,7 +4202,7 @@ match result:
 | <code>coupon_id</code> | <code>int</code> | The Advanced Billing id of the coupon |
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 20. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>Use in query `per_page=200`.<br>**Default**: <code>20</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -4212,11 +4212,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[CouponSubcodes](maxio_advanced_billing/models/coupon_subcodes.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[CouponSubcodes](maxio/models/coupon_subcodes.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[CouponSubcodes](maxio_advanced_billing/models/coupon_subcodes.py)</code> -- OK
+**On `Success`**: `payload` is <code>[CouponSubcodes](maxio/models/coupon_subcodes.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -4281,9 +4281,9 @@ match result:
 | --- | --- | --- |
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 30. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>Use in query `per_page=200`.<br>**Default**: <code>30</code> |
-| <code>filter</code> | <code>[ListCouponsFilter](maxio_advanced_billing/models/list_coupons_filter.py) \| [ListCouponsFilterDict](maxio_advanced_billing/models/list_coupons_filter.py) \| None</code> | Filter to use for List Coupons operations<br>**Default**: <code>None</code> |
+| <code>filter</code> | <code>[ListCouponsFilter](maxio/models/list_coupons_filter.py) \| [ListCouponsFilterDict](maxio/models/list_coupons_filter.py) \| None</code> | Filter to use for List Coupons operations<br>**Default**: <code>None</code> |
 | <code>currency_prices</code> | <code>bool \| None</code> | (Optional) If you have defined multiple currencies at the site level, you can pass `?currency_prices=true` to include an array of currency price data in the response. Use in query `currency_prices=true`.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -4293,11 +4293,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;list&#91;[CouponResponse](maxio_advanced_billing/models/coupon_response.py)&#93;, [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;list&#91;[CouponResponse](maxio/models/coupon_response.py)&#93;, [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>list&#91;[CouponResponse](maxio_advanced_billing/models/coupon_response.py)&#93;</code> -- OK
+**On `Success`**: `payload` is <code>list&#91;[CouponResponse](maxio/models/coupon_response.py)&#93;</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -4363,9 +4363,9 @@ match result:
 | <code>product_family_id</code> | <code>int</code> | The Advanced Billing id of the product family to which the coupon belongs |
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 30. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>Use in query `per_page=200`.<br>**Default**: <code>30</code> |
-| <code>filter</code> | <code>[ListCouponsFilter](maxio_advanced_billing/models/list_coupons_filter.py) \| [ListCouponsFilterDict](maxio_advanced_billing/models/list_coupons_filter.py) \| None</code> | Filter to use for List Coupons operations<br>**Default**: <code>None</code> |
+| <code>filter</code> | <code>[ListCouponsFilter](maxio/models/list_coupons_filter.py) \| [ListCouponsFilterDict](maxio/models/list_coupons_filter.py) \| None</code> | Filter to use for List Coupons operations<br>**Default**: <code>None</code> |
 | <code>currency_prices</code> | <code>bool \| None</code> | (Optional) If you have defined multiple currencies at the site level, you can pass `?currency_prices=true` to include an array of currency price data in the response. Use in query `currency_prices=true`.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -4375,11 +4375,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;list&#91;[CouponResponse](maxio_advanced_billing/models/coupon_response.py)&#93;, [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;list&#91;[CouponResponse](maxio/models/coupon_response.py)&#93;, [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>list&#91;[CouponResponse](maxio_advanced_billing/models/coupon_response.py)&#93;</code> -- OK
+**On `Success`**: `payload` is <code>list&#91;[CouponResponse](maxio/models/coupon_response.py)&#93;</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -4448,7 +4448,7 @@ match result:
 | <code>product_family_id</code> | <code>int</code> | The Advanced Billing id of the product family to which the coupon belongs |
 | <code>coupon_id</code> | <code>int</code> | The Advanced Billing id of the coupon |
 | <code>currency_prices</code> | <code>bool \| None</code> | (Optional) If you have defined multiple currencies at the site level, you can pass `?currency_prices=true` to include an array of currency price data in the response.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -4458,11 +4458,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[CouponResponse](maxio_advanced_billing/models/coupon_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[CouponResponse](maxio/models/coupon_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[CouponResponse](maxio_advanced_billing/models/coupon_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[CouponResponse](maxio/models/coupon_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -4527,7 +4527,7 @@ match result:
 | --- | --- | --- |
 | <code>product_family_id</code> | <code>int</code> | The Advanced Billing id of the product family to which the coupon belongs. |
 | <code>coupon_id</code> | <code>int</code> | The Advanced Billing id of the coupon. |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -4537,11 +4537,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;list&#91;[CouponUsage](maxio_advanced_billing/models/coupon_usage.py)&#93;, [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;list&#91;[CouponUsage](maxio/models/coupon_usage.py)&#93;, [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>list&#91;[CouponUsage](maxio_advanced_billing/models/coupon_usage.py)&#93;</code> -- OK
+**On `Success`**: `payload` is <code>list&#91;[CouponUsage](maxio/models/coupon_usage.py)&#93;</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -4609,8 +4609,8 @@ match result:
 | --- | --- | --- |
 | <code>product_family_id</code> | <code>int</code> | The Advanced Billing id of the product family to which the coupon belongs |
 | <code>coupon_id</code> | <code>int</code> | The Advanced Billing id of the coupon |
-| <code>body</code> | <code>[CouponRequest](maxio_advanced_billing/models/coupon_request.py) \| [CouponRequestDict](maxio_advanced_billing/models/coupon_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CouponRequest](maxio/models/coupon_request.py) \| [CouponRequestDict](maxio/models/coupon_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -4620,18 +4620,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[CouponResponse](maxio_advanced_billing/models/coupon_response.py), [UpdateCouponErrorBody](maxio_advanced_billing/errors/update_coupon_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[CouponResponse](maxio/models/coupon_response.py), [UpdateCouponErrorBody](maxio/errors/update_coupon_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[CouponResponse](maxio_advanced_billing/models/coupon_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[CouponResponse](maxio/models/coupon_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[UpdateCouponErrorBody](maxio_advanced_billing/errors/update_coupon_error.py)</code>
+**On `Failure`**: `error` is <code>[UpdateCouponErrorBody](maxio/errors/update_coupon_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -4705,8 +4705,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>coupon_id</code> | <code>int</code> | The Advanced Billing id of the coupon |
-| <code>body</code> | <code>[CouponSubcodes](maxio_advanced_billing/models/coupon_subcodes.py) \| [CouponSubcodesDict](maxio_advanced_billing/models/coupon_subcodes.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CouponSubcodes](maxio/models/coupon_subcodes.py) \| [CouponSubcodesDict](maxio/models/coupon_subcodes.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -4716,11 +4716,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[CouponSubcodesResponse](maxio_advanced_billing/models/coupon_subcodes_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[CouponSubcodesResponse](maxio/models/coupon_subcodes_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[CouponSubcodesResponse](maxio_advanced_billing/models/coupon_subcodes_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[CouponSubcodesResponse](maxio/models/coupon_subcodes_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -4805,7 +4805,7 @@ match result:
 | --- | --- | --- |
 | <code>code</code> | <code>str</code> | The code of the coupon |
 | <code>product_family_id</code> | <code>int \| None</code> | The Advanced Billing id of the product family to which the coupon belongs<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -4815,18 +4815,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[CouponResponse](maxio_advanced_billing/models/coupon_response.py), [ValidateCouponErrorBody](maxio_advanced_billing/errors/validate_coupon_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[CouponResponse](maxio/models/coupon_response.py), [ValidateCouponErrorBody](maxio/errors/validate_coupon_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[CouponResponse](maxio_advanced_billing/models/coupon_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[CouponResponse](maxio/models/coupon_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[ValidateCouponErrorBody](maxio_advanced_billing/errors/validate_coupon_error.py)</code>
+**On `Failure`**: `error` is <code>[ValidateCouponErrorBody](maxio/errors/validate_coupon_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[SingleStringErrorResponse1](maxio_advanced_billing/models/single_string_error_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[SingleStringErrorResponse1](maxio/models/single_string_error_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -4838,7 +4838,7 @@ Mapped in first-match order -- an earlier row wins over a later range that also 
 
 ## CustomFields
 
-> Source: [CustomFields](maxio_advanced_billing/apis/custom_fields.py)
+> Source: [CustomFields](maxio/apis/custom_fields.py)
 
 <details>
 <summary><code>def create_metadata(resource_type: ResourceTypeOrStr, resource_id: int, *, body: CreateMetadataRequest | CreateMetadataRequestDict | None = None, request_options: RequestOptionsOrDict | None = None) -> ApiResult[list[Metadata], CreateMetadataErrorBody]</code></summary>
@@ -4897,10 +4897,10 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>resource_type</code> | <code>[ResourceTypeOrStr](maxio_advanced_billing/models/enums/resource_type.py)</code> | The resource type to which the metafields belong. |
+| <code>resource_type</code> | <code>[ResourceTypeOrStr](maxio/models/enums/resource_type.py)</code> | The resource type to which the metafields belong. |
 | <code>resource_id</code> | <code>int</code> | The Advanced Billing id of the customer or the subscription for which the metadata applies |
-| <code>body</code> | <code>[CreateMetadataRequest](maxio_advanced_billing/models/create_metadata_request.py) \| [CreateMetadataRequestDict](maxio_advanced_billing/models/create_metadata_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CreateMetadataRequest](maxio/models/create_metadata_request.py) \| [CreateMetadataRequestDict](maxio/models/create_metadata_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -4910,18 +4910,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;list&#91;[Metadata](maxio_advanced_billing/models/metadata.py)&#93;, [CreateMetadataErrorBody](maxio_advanced_billing/errors/create_metadata_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;list&#91;[Metadata](maxio/models/metadata.py)&#93;, [CreateMetadataErrorBody](maxio/errors/create_metadata_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>list&#91;[Metadata](maxio_advanced_billing/models/metadata.py)&#93;</code> -- OK
+**On `Success`**: `payload` is <code>list&#91;[Metadata](maxio/models/metadata.py)&#93;</code> -- OK
 
-**On `Failure`**: `error` is <code>[CreateMetadataErrorBody](maxio_advanced_billing/errors/create_metadata_error.py)</code>
+**On `Failure`**: `error` is <code>[CreateMetadataErrorBody](maxio/errors/create_metadata_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[SingleErrorResponse1](maxio_advanced_billing/models/single_error_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[SingleErrorResponse1](maxio/models/single_error_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -4997,9 +4997,9 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>resource_type</code> | <code>[ResourceTypeOrStr](maxio_advanced_billing/models/enums/resource_type.py)</code> | The resource type to which the metafields belong. |
-| <code>body</code> | <code>[CreateMetafieldsRequest](maxio_advanced_billing/models/create_metafields_request.py) \| [CreateMetafieldsRequestDict](maxio_advanced_billing/models/create_metafields_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>resource_type</code> | <code>[ResourceTypeOrStr](maxio/models/enums/resource_type.py)</code> | The resource type to which the metafields belong. |
+| <code>body</code> | <code>[CreateMetafieldsRequest](maxio/models/create_metafields_request.py) \| [CreateMetafieldsRequestDict](maxio/models/create_metafields_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -5009,18 +5009,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;list&#91;[Metafield](maxio_advanced_billing/models/metafield.py)&#93;, [CreateMetafieldsErrorBody](maxio_advanced_billing/errors/create_metafields_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;list&#91;[Metafield](maxio/models/metafield.py)&#93;, [CreateMetafieldsErrorBody](maxio/errors/create_metafields_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>list&#91;[Metafield](maxio_advanced_billing/models/metafield.py)&#93;</code> -- OK
+**On `Success`**: `payload` is <code>list&#91;[Metafield](maxio/models/metafield.py)&#93;</code> -- OK
 
-**On `Failure`**: `error` is <code>[CreateMetafieldsErrorBody](maxio_advanced_billing/errors/create_metafields_error.py)</code>
+**On `Failure`**: `error` is <code>[CreateMetafieldsErrorBody](maxio/errors/create_metafields_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[SingleErrorResponse1](maxio_advanced_billing/models/single_error_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[SingleErrorResponse1](maxio/models/single_error_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -5083,11 +5083,11 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>resource_type</code> | <code>[ResourceTypeOrStr](maxio_advanced_billing/models/enums/resource_type.py)</code> | The resource type to which the metafields belong. |
+| <code>resource_type</code> | <code>[ResourceTypeOrStr](maxio/models/enums/resource_type.py)</code> | The resource type to which the metafields belong. |
 | <code>resource_id</code> | <code>int</code> | The Advanced Billing id of the customer or the subscription for which the metadata applies |
 | <code>name</code> | <code>str \| None</code> | Name of field to be removed.<br>**Default**: <code>None</code> |
 | <code>names</code> | <code>list&#91;str&#93; \| None</code> | Names of fields to be removed. Use in query: `names[]=field1&names[]=my-field&names[]=another-field`.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -5097,18 +5097,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;None, [DeleteMetadataErrorBody](maxio_advanced_billing/errors/delete_metadata_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;None, [DeleteMetadataErrorBody](maxio/errors/delete_metadata_error.py)&#93;</code>
 
 **On `Success`**: the 2xx carries no content; `payload` is <code>None</code>
 
-**On `Failure`**: `error` is <code>[DeleteMetadataErrorBody](maxio_advanced_billing/errors/delete_metadata_error.py)</code>
+**On `Failure`**: `error` is <code>[DeleteMetadataErrorBody](maxio/errors/delete_metadata_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -5171,9 +5171,9 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>resource_type</code> | <code>[ResourceTypeOrStr](maxio_advanced_billing/models/enums/resource_type.py)</code> | The resource type to which the metafields belong. |
+| <code>resource_type</code> | <code>[ResourceTypeOrStr](maxio/models/enums/resource_type.py)</code> | The resource type to which the metafields belong. |
 | <code>name</code> | <code>str \| None</code> | The name of the metafield to be deleted<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -5183,18 +5183,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;None, [DeleteMetafieldErrorBody](maxio_advanced_billing/errors/delete_metafield_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;None, [DeleteMetafieldErrorBody](maxio/errors/delete_metafield_error.py)&#93;</code>
 
 **On `Success`**: the 2xx carries no content; `payload` is <code>None</code>
 
-**On `Failure`**: `error` is <code>[DeleteMetafieldErrorBody](maxio_advanced_billing/errors/delete_metafield_error.py)</code>
+**On `Failure`**: `error` is <code>[DeleteMetafieldErrorBody](maxio/errors/delete_metafield_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -5257,11 +5257,11 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>resource_type</code> | <code>[ResourceTypeOrStr](maxio_advanced_billing/models/enums/resource_type.py)</code> | The resource type to which the metafields belong. |
+| <code>resource_type</code> | <code>[ResourceTypeOrStr](maxio/models/enums/resource_type.py)</code> | The resource type to which the metafields belong. |
 | <code>resource_id</code> | <code>int</code> | The Advanced Billing id of the customer or the subscription for which the metadata applies |
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 20. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>Use in query `per_page=200`.<br>**Default**: <code>20</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -5271,11 +5271,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[PaginatedMetadata](maxio_advanced_billing/models/paginated_metadata.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[PaginatedMetadata](maxio/models/paginated_metadata.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[PaginatedMetadata](maxio_advanced_billing/models/paginated_metadata.py)</code> -- OK
+**On `Success`**: `payload` is <code>[PaginatedMetadata](maxio/models/paginated_metadata.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -5338,18 +5338,18 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>resource_type</code> | <code>[ResourceTypeOrStr](maxio_advanced_billing/models/enums/resource_type.py)</code> | The resource type to which the metafields belong. |
+| <code>resource_type</code> | <code>[ResourceTypeOrStr](maxio/models/enums/resource_type.py)</code> | The resource type to which the metafields belong. |
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 20. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>Use in query `per_page=200`.<br>**Default**: <code>20</code> |
-| <code>date_field</code> | <code>[BasicDateFieldOrStr](maxio_advanced_billing/models/enums/basic_date_field.py) \| None</code> | The type of filter you would like to apply to your search.<br>**Default**: <code>None</code> |
+| <code>date_field</code> | <code>[BasicDateFieldOrStr](maxio/models/enums/basic_date_field.py) \| None</code> | The type of filter you would like to apply to your search.<br>**Default**: <code>None</code> |
 | <code>start_date</code> | <code>Date \| None</code> | The start date (format YYYY-MM-DD) with which to filter the date_field. Returns metadata with a timestamp at or after midnight (12:00:00 AM) in your site’s time zone on the date specified.<br>**Default**: <code>None</code> |
 | <code>end_date</code> | <code>Date \| None</code> | The end date (format YYYY-MM-DD) with which to filter the date_field. Returns metadata with a timestamp up to and including 11:59:59PM in your site’s time zone on the date specified.<br>**Default**: <code>None</code> |
 | <code>start_datetime</code> | <code>RFC3339DateTime \| None</code> | The start date and time (format YYYY-MM-DD HH:MM:SS) with which to filter the date_field. Returns metadata with a timestamp at or after exact time provided in query. You can specify timezone in query - otherwise your site's time zone will be used. If provided, this parameter will be used instead of start_date.<br>**Default**: <code>None</code> |
 | <code>end_datetime</code> | <code>RFC3339DateTime \| None</code> | The end date and time (format YYYY-MM-DD HH:MM:SS) with which to filter the date_field. Returns metadata with a timestamp at or before exact time provided in query. You can specify timezone in query - otherwise your site's time zone will be used. If provided, this parameter will be used instead of end_date.<br>**Default**: <code>None</code> |
 | <code>with_deleted</code> | <code>bool \| None</code> | Allow to fetch deleted metadata.<br>**Default**: <code>None</code> |
 | <code>resource_ids</code> | <code>list&#91;int&#93; \| None</code> | Allow to fetch metadata for multiple records based on provided ids. Use in query: `resource_ids[]=122&resource_ids[]=123&resource_ids[]=124`.<br>**Default**: <code>None</code> |
-| <code>direction</code> | <code>[SortingDirectionOrStr](maxio_advanced_billing/models/enums/sorting_direction.py) \| None</code> | Controls the order in which results are returned.<br>Use in query `direction=asc`.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>direction</code> | <code>[SortingDirectionOrStr](maxio/models/enums/sorting_direction.py) \| None</code> | Controls the order in which results are returned.<br>Use in query `direction=asc`.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -5359,11 +5359,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[PaginatedMetadata](maxio_advanced_billing/models/paginated_metadata.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[PaginatedMetadata](maxio/models/paginated_metadata.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[PaginatedMetadata](maxio_advanced_billing/models/paginated_metadata.py)</code> -- OK
+**On `Success`**: `payload` is <code>[PaginatedMetadata](maxio/models/paginated_metadata.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -5426,12 +5426,12 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>resource_type</code> | <code>[ResourceTypeOrStr](maxio_advanced_billing/models/enums/resource_type.py)</code> | The resource type to which the metafields belong. |
+| <code>resource_type</code> | <code>[ResourceTypeOrStr](maxio/models/enums/resource_type.py)</code> | The resource type to which the metafields belong. |
 | <code>name</code> | <code>str \| None</code> | Filter by the name of the metafield.<br>**Default**: <code>None</code> |
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 20. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>Use in query `per_page=200`.<br>**Default**: <code>20</code> |
-| <code>direction</code> | <code>[SortingDirectionOrStr](maxio_advanced_billing/models/enums/sorting_direction.py) \| None</code> | Controls the order in which results are returned.<br>Use in query `direction=asc`.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>direction</code> | <code>[SortingDirectionOrStr](maxio/models/enums/sorting_direction.py) \| None</code> | Controls the order in which results are returned.<br>Use in query `direction=asc`.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -5441,11 +5441,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ListMetafieldsResponse](maxio_advanced_billing/models/list_metafields_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ListMetafieldsResponse](maxio/models/list_metafields_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ListMetafieldsResponse](maxio_advanced_billing/models/list_metafields_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ListMetafieldsResponse](maxio/models/list_metafields_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -5512,10 +5512,10 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>resource_type</code> | <code>[ResourceTypeOrStr](maxio_advanced_billing/models/enums/resource_type.py)</code> | The resource type to which the metafields belong. |
+| <code>resource_type</code> | <code>[ResourceTypeOrStr](maxio/models/enums/resource_type.py)</code> | The resource type to which the metafields belong. |
 | <code>resource_id</code> | <code>int</code> | The Advanced Billing id of the customer or the subscription for which the metadata applies |
-| <code>body</code> | <code>[UpdateMetadataRequest](maxio_advanced_billing/models/update_metadata_request.py) \| [UpdateMetadataRequestDict](maxio_advanced_billing/models/update_metadata_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[UpdateMetadataRequest](maxio/models/update_metadata_request.py) \| [UpdateMetadataRequestDict](maxio/models/update_metadata_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -5525,18 +5525,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;list&#91;[Metadata](maxio_advanced_billing/models/metadata.py)&#93;, [UpdateMetadataErrorBody](maxio_advanced_billing/errors/update_metadata_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;list&#91;[Metadata](maxio/models/metadata.py)&#93;, [UpdateMetadataErrorBody](maxio/errors/update_metadata_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>list&#91;[Metadata](maxio_advanced_billing/models/metadata.py)&#93;</code> -- OK
+**On `Success`**: `payload` is <code>list&#91;[Metadata](maxio/models/metadata.py)&#93;</code> -- OK
 
-**On `Failure`**: `error` is <code>[UpdateMetadataErrorBody](maxio_advanced_billing/errors/update_metadata_error.py)</code>
+**On `Failure`**: `error` is <code>[UpdateMetadataErrorBody](maxio/errors/update_metadata_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[SingleErrorResponse1](maxio_advanced_billing/models/single_error_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[SingleErrorResponse1](maxio/models/single_error_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -5620,9 +5620,9 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>resource_type</code> | <code>[ResourceTypeOrStr](maxio_advanced_billing/models/enums/resource_type.py)</code> | The resource type to which the metafields belong. |
-| <code>body</code> | <code>[UpdateMetafieldsRequest](maxio_advanced_billing/models/update_metafields_request.py) \| [UpdateMetafieldsRequestDict](maxio_advanced_billing/models/update_metafields_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>resource_type</code> | <code>[ResourceTypeOrStr](maxio/models/enums/resource_type.py)</code> | The resource type to which the metafields belong. |
+| <code>body</code> | <code>[UpdateMetafieldsRequest](maxio/models/update_metafields_request.py) \| [UpdateMetafieldsRequestDict](maxio/models/update_metafields_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -5632,18 +5632,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;list&#91;[Metafield](maxio_advanced_billing/models/metafield.py)&#93;, [UpdateMetafieldErrorBody](maxio_advanced_billing/errors/update_metafield_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;list&#91;[Metafield](maxio/models/metafield.py)&#93;, [UpdateMetafieldErrorBody](maxio/errors/update_metafield_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>list&#91;[Metafield](maxio_advanced_billing/models/metafield.py)&#93;</code> -- OK
+**On `Success`**: `payload` is <code>list&#91;[Metafield](maxio/models/metafield.py)&#93;</code> -- OK
 
-**On `Failure`**: `error` is <code>[UpdateMetafieldErrorBody](maxio_advanced_billing/errors/update_metafield_error.py)</code>
+**On `Failure`**: `error` is <code>[UpdateMetafieldErrorBody](maxio/errors/update_metafield_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[SingleErrorResponse1](maxio_advanced_billing/models/single_error_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[SingleErrorResponse1](maxio/models/single_error_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -5655,7 +5655,7 @@ Mapped in first-match order -- an earlier row wins over a later range that also 
 
 ## Customers
 
-> Source: [Customers](maxio_advanced_billing/apis/customers.py)
+> Source: [Customers](maxio/apis/customers.py)
 
 <details>
 <summary><code>def create_customer(*, body: CreateCustomerRequest | CreateCustomerRequestDict | None = None, request_options: RequestOptionsOrDict | None = None) -> ApiResult[CustomerResponse, CreateCustomerErrorBody]</code></summary>
@@ -5733,8 +5733,8 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>body</code> | <code>[CreateCustomerRequest](maxio_advanced_billing/models/create_customer_request.py) \| [CreateCustomerRequestDict](maxio_advanced_billing/models/create_customer_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CreateCustomerRequest](maxio/models/create_customer_request.py) \| [CreateCustomerRequestDict](maxio/models/create_customer_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -5744,18 +5744,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[CustomerResponse](maxio_advanced_billing/models/customer_response.py), [CreateCustomerErrorBody](maxio_advanced_billing/errors/create_customer_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[CustomerResponse](maxio/models/customer_response.py), [CreateCustomerErrorBody](maxio/errors/create_customer_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[CustomerResponse](maxio_advanced_billing/models/customer_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[CustomerResponse](maxio/models/customer_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[CreateCustomerErrorBody](maxio_advanced_billing/errors/create_customer_error.py)</code>
+**On `Failure`**: `error` is <code>[CreateCustomerErrorBody](maxio/errors/create_customer_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[CustomerErrorResponse1](maxio_advanced_billing/models/customer_error_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[CustomerErrorResponse1](maxio/models/customer_error_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -5819,7 +5819,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>id</code> | <code>int</code> | The Advanced Billing id of the customer |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -5829,11 +5829,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;None, [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;None, [RawError](maxio/core/results.py)&#93;</code>
 
 **On `Success`**: the 2xx carries no content; `payload` is <code>None</code>
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -5899,7 +5899,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>customer_id</code> | <code>int</code> | The Chargify id of the customer |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -5909,11 +5909,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;list&#91;[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py)&#93;, [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;list&#91;[SubscriptionResponse](maxio/models/subscription_response.py)&#93;, [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>list&#91;[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py)&#93;</code> -- OK
+**On `Success`**: `payload` is <code>list&#91;[SubscriptionResponse](maxio/models/subscription_response.py)&#93;</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -5990,16 +5990,16 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>direction</code> | <code>[SortingDirectionOrStr](maxio_advanced_billing/models/enums/sorting_direction.py) \| None</code> | Direction to sort customers by time of creation<br>**Default**: <code>None</code> |
+| <code>direction</code> | <code>[SortingDirectionOrStr](maxio/models/enums/sorting_direction.py) \| None</code> | Direction to sort customers by time of creation<br>**Default**: <code>None</code> |
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 50. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>Use in query `per_page=200`.<br>**Default**: <code>50</code> |
-| <code>date_field</code> | <code>[BasicDateFieldOrStr](maxio_advanced_billing/models/enums/basic_date_field.py) \| None</code> | The type of filter you would like to apply to your search.<br>Use in query: `date_field=created_at`.<br>**Default**: <code>None</code> |
+| <code>date_field</code> | <code>[BasicDateFieldOrStr](maxio/models/enums/basic_date_field.py) \| None</code> | The type of filter you would like to apply to your search.<br>Use in query: `date_field=created_at`.<br>**Default**: <code>None</code> |
 | <code>start_date</code> | <code>str \| None</code> | The start date (format YYYY-MM-DD) with which to filter the date_field. Returns subscriptions with a timestamp at or after midnight (12:00:00 AM) in your site’s time zone on the date specified.<br>**Default**: <code>None</code> |
 | <code>end_date</code> | <code>str \| None</code> | The end date (format YYYY-MM-DD) with which to filter the date_field. Returns subscriptions with a timestamp up to and including 11:59:59PM in your site’s time zone on the date specified.<br>**Default**: <code>None</code> |
 | <code>start_datetime</code> | <code>str \| None</code> | The start date and time (format YYYY-MM-DD HH:MM:SS) with which to filter the date_field. Returns subscriptions with a timestamp at or after exact time provided in query. You can specify timezone in query - otherwise your site's time zone will be used. If provided, this parameter will be used instead of start_date.<br>**Default**: <code>None</code> |
 | <code>end_datetime</code> | <code>str \| None</code> | The end date and time (format YYYY-MM-DD HH:MM:SS) with which to filter the date_field. Returns subscriptions with a timestamp at or before exact time provided in query. You can specify timezone in query - otherwise your site's time zone will be used. If provided, this parameter will be used instead of end_date.<br>**Default**: <code>None</code> |
 | <code>q</code> | <code>str \| None</code> | A search query by which to filter customers (can be an email, an ID, a reference, organization)<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -6009,11 +6009,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;list&#91;[CustomerResponse](maxio_advanced_billing/models/customer_response.py)&#93;, [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;list&#91;[CustomerResponse](maxio/models/customer_response.py)&#93;, [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>list&#91;[CustomerResponse](maxio_advanced_billing/models/customer_response.py)&#93;</code> -- OK
+**On `Success`**: `payload` is <code>list&#91;[CustomerResponse](maxio/models/customer_response.py)&#93;</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -6077,7 +6077,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>id</code> | <code>int</code> | The Advanced Billing id of the customer |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -6087,11 +6087,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[CustomerResponse](maxio_advanced_billing/models/customer_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[CustomerResponse](maxio/models/customer_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[CustomerResponse](maxio_advanced_billing/models/customer_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[CustomerResponse](maxio/models/customer_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -6155,7 +6155,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>reference</code> | <code>str</code> | Customer reference |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -6165,11 +6165,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[CustomerResponse](maxio_advanced_billing/models/customer_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[CustomerResponse](maxio/models/customer_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[CustomerResponse](maxio_advanced_billing/models/customer_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[CustomerResponse](maxio/models/customer_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -6233,8 +6233,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>id</code> | <code>int</code> | The Advanced Billing id of the customer |
-| <code>body</code> | <code>[UpdateCustomerRequest](maxio_advanced_billing/models/update_customer_request.py) \| [UpdateCustomerRequestDict](maxio_advanced_billing/models/update_customer_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[UpdateCustomerRequest](maxio/models/update_customer_request.py) \| [UpdateCustomerRequestDict](maxio/models/update_customer_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -6244,19 +6244,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[CustomerResponse](maxio_advanced_billing/models/customer_response.py), [UpdateCustomerErrorBody](maxio_advanced_billing/errors/update_customer_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[CustomerResponse](maxio/models/customer_response.py), [UpdateCustomerErrorBody](maxio/errors/update_customer_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[CustomerResponse](maxio_advanced_billing/models/customer_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[CustomerResponse](maxio/models/customer_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[UpdateCustomerErrorBody](maxio_advanced_billing/errors/update_customer_error.py)</code>
+**On `Failure`**: `error` is <code>[UpdateCustomerErrorBody](maxio/errors/update_customer_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 422 | <code>[CustomerErrorResponse1](maxio_advanced_billing/models/customer_error_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 422 | <code>[CustomerErrorResponse1](maxio/models/customer_error_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -6268,7 +6268,7 @@ Mapped in first-match order -- an earlier row wins over a later range that also 
 
 ## Events
 
-> Source: [Events](maxio_advanced_billing/apis/events.py)
+> Source: [Events](maxio/apis/events.py)
 
 <details>
 <summary><code>def list_events(*, page: int | None = 1, per_page: int | None = 20, since_id: int | None = None, max_id: int | None = None, direction: DirectionOrStr | None = None, filter: list[EventKeyOrStr] | None = None, date_field: ListEventsDateFieldOrStr | None = None, start_date: str | None = None, end_date: str | None = None, start_datetime: str | None = None, end_datetime: str | None = None, request_options: RequestOptionsOrDict | None = None) -> ApiResult[list[EventResponse], RawError]</code></summary>
@@ -6408,14 +6408,14 @@ match result:
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 20. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>Use in query `per_page=200`.<br>**Default**: <code>20</code> |
 | <code>since_id</code> | <code>int \| None</code> | Returns events with an id greater than or equal to the one specified.<br>**Default**: <code>None</code> |
 | <code>max_id</code> | <code>int \| None</code> | Returns events with an id less than or equal to the one specified.<br>**Default**: <code>None</code> |
-| <code>direction</code> | <code>[DirectionOrStr](maxio_advanced_billing/models/enums/direction.py) \| None</code> | The sort direction of the returned events.<br>**Default**: <code>None</code> |
-| <code>filter</code> | <code>list&#91;[EventKeyOrStr](maxio_advanced_billing/models/enums/event_key.py)&#93; \| None</code> | You can pass multiple event keys after comma.<br>Use in query `filter=signup_success,payment_success`.<br>**Default**: <code>None</code> |
-| <code>date_field</code> | <code>[ListEventsDateFieldOrStr](maxio_advanced_billing/models/enums/list_events_date_field.py) \| None</code> | The type of filter you would like to apply to your search.<br>**Default**: <code>None</code> |
+| <code>direction</code> | <code>[DirectionOrStr](maxio/models/enums/direction.py) \| None</code> | The sort direction of the returned events.<br>**Default**: <code>None</code> |
+| <code>filter</code> | <code>list&#91;[EventKeyOrStr](maxio/models/enums/event_key.py)&#93; \| None</code> | You can pass multiple event keys after comma.<br>Use in query `filter=signup_success,payment_success`.<br>**Default**: <code>None</code> |
+| <code>date_field</code> | <code>[ListEventsDateFieldOrStr](maxio/models/enums/list_events_date_field.py) \| None</code> | The type of filter you would like to apply to your search.<br>**Default**: <code>None</code> |
 | <code>start_date</code> | <code>str \| None</code> | The start date (format YYYY-MM-DD) with which to filter the date_field. Returns components with a timestamp at or after midnight (12:00:00 AM) in your site’s time zone on the date specified.<br>**Default**: <code>None</code> |
 | <code>end_date</code> | <code>str \| None</code> | The end date (format YYYY-MM-DD) with which to filter the date_field. Returns components with a timestamp up to and including 11:59:59PM in your site’s time zone on the date specified.<br>**Default**: <code>None</code> |
 | <code>start_datetime</code> | <code>str \| None</code> | The start date and time (format YYYY-MM-DD HH:MM:SS) with which to filter the date_field. Returns components with a timestamp at or after exact time provided in query. You can specify timezone in query - otherwise your site's time zone will be used. If provided, this parameter will be used instead of start_date.<br>**Default**: <code>None</code> |
 | <code>end_datetime</code> | <code>str \| None</code> | The end date and time (format YYYY-MM-DD HH:MM:SS) with which to filter the date_field. Returns components with a timestamp at or before exact time provided in query. You can specify timezone in query - otherwise your site's time zone will be used. If provided, this parameter will be used instead of end_date.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -6425,11 +6425,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;list&#91;[EventResponse](maxio_advanced_billing/models/event_response.py)&#93;, [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;list&#91;[EventResponse](maxio/models/event_response.py)&#93;, [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>list&#91;[EventResponse](maxio_advanced_billing/models/event_response.py)&#93;</code> -- OK
+**On `Success`**: `payload` is <code>list&#91;[EventResponse](maxio/models/event_response.py)&#93;</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -6520,9 +6520,9 @@ match result:
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 20. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>Use in query `per_page=200`.<br>**Default**: <code>20</code> |
 | <code>since_id</code> | <code>int \| None</code> | Returns events with an id greater than or equal to the one specified.<br>**Default**: <code>None</code> |
 | <code>max_id</code> | <code>int \| None</code> | Returns events with an id less than or equal to the one specified.<br>**Default**: <code>None</code> |
-| <code>direction</code> | <code>[DirectionOrStr](maxio_advanced_billing/models/enums/direction.py) \| None</code> | The sort direction of the returned events.<br>**Default**: <code>None</code> |
-| <code>filter</code> | <code>list&#91;[EventKeyOrStr](maxio_advanced_billing/models/enums/event_key.py)&#93; \| None</code> | You can pass multiple event keys after comma.<br>Use in query `filter=signup_success,payment_success`.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>direction</code> | <code>[DirectionOrStr](maxio/models/enums/direction.py) \| None</code> | The sort direction of the returned events.<br>**Default**: <code>None</code> |
+| <code>filter</code> | <code>list&#91;[EventKeyOrStr](maxio/models/enums/event_key.py)&#93; \| None</code> | You can pass multiple event keys after comma.<br>Use in query `filter=signup_success,payment_success`.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -6532,11 +6532,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;list&#91;[EventResponse](maxio_advanced_billing/models/event_response.py)&#93;, [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;list&#91;[EventResponse](maxio/models/event_response.py)&#93;, [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>list&#91;[EventResponse](maxio_advanced_billing/models/event_response.py)&#93;</code> -- OK
+**On `Success`**: `payload` is <code>list&#91;[EventResponse](maxio/models/event_response.py)&#93;</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -6617,9 +6617,9 @@ match result:
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 20. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>Use in query `per_page=200`.<br>**Default**: <code>20</code> |
 | <code>since_id</code> | <code>int \| None</code> | Returns events with an id greater than or equal to the one specified.<br>**Default**: <code>None</code> |
 | <code>max_id</code> | <code>int \| None</code> | Returns events with an id less than or equal to the one specified.<br>**Default**: <code>None</code> |
-| <code>direction</code> | <code>[DirectionOrStr](maxio_advanced_billing/models/enums/direction.py) \| None</code> | The sort direction of the returned events.<br>**Default**: <code>None</code> |
-| <code>filter</code> | <code>list&#91;[EventKeyOrStr](maxio_advanced_billing/models/enums/event_key.py)&#93; \| None</code> | You can pass multiple event keys after comma.<br>Use in query `filter=signup_success,payment_success`.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>direction</code> | <code>[DirectionOrStr](maxio/models/enums/direction.py) \| None</code> | The sort direction of the returned events.<br>**Default**: <code>None</code> |
+| <code>filter</code> | <code>list&#91;[EventKeyOrStr](maxio/models/enums/event_key.py)&#93; \| None</code> | You can pass multiple event keys after comma.<br>Use in query `filter=signup_success,payment_success`.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -6629,11 +6629,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[CountResponse](maxio_advanced_billing/models/count_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[CountResponse](maxio/models/count_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[CountResponse](maxio_advanced_billing/models/count_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[CountResponse](maxio/models/count_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -6645,7 +6645,7 @@ match result:
 
 ## EventsBasedBillingSegments
 
-> Source: [EventsBasedBillingSegments](maxio_advanced_billing/apis/events_based_billing_segments.py)
+> Source: [EventsBasedBillingSegments](maxio/apis/events_based_billing_segments.py)
 
 <details>
 <summary><code>def bulk_create_segments(component_id: str, price_point_id: str, *, body: BulkCreateSegments | BulkCreateSegmentsDict | None = None, request_options: RequestOptionsOrDict | None = None) -> ApiResult[ListSegmentsResponse, BulkCreateSegmentsErrorBody]</code></summary>
@@ -6708,8 +6708,8 @@ match result:
 | --- | --- | --- |
 | <code>component_id</code> | <code>str</code> | ID or Handle for the Component |
 | <code>price_point_id</code> | <code>str</code> | ID or Handle for the Price Point belonging to the Component |
-| <code>body</code> | <code>[BulkCreateSegments](maxio_advanced_billing/models/bulk_create_segments.py) \| [BulkCreateSegmentsDict](maxio_advanced_billing/models/bulk_create_segments.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[BulkCreateSegments](maxio/models/bulk_create_segments.py) \| [BulkCreateSegmentsDict](maxio/models/bulk_create_segments.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -6719,19 +6719,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ListSegmentsResponse](maxio_advanced_billing/models/list_segments_response.py), [BulkCreateSegmentsErrorBody](maxio_advanced_billing/errors/bulk_create_segments_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ListSegmentsResponse](maxio/models/list_segments_response.py), [BulkCreateSegmentsErrorBody](maxio/errors/bulk_create_segments_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ListSegmentsResponse](maxio_advanced_billing/models/list_segments_response.py)</code> -- Created
+**On `Success`**: `payload` is <code>[ListSegmentsResponse](maxio/models/list_segments_response.py)</code> -- Created
 
-**On `Failure`**: `error` is <code>[BulkCreateSegmentsErrorBody](maxio_advanced_billing/errors/bulk_create_segments_error.py)</code>
+**On `Failure`**: `error` is <code>[BulkCreateSegmentsErrorBody](maxio/errors/bulk_create_segments_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 422 | <code>[EventBasedBillingSegment1](maxio_advanced_billing/models/event_based_billing_segment1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 422 | <code>[EventBasedBillingSegment1](maxio/models/event_based_billing_segment1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -6802,8 +6802,8 @@ match result:
 | --- | --- | --- |
 | <code>component_id</code> | <code>str</code> | ID or Handle for the Component |
 | <code>price_point_id</code> | <code>str</code> | ID or Handle for the Price Point belonging to the Component |
-| <code>body</code> | <code>[BulkUpdateSegments](maxio_advanced_billing/models/bulk_update_segments.py) \| [BulkUpdateSegmentsDict](maxio_advanced_billing/models/bulk_update_segments.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[BulkUpdateSegments](maxio/models/bulk_update_segments.py) \| [BulkUpdateSegmentsDict](maxio/models/bulk_update_segments.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -6813,19 +6813,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ListSegmentsResponse](maxio_advanced_billing/models/list_segments_response.py), [BulkUpdateSegmentsErrorBody](maxio_advanced_billing/errors/bulk_update_segments_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ListSegmentsResponse](maxio/models/list_segments_response.py), [BulkUpdateSegmentsErrorBody](maxio/errors/bulk_update_segments_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ListSegmentsResponse](maxio_advanced_billing/models/list_segments_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ListSegmentsResponse](maxio/models/list_segments_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[BulkUpdateSegmentsErrorBody](maxio_advanced_billing/errors/bulk_update_segments_error.py)</code>
+**On `Failure`**: `error` is <code>[BulkUpdateSegmentsErrorBody](maxio/errors/bulk_update_segments_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 422 | <code>[EventBasedBillingSegment1](maxio_advanced_billing/models/event_based_billing_segment1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 422 | <code>[EventBasedBillingSegment1](maxio/models/event_based_billing_segment1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -6892,8 +6892,8 @@ match result:
 | --- | --- | --- |
 | <code>component_id</code> | <code>str</code> | ID or Handle for the Component |
 | <code>price_point_id</code> | <code>str</code> | ID or Handle for the Price Point belonging to the Component |
-| <code>body</code> | <code>[CreateSegmentRequest](maxio_advanced_billing/models/create_segment_request.py) \| [CreateSegmentRequestDict](maxio_advanced_billing/models/create_segment_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CreateSegmentRequest](maxio/models/create_segment_request.py) \| [CreateSegmentRequestDict](maxio/models/create_segment_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -6903,19 +6903,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[SegmentResponse](maxio_advanced_billing/models/segment_response.py), [CreateSegmentErrorBody](maxio_advanced_billing/errors/create_segment_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[SegmentResponse](maxio/models/segment_response.py), [CreateSegmentErrorBody](maxio/errors/create_segment_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[SegmentResponse](maxio_advanced_billing/models/segment_response.py)</code> -- Created
+**On `Success`**: `payload` is <code>[SegmentResponse](maxio/models/segment_response.py)</code> -- Created
 
-**On `Failure`**: `error` is <code>[CreateSegmentErrorBody](maxio_advanced_billing/errors/create_segment_error.py)</code>
+**On `Failure`**: `error` is <code>[CreateSegmentErrorBody](maxio/errors/create_segment_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 422 | <code>[EventBasedBillingSegmentErrors1](maxio_advanced_billing/models/event_based_billing_segment_errors1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 422 | <code>[EventBasedBillingSegmentErrors1](maxio/models/event_based_billing_segment_errors1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -6985,7 +6985,7 @@ match result:
 | <code>component_id</code> | <code>str</code> | ID or Handle of the Component |
 | <code>price_point_id</code> | <code>str</code> | ID or Handle of the Price Point belonging to the Component |
 | <code>id</code> | <code>float</code> | The ID of the Segment |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -6995,18 +6995,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;None, [DeleteSegmentErrorBody](maxio_advanced_billing/errors/delete_segment_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;None, [DeleteSegmentErrorBody](maxio/errors/delete_segment_error.py)&#93;</code>
 
 **On `Success`**: the 2xx carries no content; `payload` is <code>None</code>
 
-**On `Failure`**: `error` is <code>[DeleteSegmentErrorBody](maxio_advanced_billing/errors/delete_segment_error.py)</code>
+**On `Failure`**: `error` is <code>[DeleteSegmentErrorBody](maxio/errors/delete_segment_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404, 422 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404, 422 | <code>[RawError](maxio/core/results.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -7081,8 +7081,8 @@ match result:
 | <code>price_point_id</code> | <code>str</code> | ID or Handle for the Price Point belonging to the Component |
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 30. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>Use in query `per_page=200`.<br>**Default**: <code>30</code> |
-| <code>filter</code> | <code>[ListSegmentsFilter](maxio_advanced_billing/models/list_segments_filter.py) \| [ListSegmentsFilterDict](maxio_advanced_billing/models/list_segments_filter.py) \| None</code> | Filter to use for List Segments for a Price Point operation<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>filter</code> | <code>[ListSegmentsFilter](maxio/models/list_segments_filter.py) \| [ListSegmentsFilterDict](maxio/models/list_segments_filter.py) \| None</code> | Filter to use for List Segments for a Price Point operation<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -7092,19 +7092,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ListSegmentsResponse](maxio_advanced_billing/models/list_segments_response.py), [ListSegmentsForPricePointErrorBody](maxio_advanced_billing/errors/list_segments_for_price_point_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ListSegmentsResponse](maxio/models/list_segments_response.py), [ListSegmentsForPricePointErrorBody](maxio/errors/list_segments_for_price_point_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ListSegmentsResponse](maxio_advanced_billing/models/list_segments_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ListSegmentsResponse](maxio/models/list_segments_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[ListSegmentsForPricePointErrorBody](maxio_advanced_billing/errors/list_segments_for_price_point_error.py)</code>
+**On `Failure`**: `error` is <code>[ListSegmentsForPricePointErrorBody](maxio/errors/list_segments_for_price_point_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 422 | <code>[EventBasedBillingListSegmentsErrors1](maxio_advanced_billing/models/event_based_billing_list_segments_errors1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 422 | <code>[EventBasedBillingListSegmentsErrors1](maxio/models/event_based_billing_list_segments_errors1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -7174,8 +7174,8 @@ match result:
 | <code>component_id</code> | <code>str</code> | ID or Handle of the Component |
 | <code>price_point_id</code> | <code>str</code> | ID or Handle of the Price Point belonging to the Component |
 | <code>id</code> | <code>float</code> | The ID of the Segment |
-| <code>body</code> | <code>[UpdateSegmentRequest](maxio_advanced_billing/models/update_segment_request.py) \| [UpdateSegmentRequestDict](maxio_advanced_billing/models/update_segment_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[UpdateSegmentRequest](maxio/models/update_segment_request.py) \| [UpdateSegmentRequestDict](maxio/models/update_segment_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -7185,19 +7185,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[SegmentResponse](maxio_advanced_billing/models/segment_response.py), [UpdateSegmentErrorBody](maxio_advanced_billing/errors/update_segment_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[SegmentResponse](maxio/models/segment_response.py), [UpdateSegmentErrorBody](maxio/errors/update_segment_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[SegmentResponse](maxio_advanced_billing/models/segment_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[SegmentResponse](maxio/models/segment_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[UpdateSegmentErrorBody](maxio_advanced_billing/errors/update_segment_error.py)</code>
+**On `Failure`**: `error` is <code>[UpdateSegmentErrorBody](maxio/errors/update_segment_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 422 | <code>[EventBasedBillingSegmentErrors1](maxio_advanced_billing/models/event_based_billing_segment_errors1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 422 | <code>[EventBasedBillingSegmentErrors1](maxio/models/event_based_billing_segment_errors1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -7209,7 +7209,7 @@ Mapped in first-match order -- an earlier row wins over a later range that also 
 
 ## Insights
 
-> Source: [Insights](maxio_advanced_billing/apis/insights.py)
+> Source: [Insights](maxio/apis/insights.py)
 
 <details>
 <summary><code>def list_mrr_movements(*, subscription_id: int | None = None, page: int | None = 1, per_page: int | None = 10, direction: SortingDirectionOrStr | None = None, request_options: RequestOptionsOrDict | None = None) -> ApiResult[ListMrrResponse, RawError]</code></summary>
@@ -7288,8 +7288,8 @@ match result:
 | <code>subscription_id</code> | <code>int \| None</code> | (Optional) Filter results by subscription.<br>**Default**: <code>None</code> |
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 10. The maximum allowed values is 50; any per_page value over 50 will be changed to 50.<br>Use in query `per_page=20`.<br>**Default**: <code>10</code> |
-| <code>direction</code> | <code>[SortingDirectionOrStr](maxio_advanced_billing/models/enums/sorting_direction.py) \| None</code> | Controls the order in which results are returned.<br>Use in query `direction=asc`.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>direction</code> | <code>[SortingDirectionOrStr](maxio/models/enums/sorting_direction.py) \| None</code> | Controls the order in which results are returned.<br>Use in query `direction=asc`.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -7299,11 +7299,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ListMrrResponse](maxio_advanced_billing/models/list_mrr_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ListMrrResponse](maxio/models/list_mrr_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ListMrrResponse](maxio_advanced_billing/models/list_mrr_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ListMrrResponse](maxio/models/list_mrr_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -7366,12 +7366,12 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>filter</code> | <code>[ListMrrFilter](maxio_advanced_billing/models/list_mrr_filter.py) \| [ListMrrFilterDict](maxio_advanced_billing/models/list_mrr_filter.py) \| None</code> | Filter to use for List MRR per subscription operation<br>**Default**: <code>None</code> |
+| <code>filter</code> | <code>[ListMrrFilter](maxio/models/list_mrr_filter.py) \| [ListMrrFilterDict](maxio/models/list_mrr_filter.py) \| None</code> | Filter to use for List MRR per subscription operation<br>**Default**: <code>None</code> |
 | <code>at_time</code> | <code>str \| None</code> | Submit a timestamp in ISO8601 format to request MRR for a historic time. Use in query: `at_time=2022-01-10T10:00:00-05:00`.<br>**Default**: <code>None</code> |
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 20. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>Use in query `per_page=200`.<br>**Default**: <code>20</code> |
-| <code>direction</code> | <code>[DirectionOrStr](maxio_advanced_billing/models/enums/direction.py) \| None</code> | Controls the order in which results are returned. Records are ordered by subscription_id in ascending order by default. Use in query `direction=desc`.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>direction</code> | <code>[DirectionOrStr](maxio/models/enums/direction.py) \| None</code> | Controls the order in which results are returned. Records are ordered by subscription_id in ascending order by default. Use in query `direction=desc`.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -7381,18 +7381,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[SubscriptionMrrResponse](maxio_advanced_billing/models/subscription_mrr_response.py), [ListMrrPerSubscriptionErrorBody](maxio_advanced_billing/errors/list_mrr_per_subscription_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[SubscriptionMrrResponse](maxio/models/subscription_mrr_response.py), [ListMrrPerSubscriptionErrorBody](maxio/errors/list_mrr_per_subscription_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[SubscriptionMrrResponse](maxio_advanced_billing/models/subscription_mrr_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[SubscriptionMrrResponse](maxio/models/subscription_mrr_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[ListMrrPerSubscriptionErrorBody](maxio_advanced_billing/errors/list_mrr_per_subscription_error.py)</code>
+**On `Failure`**: `error` is <code>[ListMrrPerSubscriptionErrorBody](maxio/errors/list_mrr_per_subscription_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 400 | <code>[SubscriptionsMrrErrorResponse1](maxio_advanced_billing/models/subscriptions_mrr_error_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 400 | <code>[SubscriptionsMrrErrorResponse1](maxio/models/subscriptions_mrr_error_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -7457,7 +7457,7 @@ match result:
 | --- | --- | --- |
 | <code>at_time</code> | <code>RFC3339DateTime \| None</code> | submit a timestamp in ISO8601 format to request MRR for a historic time.<br>**Default**: <code>None</code> |
 | <code>subscription_id</code> | <code>int \| None</code> | submit the id of a subscription in order to limit results.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -7467,11 +7467,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[MrrResponse](maxio_advanced_billing/models/mrr_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[MrrResponse](maxio/models/mrr_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[MrrResponse](maxio_advanced_billing/models/mrr_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[MrrResponse](maxio/models/mrr_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -7542,7 +7542,7 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -7552,11 +7552,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[SiteSummary](maxio_advanced_billing/models/site_summary.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[SiteSummary](maxio/models/site_summary.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[SiteSummary](maxio_advanced_billing/models/site_summary.py)</code> -- OK
+**On `Success`**: `payload` is <code>[SiteSummary](maxio/models/site_summary.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -7568,7 +7568,7 @@ match result:
 
 ## Invoices
 
-> Source: [Invoices](maxio_advanced_billing/apis/invoices.py)
+> Source: [Invoices](maxio/apis/invoices.py)
 
 <details>
 <summary><code>def create_invoice(subscription_id: int, *, body: CreateInvoiceRequest | CreateInvoiceRequestDict | None = None, request_options: RequestOptionsOrDict | None = None) -> ApiResult[InvoiceResponse, CreateInvoiceErrorBody]</code></summary>
@@ -7802,8 +7802,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>body</code> | <code>[CreateInvoiceRequest](maxio_advanced_billing/models/create_invoice_request.py) \| [CreateInvoiceRequestDict](maxio_advanced_billing/models/create_invoice_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CreateInvoiceRequest](maxio/models/create_invoice_request.py) \| [CreateInvoiceRequestDict](maxio/models/create_invoice_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -7813,18 +7813,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[InvoiceResponse](maxio_advanced_billing/models/invoice_response.py), [CreateInvoiceErrorBody](maxio_advanced_billing/errors/create_invoice_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[InvoiceResponse](maxio/models/invoice_response.py), [CreateInvoiceErrorBody](maxio/errors/create_invoice_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[InvoiceResponse](maxio_advanced_billing/models/invoice_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[InvoiceResponse](maxio/models/invoice_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[CreateInvoiceErrorBody](maxio_advanced_billing/errors/create_invoice_error.py)</code>
+**On `Failure`**: `error` is <code>[CreateInvoiceErrorBody](maxio/errors/create_invoice_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorArrayMapResponse1](maxio_advanced_billing/models/error_array_map_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorArrayMapResponse1](maxio/models/error_array_map_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -7893,7 +7893,7 @@ match result:
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
 | <code>uid</code> | <code>str</code> | The unique identifier for the invoice, this does not refer to the public facing invoice number. |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -7903,18 +7903,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;None, [DeleteInvoiceErrorBody](maxio_advanced_billing/errors/delete_invoice_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;None, [DeleteInvoiceErrorBody](maxio/errors/delete_invoice_error.py)&#93;</code>
 
 **On `Success`**: the 2xx carries no content; `payload` is <code>None</code>
 
-**On `Failure`**: `error` is <code>[DeleteInvoiceErrorBody](maxio_advanced_billing/errors/delete_invoice_error.py)</code>
+**On `Failure`**: `error` is <code>[DeleteInvoiceErrorBody](maxio/errors/delete_invoice_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404, 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404, 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -7987,8 +7987,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>uid</code> | <code>str</code> | The unique identifier for the invoice, this does not refer to the public facing invoice number. |
-| <code>body</code> | <code>[IssueInvoiceRequest](maxio_advanced_billing/models/issue_invoice_request.py) \| [IssueInvoiceRequestDict](maxio_advanced_billing/models/issue_invoice_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[IssueInvoiceRequest](maxio/models/issue_invoice_request.py) \| [IssueInvoiceRequestDict](maxio/models/issue_invoice_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -7998,19 +7998,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[Invoice](maxio_advanced_billing/models/invoice.py), [IssueInvoiceErrorBody](maxio_advanced_billing/errors/issue_invoice_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[Invoice](maxio/models/invoice.py), [IssueInvoiceErrorBody](maxio/errors/issue_invoice_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[Invoice](maxio_advanced_billing/models/invoice.py)</code> -- OK
+**On `Success`**: `payload` is <code>[Invoice](maxio/models/invoice.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[IssueInvoiceErrorBody](maxio_advanced_billing/errors/issue_invoice_error.py)</code>
+**On `Failure`**: `error` is <code>[IssueInvoiceErrorBody](maxio/errors/issue_invoice_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -8076,8 +8076,8 @@ match result:
 | <code>invoice_uid</code> | <code>str</code> | The unique identifier of the consolidated invoice |
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 20. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>Use in query `per_page=200`.<br>**Default**: <code>20</code> |
-| <code>direction</code> | <code>[DirectionOrStr](maxio_advanced_billing/models/enums/direction.py) \| None</code> | Sort direction of the returned segments.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>direction</code> | <code>[DirectionOrStr](maxio/models/enums/direction.py) \| None</code> | Sort direction of the returned segments.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -8087,11 +8087,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ConsolidatedInvoice](maxio_advanced_billing/models/consolidated_invoice.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ConsolidatedInvoice](maxio/models/consolidated_invoice.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ConsolidatedInvoice](maxio_advanced_billing/models/consolidated_invoice.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ConsolidatedInvoice](maxio/models/consolidated_invoice.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -8164,7 +8164,7 @@ match result:
 | <code>taxes</code> | <code>bool \| None</code> | Include taxes data.<br>**Default**: <code>False</code> |
 | <code>refunds</code> | <code>bool \| None</code> | Include refunds data.<br>**Default**: <code>False</code> |
 | <code>applications</code> | <code>bool \| None</code> | Include applications data.<br>**Default**: <code>False</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -8174,11 +8174,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ListCreditNotesResponse](maxio_advanced_billing/models/list_credit_notes_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ListCreditNotesResponse](maxio/models/list_credit_notes_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ListCreditNotesResponse](maxio_advanced_billing/models/list_credit_notes_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ListCreditNotesResponse](maxio/models/list_credit_notes_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -8270,8 +8270,8 @@ match result:
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 100. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>**Default**: <code>100</code> |
 | <code>invoice_uid</code> | <code>str \| None</code> | Providing an invoice_uid allows for scoping of the invoice events to a single invoice or credit note.<br>**Default**: <code>None</code> |
 | <code>with_change_invoice_status</code> | <code>str \| None</code> | Use this parameter if you want to fetch also invoice events with change_invoice_status type.<br>**Default**: <code>None</code> |
-| <code>event_types</code> | <code>list&#91;[InvoiceEventTypeOrStr](maxio_advanced_billing/models/enums/invoice_event_type.py)&#93; \| None</code> | Filter results by event_type. Supply a comma separated list of event types (listed above). Use in query: `event_types=void_invoice,void_remainder`.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>event_types</code> | <code>list&#91;[InvoiceEventTypeOrStr](maxio/models/enums/invoice_event_type.py)&#93; \| None</code> | Filter results by event_type. Supply a comma separated list of event types (listed above). Use in query: `event_types=void_invoice,void_remainder`.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -8281,11 +8281,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ListInvoiceEventsResponse](maxio_advanced_billing/models/list_invoice_events_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ListInvoiceEventsResponse](maxio/models/list_invoice_events_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ListInvoiceEventsResponse](maxio_advanced_billing/models/list_invoice_events_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ListInvoiceEventsResponse](maxio/models/list_invoice_events_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -8350,13 +8350,13 @@ match result:
 | --- | --- | --- |
 | <code>start_date</code> | <code>str \| None</code> | The start date (format YYYY-MM-DD) with which to filter the date_field. Returns invoices with a timestamp at or after midnight (12:00:00 AM) in your site’s time zone on the date specified.<br>**Default**: <code>None</code> |
 | <code>end_date</code> | <code>str \| None</code> | The end date (format YYYY-MM-DD) with which to filter the date_field. Returns invoices with a timestamp up to and including 11:59:59PM in your site’s time zone on the date specified.<br>**Default**: <code>None</code> |
-| <code>status</code> | <code>[InvoiceStatusOrStr](maxio_advanced_billing/models/enums/invoice_status.py) \| None</code> | The current status of the invoice.  Allowed Values: draft, open, paid, pending, voided<br>**Default**: <code>None</code> |
+| <code>status</code> | <code>[InvoiceStatusOrStr](maxio/models/enums/invoice_status.py) \| None</code> | The current status of the invoice.  Allowed Values: draft, open, paid, pending, voided<br>**Default**: <code>None</code> |
 | <code>subscription_id</code> | <code>int \| None</code> | The subscription's ID.<br>**Default**: <code>None</code> |
 | <code>subscription_group_uid</code> | <code>str \| None</code> | The UID of the subscription group you want to fetch consolidated invoices for. This will return a paginated list of consolidated invoices for the specified group.<br>**Default**: <code>None</code> |
 | <code>consolidation_level</code> | <code>str \| None</code> | The consolidation level of the invoice. Allowed Values: none, parent, child or comma-separated lists of thereof, e.g. none,parent.<br>**Default**: <code>None</code> |
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 20. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>Use in query `per_page=200`.<br>**Default**: <code>20</code> |
-| <code>direction</code> | <code>[DirectionOrStr](maxio_advanced_billing/models/enums/direction.py) \| None</code> | The sort direction of the returned invoices.<br>**Default**: <code>None</code> |
+| <code>direction</code> | <code>[DirectionOrStr](maxio/models/enums/direction.py) \| None</code> | The sort direction of the returned invoices.<br>**Default**: <code>None</code> |
 | <code>line_items</code> | <code>bool \| None</code> | Include line items data.<br>**Default**: <code>False</code> |
 | <code>discounts</code> | <code>bool \| None</code> | Include discounts data.<br>**Default**: <code>False</code> |
 | <code>taxes</code> | <code>bool \| None</code> | Include taxes data.<br>**Default**: <code>False</code> |
@@ -8364,14 +8364,14 @@ match result:
 | <code>payments</code> | <code>bool \| None</code> | Include payments data.<br>**Default**: <code>False</code> |
 | <code>custom_fields</code> | <code>bool \| None</code> | Include custom fields data.<br>**Default**: <code>False</code> |
 | <code>refunds</code> | <code>bool \| None</code> | Include refunds data.<br>**Default**: <code>False</code> |
-| <code>date_field</code> | <code>[InvoiceDateFieldOrStr](maxio_advanced_billing/models/enums/invoice_date_field.py) \| None</code> | The type of filter you would like to apply to your search. Use in query `date_field=issue_date`.<br>**Default**: <code>None</code> |
+| <code>date_field</code> | <code>[InvoiceDateFieldOrStr](maxio/models/enums/invoice_date_field.py) \| None</code> | The type of filter you would like to apply to your search. Use in query `date_field=issue_date`.<br>**Default**: <code>None</code> |
 | <code>start_datetime</code> | <code>str \| None</code> | The start date and time (format YYYY-MM-DD HH:MM:SS) with which to filter the date_field. Returns invoices with a timestamp at or after exact time provided in query. You can specify timezone in query - otherwise your site's time zone will be used. If provided, this parameter will be used instead of start_date. Allowed to be used only along with date_field set to created_at or updated_at.<br>**Default**: <code>None</code> |
 | <code>end_datetime</code> | <code>str \| None</code> | The end date and time (format YYYY-MM-DD HH:MM:SS) with which to filter the date_field. Returns invoices with a timestamp at or before exact time provided in query. You can specify timezone in query - otherwise your site's time zone will be used. If provided, this parameter will be used instead of end_date. Allowed to be used only along with date_field set to created_at or updated_at.<br>**Default**: <code>None</code> |
 | <code>customer_ids</code> | <code>list&#91;int&#93; \| None</code> | Allows fetching invoices with matching customer id based on provided values. Use in query `customer_ids=1,2,3`.<br>**Default**: <code>None</code> |
 | <code>number</code> | <code>list&#91;str&#93; \| None</code> | Allows fetching invoices with matching invoice number based on provided values. Use in query `number=1234,1235`.<br>**Default**: <code>None</code> |
 | <code>product_ids</code> | <code>list&#91;int&#93; \| None</code> | Allows fetching invoices with matching line items product ids based on provided values. Use in query `product_ids=23,34`.<br>**Default**: <code>None</code> |
-| <code>sort</code> | <code>[InvoiceSortFieldOrStr](maxio_advanced_billing/models/enums/invoice_sort_field.py) \| None</code> | Allows specification of the order of the returned list. Use in query `sort=total_amount`.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>sort</code> | <code>[InvoiceSortFieldOrStr](maxio/models/enums/invoice_sort_field.py) \| None</code> | Allows specification of the order of the returned list. Use in query `sort=total_amount`.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -8381,11 +8381,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ListInvoicesResponse](maxio_advanced_billing/models/list_invoices_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ListInvoicesResponse](maxio/models/list_invoices_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ListInvoicesResponse](maxio_advanced_billing/models/list_invoices_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ListInvoicesResponse](maxio/models/list_invoices_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -8451,7 +8451,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>uid</code> | <code>str</code> | The unique identifier for the invoice, this does not refer to the public facing invoice number. |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -8461,18 +8461,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[CustomerChangesPreviewResponse](maxio_advanced_billing/models/customer_changes_preview_response.py), [PreviewCustomerInformationChangesErrorBody](maxio_advanced_billing/errors/preview_customer_information_changes_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[CustomerChangesPreviewResponse](maxio/models/customer_changes_preview_response.py), [PreviewCustomerInformationChangesErrorBody](maxio/errors/preview_customer_information_changes_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[CustomerChangesPreviewResponse](maxio_advanced_billing/models/customer_changes_preview_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[CustomerChangesPreviewResponse](maxio/models/customer_changes_preview_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[PreviewCustomerInformationChangesErrorBody](maxio_advanced_billing/errors/preview_customer_information_changes_error.py)</code>
+**On `Failure`**: `error` is <code>[PreviewCustomerInformationChangesErrorBody](maxio/errors/preview_customer_information_changes_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404, 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404, 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -8536,7 +8536,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>uid</code> | <code>str</code> | The unique identifier of the credit note |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -8546,11 +8546,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[CreditNote](maxio_advanced_billing/models/credit_note.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[CreditNote](maxio/models/credit_note.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[CreditNote](maxio_advanced_billing/models/credit_note.py)</code> -- OK
+**On `Success`**: `payload` is <code>[CreditNote](maxio/models/credit_note.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -8626,7 +8626,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>uid</code> | <code>str</code> | The unique identifier for the invoice, this does not refer to the public facing invoice number. |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -8636,11 +8636,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[Invoice](maxio_advanced_billing/models/invoice.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[Invoice](maxio/models/invoice.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[Invoice](maxio_advanced_billing/models/invoice.py)</code> -- OK
+**On `Success`**: `payload` is <code>[Invoice](maxio/models/invoice.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -8704,8 +8704,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>uid</code> | <code>str</code> | The unique identifier for the invoice, this does not refer to the public facing invoice number. |
-| <code>body</code> | <code>[CreateInvoicePaymentRequest](maxio_advanced_billing/models/create_invoice_payment_request.py) \| [CreateInvoicePaymentRequestDict](maxio_advanced_billing/models/create_invoice_payment_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CreateInvoicePaymentRequest](maxio/models/create_invoice_payment_request.py) \| [CreateInvoicePaymentRequestDict](maxio/models/create_invoice_payment_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -8715,18 +8715,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[Invoice](maxio_advanced_billing/models/invoice.py), [RecordPaymentForInvoiceErrorBody](maxio_advanced_billing/errors/record_payment_for_invoice_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[Invoice](maxio/models/invoice.py), [RecordPaymentForInvoiceErrorBody](maxio/errors/record_payment_for_invoice_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[Invoice](maxio_advanced_billing/models/invoice.py)</code> -- OK
+**On `Success`**: `payload` is <code>[Invoice](maxio/models/invoice.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RecordPaymentForInvoiceErrorBody](maxio_advanced_billing/errors/record_payment_for_invoice_error.py)</code>
+**On `Failure`**: `error` is <code>[RecordPaymentForInvoiceErrorBody](maxio/errors/record_payment_for_invoice_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -8814,8 +8814,8 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>body</code> | <code>[CreateMultiInvoicePaymentRequest](maxio_advanced_billing/models/create_multi_invoice_payment_request.py) \| [CreateMultiInvoicePaymentRequestDict](maxio_advanced_billing/models/create_multi_invoice_payment_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CreateMultiInvoicePaymentRequest](maxio/models/create_multi_invoice_payment_request.py) \| [CreateMultiInvoicePaymentRequestDict](maxio/models/create_multi_invoice_payment_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -8825,18 +8825,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[MultiInvoicePaymentResponse](maxio_advanced_billing/models/multi_invoice_payment_response.py), [RecordPaymentForMultipleInvoicesErrorBody](maxio_advanced_billing/errors/record_payment_for_multiple_invoices_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[MultiInvoicePaymentResponse](maxio/models/multi_invoice_payment_response.py), [RecordPaymentForMultipleInvoicesErrorBody](maxio/errors/record_payment_for_multiple_invoices_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[MultiInvoicePaymentResponse](maxio_advanced_billing/models/multi_invoice_payment_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[MultiInvoicePaymentResponse](maxio/models/multi_invoice_payment_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RecordPaymentForMultipleInvoicesErrorBody](maxio_advanced_billing/errors/record_payment_for_multiple_invoices_error.py)</code>
+**On `Failure`**: `error` is <code>[RecordPaymentForMultipleInvoicesErrorBody](maxio/errors/record_payment_for_multiple_invoices_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -8906,8 +8906,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>body</code> | <code>[RecordPaymentRequest](maxio_advanced_billing/models/record_payment_request.py) \| [RecordPaymentRequestDict](maxio_advanced_billing/models/record_payment_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[RecordPaymentRequest](maxio/models/record_payment_request.py) \| [RecordPaymentRequestDict](maxio/models/record_payment_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -8917,18 +8917,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[RecordPaymentResponse](maxio_advanced_billing/models/record_payment_response.py), [RecordPaymentForSubscriptionErrorBody](maxio_advanced_billing/errors/record_payment_for_subscription_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[RecordPaymentResponse](maxio/models/record_payment_response.py), [RecordPaymentForSubscriptionErrorBody](maxio/errors/record_payment_for_subscription_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[RecordPaymentResponse](maxio_advanced_billing/models/record_payment_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[RecordPaymentResponse](maxio/models/record_payment_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RecordPaymentForSubscriptionErrorBody](maxio_advanced_billing/errors/record_payment_for_subscription_error.py)</code>
+**On `Failure`**: `error` is <code>[RecordPaymentForSubscriptionErrorBody](maxio/errors/record_payment_for_subscription_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -8998,8 +8998,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>uid</code> | <code>str</code> | The unique identifier for the invoice, this does not refer to the public facing invoice number. |
-| <code>body</code> | <code>[RefundInvoiceRequest](maxio_advanced_billing/models/refund_invoice_request.py) \| [RefundInvoiceRequestDict](maxio_advanced_billing/models/refund_invoice_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[RefundInvoiceRequest](maxio/models/refund_invoice_request.py) \| [RefundInvoiceRequestDict](maxio/models/refund_invoice_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -9009,18 +9009,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[Invoice](maxio_advanced_billing/models/invoice.py), [RefundInvoiceErrorBody](maxio_advanced_billing/errors/refund_invoice_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[Invoice](maxio/models/invoice.py), [RefundInvoiceErrorBody](maxio/errors/refund_invoice_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[Invoice](maxio_advanced_billing/models/invoice.py)</code> -- OK
+**On `Success`**: `payload` is <code>[Invoice](maxio/models/invoice.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RefundInvoiceErrorBody](maxio_advanced_billing/errors/refund_invoice_error.py)</code>
+**On `Failure`**: `error` is <code>[RefundInvoiceErrorBody](maxio/errors/refund_invoice_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -9095,7 +9095,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>uid</code> | <code>str</code> | The unique identifier for the invoice, this does not refer to the public facing invoice number. |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -9105,19 +9105,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[Invoice](maxio_advanced_billing/models/invoice.py), [ReopenInvoiceErrorBody](maxio_advanced_billing/errors/reopen_invoice_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[Invoice](maxio/models/invoice.py), [ReopenInvoiceErrorBody](maxio/errors/reopen_invoice_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[Invoice](maxio_advanced_billing/models/invoice.py)</code> -- OK
+**On `Success`**: `payload` is <code>[Invoice](maxio/models/invoice.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[ReopenInvoiceErrorBody](maxio_advanced_billing/errors/reopen_invoice_error.py)</code>
+**On `Failure`**: `error` is <code>[ReopenInvoiceErrorBody](maxio/errors/reopen_invoice_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
 | 404 | <code>Any \| None</code> |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -9187,8 +9187,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>uid</code> | <code>str</code> | The unique identifier for the invoice, this does not refer to the public facing invoice number. |
-| <code>body</code> | <code>[SendInvoiceRequest](maxio_advanced_billing/models/send_invoice_request.py) \| [SendInvoiceRequestDict](maxio_advanced_billing/models/send_invoice_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[SendInvoiceRequest](maxio/models/send_invoice_request.py) \| [SendInvoiceRequestDict](maxio/models/send_invoice_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -9198,18 +9198,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;None, [SendInvoiceErrorBody](maxio_advanced_billing/errors/send_invoice_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;None, [SendInvoiceErrorBody](maxio/errors/send_invoice_error.py)&#93;</code>
 
 **On `Success`**: the 2xx carries no content; `payload` is <code>None</code>
 
-**On `Failure`**: `error` is <code>[SendInvoiceErrorBody](maxio_advanced_billing/errors/send_invoice_error.py)</code>
+**On `Failure`**: `error` is <code>[SendInvoiceErrorBody](maxio/errors/send_invoice_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -9275,7 +9275,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>uid</code> | <code>str</code> | The unique identifier for the invoice, this does not refer to the public facing invoice number. |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -9285,18 +9285,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[Invoice](maxio_advanced_billing/models/invoice.py), [UpdateCustomerInformationErrorBody](maxio_advanced_billing/errors/update_customer_information_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[Invoice](maxio/models/invoice.py), [UpdateCustomerInformationErrorBody](maxio/errors/update_customer_information_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[Invoice](maxio_advanced_billing/models/invoice.py)</code> -- OK
+**On `Success`**: `payload` is <code>[Invoice](maxio/models/invoice.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[UpdateCustomerInformationErrorBody](maxio_advanced_billing/errors/update_customer_information_error.py)</code>
+**On `Failure`**: `error` is <code>[UpdateCustomerInformationErrorBody](maxio/errors/update_customer_information_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404, 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404, 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -9401,8 +9401,8 @@ match result:
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
 | <code>uid</code> | <code>str</code> | The unique identifier for the invoice, this does not refer to the public facing invoice number. |
-| <code>body</code> | <code>[UpdateInvoiceRequest](maxio_advanced_billing/models/update_invoice_request.py) \| [UpdateInvoiceRequestDict](maxio_advanced_billing/models/update_invoice_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[UpdateInvoiceRequest](maxio/models/update_invoice_request.py) \| [UpdateInvoiceRequestDict](maxio/models/update_invoice_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -9412,19 +9412,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[InvoiceResponse](maxio_advanced_billing/models/invoice_response.py), [UpdateInvoiceErrorBody](maxio_advanced_billing/errors/update_invoice_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[InvoiceResponse](maxio/models/invoice_response.py), [UpdateInvoiceErrorBody](maxio/errors/update_invoice_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[InvoiceResponse](maxio_advanced_billing/models/invoice_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[InvoiceResponse](maxio/models/invoice_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[UpdateInvoiceErrorBody](maxio_advanced_billing/errors/update_invoice_error.py)</code>
+**On `Failure`**: `error` is <code>[UpdateInvoiceErrorBody](maxio/errors/update_invoice_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| 422 | <code>[ErrorArrayMapResponse1](maxio_advanced_billing/models/error_array_map_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| 422 | <code>[ErrorArrayMapResponse1](maxio/models/error_array_map_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -9488,8 +9488,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>uid</code> | <code>str</code> | The unique identifier for the invoice, this does not refer to the public facing invoice number. |
-| <code>body</code> | <code>[VoidInvoiceRequest](maxio_advanced_billing/models/void_invoice_request.py) \| [VoidInvoiceRequestDict](maxio_advanced_billing/models/void_invoice_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[VoidInvoiceRequest](maxio/models/void_invoice_request.py) \| [VoidInvoiceRequestDict](maxio/models/void_invoice_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -9499,19 +9499,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[Invoice](maxio_advanced_billing/models/invoice.py), [VoidInvoiceErrorBody](maxio_advanced_billing/errors/void_invoice_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[Invoice](maxio/models/invoice.py), [VoidInvoiceErrorBody](maxio/errors/void_invoice_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[Invoice](maxio_advanced_billing/models/invoice.py)</code> -- OK
+**On `Success`**: `payload` is <code>[Invoice](maxio/models/invoice.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[VoidInvoiceErrorBody](maxio_advanced_billing/errors/void_invoice_error.py)</code>
+**On `Failure`**: `error` is <code>[VoidInvoiceErrorBody](maxio/errors/void_invoice_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
 | 404 | <code>Any \| None</code> |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -9523,7 +9523,7 @@ Mapped in first-match order -- an earlier row wins over a later range that also 
 
 ## MaxioGateway
 
-> Source: [MaxioGateway](maxio_advanced_billing/apis/maxio_gateway.py)
+> Source: [MaxioGateway](maxio/apis/maxio_gateway.py)
 
 <details>
 <summary><code>def request_access_token(body: MaxioGatewayOauthTokenRequest | MaxioGatewayOauthTokenRequestDict, *, request_options: RequestOptionsOrDict | None = None) -> ApiResult[MaxioGatewayOauthAccessToken, RequestAccessTokenErrorBody]</code></summary>
@@ -9584,8 +9584,8 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>body</code> | <code>[MaxioGatewayOauthTokenRequest](maxio_advanced_billing/models/maxio_gateway_oauth_token_request.py) \| [MaxioGatewayOauthTokenRequestDict](maxio_advanced_billing/models/maxio_gateway_oauth_token_request.py)</code> | The request body. |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[MaxioGatewayOauthTokenRequest](maxio/models/maxio_gateway_oauth_token_request.py) \| [MaxioGatewayOauthTokenRequestDict](maxio/models/maxio_gateway_oauth_token_request.py)</code> | The request body. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -9595,18 +9595,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[MaxioGatewayOauthAccessToken](maxio_advanced_billing/models/maxio_gateway_oauth_access_token.py), [RequestAccessTokenErrorBody](maxio_advanced_billing/errors/request_access_token_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[MaxioGatewayOauthAccessToken](maxio/models/maxio_gateway_oauth_access_token.py), [RequestAccessTokenErrorBody](maxio/errors/request_access_token_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[MaxioGatewayOauthAccessToken](maxio_advanced_billing/models/maxio_gateway_oauth_access_token.py)</code> -- Access token issued.
+**On `Success`**: `payload` is <code>[MaxioGatewayOauthAccessToken](maxio/models/maxio_gateway_oauth_access_token.py)</code> -- Access token issued.
 
-**On `Failure`**: `error` is <code>[RequestAccessTokenErrorBody](maxio_advanced_billing/errors/request_access_token_error.py)</code>
+**On `Failure`**: `error` is <code>[RequestAccessTokenErrorBody](maxio/errors/request_access_token_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 400, 401 | <code>[MaxioGatewayOauthError](maxio_advanced_billing/models/maxio_gateway_oauth_error.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 400, 401 | <code>[MaxioGatewayOauthError](maxio/models/maxio_gateway_oauth_error.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -9618,7 +9618,7 @@ Mapped in first-match order -- an earlier row wins over a later range that also 
 
 ## Offers
 
-> Source: [Offers](maxio_advanced_billing/apis/offers.py)
+> Source: [Offers](maxio/apis/offers.py)
 
 <details>
 <summary><code>def archive_offer(offer_id: int, *, request_options: RequestOptionsOrDict | None = None) -> ApiResult[None, RawError]</code></summary>
@@ -9674,7 +9674,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>offer_id</code> | <code>int</code> | The Chargify id of the offer |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -9684,11 +9684,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;None, [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;None, [RawError](maxio/core/results.py)&#93;</code>
 
 **On `Success`**: the 2xx carries no content; `payload` is <code>None</code>
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -9763,8 +9763,8 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>body</code> | <code>[CreateOfferRequest](maxio_advanced_billing/models/create_offer_request.py) \| [CreateOfferRequestDict](maxio_advanced_billing/models/create_offer_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CreateOfferRequest](maxio/models/create_offer_request.py) \| [CreateOfferRequestDict](maxio/models/create_offer_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -9774,18 +9774,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[OfferResponse](maxio_advanced_billing/models/offer_response.py), [CreateOfferErrorBody](maxio_advanced_billing/errors/create_offer_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[OfferResponse](maxio/models/offer_response.py), [CreateOfferErrorBody](maxio/errors/create_offer_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[OfferResponse](maxio_advanced_billing/models/offer_response.py)</code> -- Created
+**On `Success`**: `payload` is <code>[OfferResponse](maxio/models/offer_response.py)</code> -- Created
 
-**On `Failure`**: `error` is <code>[CreateOfferErrorBody](maxio_advanced_billing/errors/create_offer_error.py)</code>
+**On `Failure`**: `error` is <code>[CreateOfferErrorBody](maxio/errors/create_offer_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorArrayMapResponse1](maxio_advanced_billing/models/error_array_map_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorArrayMapResponse1](maxio/models/error_array_map_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -9851,7 +9851,7 @@ match result:
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 20. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>Use in query `per_page=200`.<br>**Default**: <code>20</code> |
 | <code>include_archived</code> | <code>bool \| None</code> | Include archived products. Use in query: `include_archived=true`.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -9861,18 +9861,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ListOffersResponse](maxio_advanced_billing/models/list_offers_response.py), [ListOffersErrorBody](maxio_advanced_billing/errors/list_offers_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ListOffersResponse](maxio/models/list_offers_response.py), [ListOffersErrorBody](maxio/errors/list_offers_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ListOffersResponse](maxio_advanced_billing/models/list_offers_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ListOffersResponse](maxio/models/list_offers_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[ListOffersErrorBody](maxio_advanced_billing/errors/list_offers_error.py)</code>
+**On `Failure`**: `error` is <code>[ListOffersErrorBody](maxio/errors/list_offers_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -9936,7 +9936,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>offer_id</code> | <code>int</code> | The Chargify id of the offer |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -9946,11 +9946,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[OfferResponse](maxio_advanced_billing/models/offer_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[OfferResponse](maxio/models/offer_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[OfferResponse](maxio_advanced_billing/models/offer_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[OfferResponse](maxio/models/offer_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -10014,7 +10014,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>offer_id</code> | <code>int</code> | The Chargify id of the offer |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -10024,11 +10024,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;None, [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;None, [RawError](maxio/core/results.py)&#93;</code>
 
 **On `Success`**: the 2xx carries no content; `payload` is <code>None</code>
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -10040,7 +10040,7 @@ match result:
 
 ## PaymentProfiles
 
-> Source: [PaymentProfiles](maxio_advanced_billing/apis/payment_profiles.py)
+> Source: [PaymentProfiles](maxio/apis/payment_profiles.py)
 
 <details>
 <summary><code>def change_subscription_default_payment_profile(subscription_id: int, payment_profile_id: int, *, request_options: RequestOptionsOrDict | None = None) -> ApiResult[PaymentProfileResponse, ChangeSubscriptionDefaultPaymentProfileErrorBody]</code></summary>
@@ -10103,7 +10103,7 @@ match result:
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
 | <code>payment_profile_id</code> | <code>int</code> | The Chargify id of the payment profile |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -10113,19 +10113,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[PaymentProfileResponse](maxio_advanced_billing/models/payment_profile_response.py), [ChangeSubscriptionDefaultPaymentProfileErrorBody](maxio_advanced_billing/errors/change_subscription_default_payment_profile_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[PaymentProfileResponse](maxio/models/payment_profile_response.py), [ChangeSubscriptionDefaultPaymentProfileErrorBody](maxio/errors/change_subscription_default_payment_profile_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[PaymentProfileResponse](maxio_advanced_billing/models/payment_profile_response.py)</code> -- Created
+**On `Success`**: `payload` is <code>[PaymentProfileResponse](maxio/models/payment_profile_response.py)</code> -- Created
 
-**On `Failure`**: `error` is <code>[ChangeSubscriptionDefaultPaymentProfileErrorBody](maxio_advanced_billing/errors/change_subscription_default_payment_profile_error.py)</code>
+**On `Failure`**: `error` is <code>[ChangeSubscriptionDefaultPaymentProfileErrorBody](maxio/errors/change_subscription_default_payment_profile_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -10198,7 +10198,7 @@ match result:
 | --- | --- | --- |
 | <code>uid</code> | <code>str</code> | The uid of the subscription group |
 | <code>payment_profile_id</code> | <code>int</code> | The Chargify id of the payment profile |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -10208,18 +10208,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[PaymentProfileResponse](maxio_advanced_billing/models/payment_profile_response.py), [ChangeSubscriptionGroupDefaultPaymentProfileErrorBody](maxio_advanced_billing/errors/change_subscription_group_default_payment_profile_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[PaymentProfileResponse](maxio/models/payment_profile_response.py), [ChangeSubscriptionGroupDefaultPaymentProfileErrorBody](maxio/errors/change_subscription_group_default_payment_profile_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[PaymentProfileResponse](maxio_advanced_billing/models/payment_profile_response.py)</code> -- Created
+**On `Success`**: `payload` is <code>[PaymentProfileResponse](maxio/models/payment_profile_response.py)</code> -- Created
 
-**On `Failure`**: `error` is <code>[ChangeSubscriptionGroupDefaultPaymentProfileErrorBody](maxio_advanced_billing/errors/change_subscription_group_default_payment_profile_error.py)</code>
+**On `Failure`**: `error` is <code>[ChangeSubscriptionGroupDefaultPaymentProfileErrorBody](maxio/errors/change_subscription_group_default_payment_profile_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -10314,8 +10314,8 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>body</code> | <code>[CreatePaymentProfileRequest](maxio_advanced_billing/models/create_payment_profile_request.py) \| [CreatePaymentProfileRequestDict](maxio_advanced_billing/models/create_payment_profile_request.py) \| None</code> | When following the IBAN or the Local Bank details examples, a customer, bank account and mandate will be created in your current vault. If the customer, bank account, and mandate already exist in your vault, follow the Import example to link the payment profile into Advanced Billing.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CreatePaymentProfileRequest](maxio/models/create_payment_profile_request.py) \| [CreatePaymentProfileRequestDict](maxio/models/create_payment_profile_request.py) \| None</code> | When following the IBAN or the Local Bank details examples, a customer, bank account and mandate will be created in your current vault. If the customer, bank account, and mandate already exist in your vault, follow the Import example to link the payment profile into Advanced Billing.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -10325,19 +10325,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[PaymentProfileResponse](maxio_advanced_billing/models/payment_profile_response.py), [CreatePaymentProfileErrorBody](maxio_advanced_billing/errors/create_payment_profile_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[PaymentProfileResponse](maxio/models/payment_profile_response.py), [CreatePaymentProfileErrorBody](maxio/errors/create_payment_profile_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[PaymentProfileResponse](maxio_advanced_billing/models/payment_profile_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[PaymentProfileResponse](maxio/models/payment_profile_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[CreatePaymentProfileErrorBody](maxio_advanced_billing/errors/create_payment_profile_error.py)</code>
+**On `Failure`**: `error` is <code>[CreatePaymentProfileErrorBody](maxio/errors/create_payment_profile_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -10406,7 +10406,7 @@ match result:
 | --- | --- | --- |
 | <code>uid</code> | <code>str</code> | The uid of the subscription group |
 | <code>payment_profile_id</code> | <code>int</code> | The Chargify id of the payment profile |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -10416,11 +10416,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;None, [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;None, [RawError](maxio/core/results.py)&#93;</code>
 
 **On `Success`**: the 2xx carries no content; `payload` is <code>None</code>
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -10493,7 +10493,7 @@ match result:
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
 | <code>payment_profile_id</code> | <code>int</code> | The Chargify id of the payment profile |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -10503,11 +10503,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;None, [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;None, [RawError](maxio/core/results.py)&#93;</code>
 
 **On `Success`**: the 2xx carries no content; `payload` is <code>None</code>
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -10573,7 +10573,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>payment_profile_id</code> | <code>int</code> | The Chargify id of the payment profile |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -10583,19 +10583,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;None, [DeleteUnusedPaymentProfileErrorBody](maxio_advanced_billing/errors/delete_unused_payment_profile_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;None, [DeleteUnusedPaymentProfileErrorBody](maxio/errors/delete_unused_payment_profile_error.py)&#93;</code>
 
 **On `Success`**: the 2xx carries no content; `payload` is <code>None</code>
 
-**On `Failure`**: `error` is <code>[DeleteUnusedPaymentProfileErrorBody](maxio_advanced_billing/errors/delete_unused_payment_profile_error.py)</code>
+**On `Failure`**: `error` is <code>[DeleteUnusedPaymentProfileErrorBody](maxio/errors/delete_unused_payment_profile_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -10661,7 +10661,7 @@ match result:
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 20. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>Use in query `per_page=200`.<br>**Default**: <code>20</code> |
 | <code>customer_id</code> | <code>int \| None</code> | The ID of the customer for which you wish to list payment profiles<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -10671,11 +10671,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;list&#91;[PaymentProfileResponse](maxio_advanced_billing/models/payment_profile_response.py)&#93;, [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;list&#91;[PaymentProfileResponse](maxio/models/payment_profile_response.py)&#93;, [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>list&#91;[PaymentProfileResponse](maxio_advanced_billing/models/payment_profile_response.py)&#93;</code> -- OK
+**On `Success`**: `payload` is <code>list&#91;[PaymentProfileResponse](maxio/models/payment_profile_response.py)&#93;</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -10743,7 +10743,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>chargify_token</code> | <code>str</code> | Advanced Billing Token |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -10753,18 +10753,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[GetOneTimeTokenRequest](maxio_advanced_billing/models/get_one_time_token_request.py), [ReadOneTimeTokenErrorBody](maxio_advanced_billing/errors/read_one_time_token_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[GetOneTimeTokenRequest](maxio/models/get_one_time_token_request.py), [ReadOneTimeTokenErrorBody](maxio/errors/read_one_time_token_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[GetOneTimeTokenRequest](maxio_advanced_billing/models/get_one_time_token_request.py)</code> -- OK
+**On `Success`**: `payload` is <code>[GetOneTimeTokenRequest](maxio/models/get_one_time_token_request.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[ReadOneTimeTokenErrorBody](maxio_advanced_billing/errors/read_one_time_token_error.py)</code>
+**On `Failure`**: `error` is <code>[ReadOneTimeTokenErrorBody](maxio/errors/read_one_time_token_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -10864,7 +10864,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>payment_profile_id</code> | <code>int</code> | The Chargify id of the payment profile |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -10874,18 +10874,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[PaymentProfileResponse](maxio_advanced_billing/models/payment_profile_response.py), [ReadPaymentProfileErrorBody](maxio_advanced_billing/errors/read_payment_profile_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[PaymentProfileResponse](maxio/models/payment_profile_response.py), [ReadPaymentProfileErrorBody](maxio/errors/read_payment_profile_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[PaymentProfileResponse](maxio_advanced_billing/models/payment_profile_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[PaymentProfileResponse](maxio/models/payment_profile_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[ReadPaymentProfileErrorBody](maxio_advanced_billing/errors/read_payment_profile_error.py)</code>
+**On `Failure`**: `error` is <code>[ReadPaymentProfileErrorBody](maxio/errors/read_payment_profile_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -10955,7 +10955,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -10965,19 +10965,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;None, [SendRequestUpdatePaymentEmailErrorBody](maxio_advanced_billing/errors/send_request_update_payment_email_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;None, [SendRequestUpdatePaymentEmailErrorBody](maxio/errors/send_request_update_payment_email_error.py)&#93;</code>
 
 **On `Success`**: the 2xx carries no content; `payload` is <code>None</code>
 
-**On `Failure`**: `error` is <code>[SendRequestUpdatePaymentEmailErrorBody](maxio_advanced_billing/errors/send_request_update_payment_email_error.py)</code>
+**On `Failure`**: `error` is <code>[SendRequestUpdatePaymentEmailErrorBody](maxio/errors/send_request_update_payment_email_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -11076,8 +11076,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>payment_profile_id</code> | <code>int</code> | The Chargify id of the payment profile |
-| <code>body</code> | <code>[UpdatePaymentProfileRequest](maxio_advanced_billing/models/update_payment_profile_request.py) \| [UpdatePaymentProfileRequestDict](maxio_advanced_billing/models/update_payment_profile_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[UpdatePaymentProfileRequest](maxio/models/update_payment_profile_request.py) \| [UpdatePaymentProfileRequestDict](maxio/models/update_payment_profile_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -11087,19 +11087,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[PaymentProfileResponse](maxio_advanced_billing/models/payment_profile_response.py), [UpdatePaymentProfileErrorBody](maxio_advanced_billing/errors/update_payment_profile_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[PaymentProfileResponse](maxio/models/payment_profile_response.py), [UpdatePaymentProfileErrorBody](maxio/errors/update_payment_profile_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[PaymentProfileResponse](maxio_advanced_billing/models/payment_profile_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[PaymentProfileResponse](maxio/models/payment_profile_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[UpdatePaymentProfileErrorBody](maxio_advanced_billing/errors/update_payment_profile_error.py)</code>
+**On `Failure`**: `error` is <code>[UpdatePaymentProfileErrorBody](maxio/errors/update_payment_profile_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 422 | <code>[ErrorStringMapResponse1](maxio_advanced_billing/models/error_string_map_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 422 | <code>[ErrorStringMapResponse1](maxio/models/error_string_map_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -11163,8 +11163,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>bank_account_id</code> | <code>int</code> | Identifier of the bank account in the system. |
-| <code>body</code> | <code>[BankAccountVerificationRequest](maxio_advanced_billing/models/bank_account_verification_request.py) \| [BankAccountVerificationRequestDict](maxio_advanced_billing/models/bank_account_verification_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[BankAccountVerificationRequest](maxio/models/bank_account_verification_request.py) \| [BankAccountVerificationRequestDict](maxio/models/bank_account_verification_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -11174,19 +11174,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[BankAccountResponse](maxio_advanced_billing/models/bank_account_response.py), [VerifyBankAccountErrorBody](maxio_advanced_billing/errors/verify_bank_account_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[BankAccountResponse](maxio/models/bank_account_response.py), [VerifyBankAccountErrorBody](maxio/errors/verify_bank_account_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[BankAccountResponse](maxio_advanced_billing/models/bank_account_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[BankAccountResponse](maxio/models/bank_account_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[VerifyBankAccountErrorBody](maxio_advanced_billing/errors/verify_bank_account_error.py)</code>
+**On `Failure`**: `error` is <code>[VerifyBankAccountErrorBody](maxio/errors/verify_bank_account_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -11198,7 +11198,7 @@ Mapped in first-match order -- an earlier row wins over a later range that also 
 
 ## ProductFamilies
 
-> Source: [ProductFamilies](maxio_advanced_billing/apis/product_families.py)
+> Source: [ProductFamilies](maxio/apis/product_families.py)
 
 <details>
 <summary><code>def create_product_family(*, body: CreateProductFamilyRequest | CreateProductFamilyRequestDict | None = None, request_options: RequestOptionsOrDict | None = None) -> ApiResult[ProductFamilyResponse, CreateProductFamilyErrorBody]</code></summary>
@@ -11255,8 +11255,8 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>body</code> | <code>[CreateProductFamilyRequest](maxio_advanced_billing/models/create_product_family_request.py) \| [CreateProductFamilyRequestDict](maxio_advanced_billing/models/create_product_family_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CreateProductFamilyRequest](maxio/models/create_product_family_request.py) \| [CreateProductFamilyRequestDict](maxio/models/create_product_family_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -11266,18 +11266,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ProductFamilyResponse](maxio_advanced_billing/models/product_family_response.py), [CreateProductFamilyErrorBody](maxio_advanced_billing/errors/create_product_family_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ProductFamilyResponse](maxio/models/product_family_response.py), [CreateProductFamilyErrorBody](maxio/errors/create_product_family_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ProductFamilyResponse](maxio_advanced_billing/models/product_family_response.py)</code> -- Created
+**On `Success`**: `payload` is <code>[ProductFamilyResponse](maxio/models/product_family_response.py)</code> -- Created
 
-**On `Failure`**: `error` is <code>[CreateProductFamilyErrorBody](maxio_advanced_billing/errors/create_product_family_error.py)</code>
+**On `Failure`**: `error` is <code>[CreateProductFamilyErrorBody](maxio/errors/create_product_family_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -11340,12 +11340,12 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>date_field</code> | <code>[BasicDateFieldOrStr](maxio_advanced_billing/models/enums/basic_date_field.py) \| None</code> | The type of filter you would like to apply to your search.<br>Use in query: `date_field=created_at`.<br>**Default**: <code>None</code> |
+| <code>date_field</code> | <code>[BasicDateFieldOrStr](maxio/models/enums/basic_date_field.py) \| None</code> | The type of filter you would like to apply to your search.<br>Use in query: `date_field=created_at`.<br>**Default**: <code>None</code> |
 | <code>start_date</code> | <code>Date \| None</code> | The start date (format YYYY-MM-DD) with which to filter the date_field. Returns products with a timestamp at or after midnight (12:00:00 AM) in your site’s time zone on the date specified.<br>**Default**: <code>None</code> |
 | <code>end_date</code> | <code>Date \| None</code> | The end date (format YYYY-MM-DD) with which to filter the date_field. Returns products with a timestamp up to and including 11:59:59PM in your site’s time zone on the date specified.<br>**Default**: <code>None</code> |
 | <code>start_datetime</code> | <code>RFC3339DateTime \| None</code> | The start date and time (format YYYY-MM-DD HH:MM:SS) with which to filter the date_field. Returns products with a timestamp at or after exact time provided in query. You can specify timezone in query - otherwise your site's time zone will be used. If provided, this parameter will be used instead of start_date.<br>**Default**: <code>None</code> |
 | <code>end_datetime</code> | <code>RFC3339DateTime \| None</code> | The end date and time (format YYYY-MM-DD HH:MM:SS) with which to filter the date_field. Returns products with a timestamp at or before exact time provided in query. You can specify timezone in query - otherwise your site's time zone will be used. If provided, this parameter will be used instead of end_date.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -11355,11 +11355,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;list&#91;[ProductFamilyResponse](maxio_advanced_billing/models/product_family_response.py)&#93;, [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;list&#91;[ProductFamilyResponse](maxio/models/product_family_response.py)&#93;, [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>list&#91;[ProductFamilyResponse](maxio_advanced_billing/models/product_family_response.py)&#93;</code> -- OK
+**On `Success`**: `payload` is <code>list&#91;[ProductFamilyResponse](maxio/models/product_family_response.py)&#93;</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -11425,15 +11425,15 @@ match result:
 | <code>product_family_id</code> | <code>str</code> | Either the product family's id or its handle prefixed with `handle:` |
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 20. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>Use in query `per_page=200`.<br>**Default**: <code>20</code> |
-| <code>date_field</code> | <code>[BasicDateFieldOrStr](maxio_advanced_billing/models/enums/basic_date_field.py) \| None</code> | The type of filter you would like to apply to your search.<br>Use in query: `date_field=created_at`.<br>**Default**: <code>None</code> |
-| <code>filter</code> | <code>[ListProductsFilter](maxio_advanced_billing/models/list_products_filter.py) \| [ListProductsFilterDict](maxio_advanced_billing/models/list_products_filter.py) \| None</code> | Filter to use for List Products operations<br>**Default**: <code>None</code> |
+| <code>date_field</code> | <code>[BasicDateFieldOrStr](maxio/models/enums/basic_date_field.py) \| None</code> | The type of filter you would like to apply to your search.<br>Use in query: `date_field=created_at`.<br>**Default**: <code>None</code> |
+| <code>filter</code> | <code>[ListProductsFilter](maxio/models/list_products_filter.py) \| [ListProductsFilterDict](maxio/models/list_products_filter.py) \| None</code> | Filter to use for List Products operations<br>**Default**: <code>None</code> |
 | <code>start_date</code> | <code>Date \| None</code> | The start date (format YYYY-MM-DD) with which to filter the date_field. Returns products with a timestamp at or after midnight (12:00:00 AM) in your site’s time zone on the date specified.<br>**Default**: <code>None</code> |
 | <code>end_date</code> | <code>Date \| None</code> | The end date (format YYYY-MM-DD) with which to filter the date_field. Returns products with a timestamp up to and including 11:59:59PM in your site’s time zone on the date specified.<br>**Default**: <code>None</code> |
 | <code>start_datetime</code> | <code>RFC3339DateTime \| None</code> | The start date and time (format YYYY-MM-DD HH:MM:SS) with which to filter the date_field. Returns products with a timestamp at or after exact time provided in query. You can specify timezone in query - otherwise your site's time zone will be used. If provided, this parameter will be used instead of start_date.<br>**Default**: <code>None</code> |
 | <code>end_datetime</code> | <code>RFC3339DateTime \| None</code> | The end date and time (format YYYY-MM-DD HH:MM:SS) with which to filter the date_field. Returns products with a timestamp at or before exact time provided in query. You can specify timezone in query - otherwise your site's time zone will be used. If provided, this parameter will be used instead of end_date.<br>**Default**: <code>None</code> |
 | <code>include_archived</code> | <code>bool \| None</code> | Include archived products.<br>**Default**: <code>None</code> |
-| <code>include</code> | <code>[ListProductsIncludeOrStr](maxio_advanced_billing/models/enums/list_products_include.py) \| None</code> | Allows including additional data in the response. Use in query `include=prepaid_product_price_point`.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>include</code> | <code>[ListProductsIncludeOrStr](maxio/models/enums/list_products_include.py) \| None</code> | Allows including additional data in the response. Use in query `include=prepaid_product_price_point`.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -11443,18 +11443,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;list&#91;[ProductResponse](maxio_advanced_billing/models/product_response.py)&#93;, [ListProductsForProductFamilyErrorBody](maxio_advanced_billing/errors/list_products_for_product_family_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;list&#91;[ProductResponse](maxio/models/product_response.py)&#93;, [ListProductsForProductFamilyErrorBody](maxio/errors/list_products_for_product_family_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>list&#91;[ProductResponse](maxio_advanced_billing/models/product_response.py)&#93;</code> -- OK
+**On `Success`**: `payload` is <code>list&#91;[ProductResponse](maxio/models/product_response.py)&#93;</code> -- OK
 
-**On `Failure`**: `error` is <code>[ListProductsForProductFamilyErrorBody](maxio_advanced_billing/errors/list_products_for_product_family_error.py)</code>
+**On `Failure`**: `error` is <code>[ListProductsForProductFamilyErrorBody](maxio/errors/list_products_for_product_family_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
 | 404 | <code>str</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -11520,7 +11520,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>id</code> | <code>int</code> | The Advanced Billing id of the product family |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -11530,11 +11530,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ProductFamilyResponse](maxio_advanced_billing/models/product_family_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ProductFamilyResponse](maxio/models/product_family_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ProductFamilyResponse](maxio_advanced_billing/models/product_family_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ProductFamilyResponse](maxio/models/product_family_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -11546,7 +11546,7 @@ match result:
 
 ## ProductPricePoints
 
-> Source: [ProductPricePoints](maxio_advanced_billing/apis/product_price_points.py)
+> Source: [ProductPricePoints](maxio/apis/product_price_points.py)
 
 <details>
 <summary><code>def archive_product_price_point(product_id: ProductIdModel | ProductIdModelDict, price_point_id: PricePointIdModel | PricePointIdModelDict, *, request_options: RequestOptionsOrDict | None = None) -> ApiResult[ProductPricePointResponse, ArchiveProductPricePointErrorBody]</code></summary>
@@ -11603,9 +11603,9 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>product_id</code> | <code>[ProductIdModel](maxio_advanced_billing/models/unions/product_id_model.py) \| [ProductIdModelDict](maxio_advanced_billing/models/unions/product_id_model.py)</code> | The id or handle of the product. When using the handle, it must be prefixed with `handle:`. Example: `123` for an integer ID, or `handle:example-product-handle` for a string handle. |
-| <code>price_point_id</code> | <code>[PricePointIdModel](maxio_advanced_billing/models/unions/price_point_id_model.py) \| [PricePointIdModelDict](maxio_advanced_billing/models/unions/price_point_id_model.py)</code> | The id or handle of the price point. When using the handle, it must be prefixed with `handle:`. Example: `123` for an integer ID, or `handle:example-product-price-point-handle` for a string handle. |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>product_id</code> | <code>[ProductIdModel](maxio/models/unions/product_id_model.py) \| [ProductIdModelDict](maxio/models/unions/product_id_model.py)</code> | The id or handle of the product. When using the handle, it must be prefixed with `handle:`. Example: `123` for an integer ID, or `handle:example-product-handle` for a string handle. |
+| <code>price_point_id</code> | <code>[PricePointIdModel](maxio/models/unions/price_point_id_model.py) \| [PricePointIdModelDict](maxio/models/unions/price_point_id_model.py)</code> | The id or handle of the price point. When using the handle, it must be prefixed with `handle:`. Example: `123` for an integer ID, or `handle:example-product-price-point-handle` for a string handle. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -11615,18 +11615,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ProductPricePointResponse](maxio_advanced_billing/models/product_price_point_response.py), [ArchiveProductPricePointErrorBody](maxio_advanced_billing/errors/archive_product_price_point_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ProductPricePointResponse](maxio/models/product_price_point_response.py), [ArchiveProductPricePointErrorBody](maxio/errors/archive_product_price_point_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ProductPricePointResponse](maxio_advanced_billing/models/product_price_point_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ProductPricePointResponse](maxio/models/product_price_point_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[ArchiveProductPricePointErrorBody](maxio_advanced_billing/errors/archive_product_price_point_error.py)</code>
+**On `Failure`**: `error` is <code>[ArchiveProductPricePointErrorBody](maxio/errors/archive_product_price_point_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -11690,8 +11690,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>product_id</code> | <code>int</code> | The Advanced Billing id of the product to which the price points belong |
-| <code>body</code> | <code>[BulkCreateProductPricePointsRequest](maxio_advanced_billing/models/bulk_create_product_price_points_request.py) \| [BulkCreateProductPricePointsRequestDict](maxio_advanced_billing/models/bulk_create_product_price_points_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[BulkCreateProductPricePointsRequest](maxio/models/bulk_create_product_price_points_request.py) \| [BulkCreateProductPricePointsRequestDict](maxio/models/bulk_create_product_price_points_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -11701,18 +11701,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[BulkCreateProductPricePointsResponse](maxio_advanced_billing/models/bulk_create_product_price_points_response.py), [BulkCreateProductPricePointsErrorBody](maxio_advanced_billing/errors/bulk_create_product_price_points_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[BulkCreateProductPricePointsResponse](maxio/models/bulk_create_product_price_points_response.py), [BulkCreateProductPricePointsErrorBody](maxio/errors/bulk_create_product_price_points_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[BulkCreateProductPricePointsResponse](maxio_advanced_billing/models/bulk_create_product_price_points_response.py)</code> -- Created
+**On `Success`**: `payload` is <code>[BulkCreateProductPricePointsResponse](maxio/models/bulk_create_product_price_points_response.py)</code> -- Created
 
-**On `Failure`**: `error` is <code>[BulkCreateProductPricePointsErrorBody](maxio_advanced_billing/errors/bulk_create_product_price_points_error.py)</code>
+**On `Failure`**: `error` is <code>[BulkCreateProductPricePointsErrorBody](maxio/errors/bulk_create_product_price_points_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
 | 422 | <code>dict&#91;str, Any&#93;</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -11782,8 +11782,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>product_price_point_id</code> | <code>int</code> | The Advanced Billing id of the product price point |
-| <code>body</code> | <code>[CreateProductCurrencyPricesRequest](maxio_advanced_billing/models/create_product_currency_prices_request.py) \| [CreateProductCurrencyPricesRequestDict](maxio_advanced_billing/models/create_product_currency_prices_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CreateProductCurrencyPricesRequest](maxio/models/create_product_currency_prices_request.py) \| [CreateProductCurrencyPricesRequestDict](maxio/models/create_product_currency_prices_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -11793,18 +11793,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[CurrencyPricesResponse](maxio_advanced_billing/models/currency_prices_response.py), [CreateProductCurrencyPricesErrorBody](maxio_advanced_billing/errors/create_product_currency_prices_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[CurrencyPricesResponse](maxio/models/currency_prices_response.py), [CreateProductCurrencyPricesErrorBody](maxio/errors/create_product_currency_prices_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[CurrencyPricesResponse](maxio_advanced_billing/models/currency_prices_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[CurrencyPricesResponse](maxio/models/currency_prices_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[CreateProductCurrencyPricesErrorBody](maxio_advanced_billing/errors/create_product_currency_prices_error.py)</code>
+**On `Failure`**: `error` is <code>[CreateProductCurrencyPricesErrorBody](maxio/errors/create_product_currency_prices_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorArrayMapResponse1](maxio_advanced_billing/models/error_array_map_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorArrayMapResponse1](maxio/models/error_array_map_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -11867,9 +11867,9 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>product_id</code> | <code>[ProductIdModel](maxio_advanced_billing/models/unions/product_id_model.py) \| [ProductIdModelDict](maxio_advanced_billing/models/unions/product_id_model.py)</code> | The id or handle of the product. When using the handle, it must be prefixed with `handle:` |
-| <code>body</code> | <code>[CreateProductPricePointRequest](maxio_advanced_billing/models/create_product_price_point_request.py) \| [CreateProductPricePointRequestDict](maxio_advanced_billing/models/create_product_price_point_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>product_id</code> | <code>[ProductIdModel](maxio/models/unions/product_id_model.py) \| [ProductIdModelDict](maxio/models/unions/product_id_model.py)</code> | The id or handle of the product. When using the handle, it must be prefixed with `handle:` |
+| <code>body</code> | <code>[CreateProductPricePointRequest](maxio/models/create_product_price_point_request.py) \| [CreateProductPricePointRequestDict](maxio/models/create_product_price_point_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -11879,18 +11879,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ProductPricePointResponse](maxio_advanced_billing/models/product_price_point_response.py), [CreateProductPricePointErrorBody](maxio_advanced_billing/errors/create_product_price_point_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ProductPricePointResponse](maxio/models/product_price_point_response.py), [CreateProductPricePointErrorBody](maxio/errors/create_product_price_point_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ProductPricePointResponse](maxio_advanced_billing/models/product_price_point_response.py)</code> -- Created
+**On `Success`**: `payload` is <code>[ProductPricePointResponse](maxio/models/product_price_point_response.py)</code> -- Created
 
-**On `Failure`**: `error` is <code>[CreateProductPricePointErrorBody](maxio_advanced_billing/errors/create_product_price_point_error.py)</code>
+**On `Failure`**: `error` is <code>[CreateProductPricePointErrorBody](maxio/errors/create_product_price_point_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ProductPricePointErrorResponse1](maxio_advanced_billing/models/product_price_point_error_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ProductPricePointErrorResponse1](maxio/models/product_price_point_error_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -11953,12 +11953,12 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>direction</code> | <code>[SortingDirectionOrStr](maxio_advanced_billing/models/enums/sorting_direction.py) \| None</code> | Controls the order in which results are returned.<br>Use in query `direction=asc`.<br>**Default**: <code>None</code> |
-| <code>filter</code> | <code>[ListPricePointsFilter](maxio_advanced_billing/models/list_price_points_filter.py) \| [ListPricePointsFilterDict](maxio_advanced_billing/models/list_price_points_filter.py) \| None</code> | Filter to use for List PricePoints operations<br>**Default**: <code>None</code> |
-| <code>include</code> | <code>[ListProductsPricePointsIncludeOrStr](maxio_advanced_billing/models/enums/list_products_price_points_include.py) \| None</code> | Allows including additional data in the response. Use in query: `include=currency_prices`.<br>**Default**: <code>None</code> |
+| <code>direction</code> | <code>[SortingDirectionOrStr](maxio/models/enums/sorting_direction.py) \| None</code> | Controls the order in which results are returned.<br>Use in query `direction=asc`.<br>**Default**: <code>None</code> |
+| <code>filter</code> | <code>[ListPricePointsFilter](maxio/models/list_price_points_filter.py) \| [ListPricePointsFilterDict](maxio/models/list_price_points_filter.py) \| None</code> | Filter to use for List PricePoints operations<br>**Default**: <code>None</code> |
+| <code>include</code> | <code>[ListProductsPricePointsIncludeOrStr](maxio/models/enums/list_products_price_points_include.py) \| None</code> | Allows including additional data in the response. Use in query: `include=currency_prices`.<br>**Default**: <code>None</code> |
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 20. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>Use in query `per_page=200`.<br>**Default**: <code>20</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -11968,18 +11968,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ListProductPricePointsResponse](maxio_advanced_billing/models/list_product_price_points_response.py), [ListAllProductPricePointsErrorBody](maxio_advanced_billing/errors/list_all_product_price_points_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ListProductPricePointsResponse](maxio/models/list_product_price_points_response.py), [ListAllProductPricePointsErrorBody](maxio/errors/list_all_product_price_points_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ListProductPricePointsResponse](maxio_advanced_billing/models/list_product_price_points_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ListProductPricePointsResponse](maxio/models/list_product_price_points_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[ListAllProductPricePointsErrorBody](maxio_advanced_billing/errors/list_all_product_price_points_error.py)</code>
+**On `Failure`**: `error` is <code>[ListAllProductPricePointsErrorBody](maxio/errors/list_all_product_price_points_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -12042,13 +12042,13 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>product_id</code> | <code>[ProductIdModel](maxio_advanced_billing/models/unions/product_id_model.py) \| [ProductIdModelDict](maxio_advanced_billing/models/unions/product_id_model.py)</code> | The id or handle of the product. When using the handle, it must be prefixed with `handle:` |
+| <code>product_id</code> | <code>[ProductIdModel](maxio/models/unions/product_id_model.py) \| [ProductIdModelDict](maxio/models/unions/product_id_model.py)</code> | The id or handle of the product. When using the handle, it must be prefixed with `handle:` |
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 10. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>**Default**: <code>10</code> |
 | <code>currency_prices</code> | <code>bool \| None</code> | (Optional) If you have defined multiple currencies at the site level, you can pass ?currency_prices=true to include an array of currency price data in the response. If the product price point is set to use_site_exchange_rate: true, it will return pricing based on the current exchange rate. If the flag is set to false, it will return all of the defined prices for each currency.<br>**Default**: <code>None</code> |
-| <code>filter_type</code> | <code>list&#91;[PricePointTypeOrStr](maxio_advanced_billing/models/enums/price_point_type.py)&#93; \| None</code> | Use in query: `filter[type]=catalog,default`.<br>**Default**: <code>None</code> |
+| <code>filter_type</code> | <code>list&#91;[PricePointTypeOrStr](maxio/models/enums/price_point_type.py)&#93; \| None</code> | Use in query: `filter[type]=catalog,default`.<br>**Default**: <code>None</code> |
 | <code>archived</code> | <code>bool \| None</code> | Set to include archived price points in the response.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -12058,11 +12058,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ListProductPricePointsResponse](maxio_advanced_billing/models/list_product_price_points_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ListProductPricePointsResponse](maxio/models/list_product_price_points_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ListProductPricePointsResponse](maxio_advanced_billing/models/list_product_price_points_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ListProductPricePointsResponse](maxio/models/list_product_price_points_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -12133,7 +12133,7 @@ match result:
 | --- | --- | --- |
 | <code>product_id</code> | <code>int</code> | The Advanced Billing id of the product to which the price point belongs |
 | <code>price_point_id</code> | <code>int</code> | The Advanced Billing id of the product price point |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -12143,11 +12143,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ProductResponse](maxio_advanced_billing/models/product_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ProductResponse](maxio/models/product_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ProductResponse](maxio_advanced_billing/models/product_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ProductResponse](maxio/models/product_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -12210,10 +12210,10 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>product_id</code> | <code>[ProductIdModel](maxio_advanced_billing/models/unions/product_id_model.py) \| [ProductIdModelDict](maxio_advanced_billing/models/unions/product_id_model.py)</code> | The id or handle of the product. When using the handle, it must be prefixed with `handle:`. Example: `123` for an integer ID, or `handle:example-product-handle` for a string handle. |
-| <code>price_point_id</code> | <code>[PricePointIdModel](maxio_advanced_billing/models/unions/price_point_id_model.py) \| [PricePointIdModelDict](maxio_advanced_billing/models/unions/price_point_id_model.py)</code> | The id or handle of the price point. When using the handle, it must be prefixed with `handle:`. Example: `123` for an integer ID, or `handle:example-product-price-point-handle` for a string handle. |
+| <code>product_id</code> | <code>[ProductIdModel](maxio/models/unions/product_id_model.py) \| [ProductIdModelDict](maxio/models/unions/product_id_model.py)</code> | The id or handle of the product. When using the handle, it must be prefixed with `handle:`. Example: `123` for an integer ID, or `handle:example-product-handle` for a string handle. |
+| <code>price_point_id</code> | <code>[PricePointIdModel](maxio/models/unions/price_point_id_model.py) \| [PricePointIdModelDict](maxio/models/unions/price_point_id_model.py)</code> | The id or handle of the price point. When using the handle, it must be prefixed with `handle:`. Example: `123` for an integer ID, or `handle:example-product-price-point-handle` for a string handle. |
 | <code>currency_prices</code> | <code>bool \| None</code> | (Optional) If you have defined multiple currencies at the site level, you can pass ?currency_prices=true to include an array of currency price data in the response. If the product price point is set to use_site_exchange_rate: true, it will return pricing based on the current exchange rate. If the flag is set to false, it will return all of the defined prices for each currency.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -12223,11 +12223,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ProductPricePointResponse](maxio_advanced_billing/models/product_price_point_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ProductPricePointResponse](maxio/models/product_price_point_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ProductPricePointResponse](maxio_advanced_billing/models/product_price_point_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ProductPricePointResponse](maxio/models/product_price_point_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -12294,7 +12294,7 @@ match result:
 | --- | --- | --- |
 | <code>product_id</code> | <code>int</code> | The Advanced Billing id of the product to which the price point belongs |
 | <code>price_point_id</code> | <code>int</code> | The Advanced Billing id of the product price point |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -12304,11 +12304,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ProductPricePointResponse](maxio_advanced_billing/models/product_price_point_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ProductPricePointResponse](maxio/models/product_price_point_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ProductPricePointResponse](maxio_advanced_billing/models/product_price_point_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ProductPricePointResponse](maxio/models/product_price_point_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -12378,8 +12378,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>product_price_point_id</code> | <code>int</code> | The Advanced Billing id of the product price point |
-| <code>body</code> | <code>[UpdateCurrencyPricesRequest](maxio_advanced_billing/models/update_currency_prices_request.py) \| [UpdateCurrencyPricesRequestDict](maxio_advanced_billing/models/update_currency_prices_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[UpdateCurrencyPricesRequest](maxio/models/update_currency_prices_request.py) \| [UpdateCurrencyPricesRequestDict](maxio/models/update_currency_prices_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -12389,18 +12389,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[CurrencyPricesResponse](maxio_advanced_billing/models/currency_prices_response.py), [UpdateProductCurrencyPricesErrorBody](maxio_advanced_billing/errors/update_product_currency_prices_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[CurrencyPricesResponse](maxio/models/currency_prices_response.py), [UpdateProductCurrencyPricesErrorBody](maxio/errors/update_product_currency_prices_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[CurrencyPricesResponse](maxio_advanced_billing/models/currency_prices_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[CurrencyPricesResponse](maxio/models/currency_prices_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[UpdateProductCurrencyPricesErrorBody](maxio_advanced_billing/errors/update_product_currency_prices_error.py)</code>
+**On `Failure`**: `error` is <code>[UpdateProductCurrencyPricesErrorBody](maxio/errors/update_product_currency_prices_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorArrayMapResponse1](maxio_advanced_billing/models/error_array_map_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorArrayMapResponse1](maxio/models/error_array_map_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -12467,10 +12467,10 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>product_id</code> | <code>[ProductIdModel](maxio_advanced_billing/models/unions/product_id_model.py) \| [ProductIdModelDict](maxio_advanced_billing/models/unions/product_id_model.py)</code> | The id or handle of the product. When using the handle, it must be prefixed with `handle:`. Example: `123` for an integer ID, or `handle:example-product-handle` for a string handle. |
-| <code>price_point_id</code> | <code>[PricePointIdModel](maxio_advanced_billing/models/unions/price_point_id_model.py) \| [PricePointIdModelDict](maxio_advanced_billing/models/unions/price_point_id_model.py)</code> | The id or handle of the price point. When using the handle, it must be prefixed with `handle:`. Example: `123` for an integer ID, or `handle:example-product-price-point-handle` for a string handle. |
-| <code>body</code> | <code>[UpdateProductPricePointRequest](maxio_advanced_billing/models/update_product_price_point_request.py) \| [UpdateProductPricePointRequestDict](maxio_advanced_billing/models/update_product_price_point_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>product_id</code> | <code>[ProductIdModel](maxio/models/unions/product_id_model.py) \| [ProductIdModelDict](maxio/models/unions/product_id_model.py)</code> | The id or handle of the product. When using the handle, it must be prefixed with `handle:`. Example: `123` for an integer ID, or `handle:example-product-handle` for a string handle. |
+| <code>price_point_id</code> | <code>[PricePointIdModel](maxio/models/unions/price_point_id_model.py) \| [PricePointIdModelDict](maxio/models/unions/price_point_id_model.py)</code> | The id or handle of the price point. When using the handle, it must be prefixed with `handle:`. Example: `123` for an integer ID, or `handle:example-product-price-point-handle` for a string handle. |
+| <code>body</code> | <code>[UpdateProductPricePointRequest](maxio/models/update_product_price_point_request.py) \| [UpdateProductPricePointRequestDict](maxio/models/update_product_price_point_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -12480,11 +12480,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ProductPricePointResponse](maxio_advanced_billing/models/product_price_point_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ProductPricePointResponse](maxio/models/product_price_point_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ProductPricePointResponse](maxio_advanced_billing/models/product_price_point_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ProductPricePointResponse](maxio/models/product_price_point_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -12496,7 +12496,7 @@ match result:
 
 ## Products
 
-> Source: [Products](maxio_advanced_billing/apis/products.py)
+> Source: [Products](maxio/apis/products.py)
 
 <details>
 <summary><code>def archive_product(product_id: int, *, request_options: RequestOptionsOrDict | None = None) -> ApiResult[ProductResponse, ArchiveProductErrorBody]</code></summary>
@@ -12554,7 +12554,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>product_id</code> | <code>int</code> | The Advanced Billing id of the product |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -12564,18 +12564,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ProductResponse](maxio_advanced_billing/models/product_response.py), [ArchiveProductErrorBody](maxio_advanced_billing/errors/archive_product_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ProductResponse](maxio/models/product_response.py), [ArchiveProductErrorBody](maxio/errors/archive_product_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ProductResponse](maxio_advanced_billing/models/product_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ProductResponse](maxio/models/product_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[ArchiveProductErrorBody](maxio_advanced_billing/errors/archive_product_error.py)</code>
+**On `Failure`**: `error` is <code>[ArchiveProductErrorBody](maxio/errors/archive_product_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -12646,8 +12646,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>product_family_id</code> | <code>str</code> | Either the product family's id or its handle prefixed with `handle:` |
-| <code>body</code> | <code>[CreateOrUpdateProductRequest](maxio_advanced_billing/models/create_or_update_product_request.py) \| [CreateOrUpdateProductRequestDict](maxio_advanced_billing/models/create_or_update_product_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CreateOrUpdateProductRequest](maxio/models/create_or_update_product_request.py) \| [CreateOrUpdateProductRequestDict](maxio/models/create_or_update_product_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -12657,18 +12657,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ProductResponse](maxio_advanced_billing/models/product_response.py), [CreateProductErrorBody](maxio_advanced_billing/errors/create_product_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ProductResponse](maxio/models/product_response.py), [CreateProductErrorBody](maxio/errors/create_product_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ProductResponse](maxio_advanced_billing/models/product_response.py)</code> -- Created
+**On `Success`**: `payload` is <code>[ProductResponse](maxio/models/product_response.py)</code> -- Created
 
-**On `Failure`**: `error` is <code>[CreateProductErrorBody](maxio_advanced_billing/errors/create_product_error.py)</code>
+**On `Failure`**: `error` is <code>[CreateProductErrorBody](maxio/errors/create_product_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -12731,8 +12731,8 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>date_field</code> | <code>[BasicDateFieldOrStr](maxio_advanced_billing/models/enums/basic_date_field.py) \| None</code> | The type of filter you would like to apply to your search.<br>Use in query: `date_field=created_at`.<br>**Default**: <code>None</code> |
-| <code>filter</code> | <code>[ListProductsFilter](maxio_advanced_billing/models/list_products_filter.py) \| [ListProductsFilterDict](maxio_advanced_billing/models/list_products_filter.py) \| None</code> | Filter to use for List Products operations<br>**Default**: <code>None</code> |
+| <code>date_field</code> | <code>[BasicDateFieldOrStr](maxio/models/enums/basic_date_field.py) \| None</code> | The type of filter you would like to apply to your search.<br>Use in query: `date_field=created_at`.<br>**Default**: <code>None</code> |
+| <code>filter</code> | <code>[ListProductsFilter](maxio/models/list_products_filter.py) \| [ListProductsFilterDict](maxio/models/list_products_filter.py) \| None</code> | Filter to use for List Products operations<br>**Default**: <code>None</code> |
 | <code>end_date</code> | <code>Date \| None</code> | The end date (format YYYY-MM-DD) with which to filter the date_field. Returns products with a timestamp up to and including 11:59:59PM in your site’s time zone on the date specified.<br>**Default**: <code>None</code> |
 | <code>end_datetime</code> | <code>RFC3339DateTime \| None</code> | The end date and time (format YYYY-MM-DD HH:MM:SS) with which to filter the date_field. Returns products with a timestamp at or before exact time provided in query. You can specify timezone in query - otherwise your site''s time zone will be used. If provided, this parameter will be used instead of end_date.<br>**Default**: <code>None</code> |
 | <code>start_date</code> | <code>Date \| None</code> | The start date (format YYYY-MM-DD) with which to filter the date_field. Returns products with a timestamp at or after midnight (12:00:00 AM) in your site’s time zone on the date specified.<br>**Default**: <code>None</code> |
@@ -12740,8 +12740,8 @@ match result:
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 20. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>Use in query `per_page=200`.<br>**Default**: <code>20</code> |
 | <code>include_archived</code> | <code>bool \| None</code> | Include archived products. Use in query: `include_archived=true`.<br>**Default**: <code>None</code> |
-| <code>include</code> | <code>[ListProductsIncludeOrStr](maxio_advanced_billing/models/enums/list_products_include.py) \| None</code> | Allows including additional data in the response. Use in query `include=prepaid_product_price_point`.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>include</code> | <code>[ListProductsIncludeOrStr](maxio/models/enums/list_products_include.py) \| None</code> | Allows including additional data in the response. Use in query `include=prepaid_product_price_point`.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -12751,11 +12751,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;list&#91;[ProductResponse](maxio_advanced_billing/models/product_response.py)&#93;, [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;list&#91;[ProductResponse](maxio/models/product_response.py)&#93;, [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>list&#91;[ProductResponse](maxio_advanced_billing/models/product_response.py)&#93;</code> -- OK
+**On `Success`**: `payload` is <code>list&#91;[ProductResponse](maxio/models/product_response.py)&#93;</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -12819,7 +12819,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>product_id</code> | <code>int</code> | The Advanced Billing id of the product |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -12829,11 +12829,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ProductResponse](maxio_advanced_billing/models/product_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ProductResponse](maxio/models/product_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ProductResponse](maxio_advanced_billing/models/product_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ProductResponse](maxio/models/product_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -12897,7 +12897,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>api_handle</code> | <code>str</code> | The handle of the product |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -12907,11 +12907,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ProductResponse](maxio_advanced_billing/models/product_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ProductResponse](maxio/models/product_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ProductResponse](maxio_advanced_billing/models/product_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ProductResponse](maxio/models/product_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -12983,8 +12983,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>product_id</code> | <code>int</code> | The Advanced Billing id of the product |
-| <code>body</code> | <code>[CreateOrUpdateProductRequest](maxio_advanced_billing/models/create_or_update_product_request.py) \| [CreateOrUpdateProductRequestDict](maxio_advanced_billing/models/create_or_update_product_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CreateOrUpdateProductRequest](maxio/models/create_or_update_product_request.py) \| [CreateOrUpdateProductRequestDict](maxio/models/create_or_update_product_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -12994,18 +12994,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ProductResponse](maxio_advanced_billing/models/product_response.py), [UpdateProductErrorBody](maxio_advanced_billing/errors/update_product_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ProductResponse](maxio/models/product_response.py), [UpdateProductErrorBody](maxio/errors/update_product_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ProductResponse](maxio_advanced_billing/models/product_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ProductResponse](maxio/models/product_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[UpdateProductErrorBody](maxio_advanced_billing/errors/update_product_error.py)</code>
+**On `Failure`**: `error` is <code>[UpdateProductErrorBody](maxio/errors/update_product_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -13017,7 +13017,7 @@ Mapped in first-match order -- an earlier row wins over a later range that also 
 
 ## ProformaInvoices
 
-> Source: [ProformaInvoices](maxio_advanced_billing/apis/proforma_invoices.py)
+> Source: [ProformaInvoices](maxio/apis/proforma_invoices.py)
 
 <details>
 <summary><code>def create_consolidated_proforma_invoice(uid: str, *, request_options: RequestOptionsOrDict | None = None) -> ApiResult[None, CreateConsolidatedProformaInvoiceErrorBody]</code></summary>
@@ -13079,7 +13079,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>uid</code> | <code>str</code> | The uid of the subscription group |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -13089,18 +13089,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;None, [CreateConsolidatedProformaInvoiceErrorBody](maxio_advanced_billing/errors/create_consolidated_proforma_invoice_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;None, [CreateConsolidatedProformaInvoiceErrorBody](maxio/errors/create_consolidated_proforma_invoice_error.py)&#93;</code>
 
 **On `Success`**: the 2xx carries no content; `payload` is <code>None</code>
 
-**On `Failure`**: `error` is <code>[CreateConsolidatedProformaInvoiceErrorBody](maxio_advanced_billing/errors/create_consolidated_proforma_invoice_error.py)</code>
+**On `Failure`**: `error` is <code>[CreateConsolidatedProformaInvoiceErrorBody](maxio/errors/create_consolidated_proforma_invoice_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -13170,7 +13170,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -13180,18 +13180,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ProformaInvoice](maxio_advanced_billing/models/proforma_invoice.py), [CreateProformaInvoiceErrorBody](maxio_advanced_billing/errors/create_proforma_invoice_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ProformaInvoice](maxio/models/proforma_invoice.py), [CreateProformaInvoiceErrorBody](maxio/errors/create_proforma_invoice_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ProformaInvoice](maxio_advanced_billing/models/proforma_invoice.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ProformaInvoice](maxio/models/proforma_invoice.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[CreateProformaInvoiceErrorBody](maxio_advanced_billing/errors/create_proforma_invoice_error.py)</code>
+**On `Failure`**: `error` is <code>[CreateProformaInvoiceErrorBody](maxio/errors/create_proforma_invoice_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -13258,8 +13258,8 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>body</code> | <code>[CreateSubscriptionRequest](maxio_advanced_billing/models/create_subscription_request.py) \| [CreateSubscriptionRequestDict](maxio_advanced_billing/models/create_subscription_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CreateSubscriptionRequest](maxio/models/create_subscription_request.py) \| [CreateSubscriptionRequestDict](maxio/models/create_subscription_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -13269,19 +13269,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ProformaInvoice](maxio_advanced_billing/models/proforma_invoice.py), [CreateSignupProformaInvoiceErrorBody](maxio_advanced_billing/errors/create_signup_proforma_invoice_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ProformaInvoice](maxio/models/proforma_invoice.py), [CreateSignupProformaInvoiceErrorBody](maxio/errors/create_signup_proforma_invoice_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ProformaInvoice](maxio_advanced_billing/models/proforma_invoice.py)</code> -- Created
+**On `Success`**: `payload` is <code>[ProformaInvoice](maxio/models/proforma_invoice.py)</code> -- Created
 
-**On `Failure`**: `error` is <code>[CreateSignupProformaInvoiceErrorBody](maxio_advanced_billing/errors/create_signup_proforma_invoice_error.py)</code>
+**On `Failure`**: `error` is <code>[CreateSignupProformaInvoiceErrorBody](maxio/errors/create_signup_proforma_invoice_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 400 | <code>[ProformaBadRequestErrorResponse1](maxio_advanced_billing/models/proforma_bad_request_error_response1.py)</code> |
-| 422 | <code>[ErrorArrayMapResponse1](maxio_advanced_billing/models/error_array_map_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 400 | <code>[ProformaBadRequestErrorResponse1](maxio/models/proforma_bad_request_error_response1.py)</code> |
+| 422 | <code>[ErrorArrayMapResponse1](maxio/models/error_array_map_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -13350,8 +13350,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>proforma_invoice_uid</code> | <code>str</code> | The uid of the proforma invoice |
-| <code>body</code> | <code>[DeliverProformaInvoiceRequest](maxio_advanced_billing/models/deliver_proforma_invoice_request.py) \| [DeliverProformaInvoiceRequestDict](maxio_advanced_billing/models/deliver_proforma_invoice_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[DeliverProformaInvoiceRequest](maxio/models/deliver_proforma_invoice_request.py) \| [DeliverProformaInvoiceRequestDict](maxio/models/deliver_proforma_invoice_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -13361,19 +13361,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ProformaInvoice](maxio_advanced_billing/models/proforma_invoice.py), [DeliverProformaInvoiceErrorBody](maxio_advanced_billing/errors/deliver_proforma_invoice_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ProformaInvoice](maxio/models/proforma_invoice.py), [DeliverProformaInvoiceErrorBody](maxio/errors/deliver_proforma_invoice_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ProformaInvoice](maxio_advanced_billing/models/proforma_invoice.py)</code> -- Created
+**On `Success`**: `payload` is <code>[ProformaInvoice](maxio/models/proforma_invoice.py)</code> -- Created
 
-**On `Failure`**: `error` is <code>[DeliverProformaInvoiceErrorBody](maxio_advanced_billing/errors/deliver_proforma_invoice_error.py)</code>
+**On `Failure`**: `error` is <code>[DeliverProformaInvoiceErrorBody](maxio/errors/deliver_proforma_invoice_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -13439,17 +13439,17 @@ match result:
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
 | <code>start_date</code> | <code>str \| None</code> | The beginning date range for the invoice's Due Date, in the YYYY-MM-DD format.<br>**Default**: <code>None</code> |
 | <code>end_date</code> | <code>str \| None</code> | The ending date range for the invoice's Due Date, in the YYYY-MM-DD format.<br>**Default**: <code>None</code> |
-| <code>status</code> | <code>[ProformaInvoiceStatusOrStr](maxio_advanced_billing/models/enums/proforma_invoice_status.py) \| None</code> | The current status of the invoice.  Allowed Values: draft, open, paid, pending, voided<br>**Default**: <code>None</code> |
+| <code>status</code> | <code>[ProformaInvoiceStatusOrStr](maxio/models/enums/proforma_invoice_status.py) \| None</code> | The current status of the invoice.  Allowed Values: draft, open, paid, pending, voided<br>**Default**: <code>None</code> |
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 20. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>Use in query `per_page=200`.<br>**Default**: <code>20</code> |
-| <code>direction</code> | <code>[DirectionOrStr](maxio_advanced_billing/models/enums/direction.py) \| None</code> | The sort direction of the returned invoices.<br>**Default**: <code>None</code> |
+| <code>direction</code> | <code>[DirectionOrStr](maxio/models/enums/direction.py) \| None</code> | The sort direction of the returned invoices.<br>**Default**: <code>None</code> |
 | <code>line_items</code> | <code>bool \| None</code> | Include line items data.<br>**Default**: <code>False</code> |
 | <code>discounts</code> | <code>bool \| None</code> | Include discounts data.<br>**Default**: <code>False</code> |
 | <code>taxes</code> | <code>bool \| None</code> | Include taxes data.<br>**Default**: <code>False</code> |
 | <code>credits</code> | <code>bool \| None</code> | Include credits data.<br>**Default**: <code>False</code> |
 | <code>payments</code> | <code>bool \| None</code> | Include payments data.<br>**Default**: <code>False</code> |
 | <code>custom_fields</code> | <code>bool \| None</code> | Include custom fields data.<br>**Default**: <code>False</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -13459,11 +13459,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ListProformaInvoicesResponse](maxio_advanced_billing/models/list_proforma_invoices_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ListProformaInvoicesResponse](maxio/models/list_proforma_invoices_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ListProformaInvoicesResponse](maxio_advanced_billing/models/list_proforma_invoices_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ListProformaInvoicesResponse](maxio/models/list_proforma_invoices_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -13535,7 +13535,7 @@ match result:
 | <code>credits</code> | <code>bool \| None</code> | Include credits data.<br>**Default**: <code>False</code> |
 | <code>payments</code> | <code>bool \| None</code> | Include payments data.<br>**Default**: <code>False</code> |
 | <code>custom_fields</code> | <code>bool \| None</code> | Include custom fields data.<br>**Default**: <code>False</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -13545,18 +13545,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ListProformaInvoicesResponse](maxio_advanced_billing/models/list_proforma_invoices_response.py), [ListSubscriptionGroupProformaInvoicesErrorBody](maxio_advanced_billing/errors/list_subscription_group_proforma_invoices_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ListProformaInvoicesResponse](maxio/models/list_proforma_invoices_response.py), [ListSubscriptionGroupProformaInvoicesErrorBody](maxio/errors/list_subscription_group_proforma_invoices_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ListProformaInvoicesResponse](maxio_advanced_billing/models/list_proforma_invoices_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ListProformaInvoicesResponse](maxio/models/list_proforma_invoices_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[ListSubscriptionGroupProformaInvoicesErrorBody](maxio_advanced_billing/errors/list_subscription_group_proforma_invoices_error.py)</code>
+**On `Failure`**: `error` is <code>[ListSubscriptionGroupProformaInvoicesErrorBody](maxio/errors/list_subscription_group_proforma_invoices_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -13626,7 +13626,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -13636,19 +13636,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ProformaInvoice](maxio_advanced_billing/models/proforma_invoice.py), [PreviewProformaInvoiceErrorBody](maxio_advanced_billing/errors/preview_proforma_invoice_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ProformaInvoice](maxio/models/proforma_invoice.py), [PreviewProformaInvoiceErrorBody](maxio/errors/preview_proforma_invoice_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ProformaInvoice](maxio_advanced_billing/models/proforma_invoice.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ProformaInvoice](maxio/models/proforma_invoice.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[PreviewProformaInvoiceErrorBody](maxio_advanced_billing/errors/preview_proforma_invoice_error.py)</code>
+**On `Failure`**: `error` is <code>[PreviewProformaInvoiceErrorBody](maxio/errors/preview_proforma_invoice_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -13715,9 +13715,9 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>include</code> | <code>[CreateSignupProformaPreviewIncludeOrStr](maxio_advanced_billing/models/enums/create_signup_proforma_preview_include.py) \| None</code> | Choose to include a proforma invoice preview for the first renewal. Use in query `include=next_proforma_invoice`.<br>**Default**: <code>None</code> |
-| <code>body</code> | <code>[CreateSubscriptionRequest](maxio_advanced_billing/models/create_subscription_request.py) \| [CreateSubscriptionRequestDict](maxio_advanced_billing/models/create_subscription_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>include</code> | <code>[CreateSignupProformaPreviewIncludeOrStr](maxio/models/enums/create_signup_proforma_preview_include.py) \| None</code> | Choose to include a proforma invoice preview for the first renewal. Use in query `include=next_proforma_invoice`.<br>**Default**: <code>None</code> |
+| <code>body</code> | <code>[CreateSubscriptionRequest](maxio/models/create_subscription_request.py) \| [CreateSubscriptionRequestDict](maxio/models/create_subscription_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -13727,19 +13727,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[SignupProformaPreviewResponse](maxio_advanced_billing/models/signup_proforma_preview_response.py), [PreviewSignupProformaInvoiceErrorBody](maxio_advanced_billing/errors/preview_signup_proforma_invoice_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[SignupProformaPreviewResponse](maxio/models/signup_proforma_preview_response.py), [PreviewSignupProformaInvoiceErrorBody](maxio/errors/preview_signup_proforma_invoice_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[SignupProformaPreviewResponse](maxio_advanced_billing/models/signup_proforma_preview_response.py)</code> -- Created
+**On `Success`**: `payload` is <code>[SignupProformaPreviewResponse](maxio/models/signup_proforma_preview_response.py)</code> -- Created
 
-**On `Failure`**: `error` is <code>[PreviewSignupProformaInvoiceErrorBody](maxio_advanced_billing/errors/preview_signup_proforma_invoice_error.py)</code>
+**On `Failure`**: `error` is <code>[PreviewSignupProformaInvoiceErrorBody](maxio/errors/preview_signup_proforma_invoice_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 400 | <code>[ProformaBadRequestErrorResponse1](maxio_advanced_billing/models/proforma_bad_request_error_response1.py)</code> |
-| 422 | <code>[ErrorArrayMapResponse1](maxio_advanced_billing/models/error_array_map_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 400 | <code>[ProformaBadRequestErrorResponse1](maxio/models/proforma_bad_request_error_response1.py)</code> |
+| 422 | <code>[ErrorArrayMapResponse1](maxio/models/error_array_map_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -13807,7 +13807,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>proforma_invoice_uid</code> | <code>str</code> | The uid of the proforma invoice |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -13817,18 +13817,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ProformaInvoice](maxio_advanced_billing/models/proforma_invoice.py), [ReadProformaInvoiceErrorBody](maxio_advanced_billing/errors/read_proforma_invoice_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ProformaInvoice](maxio/models/proforma_invoice.py), [ReadProformaInvoiceErrorBody](maxio/errors/read_proforma_invoice_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ProformaInvoice](maxio_advanced_billing/models/proforma_invoice.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ProformaInvoice](maxio/models/proforma_invoice.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[ReadProformaInvoiceErrorBody](maxio_advanced_billing/errors/read_proforma_invoice_error.py)</code>
+**On `Failure`**: `error` is <code>[ReadProformaInvoiceErrorBody](maxio/errors/read_proforma_invoice_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -13900,8 +13900,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>proforma_invoice_uid</code> | <code>str</code> | The uid of the proforma invoice |
-| <code>body</code> | <code>[VoidInvoiceRequest](maxio_advanced_billing/models/void_invoice_request.py) \| [VoidInvoiceRequestDict](maxio_advanced_billing/models/void_invoice_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[VoidInvoiceRequest](maxio/models/void_invoice_request.py) \| [VoidInvoiceRequestDict](maxio/models/void_invoice_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -13911,19 +13911,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ProformaInvoice](maxio_advanced_billing/models/proforma_invoice.py), [VoidProformaInvoiceErrorBody](maxio_advanced_billing/errors/void_proforma_invoice_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ProformaInvoice](maxio/models/proforma_invoice.py), [VoidProformaInvoiceErrorBody](maxio/errors/void_proforma_invoice_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ProformaInvoice](maxio_advanced_billing/models/proforma_invoice.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ProformaInvoice](maxio/models/proforma_invoice.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[VoidProformaInvoiceErrorBody](maxio_advanced_billing/errors/void_proforma_invoice_error.py)</code>
+**On `Failure`**: `error` is <code>[VoidProformaInvoiceErrorBody](maxio/errors/void_proforma_invoice_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -13935,7 +13935,7 @@ Mapped in first-match order -- an earlier row wins over a later range that also 
 
 ## ReasonCodes
 
-> Source: [ReasonCodes](maxio_advanced_billing/apis/reason_codes.py)
+> Source: [ReasonCodes](maxio/apis/reason_codes.py)
 
 <details>
 <summary><code>def create_reason_code(*, body: CreateReasonCodeRequest | CreateReasonCodeRequestDict | None = None, request_options: RequestOptionsOrDict | None = None) -> ApiResult[ReasonCodeResponse, CreateReasonCodeErrorBody]</code></summary>
@@ -14006,8 +14006,8 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>body</code> | <code>[CreateReasonCodeRequest](maxio_advanced_billing/models/create_reason_code_request.py) \| [CreateReasonCodeRequestDict](maxio_advanced_billing/models/create_reason_code_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CreateReasonCodeRequest](maxio/models/create_reason_code_request.py) \| [CreateReasonCodeRequestDict](maxio/models/create_reason_code_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -14017,18 +14017,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ReasonCodeResponse](maxio_advanced_billing/models/reason_code_response.py), [CreateReasonCodeErrorBody](maxio_advanced_billing/errors/create_reason_code_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ReasonCodeResponse](maxio/models/reason_code_response.py), [CreateReasonCodeErrorBody](maxio/errors/create_reason_code_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ReasonCodeResponse](maxio_advanced_billing/models/reason_code_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ReasonCodeResponse](maxio/models/reason_code_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[CreateReasonCodeErrorBody](maxio_advanced_billing/errors/create_reason_code_error.py)</code>
+**On `Failure`**: `error` is <code>[CreateReasonCodeErrorBody](maxio/errors/create_reason_code_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -14092,7 +14092,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>reason_code_id</code> | <code>int</code> | The Advanced Billing id of the reason code |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -14102,18 +14102,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[OkResponse](maxio_advanced_billing/models/ok_response.py), [DeleteReasonCodeErrorBody](maxio_advanced_billing/errors/delete_reason_code_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[OkResponse](maxio/models/ok_response.py), [DeleteReasonCodeErrorBody](maxio/errors/delete_reason_code_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[OkResponse](maxio_advanced_billing/models/ok_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[OkResponse](maxio/models/ok_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[DeleteReasonCodeErrorBody](maxio_advanced_billing/errors/delete_reason_code_error.py)</code>
+**On `Failure`**: `error` is <code>[DeleteReasonCodeErrorBody](maxio/errors/delete_reason_code_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -14178,7 +14178,7 @@ match result:
 | --- | --- | --- |
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 20. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>Use in query `per_page=200`.<br>**Default**: <code>20</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -14188,18 +14188,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;list&#91;[ReasonCodeResponse](maxio_advanced_billing/models/reason_code_response.py)&#93;, [ListReasonCodesErrorBody](maxio_advanced_billing/errors/list_reason_codes_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;list&#91;[ReasonCodeResponse](maxio/models/reason_code_response.py)&#93;, [ListReasonCodesErrorBody](maxio/errors/list_reason_codes_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>list&#91;[ReasonCodeResponse](maxio_advanced_billing/models/reason_code_response.py)&#93;</code> -- OK
+**On `Success`**: `payload` is <code>list&#91;[ReasonCodeResponse](maxio/models/reason_code_response.py)&#93;</code> -- OK
 
-**On `Failure`**: `error` is <code>[ListReasonCodesErrorBody](maxio_advanced_billing/errors/list_reason_codes_error.py)</code>
+**On `Failure`**: `error` is <code>[ListReasonCodesErrorBody](maxio/errors/list_reason_codes_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -14263,7 +14263,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>reason_code_id</code> | <code>int</code> | The Advanced Billing id of the reason code |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -14273,18 +14273,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ReasonCodeResponse](maxio_advanced_billing/models/reason_code_response.py), [ReadReasonCodeErrorBody](maxio_advanced_billing/errors/read_reason_code_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ReasonCodeResponse](maxio/models/reason_code_response.py), [ReadReasonCodeErrorBody](maxio/errors/read_reason_code_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ReasonCodeResponse](maxio_advanced_billing/models/reason_code_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ReasonCodeResponse](maxio/models/reason_code_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[ReadReasonCodeErrorBody](maxio_advanced_billing/errors/read_reason_code_error.py)</code>
+**On `Failure`**: `error` is <code>[ReadReasonCodeErrorBody](maxio/errors/read_reason_code_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -14348,8 +14348,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>reason_code_id</code> | <code>int</code> | The Advanced Billing id of the reason code |
-| <code>body</code> | <code>[UpdateReasonCodeRequest](maxio_advanced_billing/models/update_reason_code_request.py) \| [UpdateReasonCodeRequestDict](maxio_advanced_billing/models/update_reason_code_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[UpdateReasonCodeRequest](maxio/models/update_reason_code_request.py) \| [UpdateReasonCodeRequestDict](maxio/models/update_reason_code_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -14359,19 +14359,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ReasonCodeResponse](maxio_advanced_billing/models/reason_code_response.py), [UpdateReasonCodeErrorBody](maxio_advanced_billing/errors/update_reason_code_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ReasonCodeResponse](maxio/models/reason_code_response.py), [UpdateReasonCodeErrorBody](maxio/errors/update_reason_code_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ReasonCodeResponse](maxio_advanced_billing/models/reason_code_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ReasonCodeResponse](maxio/models/reason_code_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[UpdateReasonCodeErrorBody](maxio_advanced_billing/errors/update_reason_code_error.py)</code>
+**On `Failure`**: `error` is <code>[UpdateReasonCodeErrorBody](maxio/errors/update_reason_code_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -14383,7 +14383,7 @@ Mapped in first-match order -- an earlier row wins over a later range that also 
 
 ## ReferralCodes
 
-> Source: [ReferralCodes](maxio_advanced_billing/apis/referral_codes.py)
+> Source: [ReferralCodes](maxio/apis/referral_codes.py)
 
 <details>
 <summary><code>def validate_referral_code(code: str, *, request_options: RequestOptionsOrDict | None = None) -> ApiResult[ReferralValidationResponse, ValidateReferralCodeErrorBody]</code></summary>
@@ -14447,7 +14447,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>code</code> | <code>str</code> | The referral code you are trying to validate |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -14457,18 +14457,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ReferralValidationResponse](maxio_advanced_billing/models/referral_validation_response.py), [ValidateReferralCodeErrorBody](maxio_advanced_billing/errors/validate_referral_code_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ReferralValidationResponse](maxio/models/referral_validation_response.py), [ValidateReferralCodeErrorBody](maxio/errors/validate_referral_code_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ReferralValidationResponse](maxio_advanced_billing/models/referral_validation_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ReferralValidationResponse](maxio/models/referral_validation_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[ValidateReferralCodeErrorBody](maxio_advanced_billing/errors/validate_referral_code_error.py)</code>
+**On `Failure`**: `error` is <code>[ValidateReferralCodeErrorBody](maxio/errors/validate_referral_code_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[SingleStringErrorResponse1](maxio_advanced_billing/models/single_string_error_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[SingleStringErrorResponse1](maxio/models/single_string_error_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -14480,7 +14480,7 @@ Mapped in first-match order -- an earlier row wins over a later range that also 
 
 ## SalesCommissions
 
-> Source: [SalesCommissions](maxio_advanced_billing/apis/sales_commissions.py)
+> Source: [SalesCommissions](maxio/apis/sales_commissions.py)
 
 <details>
 <summary><code>def list_sales_commission_settings(seller_id: str, *, live_mode: bool | None = None, page: int | None = 1, per_page: int | None = 100, authorization: str | None = "Bearer <<apiKey>>", request_options: RequestOptionsOrDict | None = None) -> ApiResult[list[SaleRepSettings], RawError]</code></summary>
@@ -14548,7 +14548,7 @@ match result:
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 100.<br>**Default**: <code>100</code> |
 | <code>authorization</code> | <code>str \| None</code> | For authorization use user API key. See details [here](https://developers.chargify.com/docs/developer-docs/ZG9jOjMyNzk5NTg0-2020-04-20-new-api-authentication).<br>**Default**: <code>"Bearer <<apiKey>>"</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -14558,11 +14558,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;list&#91;[SaleRepSettings](maxio_advanced_billing/models/sale_rep_settings.py)&#93;, [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;list&#91;[SaleRepSettings](maxio/models/sale_rep_settings.py)&#93;, [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>list&#91;[SaleRepSettings](maxio_advanced_billing/models/sale_rep_settings.py)&#93;</code> -- OK
+**On `Success`**: `payload` is <code>list&#91;[SaleRepSettings](maxio/models/sale_rep_settings.py)&#93;</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -14638,7 +14638,7 @@ match result:
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 100.<br>**Default**: <code>100</code> |
 | <code>authorization</code> | <code>str \| None</code> | For authorization use user API key. See details [here](https://developers.chargify.com/docs/developer-docs/ZG9jOjMyNzk5NTg0-2020-04-20-new-api-authentication).<br>**Default**: <code>"Bearer <<apiKey>>"</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -14648,11 +14648,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;list&#91;[ListSaleRepItem](maxio_advanced_billing/models/list_sale_rep_item.py)&#93;, [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;list&#91;[ListSaleRepItem](maxio/models/list_sale_rep_item.py)&#93;, [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>list&#91;[ListSaleRepItem](maxio_advanced_billing/models/list_sale_rep_item.py)&#93;</code> -- OK
+**On `Success`**: `payload` is <code>list&#91;[ListSaleRepItem](maxio/models/list_sale_rep_item.py)&#93;</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -14729,7 +14729,7 @@ match result:
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 100.<br>**Default**: <code>100</code> |
 | <code>authorization</code> | <code>str \| None</code> | For authorization use user API key. See details [here](https://developers.chargify.com/docs/developer-docs/ZG9jOjMyNzk5NTg0-2020-04-20-new-api-authentication).<br>**Default**: <code>"Bearer <<apiKey>>"</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -14739,11 +14739,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[SaleRep](maxio_advanced_billing/models/sale_rep.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[SaleRep](maxio/models/sale_rep.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[SaleRep](maxio_advanced_billing/models/sale_rep.py)</code> -- OK
+**On `Success`**: `payload` is <code>[SaleRep](maxio/models/sale_rep.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -14755,7 +14755,7 @@ match result:
 
 ## Sites
 
-> Source: [Sites](maxio_advanced_billing/apis/sites.py)
+> Source: [Sites](maxio/apis/sites.py)
 
 <details>
 <summary><code>def clear_site(*, cleanup_scope: CleanupScopeOrStr | None = None, request_options: RequestOptionsOrDict | None = None) -> ApiResult[None, RawError]</code></summary>
@@ -14812,8 +14812,8 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>cleanup_scope</code> | <code>[CleanupScopeOrStr](maxio_advanced_billing/models/enums/cleanup_scope.py) \| None</code> | `all`: Will clear all products, customers, and related subscriptions from the site. <br>`customers`: Will clear only customers and related subscriptions (leaving the products untouched) for the site. <br>Revenue will also be reset to 0.<br>Use in query `cleanup_scope=all`.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>cleanup_scope</code> | <code>[CleanupScopeOrStr](maxio/models/enums/cleanup_scope.py) \| None</code> | `all`: Will clear all products, customers, and related subscriptions from the site. <br>`customers`: Will clear only customers and related subscriptions (leaving the products untouched) for the site. <br>Revenue will also be reset to 0.<br>Use in query `cleanup_scope=all`.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -14823,11 +14823,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;None, [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;None, [RawError](maxio/core/results.py)&#93;</code>
 
 **On `Success`**: the 2xx carries no content; `payload` is <code>None</code>
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -14892,7 +14892,7 @@ match result:
 | --- | --- | --- |
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 20. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>Use in query `per_page=200`.<br>**Default**: <code>20</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -14902,11 +14902,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ListPublicKeysResponse](maxio_advanced_billing/models/list_public_keys_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ListPublicKeysResponse](maxio/models/list_public_keys_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ListPublicKeysResponse](maxio_advanced_billing/models/list_public_keys_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ListPublicKeysResponse](maxio/models/list_public_keys_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -14982,7 +14982,7 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -14992,11 +14992,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[SiteResponse](maxio_advanced_billing/models/site_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[SiteResponse](maxio/models/site_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[SiteResponse](maxio_advanced_billing/models/site_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[SiteResponse](maxio/models/site_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -15008,7 +15008,7 @@ match result:
 
 ## SubscriptionComponents
 
-> Source: [SubscriptionComponents](maxio_advanced_billing/apis/subscription_components.py)
+> Source: [SubscriptionComponents](maxio/apis/subscription_components.py)
 
 <details>
 <summary><code>def activate_event_based_component(subscription_id: int, component_id: int, *, body: ActivateEventBasedComponent | ActivateEventBasedComponentDict | None = None, request_options: RequestOptionsOrDict | None = None) -> ApiResult[None, RawError]</code></summary>
@@ -15075,8 +15075,8 @@ match result:
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Advanced Billing id of the subscription |
 | <code>component_id</code> | <code>int</code> | The Advanced Billing id of the component |
-| <code>body</code> | <code>[ActivateEventBasedComponent](maxio_advanced_billing/models/activate_event_based_component.py) \| [ActivateEventBasedComponentDict](maxio_advanced_billing/models/activate_event_based_component.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[ActivateEventBasedComponent](maxio/models/activate_event_based_component.py) \| [ActivateEventBasedComponentDict](maxio/models/activate_event_based_component.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -15086,11 +15086,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;None, [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;None, [RawError](maxio/core/results.py)&#93;</code>
 
 **On `Success`**: the 2xx carries no content; `payload` is <code>None</code>
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -15177,8 +15177,8 @@ match result:
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
 | <code>component_id</code> | <code>int</code> | The Advanced Billing id of the component |
-| <code>body</code> | <code>[CreateAllocationRequest](maxio_advanced_billing/models/create_allocation_request.py) \| [CreateAllocationRequestDict](maxio_advanced_billing/models/create_allocation_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CreateAllocationRequest](maxio/models/create_allocation_request.py) \| [CreateAllocationRequestDict](maxio/models/create_allocation_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -15188,18 +15188,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[AllocationResponse](maxio_advanced_billing/models/allocation_response.py), [AllocateComponentErrorBody](maxio_advanced_billing/errors/allocate_component_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[AllocationResponse](maxio/models/allocation_response.py), [AllocateComponentErrorBody](maxio/errors/allocate_component_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[AllocationResponse](maxio_advanced_billing/models/allocation_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[AllocationResponse](maxio/models/allocation_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[AllocateComponentErrorBody](maxio_advanced_billing/errors/allocate_component_error.py)</code>
+**On `Failure`**: `error` is <code>[AllocateComponentErrorBody](maxio/errors/allocate_component_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -15281,8 +15281,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>body</code> | <code>[AllocateComponents](maxio_advanced_billing/models/allocate_components.py) \| [AllocateComponentsDict](maxio_advanced_billing/models/allocate_components.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[AllocateComponents](maxio/models/allocate_components.py) \| [AllocateComponentsDict](maxio/models/allocate_components.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -15292,19 +15292,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;list&#91;[AllocationResponse](maxio_advanced_billing/models/allocation_response.py)&#93;, [AllocateComponentsErrorBody](maxio_advanced_billing/errors/allocate_components_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;list&#91;[AllocationResponse](maxio/models/allocation_response.py)&#93;, [AllocateComponentsErrorBody](maxio/errors/allocate_components_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>list&#91;[AllocationResponse](maxio_advanced_billing/models/allocation_response.py)&#93;</code> -- OK
+**On `Success`**: `payload` is <code>list&#91;[AllocationResponse](maxio/models/allocation_response.py)&#93;</code> -- OK
 
-**On `Failure`**: `error` is <code>[AllocateComponentsErrorBody](maxio_advanced_billing/errors/allocate_components_error.py)</code>
+**On `Failure`**: `error` is <code>[AllocateComponentsErrorBody](maxio/errors/allocate_components_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -15373,8 +15373,8 @@ match result:
 | --- | --- | --- |
 | <code>api_handle</code> | <code>str</code> | Identifies the Stream for which the events should be published. |
 | <code>store_uid</code> | <code>str \| None</code> | If you've attached your own Keen project as an Advanced Billing event data-store, use this parameter to indicate the data-store.<br>**Default**: <code>None</code> |
-| <code>body</code> | <code>list&#91;[EbbEvent](maxio_advanced_billing/models/ebb_event.py) \| [EbbEventDict](maxio_advanced_billing/models/ebb_event.py)&#93; \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>list&#91;[EbbEvent](maxio/models/ebb_event.py) \| [EbbEventDict](maxio/models/ebb_event.py)&#93; \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -15384,11 +15384,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;None, [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;None, [RawError](maxio/core/results.py)&#93;</code>
 
 **On `Success`**: the 2xx carries no content; `payload` is <code>None</code>
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -15458,7 +15458,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -15468,11 +15468,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[SubscriptionResponse](maxio/models/subscription_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py)</code> -- Created
+**On `Success`**: `payload` is <code>[SubscriptionResponse](maxio/models/subscription_response.py)</code> -- Created
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -15545,8 +15545,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>body</code> | <code>[BulkComponentsPricePointAssignment](maxio_advanced_billing/models/bulk_components_price_point_assignment.py) \| [BulkComponentsPricePointAssignmentDict](maxio_advanced_billing/models/bulk_components_price_point_assignment.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[BulkComponentsPricePointAssignment](maxio/models/bulk_components_price_point_assignment.py) \| [BulkComponentsPricePointAssignmentDict](maxio/models/bulk_components_price_point_assignment.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -15556,18 +15556,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[BulkComponentsPricePointAssignment](maxio_advanced_billing/models/bulk_components_price_point_assignment.py), [BulkUpdateSubscriptionComponentsPricePointsErrorBody](maxio_advanced_billing/errors/bulk_update_subscription_components_price_points_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[BulkComponentsPricePointAssignment](maxio/models/bulk_components_price_point_assignment.py), [BulkUpdateSubscriptionComponentsPricePointsErrorBody](maxio/errors/bulk_update_subscription_components_price_points_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[BulkComponentsPricePointAssignment](maxio_advanced_billing/models/bulk_components_price_point_assignment.py)</code> -- OK
+**On `Success`**: `payload` is <code>[BulkComponentsPricePointAssignment](maxio/models/bulk_components_price_point_assignment.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[BulkUpdateSubscriptionComponentsPricePointsErrorBody](maxio_advanced_billing/errors/bulk_update_subscription_components_price_points_error.py)</code>
+**On `Failure`**: `error` is <code>[BulkUpdateSubscriptionComponentsPricePointsErrorBody](maxio/errors/bulk_update_subscription_components_price_points_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ComponentPricePointError1](maxio_advanced_billing/models/component_price_point_error1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ComponentPricePointError1](maxio/models/component_price_point_error1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -15681,10 +15681,10 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>subscription_id_or_reference</code> | <code>[SubscriptionIdOrReference](maxio_advanced_billing/models/unions/subscription_id_or_reference.py) \| [SubscriptionIdOrReferenceDict](maxio_advanced_billing/models/unions/subscription_id_or_reference.py)</code> | Either the Advanced Billing subscription ID (integer) or the subscription reference (string). Important: In cases where a numeric string value matches both an existing subscription ID and an existing subscription reference, the system will prioritize the subscription ID lookup. For example, if both subscription ID 123 and subscription reference "123" exist, passing "123" will return the subscription with ID 123. |
-| <code>component_id</code> | <code>[ComponentIdModel](maxio_advanced_billing/models/unions/component_id_model.py) \| [ComponentIdModelDict](maxio_advanced_billing/models/unions/component_id_model.py)</code> | Either the Advanced Billing id for the component or the component's handle prefixed by `handle:` |
-| <code>body</code> | <code>[CreateUsageRequest](maxio_advanced_billing/models/create_usage_request.py) \| [CreateUsageRequestDict](maxio_advanced_billing/models/create_usage_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>subscription_id_or_reference</code> | <code>[SubscriptionIdOrReference](maxio/models/unions/subscription_id_or_reference.py) \| [SubscriptionIdOrReferenceDict](maxio/models/unions/subscription_id_or_reference.py)</code> | Either the Advanced Billing subscription ID (integer) or the subscription reference (string). Important: In cases where a numeric string value matches both an existing subscription ID and an existing subscription reference, the system will prioritize the subscription ID lookup. For example, if both subscription ID 123 and subscription reference "123" exist, passing "123" will return the subscription with ID 123. |
+| <code>component_id</code> | <code>[ComponentIdModel](maxio/models/unions/component_id_model.py) \| [ComponentIdModelDict](maxio/models/unions/component_id_model.py)</code> | Either the Advanced Billing id for the component or the component's handle prefixed by `handle:` |
+| <code>body</code> | <code>[CreateUsageRequest](maxio/models/create_usage_request.py) \| [CreateUsageRequestDict](maxio/models/create_usage_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -15694,18 +15694,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[UsageResponse](maxio_advanced_billing/models/usage_response.py), [CreateUsageErrorBody](maxio_advanced_billing/errors/create_usage_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[UsageResponse](maxio/models/usage_response.py), [CreateUsageErrorBody](maxio/errors/create_usage_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[UsageResponse](maxio_advanced_billing/models/usage_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[UsageResponse](maxio/models/usage_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[CreateUsageErrorBody](maxio_advanced_billing/errors/create_usage_error.py)</code>
+**On `Failure`**: `error` is <code>[CreateUsageErrorBody](maxio/errors/create_usage_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -15774,7 +15774,7 @@ match result:
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Advanced Billing id of the subscription |
 | <code>component_id</code> | <code>int</code> | The Advanced Billing id of the component |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -15784,11 +15784,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;None, [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;None, [RawError](maxio/core/results.py)&#93;</code>
 
 **On `Success`**: the 2xx carries no content; `payload` is <code>None</code>
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -15868,8 +15868,8 @@ match result:
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
 | <code>component_id</code> | <code>int</code> | The Advanced Billing id of the component |
 | <code>allocation_id</code> | <code>int</code> | The Advanced Billing id of the allocation |
-| <code>body</code> | <code>[CreditSchemeRequest](maxio_advanced_billing/models/credit_scheme_request.py) \| [CreditSchemeRequestDict](maxio_advanced_billing/models/credit_scheme_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CreditSchemeRequest](maxio/models/credit_scheme_request.py) \| [CreditSchemeRequestDict](maxio/models/credit_scheme_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -15879,19 +15879,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;None, [DeletePrepaidUsageAllocationErrorBody](maxio_advanced_billing/errors/delete_prepaid_usage_allocation_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;None, [DeletePrepaidUsageAllocationErrorBody](maxio/errors/delete_prepaid_usage_allocation_error.py)&#93;</code>
 
 **On `Success`**: the 2xx carries no content; `payload` is <code>None</code>
 
-**On `Failure`**: `error` is <code>[DeletePrepaidUsageAllocationErrorBody](maxio_advanced_billing/errors/delete_prepaid_usage_allocation_error.py)</code>
+**On `Failure`**: `error` is <code>[DeletePrepaidUsageAllocationErrorBody](maxio/errors/delete_prepaid_usage_allocation_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 422 | <code>[SubscriptionComponentAllocationError1](maxio_advanced_billing/models/subscription_component_allocation_error1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 422 | <code>[SubscriptionComponentAllocationError1](maxio/models/subscription_component_allocation_error1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -15961,7 +15961,7 @@ match result:
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
 | <code>component_id</code> | <code>int</code> | The Advanced Billing id of the component |
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -15971,19 +15971,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;list&#91;[AllocationResponse](maxio_advanced_billing/models/allocation_response.py)&#93;, [ListAllocationsErrorBody](maxio_advanced_billing/errors/list_allocations_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;list&#91;[AllocationResponse](maxio/models/allocation_response.py)&#93;, [ListAllocationsErrorBody](maxio/errors/list_allocations_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>list&#91;[AllocationResponse](maxio_advanced_billing/models/allocation_response.py)&#93;</code> -- OK
+**On `Success`**: `payload` is <code>list&#91;[AllocationResponse](maxio/models/allocation_response.py)&#93;</code> -- OK
 
-**On `Failure`**: `error` is <code>[ListAllocationsErrorBody](maxio_advanced_billing/errors/list_allocations_error.py)</code>
+**On `Failure`**: `error` is <code>[ListAllocationsErrorBody](maxio/errors/list_allocations_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -16051,19 +16051,19 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>date_field</code> | <code>[SubscriptionListDateFieldOrStr](maxio_advanced_billing/models/enums/subscription_list_date_field.py) \| None</code> | The type of filter you'd like to apply to your search. Use in query `date_field=updated_at`.<br>**Default**: <code>None</code> |
-| <code>direction</code> | <code>[SortingDirectionOrStr](maxio_advanced_billing/models/enums/sorting_direction.py) \| None</code> | Controls the order in which results are returned.<br>Use in query `direction=asc`.<br>**Default**: <code>None</code> |
-| <code>filter</code> | <code>[ListSubscriptionComponentsFilter](maxio_advanced_billing/models/list_subscription_components_filter.py) \| [ListSubscriptionComponentsFilterDict](maxio_advanced_billing/models/list_subscription_components_filter.py) \| None</code> | Filter to use for List Subscription Components operation<br>**Default**: <code>None</code> |
+| <code>date_field</code> | <code>[SubscriptionListDateFieldOrStr](maxio/models/enums/subscription_list_date_field.py) \| None</code> | The type of filter you'd like to apply to your search. Use in query `date_field=updated_at`.<br>**Default**: <code>None</code> |
+| <code>direction</code> | <code>[SortingDirectionOrStr](maxio/models/enums/sorting_direction.py) \| None</code> | Controls the order in which results are returned.<br>Use in query `direction=asc`.<br>**Default**: <code>None</code> |
+| <code>filter</code> | <code>[ListSubscriptionComponentsFilter](maxio/models/list_subscription_components_filter.py) \| [ListSubscriptionComponentsFilterDict](maxio/models/list_subscription_components_filter.py) \| None</code> | Filter to use for List Subscription Components operation<br>**Default**: <code>None</code> |
 | <code>end_date</code> | <code>str \| None</code> | The end date (format YYYY-MM-DD) with which to filter the date_field. Returns components with a timestamp up to and including 11:59:59PM in your site’s time zone on the date specified.<br>**Default**: <code>None</code> |
 | <code>end_datetime</code> | <code>str \| None</code> | The end date and time (format YYYY-MM-DD HH:MM:SS) with which to filter the date_field. Returns components with a timestamp at or before exact time provided in query. You can specify timezone in query - otherwise your site''s time zone will be used. If provided, this parameter will be used instead of end_date.<br>**Default**: <code>None</code> |
-| <code>price_point_ids</code> | <code>[IncludeNotNullOrStr](maxio_advanced_billing/models/enums/include_not_null.py) \| None</code> | Allows fetching components allocation only if price point id is present. Use in query `price_point_ids=not_null`.<br>**Default**: <code>None</code> |
+| <code>price_point_ids</code> | <code>[IncludeNotNullOrStr](maxio/models/enums/include_not_null.py) \| None</code> | Allows fetching components allocation only if price point id is present. Use in query `price_point_ids=not_null`.<br>**Default**: <code>None</code> |
 | <code>product_family_ids</code> | <code>list&#91;int&#93; \| None</code> | Allows fetching components allocation with matching product family id based on provided ids. Use in query `product_family_ids=1,2,3`.<br>**Default**: <code>None</code> |
-| <code>sort</code> | <code>[ListSubscriptionComponentsSortOrStr](maxio_advanced_billing/models/enums/list_subscription_components_sort.py) \| None</code> | The attribute by which to sort. Use in query `sort=updated_at`.<br>**Default**: <code>None</code> |
+| <code>sort</code> | <code>[ListSubscriptionComponentsSortOrStr](maxio/models/enums/list_subscription_components_sort.py) \| None</code> | The attribute by which to sort. Use in query `sort=updated_at`.<br>**Default**: <code>None</code> |
 | <code>start_date</code> | <code>str \| None</code> | The start date (format YYYY-MM-DD) with which to filter the date_field. Returns components with a timestamp at or after midnight (12:00:00 AM) in your site’s time zone on the date specified.<br>**Default**: <code>None</code> |
 | <code>start_datetime</code> | <code>str \| None</code> | The start date and time (format YYYY-MM-DD HH:MM:SS) with which to filter the date_field. Returns components with a timestamp at or after exact time provided in query. You can specify timezone in query - otherwise your site''s time zone will be used. If provided, this parameter will be used instead of start_date.<br>**Default**: <code>None</code> |
-| <code>include</code> | <code>list&#91;[ListSubscriptionComponentsIncludeOrStr](maxio_advanced_billing/models/enums/list_subscription_components_include.py)&#93; \| None</code> | Allows including additional data in the response. Use in query `include=subscription,historic_usages`.<br>**Default**: <code>None</code> |
+| <code>include</code> | <code>list&#91;[ListSubscriptionComponentsIncludeOrStr](maxio/models/enums/list_subscription_components_include.py)&#93; \| None</code> | Allows including additional data in the response. Use in query `include=subscription,historic_usages`.<br>**Default**: <code>None</code> |
 | <code>in_use</code> | <code>bool \| None</code> | If in_use is set to true, it returns only components that are currently in use. However, if it's set to false or not provided, it returns all components connected with the subscription.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -16073,11 +16073,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;list&#91;[SubscriptionComponentResponse](maxio_advanced_billing/models/subscription_component_response.py)&#93;, [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;list&#91;[SubscriptionComponentResponse](maxio/models/subscription_component_response.py)&#93;, [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>list&#91;[SubscriptionComponentResponse](maxio_advanced_billing/models/subscription_component_response.py)&#93;</code> -- OK
+**On `Success`**: `payload` is <code>list&#91;[SubscriptionComponentResponse](maxio/models/subscription_component_response.py)&#93;</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -16142,19 +16142,19 @@ match result:
 | --- | --- | --- |
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 20. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>Use in query `per_page=200`.<br>**Default**: <code>20</code> |
-| <code>sort</code> | <code>[ListSubscriptionComponentsSortOrStr](maxio_advanced_billing/models/enums/list_subscription_components_sort.py) \| None</code> | The attribute by which to sort. Use in query: `sort=updated_at`.<br>**Default**: <code>None</code> |
-| <code>direction</code> | <code>[SortingDirectionOrStr](maxio_advanced_billing/models/enums/sorting_direction.py) \| None</code> | Controls the order in which results are returned.<br>Use in query `direction=asc`.<br>**Default**: <code>None</code> |
-| <code>filter</code> | <code>[ListSubscriptionComponentsForSiteFilter](maxio_advanced_billing/models/list_subscription_components_for_site_filter.py) \| [ListSubscriptionComponentsForSiteFilterDict](maxio_advanced_billing/models/list_subscription_components_for_site_filter.py) \| None</code> | Filter to use for List Subscription Components For Site operation<br>**Default**: <code>None</code> |
-| <code>date_field</code> | <code>[SubscriptionListDateFieldOrStr](maxio_advanced_billing/models/enums/subscription_list_date_field.py) \| None</code> | The type of filter you'd like to apply to your search. Use in query: `date_field=updated_at`.<br>**Default**: <code>None</code> |
+| <code>sort</code> | <code>[ListSubscriptionComponentsSortOrStr](maxio/models/enums/list_subscription_components_sort.py) \| None</code> | The attribute by which to sort. Use in query: `sort=updated_at`.<br>**Default**: <code>None</code> |
+| <code>direction</code> | <code>[SortingDirectionOrStr](maxio/models/enums/sorting_direction.py) \| None</code> | Controls the order in which results are returned.<br>Use in query `direction=asc`.<br>**Default**: <code>None</code> |
+| <code>filter</code> | <code>[ListSubscriptionComponentsForSiteFilter](maxio/models/list_subscription_components_for_site_filter.py) \| [ListSubscriptionComponentsForSiteFilterDict](maxio/models/list_subscription_components_for_site_filter.py) \| None</code> | Filter to use for List Subscription Components For Site operation<br>**Default**: <code>None</code> |
+| <code>date_field</code> | <code>[SubscriptionListDateFieldOrStr](maxio/models/enums/subscription_list_date_field.py) \| None</code> | The type of filter you'd like to apply to your search. Use in query: `date_field=updated_at`.<br>**Default**: <code>None</code> |
 | <code>start_date</code> | <code>str \| None</code> | The start date (format YYYY-MM-DD) with which to filter the date_field. Returns components with a timestamp at or after midnight (12:00:00 AM) in your site’s time zone on the date specified. Use in query `start_date=2011-12-15`.<br>**Default**: <code>None</code> |
 | <code>start_datetime</code> | <code>str \| None</code> | The start date and time (format YYYY-MM-DD HH:MM:SS) with which to filter the date_field. Returns components with a timestamp at or after exact time provided in query. You can specify timezone in query - otherwise your site''s time zone will be used. If provided, this parameter will be used instead of start_date. Use in query `start_datetime=2022-07-01 09:00:05`.<br>**Default**: <code>None</code> |
 | <code>end_date</code> | <code>str \| None</code> | The end date (format YYYY-MM-DD) with which to filter the date_field. Returns components with a timestamp up to and including 11:59:59PM in your site’s time zone on the date specified. Use in query `end_date=2011-12-16`.<br>**Default**: <code>None</code> |
 | <code>end_datetime</code> | <code>str \| None</code> | The end date and time (format YYYY-MM-DD HH:MM:SS) with which to filter the date_field. Returns components with a timestamp at or before exact time provided in query. You can specify timezone in query - otherwise your site''s time zone will be used. If provided, this parameter will be used instead of end_date. Use in query `end_datetime=2022-07-01 09:00:05`.<br>**Default**: <code>None</code> |
 | <code>subscription_ids</code> | <code>list&#91;int&#93; \| None</code> | Allows fetching components allocation with matching subscription id based on provided ids. Use in query `subscription_ids=1,2,3`.<br>**Default**: <code>None</code> |
-| <code>price_point_ids</code> | <code>[IncludeNotNullOrStr](maxio_advanced_billing/models/enums/include_not_null.py) \| None</code> | Allows fetching components allocation only if price point id is present. Use in query `price_point_ids=not_null`.<br>**Default**: <code>None</code> |
+| <code>price_point_ids</code> | <code>[IncludeNotNullOrStr](maxio/models/enums/include_not_null.py) \| None</code> | Allows fetching components allocation only if price point id is present. Use in query `price_point_ids=not_null`.<br>**Default**: <code>None</code> |
 | <code>product_family_ids</code> | <code>list&#91;int&#93; \| None</code> | Allows fetching components allocation with matching product family id based on provided ids. Use in query `product_family_ids=1,2,3`.<br>**Default**: <code>None</code> |
-| <code>include</code> | <code>[ListSubscriptionComponentsIncludeOrStr](maxio_advanced_billing/models/enums/list_subscription_components_include.py) \| None</code> | Allows including additional data in the response. Use in query `include=subscription,historic_usages`.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>include</code> | <code>[ListSubscriptionComponentsIncludeOrStr](maxio/models/enums/list_subscription_components_include.py) \| None</code> | Allows including additional data in the response. Use in query `include=subscription,historic_usages`.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -16164,11 +16164,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ListSubscriptionComponentsResponse](maxio_advanced_billing/models/list_subscription_components_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ListSubscriptionComponentsResponse](maxio/models/list_subscription_components_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ListSubscriptionComponentsResponse](maxio_advanced_billing/models/list_subscription_components_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ListSubscriptionComponentsResponse](maxio/models/list_subscription_components_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -16247,15 +16247,15 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>subscription_id_or_reference</code> | <code>[SubscriptionIdOrReference](maxio_advanced_billing/models/unions/subscription_id_or_reference.py) \| [SubscriptionIdOrReferenceDict](maxio_advanced_billing/models/unions/subscription_id_or_reference.py)</code> | Either the Advanced Billing subscription ID (integer) or the subscription reference (string). Important: In cases where a numeric string value matches both an existing subscription ID and an existing subscription reference, the system will prioritize the subscription ID lookup. For example, if both subscription ID 123 and subscription reference "123" exist, passing "123" will return the subscription with ID 123. |
-| <code>component_id</code> | <code>[ComponentIdModel](maxio_advanced_billing/models/unions/component_id_model.py) \| [ComponentIdModelDict](maxio_advanced_billing/models/unions/component_id_model.py)</code> | Either the Advanced Billing id for the component or the component's handle prefixed by `handle:` |
+| <code>subscription_id_or_reference</code> | <code>[SubscriptionIdOrReference](maxio/models/unions/subscription_id_or_reference.py) \| [SubscriptionIdOrReferenceDict](maxio/models/unions/subscription_id_or_reference.py)</code> | Either the Advanced Billing subscription ID (integer) or the subscription reference (string). Important: In cases where a numeric string value matches both an existing subscription ID and an existing subscription reference, the system will prioritize the subscription ID lookup. For example, if both subscription ID 123 and subscription reference "123" exist, passing "123" will return the subscription with ID 123. |
+| <code>component_id</code> | <code>[ComponentIdModel](maxio/models/unions/component_id_model.py) \| [ComponentIdModelDict](maxio/models/unions/component_id_model.py)</code> | Either the Advanced Billing id for the component or the component's handle prefixed by `handle:` |
 | <code>since_id</code> | <code>int \| None</code> | Returns usages with an id greater than or equal to the one specified.<br>**Default**: <code>None</code> |
 | <code>max_id</code> | <code>int \| None</code> | Returns usages with an id less than or equal to the one specified.<br>**Default**: <code>None</code> |
 | <code>since_date</code> | <code>Date \| None</code> | Returns usages with a created_at date greater than or equal to midnight (12:00 AM) on the date specified.<br>**Default**: <code>None</code> |
 | <code>until_date</code> | <code>Date \| None</code> | Returns usages with a created_at date less than or equal to midnight (12:00 AM) on the date specified.<br>**Default**: <code>None</code> |
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 20. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>Use in query `per_page=200`.<br>**Default**: <code>20</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -16265,11 +16265,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;list&#91;[UsageResponse](maxio_advanced_billing/models/usage_response.py)&#93;, [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;list&#91;[UsageResponse](maxio/models/usage_response.py)&#93;, [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>list&#91;[UsageResponse](maxio_advanced_billing/models/usage_response.py)&#93;</code> -- OK
+**On `Success`**: `payload` is <code>list&#91;[UsageResponse](maxio/models/usage_response.py)&#93;</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -16339,8 +16339,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>body</code> | <code>[PreviewAllocationsRequest](maxio_advanced_billing/models/preview_allocations_request.py) \| [PreviewAllocationsRequestDict](maxio_advanced_billing/models/preview_allocations_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[PreviewAllocationsRequest](maxio/models/preview_allocations_request.py) \| [PreviewAllocationsRequestDict](maxio/models/preview_allocations_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -16350,18 +16350,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[AllocationPreviewResponse](maxio_advanced_billing/models/allocation_preview_response.py), [PreviewAllocationsErrorBody](maxio_advanced_billing/errors/preview_allocations_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[AllocationPreviewResponse](maxio/models/allocation_preview_response.py), [PreviewAllocationsErrorBody](maxio/errors/preview_allocations_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[AllocationPreviewResponse](maxio_advanced_billing/models/allocation_preview_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[AllocationPreviewResponse](maxio/models/allocation_preview_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[PreviewAllocationsErrorBody](maxio_advanced_billing/errors/preview_allocations_error.py)</code>
+**On `Failure`**: `error` is <code>[PreviewAllocationsErrorBody](maxio/errors/preview_allocations_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ComponentAllocationError1](maxio_advanced_billing/models/component_allocation_error1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ComponentAllocationError1](maxio/models/component_allocation_error1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -16428,7 +16428,7 @@ match result:
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
 | <code>component_id</code> | <code>int</code> | The Advanced Billing id of the component. Alternatively, the component's handle prefixed by `handle:` |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -16438,18 +16438,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[SubscriptionComponentResponse](maxio_advanced_billing/models/subscription_component_response.py), [ReadSubscriptionComponentErrorBody](maxio_advanced_billing/errors/read_subscription_component_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[SubscriptionComponentResponse](maxio/models/subscription_component_response.py), [ReadSubscriptionComponentErrorBody](maxio/errors/read_subscription_component_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[SubscriptionComponentResponse](maxio_advanced_billing/models/subscription_component_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[SubscriptionComponentResponse](maxio/models/subscription_component_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[ReadSubscriptionComponentErrorBody](maxio_advanced_billing/errors/read_subscription_component_error.py)</code>
+**On `Failure`**: `error` is <code>[ReadSubscriptionComponentErrorBody](maxio/errors/read_subscription_component_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -16534,8 +16534,8 @@ match result:
 | --- | --- | --- |
 | <code>api_handle</code> | <code>str</code> | Identifies the Stream for which the event should be published. |
 | <code>store_uid</code> | <code>str \| None</code> | If you've attached your own Keen project as an Advanced Billing event data-store, use this parameter to indicate the data-store.<br>**Default**: <code>None</code> |
-| <code>body</code> | <code>[EbbEvent](maxio_advanced_billing/models/ebb_event.py) \| [EbbEventDict](maxio_advanced_billing/models/ebb_event.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[EbbEvent](maxio/models/ebb_event.py) \| [EbbEventDict](maxio/models/ebb_event.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -16545,11 +16545,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;None, [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;None, [RawError](maxio/core/results.py)&#93;</code>
 
 **On `Success`**: the 2xx carries no content; `payload` is <code>None</code>
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -16629,8 +16629,8 @@ match result:
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
 | <code>component_id</code> | <code>int</code> | The Advanced Billing id of the component |
 | <code>allocation_id</code> | <code>int</code> | The Advanced Billing id of the allocation |
-| <code>body</code> | <code>[UpdateAllocationExpirationDate](maxio_advanced_billing/models/update_allocation_expiration_date.py) \| [UpdateAllocationExpirationDateDict](maxio_advanced_billing/models/update_allocation_expiration_date.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[UpdateAllocationExpirationDate](maxio/models/update_allocation_expiration_date.py) \| [UpdateAllocationExpirationDateDict](maxio/models/update_allocation_expiration_date.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -16640,19 +16640,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;None, [UpdatePrepaidUsageAllocationExpirationDateErrorBody](maxio_advanced_billing/errors/update_prepaid_usage_allocation_expiration_date_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;None, [UpdatePrepaidUsageAllocationExpirationDateErrorBody](maxio/errors/update_prepaid_usage_allocation_expiration_date_error.py)&#93;</code>
 
 **On `Success`**: the 2xx carries no content; `payload` is <code>None</code>
 
-**On `Failure`**: `error` is <code>[UpdatePrepaidUsageAllocationExpirationDateErrorBody](maxio_advanced_billing/errors/update_prepaid_usage_allocation_expiration_date_error.py)</code>
+**On `Failure`**: `error` is <code>[UpdatePrepaidUsageAllocationExpirationDateErrorBody](maxio/errors/update_prepaid_usage_allocation_expiration_date_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 422 | <code>[SubscriptionComponentAllocationError1](maxio_advanced_billing/models/subscription_component_allocation_error1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 422 | <code>[SubscriptionComponentAllocationError1](maxio/models/subscription_component_allocation_error1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -16664,7 +16664,7 @@ Mapped in first-match order -- an earlier row wins over a later range that also 
 
 ## SubscriptionGroupInvoiceAccount
 
-> Source: [SubscriptionGroupInvoiceAccount](maxio_advanced_billing/apis/subscription_group_invoice_account.py)
+> Source: [SubscriptionGroupInvoiceAccount](maxio/apis/subscription_group_invoice_account.py)
 
 <details>
 <summary><code>def create_subscription_group_prepayment(uid: str, *, body: SubscriptionGroupPrepaymentRequest | SubscriptionGroupPrepaymentRequestDict | None = None, request_options: RequestOptionsOrDict | None = None) -> ApiResult[SubscriptionGroupPrepaymentResponse, CreateSubscriptionGroupPrepaymentErrorBody]</code></summary>
@@ -16722,8 +16722,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>uid</code> | <code>str</code> | The uid of the subscription group |
-| <code>body</code> | <code>[SubscriptionGroupPrepaymentRequest](maxio_advanced_billing/models/subscription_group_prepayment_request.py) \| [SubscriptionGroupPrepaymentRequestDict](maxio_advanced_billing/models/subscription_group_prepayment_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[SubscriptionGroupPrepaymentRequest](maxio/models/subscription_group_prepayment_request.py) \| [SubscriptionGroupPrepaymentRequestDict](maxio/models/subscription_group_prepayment_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -16733,18 +16733,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[SubscriptionGroupPrepaymentResponse](maxio_advanced_billing/models/subscription_group_prepayment_response.py), [CreateSubscriptionGroupPrepaymentErrorBody](maxio_advanced_billing/errors/create_subscription_group_prepayment_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[SubscriptionGroupPrepaymentResponse](maxio/models/subscription_group_prepayment_response.py), [CreateSubscriptionGroupPrepaymentErrorBody](maxio/errors/create_subscription_group_prepayment_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[SubscriptionGroupPrepaymentResponse](maxio_advanced_billing/models/subscription_group_prepayment_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[SubscriptionGroupPrepaymentResponse](maxio/models/subscription_group_prepayment_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[CreateSubscriptionGroupPrepaymentErrorBody](maxio_advanced_billing/errors/create_subscription_group_prepayment_error.py)</code>
+**On `Failure`**: `error` is <code>[CreateSubscriptionGroupPrepaymentErrorBody](maxio/errors/create_subscription_group_prepayment_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -16810,8 +16810,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>uid</code> | <code>str</code> | The uid of the subscription group |
-| <code>body</code> | <code>[DeductServiceCreditRequest](maxio_advanced_billing/models/deduct_service_credit_request.py) \| [DeductServiceCreditRequestDict](maxio_advanced_billing/models/deduct_service_credit_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[DeductServiceCreditRequest](maxio/models/deduct_service_credit_request.py) \| [DeductServiceCreditRequestDict](maxio/models/deduct_service_credit_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -16821,18 +16821,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ServiceCredit](maxio_advanced_billing/models/service_credit.py), [DeductSubscriptionGroupServiceCreditErrorBody](maxio_advanced_billing/errors/deduct_subscription_group_service_credit_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ServiceCredit](maxio/models/service_credit.py), [DeductSubscriptionGroupServiceCreditErrorBody](maxio/errors/deduct_subscription_group_service_credit_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ServiceCredit](maxio_advanced_billing/models/service_credit.py)</code> -- Created
+**On `Success`**: `payload` is <code>[ServiceCredit](maxio/models/service_credit.py)</code> -- Created
 
-**On `Failure`**: `error` is <code>[DeductSubscriptionGroupServiceCreditErrorBody](maxio_advanced_billing/errors/deduct_subscription_group_service_credit_error.py)</code>
+**On `Failure`**: `error` is <code>[DeductSubscriptionGroupServiceCreditErrorBody](maxio/errors/deduct_subscription_group_service_credit_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -16898,8 +16898,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>uid</code> | <code>str</code> | The uid of the subscription group |
-| <code>body</code> | <code>[IssueServiceCreditRequest](maxio_advanced_billing/models/issue_service_credit_request.py) \| [IssueServiceCreditRequestDict](maxio_advanced_billing/models/issue_service_credit_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[IssueServiceCreditRequest](maxio/models/issue_service_credit_request.py) \| [IssueServiceCreditRequestDict](maxio/models/issue_service_credit_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -16909,18 +16909,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ServiceCreditResponse](maxio_advanced_billing/models/service_credit_response.py), [IssueSubscriptionGroupServiceCreditErrorBody](maxio_advanced_billing/errors/issue_subscription_group_service_credit_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ServiceCreditResponse](maxio/models/service_credit_response.py), [IssueSubscriptionGroupServiceCreditErrorBody](maxio/errors/issue_subscription_group_service_credit_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ServiceCreditResponse](maxio_advanced_billing/models/service_credit_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ServiceCreditResponse](maxio/models/service_credit_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[IssueSubscriptionGroupServiceCreditErrorBody](maxio_advanced_billing/errors/issue_subscription_group_service_credit_error.py)</code>
+**On `Failure`**: `error` is <code>[IssueSubscriptionGroupServiceCreditErrorBody](maxio/errors/issue_subscription_group_service_credit_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -16988,8 +16988,8 @@ match result:
 | <code>uid</code> | <code>str</code> | The uid of the subscription group |
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 20. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>Use in query `per_page=200`.<br>**Default**: <code>20</code> |
-| <code>filter</code> | <code>[ListPrepaymentsFilter](maxio_advanced_billing/models/list_prepayments_filter.py) \| [ListPrepaymentsFilterDict](maxio_advanced_billing/models/list_prepayments_filter.py) \| None</code> | Filter to use for List Prepayments operations<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>filter</code> | <code>[ListPrepaymentsFilter](maxio/models/list_prepayments_filter.py) \| [ListPrepaymentsFilterDict](maxio/models/list_prepayments_filter.py) \| None</code> | Filter to use for List Prepayments operations<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -16999,18 +16999,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ListSubscriptionGroupPrepaymentResponse](maxio_advanced_billing/models/list_subscription_group_prepayment_response.py), [ListPrepaymentsForSubscriptionGroupErrorBody](maxio_advanced_billing/errors/list_prepayments_for_subscription_group_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ListSubscriptionGroupPrepaymentResponse](maxio/models/list_subscription_group_prepayment_response.py), [ListPrepaymentsForSubscriptionGroupErrorBody](maxio/errors/list_prepayments_for_subscription_group_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ListSubscriptionGroupPrepaymentResponse](maxio_advanced_billing/models/list_subscription_group_prepayment_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ListSubscriptionGroupPrepaymentResponse](maxio/models/list_subscription_group_prepayment_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[ListPrepaymentsForSubscriptionGroupErrorBody](maxio_advanced_billing/errors/list_prepayments_for_subscription_group_error.py)</code>
+**On `Failure`**: `error` is <code>[ListPrepaymentsForSubscriptionGroupErrorBody](maxio/errors/list_prepayments_for_subscription_group_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -17022,7 +17022,7 @@ Mapped in first-match order -- an earlier row wins over a later range that also 
 
 ## SubscriptionGroupStatus
 
-> Source: [SubscriptionGroupStatus](maxio_advanced_billing/apis/subscription_group_status.py)
+> Source: [SubscriptionGroupStatus](maxio/apis/subscription_group_status.py)
 
 <details>
 <summary><code>def cancel_delayed_cancellation_for_group(uid: str, *, request_options: RequestOptionsOrDict | None = None) -> ApiResult[None, CancelDelayedCancellationForGroupErrorBody]</code></summary>
@@ -17080,7 +17080,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>uid</code> | <code>str</code> | The uid of the subscription group |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -17090,18 +17090,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;None, [CancelDelayedCancellationForGroupErrorBody](maxio_advanced_billing/errors/cancel_delayed_cancellation_for_group_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;None, [CancelDelayedCancellationForGroupErrorBody](maxio/errors/cancel_delayed_cancellation_for_group_error.py)&#93;</code>
 
 **On `Success`**: the 2xx carries no content; `payload` is <code>None</code>
 
-**On `Failure`**: `error` is <code>[CancelDelayedCancellationForGroupErrorBody](maxio_advanced_billing/errors/cancel_delayed_cancellation_for_group_error.py)</code>
+**On `Failure`**: `error` is <code>[CancelDelayedCancellationForGroupErrorBody](maxio/errors/cancel_delayed_cancellation_for_group_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -17167,8 +17167,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>uid</code> | <code>str</code> | The uid of the subscription group |
-| <code>body</code> | <code>[CancelGroupedSubscriptionsRequest](maxio_advanced_billing/models/cancel_grouped_subscriptions_request.py) \| [CancelGroupedSubscriptionsRequestDict](maxio_advanced_billing/models/cancel_grouped_subscriptions_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CancelGroupedSubscriptionsRequest](maxio/models/cancel_grouped_subscriptions_request.py) \| [CancelGroupedSubscriptionsRequestDict](maxio/models/cancel_grouped_subscriptions_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -17178,18 +17178,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;None, [CancelSubscriptionsInGroupErrorBody](maxio_advanced_billing/errors/cancel_subscriptions_in_group_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;None, [CancelSubscriptionsInGroupErrorBody](maxio/errors/cancel_subscriptions_in_group_error.py)&#93;</code>
 
 **On `Success`**: the 2xx carries no content; `payload` is <code>None</code>
 
-**On `Failure`**: `error` is <code>[CancelSubscriptionsInGroupErrorBody](maxio_advanced_billing/errors/cancel_subscriptions_in_group_error.py)</code>
+**On `Failure`**: `error` is <code>[CancelSubscriptionsInGroupErrorBody](maxio/errors/cancel_subscriptions_in_group_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -17255,7 +17255,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>uid</code> | <code>str</code> | The uid of the subscription group |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -17265,18 +17265,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;None, [InitiateDelayedCancellationForGroupErrorBody](maxio_advanced_billing/errors/initiate_delayed_cancellation_for_group_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;None, [InitiateDelayedCancellationForGroupErrorBody](maxio/errors/initiate_delayed_cancellation_for_group_error.py)&#93;</code>
 
 **On `Success`**: the 2xx carries no content; `payload` is <code>None</code>
 
-**On `Failure`**: `error` is <code>[InitiateDelayedCancellationForGroupErrorBody](maxio_advanced_billing/errors/initiate_delayed_cancellation_for_group_error.py)</code>
+**On `Failure`**: `error` is <code>[InitiateDelayedCancellationForGroupErrorBody](maxio/errors/initiate_delayed_cancellation_for_group_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -17365,8 +17365,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>uid</code> | <code>str</code> | The uid of the subscription group |
-| <code>body</code> | <code>[ReactivateSubscriptionGroupRequest](maxio_advanced_billing/models/reactivate_subscription_group_request.py) \| [ReactivateSubscriptionGroupRequestDict](maxio_advanced_billing/models/reactivate_subscription_group_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[ReactivateSubscriptionGroupRequest](maxio/models/reactivate_subscription_group_request.py) \| [ReactivateSubscriptionGroupRequestDict](maxio/models/reactivate_subscription_group_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -17376,18 +17376,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ReactivateSubscriptionGroupResponse](maxio_advanced_billing/models/reactivate_subscription_group_response.py), [ReactivateSubscriptionGroupErrorBody](maxio_advanced_billing/errors/reactivate_subscription_group_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ReactivateSubscriptionGroupResponse](maxio/models/reactivate_subscription_group_response.py), [ReactivateSubscriptionGroupErrorBody](maxio/errors/reactivate_subscription_group_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ReactivateSubscriptionGroupResponse](maxio_advanced_billing/models/reactivate_subscription_group_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ReactivateSubscriptionGroupResponse](maxio/models/reactivate_subscription_group_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[ReactivateSubscriptionGroupErrorBody](maxio_advanced_billing/errors/reactivate_subscription_group_error.py)</code>
+**On `Failure`**: `error` is <code>[ReactivateSubscriptionGroupErrorBody](maxio/errors/reactivate_subscription_group_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -17399,7 +17399,7 @@ Mapped in first-match order -- an earlier row wins over a later range that also 
 
 ## SubscriptionGroups
 
-> Source: [SubscriptionGroups](maxio_advanced_billing/apis/subscription_groups.py)
+> Source: [SubscriptionGroups](maxio/apis/subscription_groups.py)
 
 <details>
 <summary><code>def add_subscription_to_group(subscription_id: int, *, body: AddSubscriptionToAGroup | AddSubscriptionToAGroupDict | None = None, request_options: RequestOptionsOrDict | None = None) -> ApiResult[SubscriptionGroupResponse, RawError]</code></summary>
@@ -17467,8 +17467,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>body</code> | <code>[AddSubscriptionToAGroup](maxio_advanced_billing/models/add_subscription_to_a_group.py) \| [AddSubscriptionToAGroupDict](maxio_advanced_billing/models/add_subscription_to_a_group.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[AddSubscriptionToAGroup](maxio/models/add_subscription_to_a_group.py) \| [AddSubscriptionToAGroupDict](maxio/models/add_subscription_to_a_group.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -17478,11 +17478,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[SubscriptionGroupResponse](maxio_advanced_billing/models/subscription_group_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[SubscriptionGroupResponse](maxio/models/subscription_group_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[SubscriptionGroupResponse](maxio_advanced_billing/models/subscription_group_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[SubscriptionGroupResponse](maxio/models/subscription_group_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -17545,8 +17545,8 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>body</code> | <code>[CreateSubscriptionGroupRequest](maxio_advanced_billing/models/create_subscription_group_request.py) \| [CreateSubscriptionGroupRequestDict](maxio_advanced_billing/models/create_subscription_group_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CreateSubscriptionGroupRequest](maxio/models/create_subscription_group_request.py) \| [CreateSubscriptionGroupRequestDict](maxio/models/create_subscription_group_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -17556,18 +17556,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[SubscriptionGroupResponse](maxio_advanced_billing/models/subscription_group_response.py), [CreateSubscriptionGroupErrorBody](maxio_advanced_billing/errors/create_subscription_group_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[SubscriptionGroupResponse](maxio/models/subscription_group_response.py), [CreateSubscriptionGroupErrorBody](maxio/errors/create_subscription_group_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[SubscriptionGroupResponse](maxio_advanced_billing/models/subscription_group_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[SubscriptionGroupResponse](maxio/models/subscription_group_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[CreateSubscriptionGroupErrorBody](maxio_advanced_billing/errors/create_subscription_group_error.py)</code>
+**On `Failure`**: `error` is <code>[CreateSubscriptionGroupErrorBody](maxio/errors/create_subscription_group_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[SubscriptionGroupCreateErrorResponse1](maxio_advanced_billing/models/subscription_group_create_error_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[SubscriptionGroupCreateErrorResponse1](maxio/models/subscription_group_create_error_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -17632,7 +17632,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>uid</code> | <code>str</code> | The uid of the subscription group |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -17642,18 +17642,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[DeleteSubscriptionGroupResponse](maxio_advanced_billing/models/delete_subscription_group_response.py), [DeleteSubscriptionGroupErrorBody](maxio_advanced_billing/errors/delete_subscription_group_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[DeleteSubscriptionGroupResponse](maxio/models/delete_subscription_group_response.py), [DeleteSubscriptionGroupErrorBody](maxio/errors/delete_subscription_group_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[DeleteSubscriptionGroupResponse](maxio_advanced_billing/models/delete_subscription_group_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[DeleteSubscriptionGroupResponse](maxio/models/delete_subscription_group_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[DeleteSubscriptionGroupErrorBody](maxio_advanced_billing/errors/delete_subscription_group_error.py)</code>
+**On `Failure`**: `error` is <code>[DeleteSubscriptionGroupErrorBody](maxio/errors/delete_subscription_group_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -17719,7 +17719,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>str</code> | The Advanced Billing id of the subscription associated with the subscription group |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -17729,18 +17729,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[FullSubscriptionGroupResponse](maxio_advanced_billing/models/full_subscription_group_response.py), [FindSubscriptionGroupErrorBody](maxio_advanced_billing/errors/find_subscription_group_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[FullSubscriptionGroupResponse](maxio/models/full_subscription_group_response.py), [FindSubscriptionGroupErrorBody](maxio/errors/find_subscription_group_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[FullSubscriptionGroupResponse](maxio_advanced_billing/models/full_subscription_group_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[FullSubscriptionGroupResponse](maxio/models/full_subscription_group_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[FindSubscriptionGroupErrorBody](maxio_advanced_billing/errors/find_subscription_group_error.py)</code>
+**On `Failure`**: `error` is <code>[FindSubscriptionGroupErrorBody](maxio/errors/find_subscription_group_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -17809,8 +17809,8 @@ match result:
 | --- | --- | --- |
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 20. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>Use in query `per_page=200`.<br>**Default**: <code>20</code> |
-| <code>include</code> | <code>list&#91;[SubscriptionGroupsListIncludeOrStr](maxio_advanced_billing/models/enums/subscription_groups_list_include.py)&#93; \| None</code> | A list of additional information to include in the response. The following values are supported:<br><br>- `account_balances`: Account balance information for the subscription groups. Use in query: `include[]=account_balances`<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>include</code> | <code>list&#91;[SubscriptionGroupsListIncludeOrStr](maxio/models/enums/subscription_groups_list_include.py)&#93; \| None</code> | A list of additional information to include in the response. The following values are supported:<br><br>- `account_balances`: Account balance information for the subscription groups. Use in query: `include[]=account_balances`<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -17820,11 +17820,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ListSubscriptionGroupsResponse](maxio_advanced_billing/models/list_subscription_groups_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ListSubscriptionGroupsResponse](maxio/models/list_subscription_groups_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ListSubscriptionGroupsResponse](maxio_advanced_billing/models/list_subscription_groups_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ListSubscriptionGroupsResponse](maxio/models/list_subscription_groups_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -17892,8 +17892,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>uid</code> | <code>str</code> | The uid of the subscription group |
-| <code>include</code> | <code>list&#91;[SubscriptionGroupIncludeOrStr](maxio_advanced_billing/models/enums/subscription_group_include.py)&#93; \| None</code> | Allows including additional data in the response. Use in query: `include[]=current_billing_amount_in_cents`.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>include</code> | <code>list&#91;[SubscriptionGroupIncludeOrStr](maxio/models/enums/subscription_group_include.py)&#93; \| None</code> | Allows including additional data in the response. Use in query: `include[]=current_billing_amount_in_cents`.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -17903,11 +17903,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[FullSubscriptionGroupResponse](maxio_advanced_billing/models/full_subscription_group_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[FullSubscriptionGroupResponse](maxio/models/full_subscription_group_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[FullSubscriptionGroupResponse](maxio_advanced_billing/models/full_subscription_group_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[FullSubscriptionGroupResponse](maxio/models/full_subscription_group_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -17971,7 +17971,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -17981,19 +17981,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;None, [RemoveSubscriptionFromGroupErrorBody](maxio_advanced_billing/errors/remove_subscription_from_group_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;None, [RemoveSubscriptionFromGroupErrorBody](maxio/errors/remove_subscription_from_group_error.py)&#93;</code>
 
 **On `Success`**: the 2xx carries no content; `payload` is <code>None</code>
 
-**On `Failure`**: `error` is <code>[RemoveSubscriptionFromGroupErrorBody](maxio_advanced_billing/errors/remove_subscription_from_group_error.py)</code>
+**On `Failure`**: `error` is <code>[RemoveSubscriptionFromGroupErrorBody](maxio/errors/remove_subscription_from_group_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -18066,8 +18066,8 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>body</code> | <code>[SubscriptionGroupSignupRequest](maxio_advanced_billing/models/subscription_group_signup_request.py) \| [SubscriptionGroupSignupRequestDict](maxio_advanced_billing/models/subscription_group_signup_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[SubscriptionGroupSignupRequest](maxio/models/subscription_group_signup_request.py) \| [SubscriptionGroupSignupRequestDict](maxio/models/subscription_group_signup_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -18077,18 +18077,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[SubscriptionGroupSignupResponse](maxio_advanced_billing/models/subscription_group_signup_response.py), [SignupWithSubscriptionGroupErrorBody](maxio_advanced_billing/errors/signup_with_subscription_group_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[SubscriptionGroupSignupResponse](maxio/models/subscription_group_signup_response.py), [SignupWithSubscriptionGroupErrorBody](maxio/errors/signup_with_subscription_group_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[SubscriptionGroupSignupResponse](maxio_advanced_billing/models/subscription_group_signup_response.py)</code> -- Created
+**On `Success`**: `payload` is <code>[SubscriptionGroupSignupResponse](maxio/models/subscription_group_signup_response.py)</code> -- Created
 
-**On `Failure`**: `error` is <code>[SignupWithSubscriptionGroupErrorBody](maxio_advanced_billing/errors/signup_with_subscription_group_error.py)</code>
+**On `Failure`**: `error` is <code>[SignupWithSubscriptionGroupErrorBody](maxio/errors/signup_with_subscription_group_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[SubscriptionGroupSignupErrorResponse1](maxio_advanced_billing/models/subscription_group_signup_error_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[SubscriptionGroupSignupErrorResponse1](maxio/models/subscription_group_signup_error_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -18153,8 +18153,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>uid</code> | <code>str</code> | The uid of the subscription group |
-| <code>body</code> | <code>[UpdateSubscriptionGroupRequest](maxio_advanced_billing/models/update_subscription_group_request.py) \| [UpdateSubscriptionGroupRequestDict](maxio_advanced_billing/models/update_subscription_group_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[UpdateSubscriptionGroupRequest](maxio/models/update_subscription_group_request.py) \| [UpdateSubscriptionGroupRequestDict](maxio/models/update_subscription_group_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -18164,18 +18164,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[SubscriptionGroupResponse](maxio_advanced_billing/models/subscription_group_response.py), [UpdateSubscriptionGroupMembersErrorBody](maxio_advanced_billing/errors/update_subscription_group_members_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[SubscriptionGroupResponse](maxio/models/subscription_group_response.py), [UpdateSubscriptionGroupMembersErrorBody](maxio/errors/update_subscription_group_members_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[SubscriptionGroupResponse](maxio_advanced_billing/models/subscription_group_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[SubscriptionGroupResponse](maxio/models/subscription_group_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[UpdateSubscriptionGroupMembersErrorBody](maxio_advanced_billing/errors/update_subscription_group_members_error.py)</code>
+**On `Failure`**: `error` is <code>[UpdateSubscriptionGroupMembersErrorBody](maxio/errors/update_subscription_group_members_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[SubscriptionGroupUpdateErrorResponse1](maxio_advanced_billing/models/subscription_group_update_error_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[SubscriptionGroupUpdateErrorResponse1](maxio/models/subscription_group_update_error_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -18187,7 +18187,7 @@ Mapped in first-match order -- an earlier row wins over a later range that also 
 
 ## SubscriptionInvoiceAccount
 
-> Source: [SubscriptionInvoiceAccount](maxio_advanced_billing/apis/subscription_invoice_account.py)
+> Source: [SubscriptionInvoiceAccount](maxio/apis/subscription_invoice_account.py)
 
 <details>
 <summary><code>def create_prepayment(subscription_id: int, *, body: CreatePrepaymentRequest | CreatePrepaymentRequestDict | None = None, request_options: RequestOptionsOrDict | None = None) -> ApiResult[CreatePrepaymentResponse, CreatePrepaymentErrorBody]</code></summary>
@@ -18255,8 +18255,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>body</code> | <code>[CreatePrepaymentRequest](maxio_advanced_billing/models/create_prepayment_request.py) \| [CreatePrepaymentRequestDict](maxio_advanced_billing/models/create_prepayment_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CreatePrepaymentRequest](maxio/models/create_prepayment_request.py) \| [CreatePrepaymentRequestDict](maxio/models/create_prepayment_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -18266,18 +18266,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[CreatePrepaymentResponse](maxio_advanced_billing/models/create_prepayment_response.py), [CreatePrepaymentErrorBody](maxio_advanced_billing/errors/create_prepayment_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[CreatePrepaymentResponse](maxio/models/create_prepayment_response.py), [CreatePrepaymentErrorBody](maxio/errors/create_prepayment_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[CreatePrepaymentResponse](maxio_advanced_billing/models/create_prepayment_response.py)</code> -- Created
+**On `Success`**: `payload` is <code>[CreatePrepaymentResponse](maxio/models/create_prepayment_response.py)</code> -- Created
 
-**On `Failure`**: `error` is <code>[CreatePrepaymentErrorBody](maxio_advanced_billing/errors/create_prepayment_error.py)</code>
+**On `Failure`**: `error` is <code>[CreatePrepaymentErrorBody](maxio/errors/create_prepayment_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[CreatePrepaymentErrorResponse](maxio_advanced_billing/models/unions/create_prepayment_error_response.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[CreatePrepaymentErrorResponse](maxio/models/unions/create_prepayment_error_response.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -18341,8 +18341,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>body</code> | <code>[DeductServiceCreditRequest](maxio_advanced_billing/models/deduct_service_credit_request.py) \| [DeductServiceCreditRequestDict](maxio_advanced_billing/models/deduct_service_credit_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[DeductServiceCreditRequest](maxio/models/deduct_service_credit_request.py) \| [DeductServiceCreditRequestDict](maxio/models/deduct_service_credit_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -18352,18 +18352,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;None, [DeductServiceCreditErrorBody](maxio_advanced_billing/errors/deduct_service_credit_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;None, [DeductServiceCreditErrorBody](maxio/errors/deduct_service_credit_error.py)&#93;</code>
 
 **On `Success`**: the 2xx carries no content; `payload` is <code>None</code>
 
-**On `Failure`**: `error` is <code>[DeductServiceCreditErrorBody](maxio_advanced_billing/errors/deduct_service_credit_error.py)</code>
+**On `Failure`**: `error` is <code>[DeductServiceCreditErrorBody](maxio/errors/deduct_service_credit_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[DeductServiceCreditErrorResponse](maxio_advanced_billing/models/unions/deduct_service_credit_error_response.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[DeductServiceCreditErrorResponse](maxio/models/unions/deduct_service_credit_error_response.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -18427,8 +18427,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>body</code> | <code>[IssueServiceCreditRequest](maxio_advanced_billing/models/issue_service_credit_request.py) \| [IssueServiceCreditRequestDict](maxio_advanced_billing/models/issue_service_credit_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[IssueServiceCreditRequest](maxio/models/issue_service_credit_request.py) \| [IssueServiceCreditRequestDict](maxio/models/issue_service_credit_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -18438,18 +18438,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ServiceCredit](maxio_advanced_billing/models/service_credit.py), [IssueServiceCreditErrorBody](maxio_advanced_billing/errors/issue_service_credit_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ServiceCredit](maxio/models/service_credit.py), [IssueServiceCreditErrorBody](maxio/errors/issue_service_credit_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ServiceCredit](maxio_advanced_billing/models/service_credit.py)</code> -- Created
+**On `Success`**: `payload` is <code>[ServiceCredit](maxio/models/service_credit.py)</code> -- Created
 
-**On `Failure`**: `error` is <code>[IssueServiceCreditErrorBody](maxio_advanced_billing/errors/issue_service_credit_error.py)</code>
+**On `Failure`**: `error` is <code>[IssueServiceCreditErrorBody](maxio/errors/issue_service_credit_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[IssueServiceCreditErrorResponse](maxio_advanced_billing/models/unions/issue_service_credit_error_response.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[IssueServiceCreditErrorResponse](maxio/models/unions/issue_service_credit_error_response.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -18515,8 +18515,8 @@ match result:
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 20. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>Use in query `per_page=200`.<br>**Default**: <code>20</code> |
-| <code>filter</code> | <code>[ListPrepaymentsFilter](maxio_advanced_billing/models/list_prepayments_filter.py) \| [ListPrepaymentsFilterDict](maxio_advanced_billing/models/list_prepayments_filter.py) \| None</code> | Filter to use for List Prepayments operations<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>filter</code> | <code>[ListPrepaymentsFilter](maxio/models/list_prepayments_filter.py) \| [ListPrepaymentsFilterDict](maxio/models/list_prepayments_filter.py) \| None</code> | Filter to use for List Prepayments operations<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -18526,18 +18526,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[PrepaymentsResponse](maxio_advanced_billing/models/prepayments_response.py), [ListPrepaymentsErrorBody](maxio_advanced_billing/errors/list_prepayments_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[PrepaymentsResponse](maxio/models/prepayments_response.py), [ListPrepaymentsErrorBody](maxio/errors/list_prepayments_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[PrepaymentsResponse](maxio_advanced_billing/models/prepayments_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[PrepaymentsResponse](maxio/models/prepayments_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[ListPrepaymentsErrorBody](maxio_advanced_billing/errors/list_prepayments_error.py)</code>
+**On `Failure`**: `error` is <code>[ListPrepaymentsErrorBody](maxio/errors/list_prepayments_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -18603,8 +18603,8 @@ match result:
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 20. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>Use in query `per_page=200`.<br>**Default**: <code>20</code> |
-| <code>direction</code> | <code>[SortingDirectionOrStr](maxio_advanced_billing/models/enums/sorting_direction.py) \| None</code> | Controls the order in which results are returned.<br>Use in query `direction=asc`.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>direction</code> | <code>[SortingDirectionOrStr](maxio/models/enums/sorting_direction.py) \| None</code> | Controls the order in which results are returned.<br>Use in query `direction=asc`.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -18614,19 +18614,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ListServiceCreditsResponse](maxio_advanced_billing/models/list_service_credits_response.py), [ListServiceCreditsErrorBody](maxio_advanced_billing/errors/list_service_credits_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ListServiceCreditsResponse](maxio/models/list_service_credits_response.py), [ListServiceCreditsErrorBody](maxio/errors/list_service_credits_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ListServiceCreditsResponse](maxio_advanced_billing/models/list_service_credits_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ListServiceCreditsResponse](maxio/models/list_service_credits_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[ListServiceCreditsErrorBody](maxio_advanced_billing/errors/list_service_credits_error.py)</code>
+**On `Failure`**: `error` is <code>[ListServiceCreditsErrorBody](maxio/errors/list_service_credits_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -18690,7 +18690,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -18700,11 +18700,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[AccountBalances](maxio_advanced_billing/models/account_balances.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[AccountBalances](maxio/models/account_balances.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[AccountBalances](maxio_advanced_billing/models/account_balances.py)</code> -- OK
+**On `Success`**: `payload` is <code>[AccountBalances](maxio/models/account_balances.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -18773,8 +18773,8 @@ match result:
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
 | <code>prepayment_id</code> | <code>int</code> | id of prepayment |
-| <code>body</code> | <code>[RefundPrepaymentRequest](maxio_advanced_billing/models/refund_prepayment_request.py) \| [RefundPrepaymentRequestDict](maxio_advanced_billing/models/refund_prepayment_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[RefundPrepaymentRequest](maxio/models/refund_prepayment_request.py) \| [RefundPrepaymentRequestDict](maxio/models/refund_prepayment_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -18784,20 +18784,20 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[PrepaymentResponse](maxio_advanced_billing/models/prepayment_response.py), [RefundPrepaymentErrorBody](maxio_advanced_billing/errors/refund_prepayment_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[PrepaymentResponse](maxio/models/prepayment_response.py), [RefundPrepaymentErrorBody](maxio/errors/refund_prepayment_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[PrepaymentResponse](maxio_advanced_billing/models/prepayment_response.py)</code> -- Created
+**On `Success`**: `payload` is <code>[PrepaymentResponse](maxio/models/prepayment_response.py)</code> -- Created
 
-**On `Failure`**: `error` is <code>[RefundPrepaymentErrorBody](maxio_advanced_billing/errors/refund_prepayment_error.py)</code>
+**On `Failure`**: `error` is <code>[RefundPrepaymentErrorBody](maxio/errors/refund_prepayment_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 400 | <code>[RefundPrepaymentBaseErrorsResponse1](maxio_advanced_billing/models/refund_prepayment_base_errors_response1.py)</code> |
+| 400 | <code>[RefundPrepaymentBaseErrorsResponse1](maxio/models/refund_prepayment_base_errors_response1.py)</code> |
 | 404 | <code>str</code> |
-| 422 | <code>[RefundPrepaymentErrorResponse](maxio_advanced_billing/models/unions/refund_prepayment_error_response.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[RefundPrepaymentErrorResponse](maxio/models/unions/refund_prepayment_error_response.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -18809,7 +18809,7 @@ Mapped in first-match order -- an earlier row wins over a later range that also 
 
 ## SubscriptionNotes
 
-> Source: [SubscriptionNotes](maxio_advanced_billing/apis/subscription_notes.py)
+> Source: [SubscriptionNotes](maxio/apis/subscription_notes.py)
 
 <details>
 <summary><code>def create_subscription_note(subscription_id: int, *, body: UpdateSubscriptionNoteRequest | UpdateSubscriptionNoteRequestDict | None = None, request_options: RequestOptionsOrDict | None = None) -> ApiResult[SubscriptionNoteResponse, CreateSubscriptionNoteErrorBody]</code></summary>
@@ -18873,8 +18873,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>body</code> | <code>[UpdateSubscriptionNoteRequest](maxio_advanced_billing/models/update_subscription_note_request.py) \| [UpdateSubscriptionNoteRequestDict](maxio_advanced_billing/models/update_subscription_note_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[UpdateSubscriptionNoteRequest](maxio/models/update_subscription_note_request.py) \| [UpdateSubscriptionNoteRequestDict](maxio/models/update_subscription_note_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -18884,18 +18884,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[SubscriptionNoteResponse](maxio_advanced_billing/models/subscription_note_response.py), [CreateSubscriptionNoteErrorBody](maxio_advanced_billing/errors/create_subscription_note_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[SubscriptionNoteResponse](maxio/models/subscription_note_response.py), [CreateSubscriptionNoteErrorBody](maxio/errors/create_subscription_note_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[SubscriptionNoteResponse](maxio_advanced_billing/models/subscription_note_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[SubscriptionNoteResponse](maxio/models/subscription_note_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[CreateSubscriptionNoteErrorBody](maxio_advanced_billing/errors/create_subscription_note_error.py)</code>
+**On `Failure`**: `error` is <code>[CreateSubscriptionNoteErrorBody](maxio/errors/create_subscription_note_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -18960,7 +18960,7 @@ match result:
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
 | <code>note_id</code> | <code>int</code> | The Advanced Billing id of the note |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -18970,11 +18970,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;None, [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;None, [RawError](maxio/core/results.py)&#93;</code>
 
 **On `Success`**: the 2xx carries no content; `payload` is <code>None</code>
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -19040,7 +19040,7 @@ match result:
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 20. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>Use in query `per_page=200`.<br>**Default**: <code>20</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -19050,18 +19050,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;list&#91;[SubscriptionNoteResponse](maxio_advanced_billing/models/subscription_note_response.py)&#93;, [ListSubscriptionNotesErrorBody](maxio_advanced_billing/errors/list_subscription_notes_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;list&#91;[SubscriptionNoteResponse](maxio/models/subscription_note_response.py)&#93;, [ListSubscriptionNotesErrorBody](maxio/errors/list_subscription_notes_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>list&#91;[SubscriptionNoteResponse](maxio_advanced_billing/models/subscription_note_response.py)&#93;</code> -- OK
+**On `Success`**: `payload` is <code>list&#91;[SubscriptionNoteResponse](maxio/models/subscription_note_response.py)&#93;</code> -- OK
 
-**On `Failure`**: `error` is <code>[ListSubscriptionNotesErrorBody](maxio_advanced_billing/errors/list_subscription_notes_error.py)</code>
+**On `Failure`**: `error` is <code>[ListSubscriptionNotesErrorBody](maxio/errors/list_subscription_notes_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -19126,7 +19126,7 @@ match result:
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
 | <code>note_id</code> | <code>int</code> | The Advanced Billing id of the note |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -19136,11 +19136,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[SubscriptionNoteResponse](maxio_advanced_billing/models/subscription_note_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[SubscriptionNoteResponse](maxio/models/subscription_note_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[SubscriptionNoteResponse](maxio_advanced_billing/models/subscription_note_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[SubscriptionNoteResponse](maxio/models/subscription_note_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -19205,8 +19205,8 @@ match result:
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
 | <code>note_id</code> | <code>int</code> | The Advanced Billing id of the note |
-| <code>body</code> | <code>[UpdateSubscriptionNoteRequest](maxio_advanced_billing/models/update_subscription_note_request.py) \| [UpdateSubscriptionNoteRequestDict](maxio_advanced_billing/models/update_subscription_note_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[UpdateSubscriptionNoteRequest](maxio/models/update_subscription_note_request.py) \| [UpdateSubscriptionNoteRequestDict](maxio/models/update_subscription_note_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -19216,18 +19216,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[SubscriptionNoteResponse](maxio_advanced_billing/models/subscription_note_response.py), [UpdateSubscriptionNoteErrorBody](maxio_advanced_billing/errors/update_subscription_note_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[SubscriptionNoteResponse](maxio/models/subscription_note_response.py), [UpdateSubscriptionNoteErrorBody](maxio/errors/update_subscription_note_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[SubscriptionNoteResponse](maxio_advanced_billing/models/subscription_note_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[SubscriptionNoteResponse](maxio/models/subscription_note_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[UpdateSubscriptionNoteErrorBody](maxio_advanced_billing/errors/update_subscription_note_error.py)</code>
+**On `Failure`**: `error` is <code>[UpdateSubscriptionNoteErrorBody](maxio/errors/update_subscription_note_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -19239,7 +19239,7 @@ Mapped in first-match order -- an earlier row wins over a later range that also 
 
 ## SubscriptionProducts
 
-> Source: [SubscriptionProducts](maxio_advanced_billing/apis/subscription_products.py)
+> Source: [SubscriptionProducts](maxio/apis/subscription_products.py)
 
 <details>
 <summary><code>def migrate_subscription_product(subscription_id: int, *, body: SubscriptionProductMigrationRequest | SubscriptionProductMigrationRequestDict | None = None, request_options: RequestOptionsOrDict | None = None) -> ApiResult[SubscriptionResponse, MigrateSubscriptionProductErrorBody]</code></summary>
@@ -19317,8 +19317,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>body</code> | <code>[SubscriptionProductMigrationRequest](maxio_advanced_billing/models/subscription_product_migration_request.py) \| [SubscriptionProductMigrationRequestDict](maxio_advanced_billing/models/subscription_product_migration_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[SubscriptionProductMigrationRequest](maxio/models/subscription_product_migration_request.py) \| [SubscriptionProductMigrationRequestDict](maxio/models/subscription_product_migration_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -19328,18 +19328,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py), [MigrateSubscriptionProductErrorBody](maxio_advanced_billing/errors/migrate_subscription_product_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[SubscriptionResponse](maxio/models/subscription_response.py), [MigrateSubscriptionProductErrorBody](maxio/errors/migrate_subscription_product_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[SubscriptionResponse](maxio/models/subscription_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[MigrateSubscriptionProductErrorBody](maxio_advanced_billing/errors/migrate_subscription_product_error.py)</code>
+**On `Failure`**: `error` is <code>[MigrateSubscriptionProductErrorBody](maxio/errors/migrate_subscription_product_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -19410,8 +19410,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>body</code> | <code>[SubscriptionMigrationPreviewRequest](maxio_advanced_billing/models/subscription_migration_preview_request.py) \| [SubscriptionMigrationPreviewRequestDict](maxio_advanced_billing/models/subscription_migration_preview_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[SubscriptionMigrationPreviewRequest](maxio/models/subscription_migration_preview_request.py) \| [SubscriptionMigrationPreviewRequestDict](maxio/models/subscription_migration_preview_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -19421,18 +19421,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[SubscriptionMigrationPreviewResponse](maxio_advanced_billing/models/subscription_migration_preview_response.py), [PreviewSubscriptionProductMigrationErrorBody](maxio_advanced_billing/errors/preview_subscription_product_migration_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[SubscriptionMigrationPreviewResponse](maxio/models/subscription_migration_preview_response.py), [PreviewSubscriptionProductMigrationErrorBody](maxio/errors/preview_subscription_product_migration_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[SubscriptionMigrationPreviewResponse](maxio_advanced_billing/models/subscription_migration_preview_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[SubscriptionMigrationPreviewResponse](maxio/models/subscription_migration_preview_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[PreviewSubscriptionProductMigrationErrorBody](maxio_advanced_billing/errors/preview_subscription_product_migration_error.py)</code>
+**On `Failure`**: `error` is <code>[PreviewSubscriptionProductMigrationErrorBody](maxio/errors/preview_subscription_product_migration_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -19444,7 +19444,7 @@ Mapped in first-match order -- an earlier row wins over a later range that also 
 
 ## SubscriptionRenewals
 
-> Source: [SubscriptionRenewals](maxio_advanced_billing/apis/subscription_renewals.py)
+> Source: [SubscriptionRenewals](maxio/apis/subscription_renewals.py)
 
 <details>
 <summary><code>def cancel_scheduled_renewal_configuration(subscription_id: int, id: int, *, request_options: RequestOptionsOrDict | None = None) -> ApiResult[ScheduledRenewalConfigurationResponse, CancelScheduledRenewalConfigurationErrorBody]</code></summary>
@@ -19503,7 +19503,7 @@ match result:
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
 | <code>id</code> | <code>int</code> | The renewal id. |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -19513,18 +19513,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ScheduledRenewalConfigurationResponse](maxio_advanced_billing/models/scheduled_renewal_configuration_response.py), [CancelScheduledRenewalConfigurationErrorBody](maxio_advanced_billing/errors/cancel_scheduled_renewal_configuration_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ScheduledRenewalConfigurationResponse](maxio/models/scheduled_renewal_configuration_response.py), [CancelScheduledRenewalConfigurationErrorBody](maxio/errors/cancel_scheduled_renewal_configuration_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ScheduledRenewalConfigurationResponse](maxio_advanced_billing/models/scheduled_renewal_configuration_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ScheduledRenewalConfigurationResponse](maxio/models/scheduled_renewal_configuration_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[CancelScheduledRenewalConfigurationErrorBody](maxio_advanced_billing/errors/cancel_scheduled_renewal_configuration_error.py)</code>
+**On `Failure`**: `error` is <code>[CancelScheduledRenewalConfigurationErrorBody](maxio/errors/cancel_scheduled_renewal_configuration_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -19590,8 +19590,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>body</code> | <code>[ScheduledRenewalConfigurationRequest](maxio_advanced_billing/models/scheduled_renewal_configuration_request.py) \| [ScheduledRenewalConfigurationRequestDict](maxio_advanced_billing/models/scheduled_renewal_configuration_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[ScheduledRenewalConfigurationRequest](maxio/models/scheduled_renewal_configuration_request.py) \| [ScheduledRenewalConfigurationRequestDict](maxio/models/scheduled_renewal_configuration_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -19601,18 +19601,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ScheduledRenewalConfigurationResponse](maxio_advanced_billing/models/scheduled_renewal_configuration_response.py), [CreateScheduledRenewalConfigurationErrorBody](maxio_advanced_billing/errors/create_scheduled_renewal_configuration_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ScheduledRenewalConfigurationResponse](maxio/models/scheduled_renewal_configuration_response.py), [CreateScheduledRenewalConfigurationErrorBody](maxio/errors/create_scheduled_renewal_configuration_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ScheduledRenewalConfigurationResponse](maxio_advanced_billing/models/scheduled_renewal_configuration_response.py)</code> -- Created
+**On `Success`**: `payload` is <code>[ScheduledRenewalConfigurationResponse](maxio/models/scheduled_renewal_configuration_response.py)</code> -- Created
 
-**On `Failure`**: `error` is <code>[CreateScheduledRenewalConfigurationErrorBody](maxio_advanced_billing/errors/create_scheduled_renewal_configuration_error.py)</code>
+**On `Failure`**: `error` is <code>[CreateScheduledRenewalConfigurationErrorBody](maxio/errors/create_scheduled_renewal_configuration_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -19683,8 +19683,8 @@ match result:
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
 | <code>scheduled_renewals_configuration_id</code> | <code>int</code> | The scheduled renewal configuration id. |
-| <code>body</code> | <code>[ScheduledRenewalConfigurationItemRequest](maxio_advanced_billing/models/scheduled_renewal_configuration_item_request.py) \| [ScheduledRenewalConfigurationItemRequestDict](maxio_advanced_billing/models/scheduled_renewal_configuration_item_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[ScheduledRenewalConfigurationItemRequest](maxio/models/scheduled_renewal_configuration_item_request.py) \| [ScheduledRenewalConfigurationItemRequestDict](maxio/models/scheduled_renewal_configuration_item_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -19694,18 +19694,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ScheduledRenewalConfigurationItemResponse](maxio_advanced_billing/models/scheduled_renewal_configuration_item_response.py), [CreateScheduledRenewalConfigurationItemErrorBody](maxio_advanced_billing/errors/create_scheduled_renewal_configuration_item_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ScheduledRenewalConfigurationItemResponse](maxio/models/scheduled_renewal_configuration_item_response.py), [CreateScheduledRenewalConfigurationItemErrorBody](maxio/errors/create_scheduled_renewal_configuration_item_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ScheduledRenewalConfigurationItemResponse](maxio_advanced_billing/models/scheduled_renewal_configuration_item_response.py)</code> -- Created
+**On `Success`**: `payload` is <code>[ScheduledRenewalConfigurationItemResponse](maxio/models/scheduled_renewal_configuration_item_response.py)</code> -- Created
 
-**On `Failure`**: `error` is <code>[CreateScheduledRenewalConfigurationItemErrorBody](maxio_advanced_billing/errors/create_scheduled_renewal_configuration_item_error.py)</code>
+**On `Failure`**: `error` is <code>[CreateScheduledRenewalConfigurationItemErrorBody](maxio/errors/create_scheduled_renewal_configuration_item_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -19775,7 +19775,7 @@ match result:
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
 | <code>scheduled_renewals_configuration_id</code> | <code>int</code> | The scheduled renewal configuration id. |
 | <code>id</code> | <code>int</code> | The scheduled renewal configuration item id. |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -19785,18 +19785,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;None, [DeleteScheduledRenewalConfigurationItemErrorBody](maxio_advanced_billing/errors/delete_scheduled_renewal_configuration_item_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;None, [DeleteScheduledRenewalConfigurationItemErrorBody](maxio/errors/delete_scheduled_renewal_configuration_item_error.py)&#93;</code>
 
 **On `Success`**: the 2xx carries no content; `payload` is <code>None</code>
 
-**On `Failure`**: `error` is <code>[DeleteScheduledRenewalConfigurationItemErrorBody](maxio_advanced_billing/errors/delete_scheduled_renewal_configuration_item_error.py)</code>
+**On `Failure`**: `error` is <code>[DeleteScheduledRenewalConfigurationItemErrorBody](maxio/errors/delete_scheduled_renewal_configuration_item_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -19862,8 +19862,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>status</code> | <code>[StatusOrStr](maxio_advanced_billing/models/enums/status.py) \| None</code> | (Optional) Status filter for scheduled renewal configurations.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>status</code> | <code>[StatusOrStr](maxio/models/enums/status.py) \| None</code> | (Optional) Status filter for scheduled renewal configurations.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -19873,11 +19873,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ScheduledRenewalConfigurationsResponse](maxio_advanced_billing/models/scheduled_renewal_configurations_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ScheduledRenewalConfigurationsResponse](maxio/models/scheduled_renewal_configurations_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ScheduledRenewalConfigurationsResponse](maxio_advanced_billing/models/scheduled_renewal_configurations_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ScheduledRenewalConfigurationsResponse](maxio/models/scheduled_renewal_configurations_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -19944,7 +19944,7 @@ match result:
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
 | <code>id</code> | <code>int</code> | The renewal id. |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -19954,18 +19954,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ScheduledRenewalConfigurationResponse](maxio_advanced_billing/models/scheduled_renewal_configuration_response.py), [LockInScheduledRenewalImmediatelyErrorBody](maxio_advanced_billing/errors/lock_in_scheduled_renewal_immediately_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ScheduledRenewalConfigurationResponse](maxio/models/scheduled_renewal_configuration_response.py), [LockInScheduledRenewalImmediatelyErrorBody](maxio/errors/lock_in_scheduled_renewal_immediately_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ScheduledRenewalConfigurationResponse](maxio_advanced_billing/models/scheduled_renewal_configuration_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ScheduledRenewalConfigurationResponse](maxio/models/scheduled_renewal_configuration_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[LockInScheduledRenewalImmediatelyErrorBody](maxio_advanced_billing/errors/lock_in_scheduled_renewal_immediately_error.py)</code>
+**On `Failure`**: `error` is <code>[LockInScheduledRenewalImmediatelyErrorBody](maxio/errors/lock_in_scheduled_renewal_immediately_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -20032,7 +20032,7 @@ match result:
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
 | <code>id</code> | <code>int</code> | The renewal id. |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -20042,11 +20042,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ScheduledRenewalConfigurationResponse](maxio_advanced_billing/models/scheduled_renewal_configuration_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ScheduledRenewalConfigurationResponse](maxio/models/scheduled_renewal_configuration_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ScheduledRenewalConfigurationResponse](maxio_advanced_billing/models/scheduled_renewal_configuration_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ScheduledRenewalConfigurationResponse](maxio/models/scheduled_renewal_configuration_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -20113,8 +20113,8 @@ match result:
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
 | <code>id</code> | <code>int</code> | The renewal id. |
-| <code>body</code> | <code>[ScheduledRenewalLockInRequest](maxio_advanced_billing/models/scheduled_renewal_lock_in_request.py) \| [ScheduledRenewalLockInRequestDict](maxio_advanced_billing/models/scheduled_renewal_lock_in_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[ScheduledRenewalLockInRequest](maxio/models/scheduled_renewal_lock_in_request.py) \| [ScheduledRenewalLockInRequestDict](maxio/models/scheduled_renewal_lock_in_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -20124,18 +20124,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ScheduledRenewalConfigurationResponse](maxio_advanced_billing/models/scheduled_renewal_configuration_response.py), [ScheduleScheduledRenewalLockInErrorBody](maxio_advanced_billing/errors/schedule_scheduled_renewal_lock_in_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ScheduledRenewalConfigurationResponse](maxio/models/scheduled_renewal_configuration_response.py), [ScheduleScheduledRenewalLockInErrorBody](maxio/errors/schedule_scheduled_renewal_lock_in_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ScheduledRenewalConfigurationResponse](maxio_advanced_billing/models/scheduled_renewal_configuration_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ScheduledRenewalConfigurationResponse](maxio/models/scheduled_renewal_configuration_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[ScheduleScheduledRenewalLockInErrorBody](maxio_advanced_billing/errors/schedule_scheduled_renewal_lock_in_error.py)</code>
+**On `Failure`**: `error` is <code>[ScheduleScheduledRenewalLockInErrorBody](maxio/errors/schedule_scheduled_renewal_lock_in_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -20202,7 +20202,7 @@ match result:
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
 | <code>id</code> | <code>int</code> | The renewal id. |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -20212,18 +20212,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ScheduledRenewalConfigurationResponse](maxio_advanced_billing/models/scheduled_renewal_configuration_response.py), [UnpublishScheduledRenewalConfigurationErrorBody](maxio_advanced_billing/errors/unpublish_scheduled_renewal_configuration_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ScheduledRenewalConfigurationResponse](maxio/models/scheduled_renewal_configuration_response.py), [UnpublishScheduledRenewalConfigurationErrorBody](maxio/errors/unpublish_scheduled_renewal_configuration_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ScheduledRenewalConfigurationResponse](maxio_advanced_billing/models/scheduled_renewal_configuration_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ScheduledRenewalConfigurationResponse](maxio/models/scheduled_renewal_configuration_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[UnpublishScheduledRenewalConfigurationErrorBody](maxio_advanced_billing/errors/unpublish_scheduled_renewal_configuration_error.py)</code>
+**On `Failure`**: `error` is <code>[UnpublishScheduledRenewalConfigurationErrorBody](maxio/errors/unpublish_scheduled_renewal_configuration_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -20290,8 +20290,8 @@ match result:
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
 | <code>id</code> | <code>int</code> | The renewal id. |
-| <code>body</code> | <code>[ScheduledRenewalConfigurationRequest](maxio_advanced_billing/models/scheduled_renewal_configuration_request.py) \| [ScheduledRenewalConfigurationRequestDict](maxio_advanced_billing/models/scheduled_renewal_configuration_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[ScheduledRenewalConfigurationRequest](maxio/models/scheduled_renewal_configuration_request.py) \| [ScheduledRenewalConfigurationRequestDict](maxio/models/scheduled_renewal_configuration_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -20301,18 +20301,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ScheduledRenewalConfigurationResponse](maxio_advanced_billing/models/scheduled_renewal_configuration_response.py), [UpdateScheduledRenewalConfigurationErrorBody](maxio_advanced_billing/errors/update_scheduled_renewal_configuration_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ScheduledRenewalConfigurationResponse](maxio/models/scheduled_renewal_configuration_response.py), [UpdateScheduledRenewalConfigurationErrorBody](maxio/errors/update_scheduled_renewal_configuration_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ScheduledRenewalConfigurationResponse](maxio_advanced_billing/models/scheduled_renewal_configuration_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ScheduledRenewalConfigurationResponse](maxio/models/scheduled_renewal_configuration_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[UpdateScheduledRenewalConfigurationErrorBody](maxio_advanced_billing/errors/update_scheduled_renewal_configuration_error.py)</code>
+**On `Failure`**: `error` is <code>[UpdateScheduledRenewalConfigurationErrorBody](maxio/errors/update_scheduled_renewal_configuration_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -20384,8 +20384,8 @@ match result:
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
 | <code>scheduled_renewals_configuration_id</code> | <code>int</code> | The scheduled renewal configuration id. |
 | <code>id</code> | <code>int</code> | The scheduled renewal configuration item id. |
-| <code>body</code> | <code>[ScheduledRenewalUpdateRequest](maxio_advanced_billing/models/scheduled_renewal_update_request.py) \| [ScheduledRenewalUpdateRequestDict](maxio_advanced_billing/models/scheduled_renewal_update_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[ScheduledRenewalUpdateRequest](maxio/models/scheduled_renewal_update_request.py) \| [ScheduledRenewalUpdateRequestDict](maxio/models/scheduled_renewal_update_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -20395,18 +20395,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ScheduledRenewalConfigurationItemResponse](maxio_advanced_billing/models/scheduled_renewal_configuration_item_response.py), [UpdateScheduledRenewalConfigurationItemErrorBody](maxio_advanced_billing/errors/update_scheduled_renewal_configuration_item_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ScheduledRenewalConfigurationItemResponse](maxio/models/scheduled_renewal_configuration_item_response.py), [UpdateScheduledRenewalConfigurationItemErrorBody](maxio/errors/update_scheduled_renewal_configuration_item_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ScheduledRenewalConfigurationItemResponse](maxio_advanced_billing/models/scheduled_renewal_configuration_item_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ScheduledRenewalConfigurationItemResponse](maxio/models/scheduled_renewal_configuration_item_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[UpdateScheduledRenewalConfigurationItemErrorBody](maxio_advanced_billing/errors/update_scheduled_renewal_configuration_item_error.py)</code>
+**On `Failure`**: `error` is <code>[UpdateScheduledRenewalConfigurationItemErrorBody](maxio/errors/update_scheduled_renewal_configuration_item_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -20418,7 +20418,7 @@ Mapped in first-match order -- an earlier row wins over a later range that also 
 
 ## SubscriptionStatus
 
-> Source: [SubscriptionStatus](maxio_advanced_billing/apis/subscription_status.py)
+> Source: [SubscriptionStatus](maxio/apis/subscription_status.py)
 
 <details>
 <summary><code>def cancel_delayed_cancellation(subscription_id: int, *, request_options: RequestOptionsOrDict | None = None) -> ApiResult[DelayedCancellationResponse, CancelDelayedCancellationErrorBody]</code></summary>
@@ -20476,7 +20476,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -20486,18 +20486,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[DelayedCancellationResponse](maxio_advanced_billing/models/delayed_cancellation_response.py), [CancelDelayedCancellationErrorBody](maxio_advanced_billing/errors/cancel_delayed_cancellation_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[DelayedCancellationResponse](maxio/models/delayed_cancellation_response.py), [CancelDelayedCancellationErrorBody](maxio/errors/cancel_delayed_cancellation_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[DelayedCancellationResponse](maxio_advanced_billing/models/delayed_cancellation_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[DelayedCancellationResponse](maxio/models/delayed_cancellation_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[CancelDelayedCancellationErrorBody](maxio_advanced_billing/errors/cancel_delayed_cancellation_error.py)</code>
+**On `Failure`**: `error` is <code>[CancelDelayedCancellationErrorBody](maxio/errors/cancel_delayed_cancellation_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -20561,7 +20561,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -20571,18 +20571,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py), [CancelDunningErrorBody](maxio_advanced_billing/errors/cancel_dunning_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[SubscriptionResponse](maxio/models/subscription_response.py), [CancelDunningErrorBody](maxio/errors/cancel_dunning_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[SubscriptionResponse](maxio/models/subscription_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[CancelDunningErrorBody](maxio_advanced_billing/errors/cancel_dunning_error.py)</code>
+**On `Failure`**: `error` is <code>[CancelDunningErrorBody](maxio/errors/cancel_dunning_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -20647,8 +20647,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>body</code> | <code>[CancellationRequest](maxio_advanced_billing/models/cancellation_request.py) \| [CancellationRequestDict](maxio_advanced_billing/models/cancellation_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CancellationRequest](maxio/models/cancellation_request.py) \| [CancellationRequestDict](maxio/models/cancellation_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -20658,19 +20658,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py), [CancelSubscriptionErrorBody](maxio_advanced_billing/errors/cancel_subscription_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[SubscriptionResponse](maxio/models/subscription_response.py), [CancelSubscriptionErrorBody](maxio/errors/cancel_subscription_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[SubscriptionResponse](maxio/models/subscription_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[CancelSubscriptionErrorBody](maxio_advanced_billing/errors/cancel_subscription_error.py)</code>
+**On `Failure`**: `error` is <code>[CancelSubscriptionErrorBody](maxio/errors/cancel_subscription_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 422 | <code>[CancelSubscriptionErrorResponse](maxio_advanced_billing/models/unions/cancel_subscription_error_response.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 422 | <code>[CancelSubscriptionErrorResponse](maxio/models/unions/cancel_subscription_error_response.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -20734,8 +20734,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>body</code> | <code>[CancellationRequest](maxio_advanced_billing/models/cancellation_request.py) \| [CancellationRequestDict](maxio_advanced_billing/models/cancellation_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CancellationRequest](maxio/models/cancellation_request.py) \| [CancellationRequestDict](maxio/models/cancellation_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -20745,19 +20745,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[DelayedCancellationResponse](maxio_advanced_billing/models/delayed_cancellation_response.py), [InitiateDelayedCancellationErrorBody](maxio_advanced_billing/errors/initiate_delayed_cancellation_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[DelayedCancellationResponse](maxio/models/delayed_cancellation_response.py), [InitiateDelayedCancellationErrorBody](maxio/errors/initiate_delayed_cancellation_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[DelayedCancellationResponse](maxio_advanced_billing/models/delayed_cancellation_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[DelayedCancellationResponse](maxio/models/delayed_cancellation_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[InitiateDelayedCancellationErrorBody](maxio_advanced_billing/errors/initiate_delayed_cancellation_error.py)</code>
+**On `Failure`**: `error` is <code>[InitiateDelayedCancellationErrorBody](maxio/errors/initiate_delayed_cancellation_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -20825,8 +20825,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>body</code> | <code>[PauseRequest](maxio_advanced_billing/models/pause_request.py) \| [PauseRequestDict](maxio_advanced_billing/models/pause_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[PauseRequest](maxio/models/pause_request.py) \| [PauseRequestDict](maxio/models/pause_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -20836,18 +20836,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py), [PauseSubscriptionErrorBody](maxio_advanced_billing/errors/pause_subscription_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[SubscriptionResponse](maxio/models/subscription_response.py), [PauseSubscriptionErrorBody](maxio/errors/pause_subscription_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[SubscriptionResponse](maxio/models/subscription_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[PauseSubscriptionErrorBody](maxio_advanced_billing/errors/pause_subscription_error.py)</code>
+**On `Failure`**: `error` is <code>[PauseSubscriptionErrorBody](maxio/errors/pause_subscription_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -20932,8 +20932,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>body</code> | <code>[RenewalPreviewRequest](maxio_advanced_billing/models/renewal_preview_request.py) \| [RenewalPreviewRequestDict](maxio_advanced_billing/models/renewal_preview_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[RenewalPreviewRequest](maxio/models/renewal_preview_request.py) \| [RenewalPreviewRequestDict](maxio/models/renewal_preview_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -20943,18 +20943,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[RenewalPreviewResponse](maxio_advanced_billing/models/renewal_preview_response.py), [PreviewRenewalErrorBody](maxio_advanced_billing/errors/preview_renewal_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[RenewalPreviewResponse](maxio/models/renewal_preview_response.py), [PreviewRenewalErrorBody](maxio/errors/preview_renewal_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[RenewalPreviewResponse](maxio_advanced_billing/models/renewal_preview_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[RenewalPreviewResponse](maxio/models/renewal_preview_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[PreviewRenewalErrorBody](maxio_advanced_billing/errors/preview_renewal_error.py)</code>
+**On `Failure`**: `error` is <code>[PreviewRenewalErrorBody](maxio/errors/preview_renewal_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -21177,8 +21177,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>body</code> | <code>[ReactivateSubscriptionRequest](maxio_advanced_billing/models/reactivate_subscription_request.py) \| [ReactivateSubscriptionRequestDict](maxio_advanced_billing/models/reactivate_subscription_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[ReactivateSubscriptionRequest](maxio/models/reactivate_subscription_request.py) \| [ReactivateSubscriptionRequestDict](maxio/models/reactivate_subscription_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -21188,18 +21188,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py), [ReactivateSubscriptionErrorBody](maxio_advanced_billing/errors/reactivate_subscription_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[SubscriptionResponse](maxio/models/subscription_response.py), [ReactivateSubscriptionErrorBody](maxio/errors/reactivate_subscription_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[SubscriptionResponse](maxio/models/subscription_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[ReactivateSubscriptionErrorBody](maxio_advanced_billing/errors/reactivate_subscription_error.py)</code>
+**On `Failure`**: `error` is <code>[ReactivateSubscriptionErrorBody](maxio/errors/reactivate_subscription_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -21263,8 +21263,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>calendar_billing_resumption_charge</code> | <code>[ResumptionChargeOrStr](maxio_advanced_billing/models/enums/resumption_charge.py) \| None</code> | (For calendar billing subscriptions only) The way that the resumed subscription's charge should be handled.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>calendar_billing_resumption_charge</code> | <code>[ResumptionChargeOrStr](maxio/models/enums/resumption_charge.py) \| None</code> | (For calendar billing subscriptions only) The way that the resumed subscription's charge should be handled.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -21274,18 +21274,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py), [ResumeSubscriptionErrorBody](maxio_advanced_billing/errors/resume_subscription_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[SubscriptionResponse](maxio/models/subscription_response.py), [ResumeSubscriptionErrorBody](maxio/errors/resume_subscription_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[SubscriptionResponse](maxio/models/subscription_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[ResumeSubscriptionErrorBody](maxio_advanced_billing/errors/resume_subscription_error.py)</code>
+**On `Failure`**: `error` is <code>[ResumeSubscriptionErrorBody](maxio/errors/resume_subscription_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -21355,7 +21355,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -21365,18 +21365,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py), [RetrySubscriptionErrorBody](maxio_advanced_billing/errors/retry_subscription_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[SubscriptionResponse](maxio/models/subscription_response.py), [RetrySubscriptionErrorBody](maxio/errors/retry_subscription_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[SubscriptionResponse](maxio/models/subscription_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RetrySubscriptionErrorBody](maxio_advanced_billing/errors/retry_subscription_error.py)</code>
+**On `Failure`**: `error` is <code>[RetrySubscriptionErrorBody](maxio/errors/retry_subscription_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -21448,8 +21448,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>body</code> | <code>[PauseRequest](maxio_advanced_billing/models/pause_request.py) \| [PauseRequestDict](maxio_advanced_billing/models/pause_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[PauseRequest](maxio/models/pause_request.py) \| [PauseRequestDict](maxio/models/pause_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -21459,18 +21459,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py), [UpdateAutomaticSubscriptionResumptionErrorBody](maxio_advanced_billing/errors/update_automatic_subscription_resumption_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[SubscriptionResponse](maxio/models/subscription_response.py), [UpdateAutomaticSubscriptionResumptionErrorBody](maxio/errors/update_automatic_subscription_resumption_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[SubscriptionResponse](maxio/models/subscription_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[UpdateAutomaticSubscriptionResumptionErrorBody](maxio_advanced_billing/errors/update_automatic_subscription_resumption_error.py)</code>
+**On `Failure`**: `error` is <code>[UpdateAutomaticSubscriptionResumptionErrorBody](maxio/errors/update_automatic_subscription_resumption_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -21482,7 +21482,7 @@ Mapped in first-match order -- an earlier row wins over a later range that also 
 
 ## Subscriptions
 
-> Source: [Subscriptions](maxio_advanced_billing/apis/subscriptions.py)
+> Source: [Subscriptions](maxio/apis/subscriptions.py)
 
 <details>
 <summary><code>def activate_subscription(subscription_id: int, *, body: ActivateSubscriptionRequest | ActivateSubscriptionRequestDict | None = None, request_options: RequestOptionsOrDict | None = None) -> ApiResult[SubscriptionResponse, ActivateSubscriptionErrorBody]</code></summary>
@@ -21579,8 +21579,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>body</code> | <code>[ActivateSubscriptionRequest](maxio_advanced_billing/models/activate_subscription_request.py) \| [ActivateSubscriptionRequestDict](maxio_advanced_billing/models/activate_subscription_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[ActivateSubscriptionRequest](maxio/models/activate_subscription_request.py) \| [ActivateSubscriptionRequestDict](maxio/models/activate_subscription_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -21590,18 +21590,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py), [ActivateSubscriptionErrorBody](maxio_advanced_billing/errors/activate_subscription_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[SubscriptionResponse](maxio/models/subscription_response.py), [ActivateSubscriptionErrorBody](maxio/errors/activate_subscription_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[SubscriptionResponse](maxio/models/subscription_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[ActivateSubscriptionErrorBody](maxio_advanced_billing/errors/activate_subscription_error.py)</code>
+**On `Failure`**: `error` is <code>[ActivateSubscriptionErrorBody](maxio/errors/activate_subscription_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 400 | <code>[ErrorArrayMapResponse1](maxio_advanced_billing/models/error_array_map_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 400 | <code>[ErrorArrayMapResponse1](maxio/models/error_array_map_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -21674,8 +21674,8 @@ match result:
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
 | <code>code</code> | <code>str \| None</code> | A code for the coupon that would be applied to a subscription<br>**Default**: <code>None</code> |
-| <code>body</code> | <code>[AddCouponsRequest](maxio_advanced_billing/models/add_coupons_request.py) \| [AddCouponsRequestDict](maxio_advanced_billing/models/add_coupons_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[AddCouponsRequest](maxio/models/add_coupons_request.py) \| [AddCouponsRequestDict](maxio/models/add_coupons_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -21685,18 +21685,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py), [ApplyCouponsToSubscriptionErrorBody](maxio_advanced_billing/errors/apply_coupons_to_subscription_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[SubscriptionResponse](maxio/models/subscription_response.py), [ApplyCouponsToSubscriptionErrorBody](maxio/errors/apply_coupons_to_subscription_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[SubscriptionResponse](maxio/models/subscription_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[ApplyCouponsToSubscriptionErrorBody](maxio_advanced_billing/errors/apply_coupons_to_subscription_error.py)</code>
+**On `Failure`**: `error` is <code>[ApplyCouponsToSubscriptionErrorBody](maxio/errors/apply_coupons_to_subscription_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[SubscriptionAddCouponError1](maxio_advanced_billing/models/subscription_add_coupon_error1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[SubscriptionAddCouponError1](maxio/models/subscription_add_coupon_error1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -21822,8 +21822,8 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>body</code> | <code>[CreateSubscriptionRequest](maxio_advanced_billing/models/create_subscription_request.py) \| [CreateSubscriptionRequestDict](maxio_advanced_billing/models/create_subscription_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CreateSubscriptionRequest](maxio/models/create_subscription_request.py) \| [CreateSubscriptionRequestDict](maxio/models/create_subscription_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -21833,18 +21833,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py), [CreateSubscriptionErrorBody](maxio_advanced_billing/errors/create_subscription_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[SubscriptionResponse](maxio/models/subscription_response.py), [CreateSubscriptionErrorBody](maxio/errors/create_subscription_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py)</code> -- Created
+**On `Success`**: `payload` is <code>[SubscriptionResponse](maxio/models/subscription_response.py)</code> -- Created
 
-**On `Failure`**: `error` is <code>[CreateSubscriptionErrorBody](maxio_advanced_billing/errors/create_subscription_error.py)</code>
+**On `Failure`**: `error` is <code>[CreateSubscriptionErrorBody](maxio/errors/create_subscription_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -21908,7 +21908,7 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>reference</code> | <code>str \| None</code> | Subscription reference<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -21918,18 +21918,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py), [FindSubscriptionErrorBody](maxio_advanced_billing/errors/find_subscription_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[SubscriptionResponse](maxio/models/subscription_response.py), [FindSubscriptionErrorBody](maxio/errors/find_subscription_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[SubscriptionResponse](maxio/models/subscription_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[FindSubscriptionErrorBody](maxio_advanced_billing/errors/find_subscription_error.py)</code>
+**On `Failure`**: `error` is <code>[FindSubscriptionErrorBody](maxio/errors/find_subscription_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -22004,22 +22004,22 @@ match result:
 | --- | --- | --- |
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 20. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>Use in query `per_page=200`.<br>**Default**: <code>20</code> |
-| <code>state</code> | <code>[SubscriptionStateFilterOrStr](maxio_advanced_billing/models/enums/subscription_state_filter.py) \| None</code> | The current state of the subscription<br>**Default**: <code>None</code> |
+| <code>state</code> | <code>[SubscriptionStateFilterOrStr](maxio/models/enums/subscription_state_filter.py) \| None</code> | The current state of the subscription<br>**Default**: <code>None</code> |
 | <code>product</code> | <code>int \| None</code> | The product id of the subscription. (Note that the product handle cannot be used.)<br>**Default**: <code>None</code> |
 | <code>product_price_point_id</code> | <code>int \| None</code> | The ID of the product price point. If supplied, product is required.<br>**Default**: <code>None</code> |
 | <code>coupon</code> | <code>int \| None</code> | The numeric id of the coupon currently applied to the subscription. (This can be found in the URL when editing a coupon. Note that the coupon code cannot be used.)<br>**Default**: <code>None</code> |
 | <code>coupon_code</code> | <code>str \| None</code> | The coupon code currently applied to the subscription<br>**Default**: <code>None</code> |
 | <code>branding_theme_id</code> | <code>int \| None</code> | Filter subscriptions by the ID of an assigned Branding Theme. Branding Themes is a beta feature. See [Understand Branding Themes](https://docs.maxio.com/hc/en-us/articles/43796895662093-Understand-Branding-Themes#understand-branding-themes-0-0) for more information.<br>**Default**: <code>None</code> |
-| <code>date_field</code> | <code>[SubscriptionDateFieldOrStr](maxio_advanced_billing/models/enums/subscription_date_field.py) \| None</code> | The type of filter you'd like to apply to your search.  Allowed Values: , current_period_ends_at, current_period_starts_at, created_at, activated_at, canceled_at, expires_at, trial_started_at, trial_ended_at, updated_at<br>**Default**: <code>None</code> |
+| <code>date_field</code> | <code>[SubscriptionDateFieldOrStr](maxio/models/enums/subscription_date_field.py) \| None</code> | The type of filter you'd like to apply to your search.  Allowed Values: , current_period_ends_at, current_period_starts_at, created_at, activated_at, canceled_at, expires_at, trial_started_at, trial_ended_at, updated_at<br>**Default**: <code>None</code> |
 | <code>start_date</code> | <code>Date \| None</code> | The start date (format YYYY-MM-DD) with which to filter the date_field. Returns subscriptions with a timestamp at or after midnight (12:00:00 AM) in your site’s time zone on the date specified. Use in query `start_date=2022-07-01`.<br>**Default**: <code>None</code> |
 | <code>end_date</code> | <code>Date \| None</code> | The end date (format YYYY-MM-DD) with which to filter the date_field. Returns subscriptions with a timestamp up to and including 11:59:59PM in your site’s time zone on the date specified. Use in query `end_date=2022-08-01`.<br>**Default**: <code>None</code> |
 | <code>start_datetime</code> | <code>RFC3339DateTime \| None</code> | The start date and time (format YYYY-MM-DD HH:MM:SS) with which to filter the date_field. Returns subscriptions with a timestamp at or after exact time provided in query. You can specify timezone in query - otherwise your site's time zone will be used. If provided, this parameter will be used instead of start_date. Use in query `start_datetime=2022-07-01 09:00:05`.<br>**Default**: <code>None</code> |
 | <code>end_datetime</code> | <code>RFC3339DateTime \| None</code> | The end date and time (format YYYY-MM-DD HH:MM:SS) with which to filter the date_field. Returns subscriptions with a timestamp at or before exact time provided in query. You can specify timezone in query - otherwise your site's time zone will be used. If provided, this parameter will be used instead of end_date. Use in query `end_datetime=2022-08-01 10:00:05`.<br>**Default**: <code>None</code> |
 | <code>metadata</code> | <code>dict&#91;str, str&#93; \| None</code> | The value of the metadata field specified in the parameter. Use in query `metadata[my-field]=value&metadata[other-field]=another_value`.<br>**Default**: <code>None</code> |
-| <code>direction</code> | <code>[SortingDirectionOrStr](maxio_advanced_billing/models/enums/sorting_direction.py) \| None</code> | Controls the order in which results are returned.<br>Use in query `direction=asc`.<br>**Default**: <code>None</code> |
-| <code>sort</code> | <code>[SubscriptionSortOrStr](maxio_advanced_billing/models/enums/subscription_sort.py) \| None</code> | The attribute by which to sort<br>**Default**: <code>None</code> |
-| <code>include</code> | <code>list&#91;[SubscriptionListIncludeOrStr](maxio_advanced_billing/models/enums/subscription_list_include.py)&#93; \| None</code> | Allows including additional data in the response. Use in query: `include[]=self_service_page_token`.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>direction</code> | <code>[SortingDirectionOrStr](maxio/models/enums/sorting_direction.py) \| None</code> | Controls the order in which results are returned.<br>Use in query `direction=asc`.<br>**Default**: <code>None</code> |
+| <code>sort</code> | <code>[SubscriptionSortOrStr](maxio/models/enums/subscription_sort.py) \| None</code> | The attribute by which to sort<br>**Default**: <code>None</code> |
+| <code>include</code> | <code>list&#91;[SubscriptionListIncludeOrStr](maxio/models/enums/subscription_list_include.py)&#93; \| None</code> | Allows including additional data in the response. Use in query: `include[]=self_service_page_token`.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -22029,11 +22029,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;list&#91;[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py)&#93;, [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;list&#91;[SubscriptionResponse](maxio/models/subscription_response.py)&#93;, [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>list&#91;[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py)&#93;</code> -- OK
+**On `Success`**: `payload` is <code>list&#91;[SubscriptionResponse](maxio/models/subscription_response.py)&#93;</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -22115,8 +22115,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>body</code> | <code>[OverrideSubscriptionRequest](maxio_advanced_billing/models/override_subscription_request.py) \| [OverrideSubscriptionRequestDict](maxio_advanced_billing/models/override_subscription_request.py) \| None</code> | Only these fields are available to be set.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[OverrideSubscriptionRequest](maxio/models/override_subscription_request.py) \| [OverrideSubscriptionRequestDict](maxio/models/override_subscription_request.py) \| None</code> | Only these fields are available to be set.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -22126,18 +22126,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;None, [OverrideSubscriptionErrorBody](maxio_advanced_billing/errors/override_subscription_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;None, [OverrideSubscriptionErrorBody](maxio/errors/override_subscription_error.py)&#93;</code>
 
 **On `Success`**: the 2xx carries no content; `payload` is <code>None</code>
 
-**On `Failure`**: `error` is <code>[OverrideSubscriptionErrorBody](maxio_advanced_billing/errors/override_subscription_error.py)</code>
+**On `Failure`**: `error` is <code>[OverrideSubscriptionErrorBody](maxio/errors/override_subscription_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[SingleErrorResponse1](maxio_advanced_billing/models/single_error_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[SingleErrorResponse1](maxio/models/single_error_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -22239,8 +22239,8 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>body</code> | <code>[CreateSubscriptionRequest](maxio_advanced_billing/models/create_subscription_request.py) \| [CreateSubscriptionRequestDict](maxio_advanced_billing/models/create_subscription_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CreateSubscriptionRequest](maxio/models/create_subscription_request.py) \| [CreateSubscriptionRequestDict](maxio/models/create_subscription_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -22250,11 +22250,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[SubscriptionPreviewResponse](maxio_advanced_billing/models/subscription_preview_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[SubscriptionPreviewResponse](maxio/models/subscription_preview_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[SubscriptionPreviewResponse](maxio_advanced_billing/models/subscription_preview_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[SubscriptionPreviewResponse](maxio/models/subscription_preview_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -22327,8 +22327,8 @@ match result:
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
 | <code>ack</code> | <code>int</code> | id of the customer. |
-| <code>cascade</code> | <code>list&#91;[SubscriptionPurgeTypeOrStr](maxio_advanced_billing/models/enums/subscription_purge_type.py)&#93; \| None</code> | Options are "customer" or "payment_profile".<br>Use in query: `cascade[]=customer&cascade[]=payment_profile`.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>cascade</code> | <code>list&#91;[SubscriptionPurgeTypeOrStr](maxio/models/enums/subscription_purge_type.py)&#93; \| None</code> | Options are "customer" or "payment_profile".<br>Use in query: `cascade[]=customer&cascade[]=payment_profile`.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -22338,18 +22338,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py), [PurgeSubscriptionErrorBody](maxio_advanced_billing/errors/purge_subscription_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[SubscriptionResponse](maxio/models/subscription_response.py), [PurgeSubscriptionErrorBody](maxio/errors/purge_subscription_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[SubscriptionResponse](maxio/models/subscription_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[PurgeSubscriptionErrorBody](maxio_advanced_billing/errors/purge_subscription_error.py)</code>
+**On `Failure`**: `error` is <code>[PurgeSubscriptionErrorBody](maxio/errors/purge_subscription_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 400 | <code>[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 400 | <code>[SubscriptionResponse](maxio/models/subscription_response.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -22419,8 +22419,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>include</code> | <code>list&#91;[SubscriptionIncludeOrStr](maxio_advanced_billing/models/enums/subscription_include.py)&#93; \| None</code> | Allows including additional data in the response. Use in query: `include[]=coupons&include[]=self_service_page_token`.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>include</code> | <code>list&#91;[SubscriptionIncludeOrStr](maxio/models/enums/subscription_include.py)&#93; \| None</code> | Allows including additional data in the response. Use in query: `include[]=coupons&include[]=self_service_page_token`.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -22430,11 +22430,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[SubscriptionResponse](maxio/models/subscription_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[SubscriptionResponse](maxio/models/subscription_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -22501,7 +22501,7 @@ match result:
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
 | <code>coupon_code</code> | <code>str \| None</code> | The coupon code<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -22511,18 +22511,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;str, [RemoveCouponFromSubscriptionErrorBody](maxio_advanced_billing/errors/remove_coupon_from_subscription_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;str, [RemoveCouponFromSubscriptionErrorBody](maxio/errors/remove_coupon_from_subscription_error.py)&#93;</code>
 
 **On `Success`**: `payload` is <code>str</code> -- OK
 
-**On `Failure`**: `error` is <code>[RemoveCouponFromSubscriptionErrorBody](maxio_advanced_billing/errors/remove_coupon_from_subscription_error.py)</code>
+**On `Failure`**: `error` is <code>[RemoveCouponFromSubscriptionErrorBody](maxio/errors/remove_coupon_from_subscription_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[SubscriptionRemoveCouponErrors1](maxio_advanced_billing/models/subscription_remove_coupon_errors1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[SubscriptionRemoveCouponErrors1](maxio/models/subscription_remove_coupon_errors1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -22586,8 +22586,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>body</code> | <code>[UpsertPrepaidConfigurationRequest](maxio_advanced_billing/models/upsert_prepaid_configuration_request.py) \| [UpsertPrepaidConfigurationRequestDict](maxio_advanced_billing/models/upsert_prepaid_configuration_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[UpsertPrepaidConfigurationRequest](maxio/models/upsert_prepaid_configuration_request.py) \| [UpsertPrepaidConfigurationRequestDict](maxio/models/upsert_prepaid_configuration_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -22597,18 +22597,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[PrepaidConfigurationResponse](maxio_advanced_billing/models/prepaid_configuration_response.py), [UpdatePrepaidSubscriptionConfigurationErrorBody](maxio_advanced_billing/errors/update_prepaid_subscription_configuration_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[PrepaidConfigurationResponse](maxio/models/prepaid_configuration_response.py), [UpdatePrepaidSubscriptionConfigurationErrorBody](maxio/errors/update_prepaid_subscription_configuration_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[PrepaidConfigurationResponse](maxio_advanced_billing/models/prepaid_configuration_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[PrepaidConfigurationResponse](maxio/models/prepaid_configuration_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[UpdatePrepaidSubscriptionConfigurationErrorBody](maxio_advanced_billing/errors/update_prepaid_subscription_configuration_error.py)</code>
+**On `Failure`**: `error` is <code>[UpdatePrepaidSubscriptionConfigurationErrorBody](maxio/errors/update_prepaid_subscription_configuration_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[PrepaidConfigurationErrorResponse](maxio_advanced_billing/models/unions/prepaid_configuration_error_response.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[PrepaidConfigurationErrorResponse](maxio/models/unions/prepaid_configuration_error_response.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -22722,8 +22722,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>subscription_id</code> | <code>int</code> | The Chargify id of the subscription. |
-| <code>body</code> | <code>[UpdateSubscriptionRequest](maxio_advanced_billing/models/update_subscription_request.py) \| [UpdateSubscriptionRequestDict](maxio_advanced_billing/models/update_subscription_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[UpdateSubscriptionRequest](maxio/models/update_subscription_request.py) \| [UpdateSubscriptionRequestDict](maxio/models/update_subscription_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -22733,18 +22733,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py), [UpdateSubscriptionErrorBody](maxio_advanced_billing/errors/update_subscription_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[SubscriptionResponse](maxio/models/subscription_response.py), [UpdateSubscriptionErrorBody](maxio/errors/update_subscription_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[SubscriptionResponse](maxio_advanced_billing/models/subscription_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[SubscriptionResponse](maxio/models/subscription_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[UpdateSubscriptionErrorBody](maxio_advanced_billing/errors/update_subscription_error.py)</code>
+**On `Failure`**: `error` is <code>[UpdateSubscriptionErrorBody](maxio/errors/update_subscription_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -22756,7 +22756,7 @@ Mapped in first-match order -- an earlier row wins over a later range that also 
 
 ## Webhooks
 
-> Source: [Webhooks](maxio_advanced_billing/apis/webhooks.py)
+> Source: [Webhooks](maxio/apis/webhooks.py)
 
 <details>
 <summary><code>def create_endpoint(*, body: CreateOrUpdateEndpointRequest | CreateOrUpdateEndpointRequestDict | None = None, request_options: RequestOptionsOrDict | None = None) -> ApiResult[EndpointResponse, CreateEndpointErrorBody]</code></summary>
@@ -22812,8 +22812,8 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>body</code> | <code>[CreateOrUpdateEndpointRequest](maxio_advanced_billing/models/create_or_update_endpoint_request.py) \| [CreateOrUpdateEndpointRequestDict](maxio_advanced_billing/models/create_or_update_endpoint_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CreateOrUpdateEndpointRequest](maxio/models/create_or_update_endpoint_request.py) \| [CreateOrUpdateEndpointRequestDict](maxio/models/create_or_update_endpoint_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -22823,18 +22823,18 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[EndpointResponse](maxio_advanced_billing/models/endpoint_response.py), [CreateEndpointErrorBody](maxio_advanced_billing/errors/create_endpoint_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[EndpointResponse](maxio/models/endpoint_response.py), [CreateEndpointErrorBody](maxio/errors/create_endpoint_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[EndpointResponse](maxio_advanced_billing/models/endpoint_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[EndpointResponse](maxio/models/endpoint_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[CreateEndpointErrorBody](maxio_advanced_billing/errors/create_endpoint_error.py)</code>
+**On `Failure`**: `error` is <code>[CreateEndpointErrorBody](maxio/errors/create_endpoint_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>
@@ -22897,8 +22897,8 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>body</code> | <code>[EnableWebhooksRequest](maxio_advanced_billing/models/enable_webhooks_request.py) \| [EnableWebhooksRequestDict](maxio_advanced_billing/models/enable_webhooks_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[EnableWebhooksRequest](maxio/models/enable_webhooks_request.py) \| [EnableWebhooksRequestDict](maxio/models/enable_webhooks_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -22908,11 +22908,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[EnableWebhooksResponse](maxio_advanced_billing/models/enable_webhooks_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[EnableWebhooksResponse](maxio/models/enable_webhooks_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[EnableWebhooksResponse](maxio_advanced_billing/models/enable_webhooks_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[EnableWebhooksResponse](maxio/models/enable_webhooks_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -22975,7 +22975,7 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -22985,11 +22985,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;list&#91;[Endpoint](maxio_advanced_billing/models/endpoint.py)&#93;, [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;list&#91;[Endpoint](maxio/models/endpoint.py)&#93;, [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>list&#91;[Endpoint](maxio_advanced_billing/models/endpoint.py)&#93;</code> -- OK
+**On `Success`**: `payload` is <code>list&#91;[Endpoint](maxio/models/endpoint.py)&#93;</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -23052,14 +23052,14 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>status</code> | <code>[WebhookStatusOrStr](maxio_advanced_billing/models/enums/webhook_status.py) \| None</code> | Webhooks with matching status would be returned.<br>**Default**: <code>None</code> |
+| <code>status</code> | <code>[WebhookStatusOrStr](maxio/models/enums/webhook_status.py) \| None</code> | Webhooks with matching status would be returned.<br>**Default**: <code>None</code> |
 | <code>since_date</code> | <code>str \| None</code> | Format YYYY-MM-DD. Returns Webhooks with the created_at date greater than or equal to the one specified.<br>**Default**: <code>None</code> |
 | <code>until_date</code> | <code>str \| None</code> | Format YYYY-MM-DD. Returns Webhooks with the created_at date less than or equal to the one specified.<br>**Default**: <code>None</code> |
 | <code>page</code> | <code>int \| None</code> | Result records are organized in pages. By default, the first page of results is displayed. The page parameter specifies a page number of results to fetch. You can start navigating through the pages to consume the results. You do this by passing in a page parameter. Retrieve the next page by adding ?page=2 to the query string. If there are no results to return, then an empty result set will be returned.<br>Use in query `page=1`.<br>**Default**: <code>1</code> |
 | <code>per_page</code> | <code>int \| None</code> | This parameter indicates how many records to fetch in each request. Default value is 20. The maximum allowed values is 200; any per_page value over 200 will be changed to 200.<br>Use in query `per_page=200`.<br>**Default**: <code>20</code> |
-| <code>order</code> | <code>[WebhookOrderOrStr](maxio_advanced_billing/models/enums/webhook_order.py) \| None</code> | The order in which the Webhooks are returned.<br>**Default**: <code>None</code> |
+| <code>order</code> | <code>[WebhookOrderOrStr](maxio/models/enums/webhook_order.py) \| None</code> | The order in which the Webhooks are returned.<br>**Default**: <code>None</code> |
 | <code>subscription</code> | <code>int \| None</code> | The Advanced Billing id of a subscription you'd like to filter for<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -23069,11 +23069,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;list&#91;[WebhookResponse](maxio_advanced_billing/models/webhook_response.py)&#93;, [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;list&#91;[WebhookResponse](maxio/models/webhook_response.py)&#93;, [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>list&#91;[WebhookResponse](maxio_advanced_billing/models/webhook_response.py)&#93;</code> -- OK
+**On `Success`**: `payload` is <code>list&#91;[WebhookResponse](maxio/models/webhook_response.py)&#93;</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -23136,8 +23136,8 @@ match result:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| <code>body</code> | <code>[ReplayWebhooksRequest](maxio_advanced_billing/models/replay_webhooks_request.py) \| [ReplayWebhooksRequestDict](maxio_advanced_billing/models/replay_webhooks_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[ReplayWebhooksRequest](maxio/models/replay_webhooks_request.py) \| [ReplayWebhooksRequestDict](maxio/models/replay_webhooks_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -23147,11 +23147,11 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[ReplayWebhooksResponse](maxio_advanced_billing/models/replay_webhooks_response.py), [RawError](maxio_advanced_billing/core/results.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[ReplayWebhooksResponse](maxio/models/replay_webhooks_response.py), [RawError](maxio/core/results.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[ReplayWebhooksResponse](maxio_advanced_billing/models/replay_webhooks_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[ReplayWebhooksResponse](maxio/models/replay_webhooks_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[RawError](maxio_advanced_billing/core/results.py)</code>
+**On `Failure`**: `error` is <code>[RawError](maxio/core/results.py)</code>
 
 </dd>
 </dl>
@@ -23219,8 +23219,8 @@ match result:
 | Name | Type | Description |
 | --- | --- | --- |
 | <code>endpoint_id</code> | <code>int</code> | The Advanced Billing id for the endpoint that should be updated |
-| <code>body</code> | <code>[CreateOrUpdateEndpointRequest](maxio_advanced_billing/models/create_or_update_endpoint_request.py) \| [CreateOrUpdateEndpointRequestDict](maxio_advanced_billing/models/create_or_update_endpoint_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
-| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio_advanced_billing/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
+| <code>body</code> | <code>[CreateOrUpdateEndpointRequest](maxio/models/create_or_update_endpoint_request.py) \| [CreateOrUpdateEndpointRequestDict](maxio/models/create_or_update_endpoint_request.py) \| None</code> | The request body.<br>**Default**: <code>None</code> |
+| <code>request_options</code> | <code>[RequestOptionsOrDict](maxio/core/request_options.py) \| None</code> | Per-call overrides for this one request, such as a timeout or extra headers. |
 
 </dd>
 </dl>
@@ -23230,19 +23230,19 @@ match result:
 <dl>
 <dd>
 
-**Returns**: <code>[ApiResult](maxio_advanced_billing/core/results.py)&#91;[EndpointResponse](maxio_advanced_billing/models/endpoint_response.py), [UpdateEndpointErrorBody](maxio_advanced_billing/errors/update_endpoint_error.py)&#93;</code>
+**Returns**: <code>[ApiResult](maxio/core/results.py)&#91;[EndpointResponse](maxio/models/endpoint_response.py), [UpdateEndpointErrorBody](maxio/errors/update_endpoint_error.py)&#93;</code>
 
-**On `Success`**: `payload` is <code>[EndpointResponse](maxio_advanced_billing/models/endpoint_response.py)</code> -- OK
+**On `Success`**: `payload` is <code>[EndpointResponse](maxio/models/endpoint_response.py)</code> -- OK
 
-**On `Failure`**: `error` is <code>[UpdateEndpointErrorBody](maxio_advanced_billing/errors/update_endpoint_error.py)</code>
+**On `Failure`**: `error` is <code>[UpdateEndpointErrorBody](maxio/errors/update_endpoint_error.py)</code>
 
 Mapped in first-match order -- an earlier row wins over a later range that also covers the status:
 
 | Status | `error` is |
 | --- | --- |
-| 404 | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
-| 422 | <code>[ErrorListResponse1](maxio_advanced_billing/models/error_list_response1.py)</code> |
-| anything unmapped | <code>[RawError](maxio_advanced_billing/core/results.py)</code> |
+| 404 | <code>[RawError](maxio/core/results.py)</code> |
+| 422 | <code>[ErrorListResponse1](maxio/models/error_list_response1.py)</code> |
+| anything unmapped | <code>[RawError](maxio/core/results.py)</code> |
 
 </dd>
 </dl>

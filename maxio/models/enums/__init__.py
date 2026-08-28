@@ -36,6 +36,7 @@ from .event_key import EventKey, EventKeyOrStr
 from .expiration_interval_unit import ExpirationIntervalUnit, ExpirationIntervalUnitOrStr
 from .failed_payment_action import FailedPaymentAction, FailedPaymentActionOrStr
 from .first_charge_type import FirstChargeType, FirstChargeTypeOrStr
+from .grant_type import GrantType, GrantTypeOrStr
 from .group_target_type import GroupTargetType, GroupTargetTypeOrStr
 from .group_type import GroupType, GroupTypeOrStr
 from .include_not_null import IncludeNotNull, IncludeNotNullOrStr
@@ -54,6 +55,8 @@ from .invoice_role import InvoiceRole, InvoiceRoleOrStr
 from .invoice_sort_field import InvoiceSortField, InvoiceSortFieldOrStr
 from .invoice_status import InvoiceStatus, InvoiceStatusOrStr
 from .item_category import ItemCategory, ItemCategoryOrStr
+from .item_type import ItemType, ItemTypeOrStr
+from .item_type1 import ItemType1, ItemType1OrStr
 from .line_item_kind import LineItemKind, LineItemKindOrStr
 from .line_item_transaction_type import LineItemTransactionType, LineItemTransactionTypeOrStr
 from .list_components_price_points_include import (
@@ -183,6 +186,8 @@ __all__ = [
     "FailedPaymentActionOrStr",
     "FirstChargeType",
     "FirstChargeTypeOrStr",
+    "GrantType",
+    "GrantTypeOrStr",
     "GroupTargetType",
     "GroupTargetTypeOrStr",
     "GroupType",
@@ -219,6 +224,10 @@ __all__ = [
     "InvoiceStatusOrStr",
     "ItemCategory",
     "ItemCategoryOrStr",
+    "ItemType",
+    "ItemType1",
+    "ItemType1OrStr",
+    "ItemTypeOrStr",
     "LineItemKind",
     "LineItemKindOrStr",
     "LineItemTransactionType",

@@ -1,10 +1,9 @@
 from __future__ import annotations
 
-from typing import Literal
-
 from typing_extensions import NotRequired, TypedDict
 
 from ..core import UNSET, Optional, SdkBaseModel
+from .enums.item_type1 import ItemType1OrStr
 from .scheduled_renewal_product_price_point import (
     ScheduledRenewalProductPricePoint,
     ScheduledRenewalProductPricePointDict,
@@ -12,7 +11,7 @@ from .scheduled_renewal_product_price_point import (
 
 
 class ScheduledRenewalItemRequestBodyProduct(SdkBaseModel):
-    item_type: Literal["Product"] = "Product"
+    item_type: ItemType1OrStr
     """Item type to add. Either Product or Component."""
 
     item_id: int
@@ -29,7 +28,7 @@ class ScheduledRenewalItemRequestBodyProduct(SdkBaseModel):
 
 
 class ScheduledRenewalItemRequestBodyProductDict(TypedDict):
-    item_type: NotRequired[Literal["Product"]]
+    item_type: ItemType1OrStr
     item_id: int
     price_point_id: NotRequired[int]
     quantity: NotRequired[int]

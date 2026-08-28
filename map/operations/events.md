@@ -2,7 +2,7 @@
 
 # Events — operations
 
-Accessor: `client.events` · Source: `maxio_advanced_billing/apis/events.py` · 3 operations
+Accessor: `client.events` · Source: `maxio/apis/events.py` · 3 operations
 
 Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omit what its invariants table covers and are otherwise self-contained, so chunk at block level. Signatures are the sync parsed spelling; the async and raw spellings take the same parameters (see sdk-map.md). **Type sources** names the module declaring each type an operation mentions, so resolving a body, return or error payload is a lookup rather than a search; the runtime types `RawError` and `ApiResult` are excluded.
 
@@ -18,10 +18,10 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `DirectionOrStr` | `maxio_advanced_billing/models/enums/direction.py` |
-| `EventKeyOrStr` | `maxio_advanced_billing/models/enums/event_key.py` |
-| `ListEventsDateFieldOrStr` | `maxio_advanced_billing/models/enums/list_events_date_field.py` |
-| `EventResponse` | `maxio_advanced_billing/models/event_response.py` |
+| `DirectionOrStr` | `maxio/models/enums/direction.py` |
+| `EventKeyOrStr` | `maxio/models/enums/event_key.py` |
+| `ListEventsDateFieldOrStr` | `maxio/models/enums/list_events_date_field.py` |
+| `EventResponse` | `maxio/models/event_response.py` |
 
 ### client.events.list_subscription_events
 
@@ -36,9 +36,9 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `DirectionOrStr` | `maxio_advanced_billing/models/enums/direction.py` |
-| `EventKeyOrStr` | `maxio_advanced_billing/models/enums/event_key.py` |
-| `EventResponse` | `maxio_advanced_billing/models/event_response.py` |
+| `DirectionOrStr` | `maxio/models/enums/direction.py` |
+| `EventKeyOrStr` | `maxio/models/enums/event_key.py` |
+| `EventResponse` | `maxio/models/event_response.py` |
 
 ### client.events.read_events_count
 
@@ -52,7 +52,7 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `DirectionOrStr` | `maxio_advanced_billing/models/enums/direction.py` |
-| `EventKeyOrStr` | `maxio_advanced_billing/models/enums/event_key.py` |
-| `CountResponse` | `maxio_advanced_billing/models/count_response.py` |
+| `DirectionOrStr` | `maxio/models/enums/direction.py` |
+| `EventKeyOrStr` | `maxio/models/enums/event_key.py` |
+| `CountResponse` | `maxio/models/count_response.py` |
 

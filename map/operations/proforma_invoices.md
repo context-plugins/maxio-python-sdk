@@ -2,7 +2,7 @@
 
 # ProformaInvoices — operations
 
-Accessor: `client.proforma_invoices` · Source: `maxio_advanced_billing/apis/proforma_invoices.py` · 10 operations
+Accessor: `client.proforma_invoices` · Source: `maxio/apis/proforma_invoices.py` · 10 operations
 
 Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omit what its invariants table covers and are otherwise self-contained, so chunk at block level. Signatures are the sync parsed spelling; the async and raw spellings take the same parameters (see sdk-map.md). **Type sources** names the module declaring each type an operation mentions, so resolving a body, return or error payload is a lookup rather than a search; the runtime types `RawError` and `ApiResult` are excluded.
 
@@ -20,8 +20,8 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CreateConsolidatedProformaInvoiceErrorBody` | `maxio_advanced_billing/errors/create_consolidated_proforma_invoice_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `CreateConsolidatedProformaInvoiceErrorBody` | `maxio/errors/create_consolidated_proforma_invoice_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.proforma_invoices.create_proforma_invoice
 
@@ -37,9 +37,9 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ProformaInvoice` | `maxio_advanced_billing/models/proforma_invoice.py` |
-| `CreateProformaInvoiceErrorBody` | `maxio_advanced_billing/errors/create_proforma_invoice_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `ProformaInvoice` | `maxio/models/proforma_invoice.py` |
+| `CreateProformaInvoiceErrorBody` | `maxio/errors/create_proforma_invoice_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.proforma_invoices.create_signup_proforma_invoice
 
@@ -54,12 +54,12 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CreateSubscriptionRequest` | `maxio_advanced_billing/models/create_subscription_request.py` |
-| `CreateSubscriptionRequestDict` | `maxio_advanced_billing/models/create_subscription_request.py` |
-| `ProformaInvoice` | `maxio_advanced_billing/models/proforma_invoice.py` |
-| `CreateSignupProformaInvoiceErrorBody` | `maxio_advanced_billing/errors/create_signup_proforma_invoice_error.py` |
-| `ProformaBadRequestErrorResponse1` | `maxio_advanced_billing/models/proforma_bad_request_error_response1.py` |
-| `ErrorArrayMapResponse1` | `maxio_advanced_billing/models/error_array_map_response1.py` |
+| `CreateSubscriptionRequest` | `maxio/models/create_subscription_request.py` |
+| `CreateSubscriptionRequestDict` | `maxio/models/create_subscription_request.py` |
+| `ProformaInvoice` | `maxio/models/proforma_invoice.py` |
+| `CreateSignupProformaInvoiceErrorBody` | `maxio/errors/create_signup_proforma_invoice_error.py` |
+| `ProformaBadRequestErrorResponse1` | `maxio/models/proforma_bad_request_error_response1.py` |
+| `ErrorArrayMapResponse1` | `maxio/models/error_array_map_response1.py` |
 
 ### client.proforma_invoices.deliver_proforma_invoice
 
@@ -75,11 +75,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `DeliverProformaInvoiceRequest` | `maxio_advanced_billing/models/deliver_proforma_invoice_request.py` |
-| `DeliverProformaInvoiceRequestDict` | `maxio_advanced_billing/models/deliver_proforma_invoice_request.py` |
-| `ProformaInvoice` | `maxio_advanced_billing/models/proforma_invoice.py` |
-| `DeliverProformaInvoiceErrorBody` | `maxio_advanced_billing/errors/deliver_proforma_invoice_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `DeliverProformaInvoiceRequest` | `maxio/models/deliver_proforma_invoice_request.py` |
+| `DeliverProformaInvoiceRequestDict` | `maxio/models/deliver_proforma_invoice_request.py` |
+| `ProformaInvoice` | `maxio/models/proforma_invoice.py` |
+| `DeliverProformaInvoiceErrorBody` | `maxio/errors/deliver_proforma_invoice_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.proforma_invoices.list_proforma_invoices
 
@@ -94,9 +94,9 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ProformaInvoiceStatusOrStr` | `maxio_advanced_billing/models/enums/proforma_invoice_status.py` |
-| `DirectionOrStr` | `maxio_advanced_billing/models/enums/direction.py` |
-| `ListProformaInvoicesResponse` | `maxio_advanced_billing/models/list_proforma_invoices_response.py` |
+| `ProformaInvoiceStatusOrStr` | `maxio/models/enums/proforma_invoice_status.py` |
+| `DirectionOrStr` | `maxio/models/enums/direction.py` |
+| `ListProformaInvoicesResponse` | `maxio/models/list_proforma_invoices_response.py` |
 
 ### client.proforma_invoices.list_subscription_group_proforma_invoices
 
@@ -112,8 +112,8 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ListProformaInvoicesResponse` | `maxio_advanced_billing/models/list_proforma_invoices_response.py` |
-| `ListSubscriptionGroupProformaInvoicesErrorBody` | `maxio_advanced_billing/errors/list_subscription_group_proforma_invoices_error.py` |
+| `ListProformaInvoicesResponse` | `maxio/models/list_proforma_invoices_response.py` |
+| `ListSubscriptionGroupProformaInvoicesErrorBody` | `maxio/errors/list_subscription_group_proforma_invoices_error.py` |
 
 ### client.proforma_invoices.preview_proforma_invoice
 
@@ -129,9 +129,9 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ProformaInvoice` | `maxio_advanced_billing/models/proforma_invoice.py` |
-| `PreviewProformaInvoiceErrorBody` | `maxio_advanced_billing/errors/preview_proforma_invoice_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `ProformaInvoice` | `maxio/models/proforma_invoice.py` |
+| `PreviewProformaInvoiceErrorBody` | `maxio/errors/preview_proforma_invoice_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.proforma_invoices.preview_signup_proforma_invoice
 
@@ -146,13 +146,13 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CreateSignupProformaPreviewIncludeOrStr` | `maxio_advanced_billing/models/enums/create_signup_proforma_preview_include.py` |
-| `CreateSubscriptionRequest` | `maxio_advanced_billing/models/create_subscription_request.py` |
-| `CreateSubscriptionRequestDict` | `maxio_advanced_billing/models/create_subscription_request.py` |
-| `SignupProformaPreviewResponse` | `maxio_advanced_billing/models/signup_proforma_preview_response.py` |
-| `PreviewSignupProformaInvoiceErrorBody` | `maxio_advanced_billing/errors/preview_signup_proforma_invoice_error.py` |
-| `ProformaBadRequestErrorResponse1` | `maxio_advanced_billing/models/proforma_bad_request_error_response1.py` |
-| `ErrorArrayMapResponse1` | `maxio_advanced_billing/models/error_array_map_response1.py` |
+| `CreateSignupProformaPreviewIncludeOrStr` | `maxio/models/enums/create_signup_proforma_preview_include.py` |
+| `CreateSubscriptionRequest` | `maxio/models/create_subscription_request.py` |
+| `CreateSubscriptionRequestDict` | `maxio/models/create_subscription_request.py` |
+| `SignupProformaPreviewResponse` | `maxio/models/signup_proforma_preview_response.py` |
+| `PreviewSignupProformaInvoiceErrorBody` | `maxio/errors/preview_signup_proforma_invoice_error.py` |
+| `ProformaBadRequestErrorResponse1` | `maxio/models/proforma_bad_request_error_response1.py` |
+| `ErrorArrayMapResponse1` | `maxio/models/error_array_map_response1.py` |
 
 ### client.proforma_invoices.read_proforma_invoice
 
@@ -168,8 +168,8 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ProformaInvoice` | `maxio_advanced_billing/models/proforma_invoice.py` |
-| `ReadProformaInvoiceErrorBody` | `maxio_advanced_billing/errors/read_proforma_invoice_error.py` |
+| `ProformaInvoice` | `maxio/models/proforma_invoice.py` |
+| `ReadProformaInvoiceErrorBody` | `maxio/errors/read_proforma_invoice_error.py` |
 
 ### client.proforma_invoices.void_proforma_invoice
 
@@ -185,9 +185,9 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `VoidInvoiceRequest` | `maxio_advanced_billing/models/void_invoice_request.py` |
-| `VoidInvoiceRequestDict` | `maxio_advanced_billing/models/void_invoice_request.py` |
-| `ProformaInvoice` | `maxio_advanced_billing/models/proforma_invoice.py` |
-| `VoidProformaInvoiceErrorBody` | `maxio_advanced_billing/errors/void_proforma_invoice_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `VoidInvoiceRequest` | `maxio/models/void_invoice_request.py` |
+| `VoidInvoiceRequestDict` | `maxio/models/void_invoice_request.py` |
+| `ProformaInvoice` | `maxio/models/proforma_invoice.py` |
+| `VoidProformaInvoiceErrorBody` | `maxio/errors/void_proforma_invoice_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 

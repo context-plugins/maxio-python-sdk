@@ -40,7 +40,7 @@ from .apis.subscription_status import SubscriptionStatus
 from .apis.subscriptions import Subscriptions
 from .apis.webhooks import Webhooks
 from .auth import AuthSchemes
-from .base_client import DEFAULT_TIMEOUT, BaseMaxioAdvancedBillingClient
+from .base_client import DEFAULT_TIMEOUT, BaseMaxioClient
 from .core import (
     BasicAuthCredentials,
     BasicAuthCredentialsOrDict,
@@ -55,7 +55,7 @@ from .server.environment import Environment
 from .server.server_config import ServerConfigOrDict
 
 
-class MaxioAdvancedBillingClient(BaseMaxioAdvancedBillingClient[RawClient]):
+class MaxioClient(BaseMaxioClient[RawClient]):
     def __init__(
         self,
         *,
@@ -223,4 +223,4 @@ class MaxioAdvancedBillingClient(BaseMaxioAdvancedBillingClient[RawClient]):
         self.close()
 
 
-Client = MaxioAdvancedBillingClient
+Client = MaxioClient

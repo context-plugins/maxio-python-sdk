@@ -2,7 +2,7 @@
 
 # ReasonCodes — operations
 
-Accessor: `client.reason_codes` · Source: `maxio_advanced_billing/apis/reason_codes.py` · 5 operations
+Accessor: `client.reason_codes` · Source: `maxio/apis/reason_codes.py` · 5 operations
 
 Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omit what its invariants table covers and are otherwise self-contained, so chunk at block level. Signatures are the sync parsed spelling; the async and raw spellings take the same parameters (see sdk-map.md). **Type sources** names the module declaring each type an operation mentions, so resolving a body, return or error payload is a lookup rather than a search; the runtime types `RawError` and `ApiResult` are excluded.
 
@@ -19,11 +19,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CreateReasonCodeRequest` | `maxio_advanced_billing/models/create_reason_code_request.py` |
-| `CreateReasonCodeRequestDict` | `maxio_advanced_billing/models/create_reason_code_request.py` |
-| `ReasonCodeResponse` | `maxio_advanced_billing/models/reason_code_response.py` |
-| `CreateReasonCodeErrorBody` | `maxio_advanced_billing/errors/create_reason_code_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `CreateReasonCodeRequest` | `maxio/models/create_reason_code_request.py` |
+| `CreateReasonCodeRequestDict` | `maxio/models/create_reason_code_request.py` |
+| `ReasonCodeResponse` | `maxio/models/reason_code_response.py` |
+| `CreateReasonCodeErrorBody` | `maxio/errors/create_reason_code_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.reason_codes.delete_reason_code
 
@@ -39,8 +39,8 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `OkResponse` | `maxio_advanced_billing/models/ok_response.py` |
-| `DeleteReasonCodeErrorBody` | `maxio_advanced_billing/errors/delete_reason_code_error.py` |
+| `OkResponse` | `maxio/models/ok_response.py` |
+| `DeleteReasonCodeErrorBody` | `maxio/errors/delete_reason_code_error.py` |
 
 ### client.reason_codes.list_reason_codes
 
@@ -55,9 +55,9 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ReasonCodeResponse` | `maxio_advanced_billing/models/reason_code_response.py` |
-| `ListReasonCodesErrorBody` | `maxio_advanced_billing/errors/list_reason_codes_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `ReasonCodeResponse` | `maxio/models/reason_code_response.py` |
+| `ListReasonCodesErrorBody` | `maxio/errors/list_reason_codes_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.reason_codes.read_reason_code
 
@@ -73,8 +73,8 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ReasonCodeResponse` | `maxio_advanced_billing/models/reason_code_response.py` |
-| `ReadReasonCodeErrorBody` | `maxio_advanced_billing/errors/read_reason_code_error.py` |
+| `ReasonCodeResponse` | `maxio/models/reason_code_response.py` |
+| `ReadReasonCodeErrorBody` | `maxio/errors/read_reason_code_error.py` |
 
 ### client.reason_codes.update_reason_code
 
@@ -90,9 +90,9 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `UpdateReasonCodeRequest` | `maxio_advanced_billing/models/update_reason_code_request.py` |
-| `UpdateReasonCodeRequestDict` | `maxio_advanced_billing/models/update_reason_code_request.py` |
-| `ReasonCodeResponse` | `maxio_advanced_billing/models/reason_code_response.py` |
-| `UpdateReasonCodeErrorBody` | `maxio_advanced_billing/errors/update_reason_code_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `UpdateReasonCodeRequest` | `maxio/models/update_reason_code_request.py` |
+| `UpdateReasonCodeRequestDict` | `maxio/models/update_reason_code_request.py` |
+| `ReasonCodeResponse` | `maxio/models/reason_code_response.py` |
+| `UpdateReasonCodeErrorBody` | `maxio/errors/update_reason_code_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 

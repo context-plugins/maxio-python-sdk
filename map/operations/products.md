@@ -2,7 +2,7 @@
 
 # Products — operations
 
-Accessor: `client.products` · Source: `maxio_advanced_billing/apis/products.py` · 6 operations
+Accessor: `client.products` · Source: `maxio/apis/products.py` · 6 operations
 
 Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omit what its invariants table covers and are otherwise self-contained, so chunk at block level. Signatures are the sync parsed spelling; the async and raw spellings take the same parameters (see sdk-map.md). **Type sources** names the module declaring each type an operation mentions, so resolving a body, return or error payload is a lookup rather than a search; the runtime types `RawError` and `ApiResult` are excluded.
 
@@ -20,9 +20,9 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ProductResponse` | `maxio_advanced_billing/models/product_response.py` |
-| `ArchiveProductErrorBody` | `maxio_advanced_billing/errors/archive_product_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `ProductResponse` | `maxio/models/product_response.py` |
+| `ArchiveProductErrorBody` | `maxio/errors/archive_product_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.products.create_product
 
@@ -38,11 +38,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CreateOrUpdateProductRequest` | `maxio_advanced_billing/models/create_or_update_product_request.py` |
-| `CreateOrUpdateProductRequestDict` | `maxio_advanced_billing/models/create_or_update_product_request.py` |
-| `ProductResponse` | `maxio_advanced_billing/models/product_response.py` |
-| `CreateProductErrorBody` | `maxio_advanced_billing/errors/create_product_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `CreateOrUpdateProductRequest` | `maxio/models/create_or_update_product_request.py` |
+| `CreateOrUpdateProductRequestDict` | `maxio/models/create_or_update_product_request.py` |
+| `ProductResponse` | `maxio/models/product_response.py` |
+| `CreateProductErrorBody` | `maxio/errors/create_product_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.products.list_products
 
@@ -56,11 +56,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `BasicDateFieldOrStr` | `maxio_advanced_billing/models/enums/basic_date_field.py` |
-| `ListProductsFilter` | `maxio_advanced_billing/models/list_products_filter.py` |
-| `ListProductsFilterDict` | `maxio_advanced_billing/models/list_products_filter.py` |
-| `ListProductsIncludeOrStr` | `maxio_advanced_billing/models/enums/list_products_include.py` |
-| `ProductResponse` | `maxio_advanced_billing/models/product_response.py` |
+| `BasicDateFieldOrStr` | `maxio/models/enums/basic_date_field.py` |
+| `ListProductsFilter` | `maxio/models/list_products_filter.py` |
+| `ListProductsFilterDict` | `maxio/models/list_products_filter.py` |
+| `ListProductsIncludeOrStr` | `maxio/models/enums/list_products_include.py` |
+| `ProductResponse` | `maxio/models/product_response.py` |
 
 ### client.products.read_product
 
@@ -75,7 +75,7 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ProductResponse` | `maxio_advanced_billing/models/product_response.py` |
+| `ProductResponse` | `maxio/models/product_response.py` |
 
 ### client.products.read_product_by_handle
 
@@ -90,7 +90,7 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ProductResponse` | `maxio_advanced_billing/models/product_response.py` |
+| `ProductResponse` | `maxio/models/product_response.py` |
 
 ### client.products.update_product
 
@@ -106,9 +106,9 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CreateOrUpdateProductRequest` | `maxio_advanced_billing/models/create_or_update_product_request.py` |
-| `CreateOrUpdateProductRequestDict` | `maxio_advanced_billing/models/create_or_update_product_request.py` |
-| `ProductResponse` | `maxio_advanced_billing/models/product_response.py` |
-| `UpdateProductErrorBody` | `maxio_advanced_billing/errors/update_product_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `CreateOrUpdateProductRequest` | `maxio/models/create_or_update_product_request.py` |
+| `CreateOrUpdateProductRequestDict` | `maxio/models/create_or_update_product_request.py` |
+| `ProductResponse` | `maxio/models/product_response.py` |
+| `UpdateProductErrorBody` | `maxio/errors/update_product_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 

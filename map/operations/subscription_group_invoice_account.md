@@ -2,7 +2,7 @@
 
 # SubscriptionGroupInvoiceAccount — operations
 
-Accessor: `client.subscription_group_invoice_account` · Source: `maxio_advanced_billing/apis/subscription_group_invoice_account.py` · 4 operations
+Accessor: `client.subscription_group_invoice_account` · Source: `maxio/apis/subscription_group_invoice_account.py` · 4 operations
 
 Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omit what its invariants table covers and are otherwise self-contained, so chunk at block level. Signatures are the sync parsed spelling; the async and raw spellings take the same parameters (see sdk-map.md). **Type sources** names the module declaring each type an operation mentions, so resolving a body, return or error payload is a lookup rather than a search; the runtime types `RawError` and `ApiResult` are excluded.
 
@@ -20,11 +20,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `SubscriptionGroupPrepaymentRequest` | `maxio_advanced_billing/models/subscription_group_prepayment_request.py` |
-| `SubscriptionGroupPrepaymentRequestDict` | `maxio_advanced_billing/models/subscription_group_prepayment_request.py` |
-| `SubscriptionGroupPrepaymentResponse` | `maxio_advanced_billing/models/subscription_group_prepayment_response.py` |
-| `CreateSubscriptionGroupPrepaymentErrorBody` | `maxio_advanced_billing/errors/create_subscription_group_prepayment_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `SubscriptionGroupPrepaymentRequest` | `maxio/models/subscription_group_prepayment_request.py` |
+| `SubscriptionGroupPrepaymentRequestDict` | `maxio/models/subscription_group_prepayment_request.py` |
+| `SubscriptionGroupPrepaymentResponse` | `maxio/models/subscription_group_prepayment_response.py` |
+| `CreateSubscriptionGroupPrepaymentErrorBody` | `maxio/errors/create_subscription_group_prepayment_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.subscription_group_invoice_account.deduct_subscription_group_service_credit
 
@@ -40,11 +40,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `DeductServiceCreditRequest` | `maxio_advanced_billing/models/deduct_service_credit_request.py` |
-| `DeductServiceCreditRequestDict` | `maxio_advanced_billing/models/deduct_service_credit_request.py` |
-| `ServiceCredit` | `maxio_advanced_billing/models/service_credit.py` |
-| `DeductSubscriptionGroupServiceCreditErrorBody` | `maxio_advanced_billing/errors/deduct_subscription_group_service_credit_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `DeductServiceCreditRequest` | `maxio/models/deduct_service_credit_request.py` |
+| `DeductServiceCreditRequestDict` | `maxio/models/deduct_service_credit_request.py` |
+| `ServiceCredit` | `maxio/models/service_credit.py` |
+| `DeductSubscriptionGroupServiceCreditErrorBody` | `maxio/errors/deduct_subscription_group_service_credit_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.subscription_group_invoice_account.issue_subscription_group_service_credit
 
@@ -60,11 +60,11 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `IssueServiceCreditRequest` | `maxio_advanced_billing/models/issue_service_credit_request.py` |
-| `IssueServiceCreditRequestDict` | `maxio_advanced_billing/models/issue_service_credit_request.py` |
-| `ServiceCreditResponse` | `maxio_advanced_billing/models/service_credit_response.py` |
-| `IssueSubscriptionGroupServiceCreditErrorBody` | `maxio_advanced_billing/errors/issue_subscription_group_service_credit_error.py` |
-| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
+| `IssueServiceCreditRequest` | `maxio/models/issue_service_credit_request.py` |
+| `IssueServiceCreditRequestDict` | `maxio/models/issue_service_credit_request.py` |
+| `ServiceCreditResponse` | `maxio/models/service_credit_response.py` |
+| `IssueSubscriptionGroupServiceCreditErrorBody` | `maxio/errors/issue_subscription_group_service_credit_error.py` |
+| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
 
 ### client.subscription_group_invoice_account.list_prepayments_for_subscription_group
 
@@ -80,8 +80,8 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ListPrepaymentsFilter` | `maxio_advanced_billing/models/list_prepayments_filter.py` |
-| `ListPrepaymentsFilterDict` | `maxio_advanced_billing/models/list_prepayments_filter.py` |
-| `ListSubscriptionGroupPrepaymentResponse` | `maxio_advanced_billing/models/list_subscription_group_prepayment_response.py` |
-| `ListPrepaymentsForSubscriptionGroupErrorBody` | `maxio_advanced_billing/errors/list_prepayments_for_subscription_group_error.py` |
+| `ListPrepaymentsFilter` | `maxio/models/list_prepayments_filter.py` |
+| `ListPrepaymentsFilterDict` | `maxio/models/list_prepayments_filter.py` |
+| `ListSubscriptionGroupPrepaymentResponse` | `maxio/models/list_subscription_group_prepayment_response.py` |
+| `ListPrepaymentsForSubscriptionGroupErrorBody` | `maxio/errors/list_prepayments_for_subscription_group_error.py` |
 

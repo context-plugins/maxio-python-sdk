@@ -40,7 +40,7 @@ from .apis.subscription_status import AsyncSubscriptionStatus
 from .apis.subscriptions import AsyncSubscriptions
 from .apis.webhooks import AsyncWebhooks
 from .auth import AsyncAuthSchemes
-from .base_client import DEFAULT_TIMEOUT, BaseMaxioAdvancedBillingClient
+from .base_client import DEFAULT_TIMEOUT, BaseMaxioClient
 from .core import (
     AsyncHttpClient,
     AsyncHttpxClient,
@@ -55,7 +55,7 @@ from .server.environment import Environment
 from .server.server_config import ServerConfigOrDict
 
 
-class AsyncMaxioAdvancedBillingClient(BaseMaxioAdvancedBillingClient[AsyncRawClient]):
+class AsyncMaxioClient(BaseMaxioClient[AsyncRawClient]):
     def __init__(
         self,
         *,
@@ -225,4 +225,4 @@ class AsyncMaxioAdvancedBillingClient(BaseMaxioAdvancedBillingClient[AsyncRawCli
         await self.aclose()
 
 
-AsyncClient = AsyncMaxioAdvancedBillingClient
+AsyncClient = AsyncMaxioClient
