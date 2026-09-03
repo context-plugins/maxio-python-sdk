@@ -2,13 +2,14 @@
 
 # ComponentPricePoints — operations
 
-Accessor: `client.component_price_points` · Source: `maxio/apis/component_price_points.py` · 12 operations
+Accessor: `client.component_price_points` · Source: `maxio_advanced_billing/apis/component_price_points.py` · 12 operations
 
 Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omit what its invariants table covers and are otherwise self-contained, so chunk at block level. Signatures are the sync parsed spelling; the async and raw spellings take the same parameters (see sdk-map.md). **Type sources** names the module declaring each type an operation mentions, so resolving a body, return or error payload is a lookup rather than a search; the runtime types `RawError` and `ApiResult` are excluded.
 
 ### client.component_price_points.archive_component_price_point
 
 - **Route**: `DELETE /components/{component_id}/price_points/{price_point_id}.json`
+- **Auth**: `basic_auth` OR `bearer_auth`
 - **Server**: `production`
 - **Signature**: `def archive_component_price_point(component_id: ComponentIdModel | ComponentIdModelDict, price_point_id: PricePointIdModel | PricePointIdModelDict, *, request_options: RequestOptionsOrDict | None = None)`
   - required, positional: `component_id`, `price_point_id`
@@ -20,17 +21,18 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ComponentIdModel` | `maxio/models/unions/component_id_model.py` |
-| `ComponentIdModelDict` | `maxio/models/unions/component_id_model.py` |
-| `PricePointIdModel` | `maxio/models/unions/price_point_id_model.py` |
-| `PricePointIdModelDict` | `maxio/models/unions/price_point_id_model.py` |
-| `ComponentPricePointResponse` | `maxio/models/component_price_point_response.py` |
-| `ArchiveComponentPricePointErrorBody` | `maxio/errors/archive_component_price_point_error.py` |
-| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
+| `ComponentIdModel` | `maxio_advanced_billing/models/unions/component_id_model.py` |
+| `ComponentIdModelDict` | `maxio_advanced_billing/models/unions/component_id_model.py` |
+| `PricePointIdModel` | `maxio_advanced_billing/models/unions/price_point_id_model.py` |
+| `PricePointIdModelDict` | `maxio_advanced_billing/models/unions/price_point_id_model.py` |
+| `ComponentPricePointResponse` | `maxio_advanced_billing/models/component_price_point_response.py` |
+| `ArchiveComponentPricePointErrorBody` | `maxio_advanced_billing/errors/archive_component_price_point_error.py` |
+| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
 
 ### client.component_price_points.bulk_create_component_price_points
 
 - **Route**: `POST /components/{component_id}/price_points/bulk.json`
+- **Auth**: `basic_auth` OR `bearer_auth`
 - **Server**: `production`
 - **Signature**: `def bulk_create_component_price_points(component_id: str, *, body: CreateComponentPricePointsRequest | CreateComponentPricePointsRequestDict | None = None, request_options: RequestOptionsOrDict | None = None)`
   - required, positional: `component_id`
@@ -42,15 +44,16 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CreateComponentPricePointsRequest` | `maxio/models/create_component_price_points_request.py` |
-| `CreateComponentPricePointsRequestDict` | `maxio/models/create_component_price_points_request.py` |
-| `ComponentPricePointsResponse` | `maxio/models/component_price_points_response.py` |
-| `BulkCreateComponentPricePointsErrorBody` | `maxio/errors/bulk_create_component_price_points_error.py` |
-| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
+| `CreateComponentPricePointsRequest` | `maxio_advanced_billing/models/create_component_price_points_request.py` |
+| `CreateComponentPricePointsRequestDict` | `maxio_advanced_billing/models/create_component_price_points_request.py` |
+| `ComponentPricePointsResponse` | `maxio_advanced_billing/models/component_price_points_response.py` |
+| `BulkCreateComponentPricePointsErrorBody` | `maxio_advanced_billing/errors/bulk_create_component_price_points_error.py` |
+| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
 
 ### client.component_price_points.clone_component_price_point
 
 - **Route**: `POST /components/{component_id}/price_points/{price_point_id}/clone.json`
+- **Auth**: `basic_auth` OR `bearer_auth`
 - **Server**: `production`
 - **Signature**: `def clone_component_price_point(component_id: ComponentIdModel | ComponentIdModelDict, price_point_id: PricePointIdModel | PricePointIdModelDict, *, body: CloneComponentPricePointRequest | CloneComponentPricePointRequestDict | None = None, request_options: RequestOptionsOrDict | None = None)`
   - required, positional: `component_id`, `price_point_id`
@@ -62,19 +65,20 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ComponentIdModel` | `maxio/models/unions/component_id_model.py` |
-| `ComponentIdModelDict` | `maxio/models/unions/component_id_model.py` |
-| `PricePointIdModel` | `maxio/models/unions/price_point_id_model.py` |
-| `PricePointIdModelDict` | `maxio/models/unions/price_point_id_model.py` |
-| `CloneComponentPricePointRequest` | `maxio/models/clone_component_price_point_request.py` |
-| `CloneComponentPricePointRequestDict` | `maxio/models/clone_component_price_point_request.py` |
-| `ComponentPricePointCurrencyOverageResponse` | `maxio/models/component_price_point_currency_overage_response.py` |
-| `CloneComponentPricePointErrorBody` | `maxio/errors/clone_component_price_point_error.py` |
-| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
+| `ComponentIdModel` | `maxio_advanced_billing/models/unions/component_id_model.py` |
+| `ComponentIdModelDict` | `maxio_advanced_billing/models/unions/component_id_model.py` |
+| `PricePointIdModel` | `maxio_advanced_billing/models/unions/price_point_id_model.py` |
+| `PricePointIdModelDict` | `maxio_advanced_billing/models/unions/price_point_id_model.py` |
+| `CloneComponentPricePointRequest` | `maxio_advanced_billing/models/clone_component_price_point_request.py` |
+| `CloneComponentPricePointRequestDict` | `maxio_advanced_billing/models/clone_component_price_point_request.py` |
+| `ComponentPricePointCurrencyOverageResponse` | `maxio_advanced_billing/models/component_price_point_currency_overage_response.py` |
+| `CloneComponentPricePointErrorBody` | `maxio_advanced_billing/errors/clone_component_price_point_error.py` |
+| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
 
 ### client.component_price_points.create_component_price_point
 
 - **Route**: `POST /components/{component_id}/price_points.json`
+- **Auth**: `basic_auth` OR `bearer_auth`
 - **Server**: `production`
 - **Signature**: `def create_component_price_point(component_id: int, *, body: CreateComponentPricePointRequest | CreateComponentPricePointRequestDict | None = None, request_options: RequestOptionsOrDict | None = None)`
   - required, positional: `component_id`
@@ -86,15 +90,16 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CreateComponentPricePointRequest` | `maxio/models/create_component_price_point_request.py` |
-| `CreateComponentPricePointRequestDict` | `maxio/models/create_component_price_point_request.py` |
-| `ComponentPricePointResponse` | `maxio/models/component_price_point_response.py` |
-| `CreateComponentPricePointErrorBody` | `maxio/errors/create_component_price_point_error.py` |
-| `ErrorArrayMapResponse1` | `maxio/models/error_array_map_response1.py` |
+| `CreateComponentPricePointRequest` | `maxio_advanced_billing/models/create_component_price_point_request.py` |
+| `CreateComponentPricePointRequestDict` | `maxio_advanced_billing/models/create_component_price_point_request.py` |
+| `ComponentPricePointResponse` | `maxio_advanced_billing/models/component_price_point_response.py` |
+| `CreateComponentPricePointErrorBody` | `maxio_advanced_billing/errors/create_component_price_point_error.py` |
+| `ErrorArrayMapResponse1` | `maxio_advanced_billing/models/error_array_map_response1.py` |
 
 ### client.component_price_points.create_currency_prices
 
 - **Route**: `POST /price_points/{price_point_id}/currency_prices.json`
+- **Auth**: `basic_auth` OR `bearer_auth`
 - **Server**: `production`
 - **Signature**: `def create_currency_prices(price_point_id: int, *, body: CreateCurrencyPricesRequest | CreateCurrencyPricesRequestDict | None = None, request_options: RequestOptionsOrDict | None = None)`
   - required, positional: `price_point_id`
@@ -106,15 +111,16 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CreateCurrencyPricesRequest` | `maxio/models/create_currency_prices_request.py` |
-| `CreateCurrencyPricesRequestDict` | `maxio/models/create_currency_prices_request.py` |
-| `ComponentCurrencyPricesResponse` | `maxio/models/component_currency_prices_response.py` |
-| `CreateCurrencyPricesErrorBody` | `maxio/errors/create_currency_prices_error.py` |
-| `ErrorArrayMapResponse1` | `maxio/models/error_array_map_response1.py` |
+| `CreateCurrencyPricesRequest` | `maxio_advanced_billing/models/create_currency_prices_request.py` |
+| `CreateCurrencyPricesRequestDict` | `maxio_advanced_billing/models/create_currency_prices_request.py` |
+| `ComponentCurrencyPricesResponse` | `maxio_advanced_billing/models/component_currency_prices_response.py` |
+| `CreateCurrencyPricesErrorBody` | `maxio_advanced_billing/errors/create_currency_prices_error.py` |
+| `ErrorArrayMapResponse1` | `maxio_advanced_billing/models/error_array_map_response1.py` |
 
 ### client.component_price_points.list_all_component_price_points
 
 - **Route**: `GET /components_price_points.json`
+- **Auth**: `basic_auth` OR `bearer_auth`
 - **Server**: `production`
 - **Signature**: `def list_all_component_price_points(*, include: ListComponentsPricePointsIncludeOrStr | None = None, page: int | None = 1, per_page: int | None = 20, direction: SortingDirectionOrStr | None = None, filter: ListPricePointsFilter | ListPricePointsFilterDict | None = None, request_options: RequestOptionsOrDict | None = None)`
 - **Params**: `include` — query · `page` — query · `per_page` — query · `direction` — query · `filter` — query
@@ -125,17 +131,18 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ListComponentsPricePointsIncludeOrStr` | `maxio/models/enums/list_components_price_points_include.py` |
-| `SortingDirectionOrStr` | `maxio/models/enums/sorting_direction.py` |
-| `ListPricePointsFilter` | `maxio/models/list_price_points_filter.py` |
-| `ListPricePointsFilterDict` | `maxio/models/list_price_points_filter.py` |
-| `ListComponentsPricePointsResponse` | `maxio/models/list_components_price_points_response.py` |
-| `ListAllComponentPricePointsErrorBody` | `maxio/errors/list_all_component_price_points_error.py` |
-| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
+| `ListComponentsPricePointsIncludeOrStr` | `maxio_advanced_billing/models/enums/list_components_price_points_include.py` |
+| `SortingDirectionOrStr` | `maxio_advanced_billing/models/enums/sorting_direction.py` |
+| `ListPricePointsFilter` | `maxio_advanced_billing/models/list_price_points_filter.py` |
+| `ListPricePointsFilterDict` | `maxio_advanced_billing/models/list_price_points_filter.py` |
+| `ListComponentsPricePointsResponse` | `maxio_advanced_billing/models/list_components_price_points_response.py` |
+| `ListAllComponentPricePointsErrorBody` | `maxio_advanced_billing/errors/list_all_component_price_points_error.py` |
+| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
 
 ### client.component_price_points.list_component_price_points
 
 - **Route**: `GET /components/{component_id}/price_points.json`
+- **Auth**: `basic_auth` OR `bearer_auth`
 - **Server**: `production`
 - **Signature**: `def list_component_price_points(component_id: int, *, currency_prices: bool | None = None, page: int | None = 1, per_page: int | None = 20, filter_type: list[PricePointTypeOrStr] | None = None, request_options: RequestOptionsOrDict | None = None)`
   - required, positional: `component_id`
@@ -146,12 +153,13 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `PricePointTypeOrStr` | `maxio/models/enums/price_point_type.py` |
-| `ComponentPricePointsResponse` | `maxio/models/component_price_points_response.py` |
+| `PricePointTypeOrStr` | `maxio_advanced_billing/models/enums/price_point_type.py` |
+| `ComponentPricePointsResponse` | `maxio_advanced_billing/models/component_price_points_response.py` |
 
 ### client.component_price_points.promote_component_price_point_to_default
 
 - **Route**: `PUT /components/{component_id}/price_points/{price_point_id}/default.json`
+- **Auth**: `basic_auth` OR `bearer_auth`
 - **Server**: `production`
 - **Signature**: `def promote_component_price_point_to_default(component_id: int, price_point_id: int, *, request_options: RequestOptionsOrDict | None = None)`
   - required, positional: `component_id`, `price_point_id`
@@ -162,11 +170,12 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ComponentResponse` | `maxio/models/component_response.py` |
+| `ComponentResponse` | `maxio_advanced_billing/models/component_response.py` |
 
 ### client.component_price_points.read_component_price_point
 
 - **Route**: `GET /components/{component_id}/price_points/{price_point_id}.json`
+- **Auth**: `basic_auth` OR `bearer_auth`
 - **Server**: `production`
 - **Signature**: `def read_component_price_point(component_id: ComponentIdModel | ComponentIdModelDict, price_point_id: PricePointIdModel | PricePointIdModelDict, *, currency_prices: bool | None = None, request_options: RequestOptionsOrDict | None = None)`
   - required, positional: `component_id`, `price_point_id`
@@ -177,15 +186,16 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ComponentIdModel` | `maxio/models/unions/component_id_model.py` |
-| `ComponentIdModelDict` | `maxio/models/unions/component_id_model.py` |
-| `PricePointIdModel` | `maxio/models/unions/price_point_id_model.py` |
-| `PricePointIdModelDict` | `maxio/models/unions/price_point_id_model.py` |
-| `ComponentPricePointCurrencyOverageResponse` | `maxio/models/component_price_point_currency_overage_response.py` |
+| `ComponentIdModel` | `maxio_advanced_billing/models/unions/component_id_model.py` |
+| `ComponentIdModelDict` | `maxio_advanced_billing/models/unions/component_id_model.py` |
+| `PricePointIdModel` | `maxio_advanced_billing/models/unions/price_point_id_model.py` |
+| `PricePointIdModelDict` | `maxio_advanced_billing/models/unions/price_point_id_model.py` |
+| `ComponentPricePointCurrencyOverageResponse` | `maxio_advanced_billing/models/component_price_point_currency_overage_response.py` |
 
 ### client.component_price_points.unarchive_component_price_point
 
 - **Route**: `PUT /components/{component_id}/price_points/{price_point_id}/unarchive.json`
+- **Auth**: `basic_auth` OR `bearer_auth`
 - **Server**: `production`
 - **Signature**: `def unarchive_component_price_point(component_id: int, price_point_id: int, *, request_options: RequestOptionsOrDict | None = None)`
   - required, positional: `component_id`, `price_point_id`
@@ -196,11 +206,12 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ComponentPricePointResponse` | `maxio/models/component_price_point_response.py` |
+| `ComponentPricePointResponse` | `maxio_advanced_billing/models/component_price_point_response.py` |
 
 ### client.component_price_points.update_component_price_point
 
 - **Route**: `PUT /components/{component_id}/price_points/{price_point_id}.json`
+- **Auth**: `basic_auth` OR `bearer_auth`
 - **Server**: `production`
 - **Signature**: `def update_component_price_point(component_id: ComponentIdModel | ComponentIdModelDict, price_point_id: PricePointIdModel | PricePointIdModelDict, *, body: UpdateComponentPricePointRequest | UpdateComponentPricePointRequestDict | None = None, request_options: RequestOptionsOrDict | None = None)`
   - required, positional: `component_id`, `price_point_id`
@@ -212,19 +223,20 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ComponentIdModel` | `maxio/models/unions/component_id_model.py` |
-| `ComponentIdModelDict` | `maxio/models/unions/component_id_model.py` |
-| `PricePointIdModel` | `maxio/models/unions/price_point_id_model.py` |
-| `PricePointIdModelDict` | `maxio/models/unions/price_point_id_model.py` |
-| `UpdateComponentPricePointRequest` | `maxio/models/update_component_price_point_request.py` |
-| `UpdateComponentPricePointRequestDict` | `maxio/models/update_component_price_point_request.py` |
-| `ComponentPricePointResponse` | `maxio/models/component_price_point_response.py` |
-| `UpdateComponentPricePointErrorBody` | `maxio/errors/update_component_price_point_error.py` |
-| `ErrorArrayMapResponse1` | `maxio/models/error_array_map_response1.py` |
+| `ComponentIdModel` | `maxio_advanced_billing/models/unions/component_id_model.py` |
+| `ComponentIdModelDict` | `maxio_advanced_billing/models/unions/component_id_model.py` |
+| `PricePointIdModel` | `maxio_advanced_billing/models/unions/price_point_id_model.py` |
+| `PricePointIdModelDict` | `maxio_advanced_billing/models/unions/price_point_id_model.py` |
+| `UpdateComponentPricePointRequest` | `maxio_advanced_billing/models/update_component_price_point_request.py` |
+| `UpdateComponentPricePointRequestDict` | `maxio_advanced_billing/models/update_component_price_point_request.py` |
+| `ComponentPricePointResponse` | `maxio_advanced_billing/models/component_price_point_response.py` |
+| `UpdateComponentPricePointErrorBody` | `maxio_advanced_billing/errors/update_component_price_point_error.py` |
+| `ErrorArrayMapResponse1` | `maxio_advanced_billing/models/error_array_map_response1.py` |
 
 ### client.component_price_points.update_currency_prices
 
 - **Route**: `PUT /price_points/{price_point_id}/currency_prices.json`
+- **Auth**: `basic_auth` OR `bearer_auth`
 - **Server**: `production`
 - **Signature**: `def update_currency_prices(price_point_id: int, *, body: UpdateCurrencyPricesRequest | UpdateCurrencyPricesRequestDict | None = None, request_options: RequestOptionsOrDict | None = None)`
   - required, positional: `price_point_id`
@@ -236,9 +248,9 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `UpdateCurrencyPricesRequest` | `maxio/models/update_currency_prices_request.py` |
-| `UpdateCurrencyPricesRequestDict` | `maxio/models/update_currency_prices_request.py` |
-| `ComponentCurrencyPricesResponse` | `maxio/models/component_currency_prices_response.py` |
-| `UpdateCurrencyPricesErrorBody` | `maxio/errors/update_currency_prices_error.py` |
-| `ErrorArrayMapResponse1` | `maxio/models/error_array_map_response1.py` |
+| `UpdateCurrencyPricesRequest` | `maxio_advanced_billing/models/update_currency_prices_request.py` |
+| `UpdateCurrencyPricesRequestDict` | `maxio_advanced_billing/models/update_currency_prices_request.py` |
+| `ComponentCurrencyPricesResponse` | `maxio_advanced_billing/models/component_currency_prices_response.py` |
+| `UpdateCurrencyPricesErrorBody` | `maxio_advanced_billing/errors/update_currency_prices_error.py` |
+| `ErrorArrayMapResponse1` | `maxio_advanced_billing/models/error_array_map_response1.py` |
 

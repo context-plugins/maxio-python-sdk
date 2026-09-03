@@ -1,5 +1,5 @@
 [project]
-name = "maxio"
+name = "maxio-advanced-billing"
 version = "1.0"
 description = "\nMaxio Advanced Billing (formerly Chargify) provides an HTTP-based API that conforms to the principles of REST.\nOne of the many reasons to use Advanced Billing is the immense feature set and [client libraries](page:development-tools/client-libraries).\nThe Maxio API returns JSON responses as the primary and recommended format, but XML is also provided as a backwards compatible option for merchants who require it.\n\n## Steps to make your first Maxio Advanced Billing API call\n\n1. [Sign-up](https://app.chargify.com/signup/maxio-billing-sandbox) or [log-in](https://app.chargify.com/login.html) to your [test site](https://maxio.zendesk.com/hc/en-us/articles/24250712113165-Testing-Overview) account.\n2. [Setup authentication](https://maxio.zendesk.com/hc/en-us/articles/24294819360525-API-Keys) credentials.\n3. [Submit an API request and verify the response](page:development-tools/client-libraries#make-your-first-maxio-advanced-billing-api-request).\n5. Test the Advanced Billing [integrations](https://www.maxio.com/integrations).\n\nNext, you can explore [authentication methods](page:introduction/authentication), [basic concepts](page:introduction/basic-concepts/connected-sites) for interacting with Advanced Billing via the API, and the entire set of [application-based documentation](https://docs.maxio.com/hc/en-us) to aid in your discovery of the product.\n\n### Request Example\n\nThe following example uses the curl command-line tool to make an API request.\n\n**Request**\n\n    curl -u <api_key>:x -H Accept:application/json -H Content-Type:application/json https://acme.chargify.com/subscriptions.json"
 authors = [
@@ -77,7 +77,7 @@ ignore = [
 
 [tool.mypy]
 python_version = "3.10"         # the supported floor, not whichever interpreter is local
-files = ["maxio"]
+files = ["maxio_advanced_billing"]
 strict = true
 warn_unreachable = true
 enable_error_code = ["redundant-expr", "truthy-bool", "ignore-without-code", "possibly-undefined"]

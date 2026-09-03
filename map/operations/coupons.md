@@ -2,13 +2,14 @@
 
 # Coupons — operations
 
-Accessor: `client.coupons` · Source: `maxio/apis/coupons.py` · 14 operations
+Accessor: `client.coupons` · Source: `maxio_advanced_billing/apis/coupons.py` · 14 operations
 
 Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omit what its invariants table covers and are otherwise self-contained, so chunk at block level. Signatures are the sync parsed spelling; the async and raw spellings take the same parameters (see sdk-map.md). **Type sources** names the module declaring each type an operation mentions, so resolving a body, return or error payload is a lookup rather than a search; the runtime types `RawError` and `ApiResult` are excluded.
 
 ### client.coupons.archive_coupon
 
 - **Route**: `DELETE /product_families/{product_family_id}/coupons/{coupon_id}.json`
+- **Auth**: `basic_auth` OR `bearer_auth`
 - **Server**: `production`
 - **Signature**: `def archive_coupon(product_family_id: int, coupon_id: int, *, request_options: RequestOptionsOrDict | None = None)`
   - required, positional: `product_family_id`, `coupon_id`
@@ -19,11 +20,12 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CouponResponse` | `maxio/models/coupon_response.py` |
+| `CouponResponse` | `maxio_advanced_billing/models/coupon_response.py` |
 
 ### client.coupons.create_coupon
 
 - **Route**: `POST /product_families/{product_family_id}/coupons.json`
+- **Auth**: `basic_auth` OR `bearer_auth`
 - **Server**: `production`
 - **Signature**: `def create_coupon(product_family_id: int, *, body: CouponRequest | CouponRequestDict | None = None, request_options: RequestOptionsOrDict | None = None)`
   - required, positional: `product_family_id`
@@ -35,15 +37,16 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CouponRequest` | `maxio/models/coupon_request.py` |
-| `CouponRequestDict` | `maxio/models/coupon_request.py` |
-| `CouponResponse` | `maxio/models/coupon_response.py` |
-| `CreateCouponErrorBody` | `maxio/errors/create_coupon_error.py` |
-| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
+| `CouponRequest` | `maxio_advanced_billing/models/coupon_request.py` |
+| `CouponRequestDict` | `maxio_advanced_billing/models/coupon_request.py` |
+| `CouponResponse` | `maxio_advanced_billing/models/coupon_response.py` |
+| `CreateCouponErrorBody` | `maxio_advanced_billing/errors/create_coupon_error.py` |
+| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
 
 ### client.coupons.create_coupon_subcodes
 
 - **Route**: `POST /coupons/{coupon_id}/codes.json`
+- **Auth**: `basic_auth` OR `bearer_auth`
 - **Server**: `production`
 - **Signature**: `def create_coupon_subcodes(coupon_id: int, *, body: CouponSubcodes | CouponSubcodesDict | None = None, request_options: RequestOptionsOrDict | None = None)`
   - required, positional: `coupon_id`
@@ -54,13 +57,14 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CouponSubcodes` | `maxio/models/coupon_subcodes.py` |
-| `CouponSubcodesDict` | `maxio/models/coupon_subcodes.py` |
-| `CouponSubcodesResponse` | `maxio/models/coupon_subcodes_response.py` |
+| `CouponSubcodes` | `maxio_advanced_billing/models/coupon_subcodes.py` |
+| `CouponSubcodesDict` | `maxio_advanced_billing/models/coupon_subcodes.py` |
+| `CouponSubcodesResponse` | `maxio_advanced_billing/models/coupon_subcodes_response.py` |
 
 ### client.coupons.create_or_update_coupon_currency_prices
 
 - **Route**: `PUT /coupons/{coupon_id}/currency_prices.json`
+- **Auth**: `basic_auth` OR `bearer_auth`
 - **Server**: `production`
 - **Signature**: `def create_or_update_coupon_currency_prices(coupon_id: int, *, body: CouponCurrencyRequest | CouponCurrencyRequestDict | None = None, request_options: RequestOptionsOrDict | None = None)`
   - required, positional: `coupon_id`
@@ -72,15 +76,16 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CouponCurrencyRequest` | `maxio/models/coupon_currency_request.py` |
-| `CouponCurrencyRequestDict` | `maxio/models/coupon_currency_request.py` |
-| `CouponCurrencyResponse` | `maxio/models/coupon_currency_response.py` |
-| `CreateOrUpdateCouponCurrencyPricesErrorBody` | `maxio/errors/create_or_update_coupon_currency_prices_error.py` |
-| `ErrorStringMapResponse1` | `maxio/models/error_string_map_response1.py` |
+| `CouponCurrencyRequest` | `maxio_advanced_billing/models/coupon_currency_request.py` |
+| `CouponCurrencyRequestDict` | `maxio_advanced_billing/models/coupon_currency_request.py` |
+| `CouponCurrencyResponse` | `maxio_advanced_billing/models/coupon_currency_response.py` |
+| `CreateOrUpdateCouponCurrencyPricesErrorBody` | `maxio_advanced_billing/errors/create_or_update_coupon_currency_prices_error.py` |
+| `ErrorStringMapResponse1` | `maxio_advanced_billing/models/error_string_map_response1.py` |
 
 ### client.coupons.delete_coupon_subcode
 
 - **Route**: `DELETE /coupons/{coupon_id}/codes/{subcode}.json`
+- **Auth**: `basic_auth` OR `bearer_auth`
 - **Server**: `production`
 - **Signature**: `def delete_coupon_subcode(coupon_id: int, subcode: str, *, request_options: RequestOptionsOrDict | None = None)`
   - required, positional: `coupon_id`, `subcode`
@@ -92,11 +97,12 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `DeleteCouponSubcodeErrorBody` | `maxio/errors/delete_coupon_subcode_error.py` |
+| `DeleteCouponSubcodeErrorBody` | `maxio_advanced_billing/errors/delete_coupon_subcode_error.py` |
 
 ### client.coupons.find_coupon
 
 - **Route**: `GET /coupons/find.json`
+- **Auth**: `basic_auth` OR `bearer_auth`
 - **Server**: `production`
 - **Signature**: `def find_coupon(*, product_family_id: int | None = None, code: str | None = None, currency_prices: bool | None = None, request_options: RequestOptionsOrDict | None = None)`
 - **Params**: `product_family_id` — query · `code` — query · `currency_prices` — query
@@ -106,11 +112,12 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CouponResponse` | `maxio/models/coupon_response.py` |
+| `CouponResponse` | `maxio_advanced_billing/models/coupon_response.py` |
 
 ### client.coupons.list_coupon_subcodes
 
 - **Route**: `GET /coupons/{coupon_id}/codes.json`
+- **Auth**: `basic_auth` OR `bearer_auth`
 - **Server**: `production`
 - **Signature**: `def list_coupon_subcodes(coupon_id: int, *, page: int | None = 1, per_page: int | None = 20, request_options: RequestOptionsOrDict | None = None)`
   - required, positional: `coupon_id`
@@ -121,11 +128,12 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CouponSubcodes` | `maxio/models/coupon_subcodes.py` |
+| `CouponSubcodes` | `maxio_advanced_billing/models/coupon_subcodes.py` |
 
 ### client.coupons.list_coupons
 
 - **Route**: `GET /coupons.json`
+- **Auth**: `basic_auth` OR `bearer_auth`
 - **Server**: `production`
 - **Signature**: `def list_coupons(*, page: int | None = 1, per_page: int | None = 30, filter: ListCouponsFilter | ListCouponsFilterDict | None = None, currency_prices: bool | None = None, request_options: RequestOptionsOrDict | None = None)`
 - **Params**: `page` — query · `per_page` — query · `filter` — query · `currency_prices` — query
@@ -135,13 +143,14 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ListCouponsFilter` | `maxio/models/list_coupons_filter.py` |
-| `ListCouponsFilterDict` | `maxio/models/list_coupons_filter.py` |
-| `CouponResponse` | `maxio/models/coupon_response.py` |
+| `ListCouponsFilter` | `maxio_advanced_billing/models/list_coupons_filter.py` |
+| `ListCouponsFilterDict` | `maxio_advanced_billing/models/list_coupons_filter.py` |
+| `CouponResponse` | `maxio_advanced_billing/models/coupon_response.py` |
 
 ### client.coupons.list_coupons_for_product_family
 
 - **Route**: `GET /product_families/{product_family_id}/coupons.json`
+- **Auth**: `basic_auth` OR `bearer_auth`
 - **Server**: `production`
 - **Signature**: `def list_coupons_for_product_family(product_family_id: int, *, page: int | None = 1, per_page: int | None = 30, filter: ListCouponsFilter | ListCouponsFilterDict | None = None, currency_prices: bool | None = None, request_options: RequestOptionsOrDict | None = None)`
   - required, positional: `product_family_id`
@@ -152,13 +161,14 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ListCouponsFilter` | `maxio/models/list_coupons_filter.py` |
-| `ListCouponsFilterDict` | `maxio/models/list_coupons_filter.py` |
-| `CouponResponse` | `maxio/models/coupon_response.py` |
+| `ListCouponsFilter` | `maxio_advanced_billing/models/list_coupons_filter.py` |
+| `ListCouponsFilterDict` | `maxio_advanced_billing/models/list_coupons_filter.py` |
+| `CouponResponse` | `maxio_advanced_billing/models/coupon_response.py` |
 
 ### client.coupons.read_coupon
 
 - **Route**: `GET /product_families/{product_family_id}/coupons/{coupon_id}.json`
+- **Auth**: `basic_auth` OR `bearer_auth`
 - **Server**: `production`
 - **Signature**: `def read_coupon(product_family_id: int, coupon_id: int, *, currency_prices: bool | None = None, request_options: RequestOptionsOrDict | None = None)`
   - required, positional: `product_family_id`, `coupon_id`
@@ -169,11 +179,12 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CouponResponse` | `maxio/models/coupon_response.py` |
+| `CouponResponse` | `maxio_advanced_billing/models/coupon_response.py` |
 
 ### client.coupons.read_coupon_usage
 
 - **Route**: `GET /product_families/{product_family_id}/coupons/{coupon_id}/usage.json`
+- **Auth**: `basic_auth` OR `bearer_auth`
 - **Server**: `production`
 - **Signature**: `def read_coupon_usage(product_family_id: int, coupon_id: int, *, request_options: RequestOptionsOrDict | None = None)`
   - required, positional: `product_family_id`, `coupon_id`
@@ -184,11 +195,12 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CouponUsage` | `maxio/models/coupon_usage.py` |
+| `CouponUsage` | `maxio_advanced_billing/models/coupon_usage.py` |
 
 ### client.coupons.update_coupon
 
 - **Route**: `PUT /product_families/{product_family_id}/coupons/{coupon_id}.json`
+- **Auth**: `basic_auth` OR `bearer_auth`
 - **Server**: `production`
 - **Signature**: `def update_coupon(product_family_id: int, coupon_id: int, *, body: CouponRequest | CouponRequestDict | None = None, request_options: RequestOptionsOrDict | None = None)`
   - required, positional: `product_family_id`, `coupon_id`
@@ -200,15 +212,16 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CouponRequest` | `maxio/models/coupon_request.py` |
-| `CouponRequestDict` | `maxio/models/coupon_request.py` |
-| `CouponResponse` | `maxio/models/coupon_response.py` |
-| `UpdateCouponErrorBody` | `maxio/errors/update_coupon_error.py` |
-| `ErrorListResponse1` | `maxio/models/error_list_response1.py` |
+| `CouponRequest` | `maxio_advanced_billing/models/coupon_request.py` |
+| `CouponRequestDict` | `maxio_advanced_billing/models/coupon_request.py` |
+| `CouponResponse` | `maxio_advanced_billing/models/coupon_response.py` |
+| `UpdateCouponErrorBody` | `maxio_advanced_billing/errors/update_coupon_error.py` |
+| `ErrorListResponse1` | `maxio_advanced_billing/models/error_list_response1.py` |
 
 ### client.coupons.update_coupon_subcodes
 
 - **Route**: `PUT /coupons/{coupon_id}/codes.json`
+- **Auth**: `basic_auth` OR `bearer_auth`
 - **Server**: `production`
 - **Signature**: `def update_coupon_subcodes(coupon_id: int, *, body: CouponSubcodes | CouponSubcodesDict | None = None, request_options: RequestOptionsOrDict | None = None)`
   - required, positional: `coupon_id`
@@ -219,13 +232,14 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CouponSubcodes` | `maxio/models/coupon_subcodes.py` |
-| `CouponSubcodesDict` | `maxio/models/coupon_subcodes.py` |
-| `CouponSubcodesResponse` | `maxio/models/coupon_subcodes_response.py` |
+| `CouponSubcodes` | `maxio_advanced_billing/models/coupon_subcodes.py` |
+| `CouponSubcodesDict` | `maxio_advanced_billing/models/coupon_subcodes.py` |
+| `CouponSubcodesResponse` | `maxio_advanced_billing/models/coupon_subcodes_response.py` |
 
 ### client.coupons.validate_coupon
 
 - **Route**: `GET /coupons/validate.json`
+- **Auth**: `basic_auth` OR `bearer_auth`
 - **Server**: `production`
 - **Signature**: `def validate_coupon(code: str, *, product_family_id: int | None = None, request_options: RequestOptionsOrDict | None = None)`
   - required, positional: `code`
@@ -237,7 +251,7 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `CouponResponse` | `maxio/models/coupon_response.py` |
-| `ValidateCouponErrorBody` | `maxio/errors/validate_coupon_error.py` |
-| `SingleStringErrorResponse1` | `maxio/models/single_string_error_response1.py` |
+| `CouponResponse` | `maxio_advanced_billing/models/coupon_response.py` |
+| `ValidateCouponErrorBody` | `maxio_advanced_billing/errors/validate_coupon_error.py` |
+| `SingleStringErrorResponse1` | `maxio_advanced_billing/models/single_string_error_response1.py` |
 

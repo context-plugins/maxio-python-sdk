@@ -2,13 +2,14 @@
 
 # ReferralCodes — operations
 
-Accessor: `client.referral_codes` · Source: `maxio/apis/referral_codes.py` · 1 operation
+Accessor: `client.referral_codes` · Source: `maxio_advanced_billing/apis/referral_codes.py` · 1 operation
 
 Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omit what its invariants table covers and are otherwise self-contained, so chunk at block level. Signatures are the sync parsed spelling; the async and raw spellings take the same parameters (see sdk-map.md). **Type sources** names the module declaring each type an operation mentions, so resolving a body, return or error payload is a lookup rather than a search; the runtime types `RawError` and `ApiResult` are excluded.
 
 ### client.referral_codes.validate_referral_code
 
 - **Route**: `GET /referral_codes/validate.json`
+- **Auth**: `basic_auth` OR `bearer_auth`
 - **Server**: `production`
 - **Signature**: `def validate_referral_code(code: str, *, request_options: RequestOptionsOrDict | None = None)`
   - required, positional: `code`
@@ -20,7 +21,7 @@ Each `###` block is one operation and assumes `sdk-map.md` is loaded: blocks omi
 
 | Type | Source |
 | --- | --- |
-| `ReferralValidationResponse` | `maxio/models/referral_validation_response.py` |
-| `ValidateReferralCodeErrorBody` | `maxio/errors/validate_referral_code_error.py` |
-| `SingleStringErrorResponse1` | `maxio/models/single_string_error_response1.py` |
+| `ReferralValidationResponse` | `maxio_advanced_billing/models/referral_validation_response.py` |
+| `ValidateReferralCodeErrorBody` | `maxio_advanced_billing/errors/validate_referral_code_error.py` |
+| `SingleStringErrorResponse1` | `maxio_advanced_billing/models/single_string_error_response1.py` |
 
